@@ -157,6 +157,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>MASA_all.mdf</DependentUpon>
     </Content>
+    <Content Include="__README_comments.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
