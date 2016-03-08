@@ -61,6 +61,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -87,6 +90,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Enter_New.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_New.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_New_Glider_pilot.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_New_Glider_pilot.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_New_Instructor.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_New_Instructor.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainDataEntryFrm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +133,61 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="OD_AOD_AirportName1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_AirportName1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_AOD1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_AOD1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_AOD2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_AOD2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_OD1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_OD1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_OD2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_OD2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_OD3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_OD3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_Tow1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_Tow1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_Tow2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_Tow2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_Tow3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_Tow3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_TowPlane1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_TowPlane1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_TowPlane2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_TowPlane2.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainDataEntryFrm.resx">
@@ -127,6 +201,39 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Enter_New.xsc">
+      <DependentUpon>Enter_New.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_New.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_New.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_New.xss">
+      <DependentUpon>Enter_New.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_New_Glider_pilot.xsc">
+      <DependentUpon>Enter_New_Glider_pilot.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_New_Glider_pilot.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_New_Glider_pilot.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_New_Glider_pilot.xss">
+      <DependentUpon>Enter_New_Glider_pilot.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_New_Instructor.xsc">
+      <DependentUpon>Enter_New_Instructor.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_New_Instructor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_New_Instructor.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_New_Instructor.xss">
+      <DependentUpon>Enter_New_Instructor.xsd</DependentUpon>
+    </None>
     <None Include="MASA_allDataSet.xsc">
       <DependentUpon>MASA_allDataSet.xsd</DependentUpon>
     </None>
@@ -138,6 +245,7 @@
     <None Include="MASA_allDataSet.xss">
       <DependentUpon>MASA_allDataSet.xsd</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -148,6 +256,127 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="OD_AOD_AirportName1.xsc">
+      <DependentUpon>OD_AOD_AirportName1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_AirportName1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_AirportName1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_AirportName1.xss">
+      <DependentUpon>OD_AOD_AirportName1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_AOD1.xsc">
+      <DependentUpon>OD_AOD_AOD1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_AOD1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_AOD1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_AOD1.xss">
+      <DependentUpon>OD_AOD_AOD1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_AOD2.xsc">
+      <DependentUpon>OD_AOD_AOD2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_AOD2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_AOD2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_AOD2.xss">
+      <DependentUpon>OD_AOD_AOD2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD1.xsc">
+      <DependentUpon>OD_AOD_OD1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_OD1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_OD1.xss">
+      <DependentUpon>OD_AOD_OD1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD2.xsc">
+      <DependentUpon>OD_AOD_OD2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_OD2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_OD2.xss">
+      <DependentUpon>OD_AOD_OD2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD3.xsc">
+      <DependentUpon>OD_AOD_OD3.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_OD3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_OD3.xss">
+      <DependentUpon>OD_AOD_OD3.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_Tow1.xsc">
+      <DependentUpon>OD_AOD_Tow1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_Tow1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_Tow1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_Tow1.xss">
+      <DependentUpon>OD_AOD_Tow1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_Tow2.xsc">
+      <DependentUpon>OD_AOD_Tow2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_Tow2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_Tow2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_Tow2.xss">
+      <DependentUpon>OD_AOD_Tow2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_Tow3.xsc">
+      <DependentUpon>OD_AOD_Tow3.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_Tow3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_Tow3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_Tow3.xss">
+      <DependentUpon>OD_AOD_Tow3.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_TowPlane1.xsc">
+      <DependentUpon>OD_AOD_TowPlane1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_TowPlane1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_TowPlane1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_TowPlane1.xss">
+      <DependentUpon>OD_AOD_TowPlane1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_TowPlane2.xsc">
+      <DependentUpon>OD_AOD_TowPlane2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_TowPlane2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_TowPlane2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_TowPlane2.xss">
+      <DependentUpon>OD_AOD_TowPlane2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MASA_all.mdf">
