@@ -1,5 +1,5 @@
 ﻿Public Class MainDataEntryForm
-    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MembersBindingNavigatorSaveItem.Click
+    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.OD_AOD_OD1MembersBindingSource.EndEdit()
         Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
@@ -35,6 +35,27 @@
         Me.OD_AOD_OD2MembersTableAdapter.Fill(Me.OD_AOD_OD2.Members)
         'TODO: This line of code loads data into the 'OD_AOD_OD1.Members' table. You can move, or remove it, as needed.
         Me.OD_AOD_OD1MembersTableAdapter.Fill(Me.OD_AOD_OD1.Members)
+
+        If Airport_nameComboBox.Items.Count > 0 Then     'set the airport to be the "first one on the list"
+            Airport_nameComboBox.SelectedIndex = 1
+        End If
+
+
+    End Sub
+
+    Private Sub NameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NameComboBox.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub NameComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NameComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Airport_nameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Airport_nameComboBox.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Aircraft_NnumberComboBox_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 
