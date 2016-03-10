@@ -7,6 +7,20 @@
     End Sub
 
     Private Sub MainDataEntryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'MASA_allDataSet.Flights' table. You can move, or remove it, as needed.
+        Me.FlightsTableAdapter.Fill(Me.MASA_allDataSet.Flights)
+        'TODO: This line of code loads data into the 'NewFlights_Passenger.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter4.Fill(Me.NewFlights_Passenger.Members)
+        'TODO: This line of code loads data into the 'NewFlights_PutSecondNameOnCheck.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter3.Fill(Me.NewFlights_PutSecondNameOnCheck.Members)
+        'TODO: This line of code loads data into the 'NewFlights_PutOnCheck.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter2.Fill(Me.NewFlights_PutOnCheck.Members)
+        'TODO: This line of code loads data into the 'NewFlights_Glider.Aircraft' table. You can move, or remove it, as needed.
+        Me.AircraftTableAdapter.Fill(Me.NewFlights_Glider.Aircraft)
+        'TODO: This line of code loads data into the 'NewFlights_Instructor.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter1.Fill(Me.NewFlights_Instructor.Members)
+        'TODO: This line of code loads data into the 'NewFlights_GliderPilot.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter.Fill(Me.NewFlights_GliderPilot.Members)
         'TODO: This line of code loads data into the 'Enter_New_Instructor.Flights' table. You can move, or remove it, as needed.
         Me.Flights_Enter_New_InstructorFlightsTableAdapter.Fill(Me.Flights_Enter_New_Instructor.Flights)
         'TODO: This line of code loads data into the 'Enter_New_Glider_pilot.Flights' table. You can move, or remove it, as needed.
@@ -41,21 +55,13 @@
         End If
 
 
-    End Sub
+        ' Set the Format type and the CustomFormat string for both time pickers
+        TakeOffTimePicker.Format = DateTimePickerFormat.Custom
+        TakeOffTimePicker.CustomFormat = "HH:mm"
+        LandingTimePicker.Format = DateTimePickerFormat.Custom
+        LandingTimePicker.CustomFormat = "HH:mm"
 
-    Private Sub NameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NameComboBox.SelectedIndexChanged
 
-    End Sub
-
-    Private Sub NameComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NameComboBox1.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Airport_nameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Airport_nameComboBox.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Aircraft_NnumberComboBox_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 

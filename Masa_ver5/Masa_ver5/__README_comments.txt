@@ -4,6 +4,8 @@
 *
 *-------------------------------------
 
+10 Mar 2016 - double checked all the combo boxes.  Moving to the "add flights" tab.
+
 9 Mar 2016 - successfully wired up all the combo boxes on the first tab.  Seems to be working well.
 
 
