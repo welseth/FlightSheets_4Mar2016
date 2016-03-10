@@ -1,10 +1,6 @@
 ﻿Public Class MainDataEntryForm
-    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        Me.OD_AOD_OD1MembersBindingSource.EndEdit()
-        Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
 
-    End Sub
+
 
     Private Sub MainDataEntryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'MASA_allDataSet.Flights' table. You can move, or remove it, as needed.
@@ -50,10 +46,10 @@
         'TODO: This line of code loads data into the 'OD_AOD_OD1.Members' table. You can move, or remove it, as needed.
         Me.OD_AOD_OD1MembersTableAdapter.Fill(Me.OD_AOD_OD1.Members)
 
+
         If Airport_nameComboBox.Items.Count > 0 Then     'set the airport to be the "first one on the list"
             Airport_nameComboBox.SelectedIndex = 1
         End If
-
 
         ' Set the Format type and the CustomFormat string for both time pickers
         TakeOffTimePicker.Format = DateTimePickerFormat.Custom
@@ -62,8 +58,17 @@
         LandingTimePicker.CustomFormat = "HH:mm"
 
 
-
     End Sub
 
+
+    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.OD_AOD_OD1MembersBindingSource.EndEdit()
+        Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
+    End Sub
+
+    Private Sub BindingNavigatorMoveNextItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorMoveNextItem.Click
+
+    End Sub
 
 End Class
