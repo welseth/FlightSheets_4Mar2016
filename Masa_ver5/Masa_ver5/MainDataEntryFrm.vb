@@ -4,7 +4,7 @@
 
     Private Sub MainDataEntryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'MASA_allDataSet.Flights' table. You can move, or remove it, as needed.
-        Me.FlightsTableAdapter.Fill(Me.MASA_allDataSet.Flights)
+        Me.MASA_allDataSetFlightsTableAdapter.Fill(Me.MASA_allDataSet.Flights)
         'TODO: This line of code loads data into the 'NewFlights_Passenger.Members' table. You can move, or remove it, as needed.
         Me.MembersTableAdapter4.Fill(Me.NewFlights_Passenger.Members)
         'TODO: This line of code loads data into the 'NewFlights_PutSecondNameOnCheck.Members' table. You can move, or remove it, as needed.
@@ -71,4 +71,10 @@
 
     End Sub
 
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+        MASA_allDataSetFlightsTableAdapter.Fill(TowPilotNameComboBox5.ValueMember)
+
+
+
+    End Sub
 End Class
