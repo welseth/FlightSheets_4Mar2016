@@ -50,13 +50,13 @@ Partial Class MainDataEntryForm
         Dim Label6 As System.Windows.Forms.Label
         Dim Label11 As System.Windows.Forms.Label
         Dim Label15 As System.Windows.Forms.Label
+        Dim Label16 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainDataEntryForm))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.N_numberTextBox = New System.Windows.Forms.TextBox()
         Me.OD_AOD_TowPlane2AircraftBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_TowPlane2 = New Masa_ver5.OD_AOD_TowPlane2()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Airport_nameComboBox = New System.Windows.Forms.ComboBox()
         Me.OD_AOD_AirportNameAirportBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_AirportName = New Masa_ver5.OD_AOD_AirportName()
@@ -84,6 +84,7 @@ Partial Class MainDataEntryForm
         Me.OD_AOD_OD1MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New Masa_ver5.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TempTextBox = New System.Windows.Forms.TextBox()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -97,6 +98,16 @@ Partial Class MainDataEntryForm
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.CutToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.CopyToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.PasteToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.NameComboBox12 = New System.Windows.Forms.ComboBox()
         Me.MembersBindingSource8 = New System.Windows.Forms.BindingSource(Me.components)
@@ -202,16 +213,6 @@ Partial Class MainDataEntryForm
         Me.MASA_allDataSetFlightsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MASA_allDataSetFlightsTableAdapter = New Masa_ver5.MASA_allDataSetTableAdapters.FlightsTableAdapter()
         Me.MASA_allDataSetTableAdapterManager6 = New Masa_ver5.MASA_allDataSetTableAdapters.TableAdapterManager()
-        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.CutToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.CopyToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.PasteToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
         NameLabel = New System.Windows.Forms.Label()
         NameLabel1 = New System.Windows.Forms.Label()
         NameLabel2 = New System.Windows.Forms.Label()
@@ -239,6 +240,7 @@ Partial Class MainDataEntryForm
         Label6 = New System.Windows.Forms.Label()
         Label11 = New System.Windows.Forms.Label()
         Label15 = New System.Windows.Forms.Label()
+        Label16 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.OD_AOD_TowPlane2AircraftBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -545,6 +547,15 @@ Partial Class MainDataEntryForm
         Label15.TabIndex = 65
         Label15.Text = "Use TAB to move between items."
         '
+        'Label16
+        '
+        Label16.AutoSize = True
+        Label16.Location = New System.Drawing.Point(315, 253)
+        Label16.Name = "Label16"
+        Label16.Size = New System.Drawing.Size(118, 13)
+        Label16.TabIndex = 68
+        Label16.Text = "Contents of ""TowPilot"" "
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -564,7 +575,6 @@ Partial Class MainDataEntryForm
         Me.TabPage1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TabPage1.Controls.Add(Label11)
         Me.TabPage1.Controls.Add(Me.N_numberTextBox)
-        Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Label5)
         Me.TabPage1.Controls.Add(Airport_nameLabel)
         Me.TabPage1.Controls.Add(Me.Airport_nameComboBox)
@@ -610,16 +620,6 @@ Partial Class MainDataEntryForm
         '
         Me.OD_AOD_TowPlane2.DataSetName = "OD_AOD_TowPlane2"
         Me.OD_AOD_TowPlane2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(18, 21)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(867, 37)
-        Me.Label1.TabIndex = 25
-        Me.Label1.Text = "Enter the general information about the flights for today:"
         '
         'Airport_nameComboBox
         '
@@ -839,6 +839,8 @@ Partial Class MainDataEntryForm
         '
         Me.TabPage2.AutoScroll = True
         Me.TabPage2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPage2.Controls.Add(Label16)
+        Me.TabPage2.Controls.Add(Me.TempTextBox)
         Me.TabPage2.Controls.Add(Me.BindingNavigator1)
         Me.TabPage2.Controls.Add(Me.CheckBox2)
         Me.TabPage2.Controls.Add(Label15)
@@ -883,6 +885,13 @@ Partial Class MainDataEntryForm
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         '
+        'TempTextBox
+        '
+        Me.TempTextBox.Location = New System.Drawing.Point(318, 272)
+        Me.TempTextBox.Name = "TempTextBox"
+        Me.TempTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TempTextBox.TabIndex = 67
+        '
         'BindingNavigator1
         '
         Me.BindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -890,7 +899,7 @@ Partial Class MainDataEntryForm
         Me.BindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ToolStripButton1, Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.PrintToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.toolStripSeparator1, Me.HelpToolStripButton})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(145, 346)
+        Me.BindingNavigator1.Location = New System.Drawing.Point(43, 465)
         Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -994,6 +1003,88 @@ Partial Class MainDataEntryForm
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
+        'NewToolStripButton
+        '
+        Me.NewToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.NewToolStripButton.Image = CType(resources.GetObject("NewToolStripButton.Image"), System.Drawing.Image)
+        Me.NewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.NewToolStripButton.Name = "NewToolStripButton"
+        Me.NewToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.NewToolStripButton.Text = "&New"
+        '
+        'OpenToolStripButton
+        '
+        Me.OpenToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OpenToolStripButton.Image = CType(resources.GetObject("OpenToolStripButton.Image"), System.Drawing.Image)
+        Me.OpenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.OpenToolStripButton.Name = "OpenToolStripButton"
+        Me.OpenToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.OpenToolStripButton.Text = "&Open"
+        '
+        'SaveToolStripButton
+        '
+        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripButton.Name = "SaveToolStripButton"
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.SaveToolStripButton.Text = "&Save"
+        '
+        'PrintToolStripButton
+        '
+        Me.PrintToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PrintToolStripButton.Image = CType(resources.GetObject("PrintToolStripButton.Image"), System.Drawing.Image)
+        Me.PrintToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.PrintToolStripButton.Name = "PrintToolStripButton"
+        Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.PrintToolStripButton.Text = "&Print"
+        '
+        'toolStripSeparator
+        '
+        Me.toolStripSeparator.Name = "toolStripSeparator"
+        Me.toolStripSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'CutToolStripButton
+        '
+        Me.CutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CutToolStripButton.Image = CType(resources.GetObject("CutToolStripButton.Image"), System.Drawing.Image)
+        Me.CutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CutToolStripButton.Name = "CutToolStripButton"
+        Me.CutToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.CutToolStripButton.Text = "C&ut"
+        '
+        'CopyToolStripButton
+        '
+        Me.CopyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CopyToolStripButton.Image = CType(resources.GetObject("CopyToolStripButton.Image"), System.Drawing.Image)
+        Me.CopyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CopyToolStripButton.Name = "CopyToolStripButton"
+        Me.CopyToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.CopyToolStripButton.Text = "&Copy"
+        '
+        'PasteToolStripButton
+        '
+        Me.PasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PasteToolStripButton.Image = CType(resources.GetObject("PasteToolStripButton.Image"), System.Drawing.Image)
+        Me.PasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.PasteToolStripButton.Name = "PasteToolStripButton"
+        Me.PasteToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.PasteToolStripButton.Text = "&Paste"
+        '
+        'toolStripSeparator1
+        '
+        Me.toolStripSeparator1.Name = "toolStripSeparator1"
+        Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'HelpToolStripButton
+        '
+        Me.HelpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.HelpToolStripButton.Image = CType(resources.GetObject("HelpToolStripButton.Image"), System.Drawing.Image)
+        Me.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.HelpToolStripButton.Name = "HelpToolStripButton"
+        Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.HelpToolStripButton.Text = "He&lp"
         '
         'CheckBox2
         '
@@ -1747,88 +1838,6 @@ Partial Class MainDataEntryForm
         Me.MASA_allDataSetTableAdapterManager6.MembersTableAdapter = Nothing
         Me.MASA_allDataSetTableAdapterManager6.UpdateOrder = Masa_ver5.MASA_allDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'NewToolStripButton
-        '
-        Me.NewToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.NewToolStripButton.Image = CType(resources.GetObject("NewToolStripButton.Image"), System.Drawing.Image)
-        Me.NewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.NewToolStripButton.Name = "NewToolStripButton"
-        Me.NewToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.NewToolStripButton.Text = "&New"
-        '
-        'OpenToolStripButton
-        '
-        Me.OpenToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OpenToolStripButton.Image = CType(resources.GetObject("OpenToolStripButton.Image"), System.Drawing.Image)
-        Me.OpenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.OpenToolStripButton.Name = "OpenToolStripButton"
-        Me.OpenToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.OpenToolStripButton.Text = "&Open"
-        '
-        'SaveToolStripButton
-        '
-        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
-        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.SaveToolStripButton.Text = "&Save"
-        '
-        'PrintToolStripButton
-        '
-        Me.PrintToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PrintToolStripButton.Image = CType(resources.GetObject("PrintToolStripButton.Image"), System.Drawing.Image)
-        Me.PrintToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PrintToolStripButton.Name = "PrintToolStripButton"
-        Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.PrintToolStripButton.Text = "&Print"
-        '
-        'toolStripSeparator
-        '
-        Me.toolStripSeparator.Name = "toolStripSeparator"
-        Me.toolStripSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'CutToolStripButton
-        '
-        Me.CutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CutToolStripButton.Image = CType(resources.GetObject("CutToolStripButton.Image"), System.Drawing.Image)
-        Me.CutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.CutToolStripButton.Name = "CutToolStripButton"
-        Me.CutToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.CutToolStripButton.Text = "C&ut"
-        '
-        'CopyToolStripButton
-        '
-        Me.CopyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CopyToolStripButton.Image = CType(resources.GetObject("CopyToolStripButton.Image"), System.Drawing.Image)
-        Me.CopyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.CopyToolStripButton.Name = "CopyToolStripButton"
-        Me.CopyToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.CopyToolStripButton.Text = "&Copy"
-        '
-        'PasteToolStripButton
-        '
-        Me.PasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PasteToolStripButton.Image = CType(resources.GetObject("PasteToolStripButton.Image"), System.Drawing.Image)
-        Me.PasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PasteToolStripButton.Name = "PasteToolStripButton"
-        Me.PasteToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.PasteToolStripButton.Text = "&Paste"
-        '
-        'toolStripSeparator1
-        '
-        Me.toolStripSeparator1.Name = "toolStripSeparator1"
-        Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'HelpToolStripButton
-        '
-        Me.HelpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.HelpToolStripButton.Image = CType(resources.GetObject("HelpToolStripButton.Image"), System.Drawing.Image)
-        Me.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.HelpToolStripButton.Name = "HelpToolStripButton"
-        Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.HelpToolStripButton.Text = "He&lp"
-        '
         'MainDataEntryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1983,7 +1992,6 @@ Partial Class MainDataEntryForm
     Friend WithEvents Flights_Enter_New_InstructorFlightsBindingSource As BindingSource
     Friend WithEvents Flights_Enter_New_InstructorFlightsTableAdapter As Enter_New_InstructorTableAdapters.FlightsTableAdapter
     Friend WithEvents Flights_Enter_New_InstructorTableAdapterManager As Enter_New_InstructorTableAdapters.TableAdapterManager
-    Friend WithEvents Label1 As Label
     Friend WithEvents N_numberTextBox As TextBox
     Friend WithEvents Aircraft_nameComboBox As ComboBox
     Friend WithEvents TowPilotNameComboBox5 As ComboBox
@@ -2071,4 +2079,5 @@ Partial Class MainDataEntryForm
     Friend WithEvents PasteToolStripButton As ToolStripButton
     Friend WithEvents toolStripSeparator1 As ToolStripSeparator
     Friend WithEvents HelpToolStripButton As ToolStripButton
+    Friend WithEvents TempTextBox As TextBox
 End Class

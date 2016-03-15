@@ -58,6 +58,8 @@
         LandingTimePicker.CustomFormat = "HH:mm"
 
 
+
+
     End Sub
 
 
@@ -67,14 +69,9 @@
         Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
     End Sub
 
-    Private Sub BindingNavigatorMoveNextItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorMoveNextItem.Click
+    Private Sub TowPilotNameComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TowPilotNameComboBox5.LostFocus
 
-    End Sub
-
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
-        MASA_allDataSetFlightsTableAdapter.Fill(TowPilotNameComboBox5.ValueMember)
-
-
+        TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
 
     End Sub
 End Class
