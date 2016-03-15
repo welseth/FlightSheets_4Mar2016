@@ -114,8 +114,8 @@ Partial Class MainDataEntryForm
         Me.NewFlights_Passenger = New Masa_ver5.NewFlights_Passenger()
         Me.MembersBindingSource10 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersBindingSource9 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ClearFormButton = New System.Windows.Forms.Button()
+        Me.SaveFlightButton = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
@@ -550,7 +550,7 @@ Partial Class MainDataEntryForm
         'Label16
         '
         Label16.AutoSize = True
-        Label16.Location = New System.Drawing.Point(315, 253)
+        Label16.Location = New System.Drawing.Point(697, 356)
         Label16.Name = "Label16"
         Label16.Size = New System.Drawing.Size(118, 13)
         Label16.TabIndex = 68
@@ -846,8 +846,8 @@ Partial Class MainDataEntryForm
         Me.TabPage2.Controls.Add(Label15)
         Me.TabPage2.Controls.Add(Me.NameComboBox12)
         Me.TabPage2.Controls.Add(Label6)
-        Me.TabPage2.Controls.Add(Me.Button2)
-        Me.TabPage2.Controls.Add(Me.Button1)
+        Me.TabPage2.Controls.Add(Me.ClearFormButton)
+        Me.TabPage2.Controls.Add(Me.SaveFlightButton)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Controls.Add(Label14)
         Me.TabPage2.Controls.Add(Label13)
@@ -887,7 +887,7 @@ Partial Class MainDataEntryForm
         '
         'TempTextBox
         '
-        Me.TempTextBox.Location = New System.Drawing.Point(318, 272)
+        Me.TempTextBox.Location = New System.Drawing.Point(700, 375)
         Me.TempTextBox.Name = "TempTextBox"
         Me.TempTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TempTextBox.TabIndex = 67
@@ -906,7 +906,7 @@ Partial Class MainDataEntryForm
         Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(473, 25)
+        Me.BindingNavigator1.Size = New System.Drawing.Size(474, 25)
         Me.BindingNavigator1.TabIndex = 66
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
@@ -922,7 +922,7 @@ Partial Class MainDataEntryForm
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -1130,23 +1130,23 @@ Partial Class MainDataEntryForm
         Me.MembersBindingSource9.DataMember = "Members"
         Me.MembersBindingSource9.DataSource = Me.NewFlights_Passenger
         '
-        'Button2
+        'ClearFormButton
         '
-        Me.Button2.Location = New System.Drawing.Point(820, 292)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 37)
-        Me.Button2.TabIndex = 58
-        Me.Button2.Text = "Clear Form"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ClearFormButton.Location = New System.Drawing.Point(820, 292)
+        Me.ClearFormButton.Name = "ClearFormButton"
+        Me.ClearFormButton.Size = New System.Drawing.Size(103, 37)
+        Me.ClearFormButton.TabIndex = 58
+        Me.ClearFormButton.Text = "Clear Form"
+        Me.ClearFormButton.UseVisualStyleBackColor = True
         '
-        'Button1
+        'SaveFlightButton
         '
-        Me.Button1.Location = New System.Drawing.Point(697, 292)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(103, 37)
-        Me.Button1.TabIndex = 55
-        Me.Button1.Text = "Save and Create Another"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.SaveFlightButton.Location = New System.Drawing.Point(697, 292)
+        Me.SaveFlightButton.Name = "SaveFlightButton"
+        Me.SaveFlightButton.Size = New System.Drawing.Size(103, 37)
+        Me.SaveFlightButton.TabIndex = 55
+        Me.SaveFlightButton.Text = "Save and Create Another"
+        Me.SaveFlightButton.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -2031,8 +2031,8 @@ Partial Class MainDataEntryForm
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ClearFormButton As Button
+    Friend WithEvents SaveFlightButton As Button
     Friend WithEvents N_numberTextBox1 As TextBox
     Friend WithEvents MembersBindingSource7 As BindingSource
     Friend WithEvents MembersBindingSource6 As BindingSource

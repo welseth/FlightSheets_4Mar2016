@@ -47,7 +47,7 @@
         Me.OD_AOD_OD1MembersTableAdapter.Fill(Me.OD_AOD_OD1.Members)
 
 
-        If Airport_nameComboBox.Items.Count > 0 Then     'set the airport to be the "first one on the list"
+        If Airport_nameComboBox.Items.Count > 0 Then     'set the airport displayed to be the "first one in the list"
             Airport_nameComboBox.SelectedIndex = 1
         End If
 
@@ -69,9 +69,120 @@
         Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
     End Sub
 
-    Private Sub TowPilotNameComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TowPilotNameComboBox5.LostFocus
 
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles SaveFlightButton.Click
+        'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
+        'I can grab that value and display it.  OK to delete when done.
+        TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
+    End Sub
+
+    'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ClearFormButton.Click
+    '    'Reset all the selected comboBoxes back to "blank"
+    '    TowPilotNameComboBox5.SelectedIndex = -1
+
+    '    'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
+    '    'I can grab that value and display it.  OK to delete when done.
+    '    TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
+    'End Sub
+
+    Private Sub ClearFormButton_Click(sender As Object, e As EventArgs) Handles ClearFormButton.Click
+        'Reset all the selected comboBoxes back to "blank"
+        'TowPilotNameComboBox5.SelectedIndex = -1
+        'SetContentsBackToNothing()
+        ''''''''''''''''''''''''''''''
+        ''''''''''''''''''''''''''''''  This WORKS!!
+        ''''''''''''''''''''''''''''''  Need to verify it will grab ALL controls
+        ''''''''''''''''''''''''''''''  Need also to check for OTHER TYPES of controls and reset them to zero
+        '
+        Dim ctl As Control = Me.GetNextControl(Me, True) 'Get the first control in the tab order.
+
+        Do Until ctl Is Nothing
+
+            'do some stuff here, Use ctl here.
+            If (TypeOf ctl Is ComboBox) Then
+                DirectCast(ctl, ComboBox).SelectedIndex = -1
+
+            End If
+            ctl = Me.GetNextControl(ctl, True) 'Get the next control in the tab order.
+        Loop
+
+        'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
+        'I can grab that value and display it.  OK to delete when done.
         TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
 
     End Sub
+
+
+    ''Below is one way to iterate through all controls on page...
+    'Private Sub SetContentsBackToNothing()
+    '    Dim cControl As Control
+
+    '    For Each cControl In Controls
+    '        If (TypeOf cControl Is ComboBox) Then
+    '            DirectCast(cControl, ComboBox).SelectedIndex = -1
+    '            cControl.Text = -1
+    '            ' DirectCast(cControl, ComboBox).SelectedIndex = -1
+    '        End If
+    '    Next cControl
+    'End Sub
+
+
+
+    ''below is a second way to iterate through all controls on page...
+    'Private Sub resetAllItemsOnTab(ByVal control As Control)
+    '    For Each item As Control In control.Controls
+    '        If TypeOf item Is TextBox Then
+    '            DirectCast(item, TextBox).ReadOnly = True
+    '        Else
+    '            ' recurse and make eventual TextBoxes 
+    '            ' on this control readonly
+    '            resetAllItemsOnTab(item)
+    '        End If
+    '    Next
+    'End Sub
+
+    ''another example: 
+    'Private Sub anotherway()
+    '    For Each tp As TabPage In TabControl1.TabPages
+    '        For Each ctl As Control In tp.Controls
+    '            If TypeOf ctl Is DataGridView Then
+    '                Dim dgv As DataGridView = DirectCast(ctl, DataGridView)
+    '                'do some stuff here...
+    '                'dgv.Columns(0).Width = 35
+    '                'dgv.Columns(1).Width = controlWidth - 70
+    '                'dgv.Columns(2).Width = 35
+    '            End If
+    '        Next
+    '    Next
+    'End Sub
+
+
+    ''yet another example
+    'Private Sub GetControls()
+    '    For Each GroupBoxCntrol As Control In Me.Controls
+    '        If TypeOf GroupBoxCntrol Is GroupBox Then
+    '            For Each cntrl As Control In GroupBoxCntrol.Controls
+    '                'do somethin here
+
+    '            Next
+    '        End If
+
+    '    Next
+    'End Sub
+
+    ''more-looks promising
+    'Private Sub zeroOut()
+    '    Dim ctl As Control = Me.GetNextControl(Me, True) 'Get the first control in the tab order.
+
+    '    Do Until ctl Is Nothing
+
+    '        'do some stuff here, Use ctl here.
+
+    '        ctl = Me.GetNextControl(ctl, True) 'Get the next control in the tab order.
+    '    Loop
+
+    'End Sub
+
+
 End Class
