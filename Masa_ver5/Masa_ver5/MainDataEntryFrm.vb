@@ -57,9 +57,6 @@
         LandingTimePicker.Format = DateTimePickerFormat.Custom
         LandingTimePicker.CustomFormat = "HH:mm"
 
-
-
-
     End Sub
 
 
@@ -69,7 +66,13 @@
         Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
     End Sub
 
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+        ' debug item: this just does a quick debug.print with the index of the current selected tab
+        Dim temp As Integer
+        temp = TabControl1.SelectedIndex
+        Debug.Print("You are in the TabControl.SelectedIndexChanged event. TabIndex:  " & temp)
 
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles SaveFlightButton.Click
         'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
@@ -77,14 +80,6 @@
         TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
     End Sub
 
-    'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ClearFormButton.Click
-    '    'Reset all the selected comboBoxes back to "blank"
-    '    TowPilotNameComboBox5.SelectedIndex = -1
-
-    '    'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
-    '    'I can grab that value and display it.  OK to delete when done.
-    '    TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
-    'End Sub
 
     Private Sub ClearFormButton_Click(sender As Object, e As EventArgs) Handles ClearFormButton.Click
         'Reset all the selected comboBoxes back to "blank"
@@ -95,17 +90,22 @@
         ''''''''''''''''''''''''''''''  Need to verify it will grab ALL controls
         ''''''''''''''''''''''''''''''  Need also to check for OTHER TYPES of controls and reset them to zero
         '
-        Dim ctl As Control = Me.GetNextControl(Me, True) 'Get the first control in the tab order.
+        'Dim ctl As Control = Me.GetNextControl(Me, True) 'Get the first control in the tab order.
+        Dim ctl As Control = Me.GetNextControl(MainDataEntryForm.ActiveForm, True) 'Get the first control in the tab order.
+
+        Debug.Write("Starting to zero out all the controls...       ")
 
         Do Until ctl Is Nothing
-
-            'do some stuff here, Use ctl here.
+            'do some stuff here, Use ctl as the object name.
             If (TypeOf ctl Is ComboBox) Then
-                DirectCast(ctl, ComboBox).SelectedIndex = -1
-
+                DirectCast(ctl, ComboBox).SelectedIndex = -1  'this sets the combobox selected item to "nothing" 
             End If
-            ctl = Me.GetNextControl(ctl, True) 'Get the next control in the tab order.
+            'ctl = Me.GetNextControl(ctl, True) 'Get the next control in the tab order.
+            ctl = Me.GetNextControl(MainDataEntryForm.ActiveForm, True) 'Get the next control in the tab order.
+
         Loop
+
+        Debug.WriteLine("Completed zeroing.")
 
         'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
         'I can grab that value and display it.  OK to delete when done.
