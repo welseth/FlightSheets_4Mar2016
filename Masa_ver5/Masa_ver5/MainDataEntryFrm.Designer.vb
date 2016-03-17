@@ -129,7 +129,7 @@ Partial Class MainDataEntryForm
         Me.MembersBindingSource13 = New System.Windows.Forms.BindingSource(Me.components)
         Me.PercentOnFirstCheck = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.NameComboBox10 = New System.Windows.Forms.ComboBox()
+        Me.FirstNameOnCheckComboBox = New System.Windows.Forms.ComboBox()
         Me.MembersBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.NewFlights_PutOnCheck = New Masa_ver5.NewFlights_PutOnCheck()
         Me.MembersBindingSource12 = New System.Windows.Forms.BindingSource(Me.components)
@@ -147,7 +147,7 @@ Partial Class MainDataEntryForm
         Me.NewFlights_Instructor = New Masa_ver5.NewFlights_Instructor()
         Me.MembersBindingSource7 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersBindingSource6 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.NameComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.GliderPilotNameComboBox = New System.Windows.Forms.ComboBox()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.NewFlights_GliderPilot = New Masa_ver5.NewFlights_GliderPilot()
         Me.MembersBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
@@ -861,7 +861,7 @@ Partial Class MainDataEntryForm
         Me.TabPage2.Controls.Add(Me.PercentOnFirstCheck)
         Me.TabPage2.Controls.Add(Me.CheckBox1)
         Me.TabPage2.Controls.Add(NameLabel10)
-        Me.TabPage2.Controls.Add(Me.NameComboBox10)
+        Me.TabPage2.Controls.Add(Me.FirstNameOnCheckComboBox)
         Me.TabPage2.Controls.Add(Label8)
         Me.TabPage2.Controls.Add(Me.TowAltitude)
         Me.TabPage2.Controls.Add(Me.LandingTimePicker)
@@ -872,7 +872,7 @@ Partial Class MainDataEntryForm
         Me.TabPage2.Controls.Add(NameLabel9)
         Me.TabPage2.Controls.Add(Me.NameComboBox9)
         Me.TabPage2.Controls.Add(NameLabel8)
-        Me.TabPage2.Controls.Add(Me.NameComboBox8)
+        Me.TabPage2.Controls.Add(Me.GliderPilotNameComboBox)
         Me.TabPage2.Controls.Add(Me.N_numberTextBox1)
         Me.TabPage2.Controls.Add(Aircraft_nameLabel)
         Me.TabPage2.Controls.Add(Me.Aircraft_nameComboBox)
@@ -1257,19 +1257,19 @@ Partial Class MainDataEntryForm
         Me.CheckBox1.Text = "Split Cost?"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'NameComboBox10
+        'FirstNameOnCheckComboBox
         '
-        Me.NameComboBox10.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource2, "Name", True))
-        Me.NameComboBox10.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource12, "Name", True))
-        Me.NameComboBox10.DataSource = Me.MembersBindingSource11
-        Me.NameComboBox10.DisplayMember = "Name"
-        Me.NameComboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox10.FormattingEnabled = True
-        Me.NameComboBox10.Location = New System.Drawing.Point(43, 162)
-        Me.NameComboBox10.Name = "NameComboBox10"
-        Me.NameComboBox10.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox10.TabIndex = 44
-        Me.NameComboBox10.ValueMember = "Name"
+        Me.FirstNameOnCheckComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource2, "Name", True))
+        Me.FirstNameOnCheckComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource12, "Name", True))
+        Me.FirstNameOnCheckComboBox.DataSource = Me.MembersBindingSource11
+        Me.FirstNameOnCheckComboBox.DisplayMember = "Name"
+        Me.FirstNameOnCheckComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.FirstNameOnCheckComboBox.FormattingEnabled = True
+        Me.FirstNameOnCheckComboBox.Location = New System.Drawing.Point(43, 162)
+        Me.FirstNameOnCheckComboBox.Name = "FirstNameOnCheckComboBox"
+        Me.FirstNameOnCheckComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.FirstNameOnCheckComboBox.TabIndex = 44
+        Me.FirstNameOnCheckComboBox.ValueMember = "Name"
         '
         'MembersBindingSource2
         '
@@ -1385,19 +1385,19 @@ Partial Class MainDataEntryForm
         Me.MembersBindingSource6.DataMember = "Members"
         Me.MembersBindingSource6.DataSource = Me.NewFlights_Instructor
         '
-        'NameComboBox8
+        'GliderPilotNameComboBox
         '
-        Me.NameComboBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource, "Name", True))
-        Me.NameComboBox8.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource5, "Name", True))
-        Me.NameComboBox8.DataSource = Me.MembersBindingSource4
-        Me.NameComboBox8.DisplayMember = "Name"
-        Me.NameComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox8.FormattingEnabled = True
-        Me.NameComboBox8.Location = New System.Drawing.Point(43, 111)
-        Me.NameComboBox8.Name = "NameComboBox8"
-        Me.NameComboBox8.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox8.TabIndex = 35
-        Me.NameComboBox8.ValueMember = "Name"
+        Me.GliderPilotNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource, "Name", True))
+        Me.GliderPilotNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource5, "Name", True))
+        Me.GliderPilotNameComboBox.DataSource = Me.MembersBindingSource4
+        Me.GliderPilotNameComboBox.DisplayMember = "Name"
+        Me.GliderPilotNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.GliderPilotNameComboBox.FormattingEnabled = True
+        Me.GliderPilotNameComboBox.Location = New System.Drawing.Point(43, 111)
+        Me.GliderPilotNameComboBox.Name = "GliderPilotNameComboBox"
+        Me.GliderPilotNameComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.GliderPilotNameComboBox.TabIndex = 35
+        Me.GliderPilotNameComboBox.ValueMember = "Name"
         '
         'MembersBindingSource
         '
@@ -1999,7 +1999,7 @@ Partial Class MainDataEntryForm
     Friend WithEvents MembersBindingSource As BindingSource
     Friend WithEvents MembersTableAdapter As NewFlights_GliderPilotTableAdapters.MembersTableAdapter
     Friend WithEvents TableAdapterManager As NewFlights_GliderPilotTableAdapters.TableAdapterManager
-    Friend WithEvents NameComboBox8 As ComboBox
+    Friend WithEvents GliderPilotNameComboBox As ComboBox
     Friend WithEvents NewFlights_Instructor As NewFlights_Instructor
     Friend WithEvents MembersBindingSource1 As BindingSource
     Friend WithEvents MembersTableAdapter1 As NewFlights_InstructorTableAdapters.MembersTableAdapter
@@ -2019,7 +2019,7 @@ Partial Class MainDataEntryForm
     Friend WithEvents TableAdapterManager3 As NewFlights_PutOnCheckTableAdapters.TableAdapterManager
     Friend WithEvents PercentOnFirstCheck As TextBox
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents NameComboBox10 As ComboBox
+    Friend WithEvents FirstNameOnCheckComboBox As ComboBox
     Friend WithEvents NewFlights_PutSecondNameOnCheck As NewFlights_PutSecondNameOnCheck
     Friend WithEvents MembersBindingSource3 As BindingSource
     Friend WithEvents MembersTableAdapter3 As NewFlights_PutSecondNameOnCheckTableAdapters.MembersTableAdapter

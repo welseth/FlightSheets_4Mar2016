@@ -68,9 +68,9 @@
 
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
         ' debug item: this just does a quick debug.print with the index of the current selected tab
-        Dim temp As Integer
-        temp = TabControl1.SelectedIndex
-        Debug.Print("You are in the TabControl.SelectedIndexChanged event. TabIndex:  " & temp)
+        Dim TabIndexValue As Integer
+        TabIndexValue = TabControl1.SelectedIndex
+        Debug.Print("You are in the TabControl.SelectedIndexChanged event. TabIndex:  " & TabIndexValue)
 
     End Sub
 
@@ -86,30 +86,42 @@
         'TowPilotNameComboBox5.SelectedIndex = -1
         'SetContentsBackToNothing()
         ''''''''''''''''''''''''''''''
-        ''''''''''''''''''''''''''''''  This WORKS!!
-        ''''''''''''''''''''''''''''''  Need to verify it will grab ALL controls
-        ''''''''''''''''''''''''''''''  Need also to check for OTHER TYPES of controls and reset them to zero
-        '
-        'Dim ctl As Control = Me.GetNextControl(Me, True) 'Get the first control in the tab order.
-        Dim ctl As Control = Me.GetNextControl(MainDataEntryForm.ActiveForm, True) 'Get the first control in the tab order.
+        ''''''''''''''''''''''''''''''''''  This WORKS!!
+        ''''''''''''''''''''''''''''''''''  Need to verify it will grab ALL controls
+        ''''''''''''''''''''''''''''''''''  Need also to check for OTHER TYPES of controls and reset them to zero
+        '''''
+        '''''Dim ctl As Control = Me.GetNextControl(Me, True) 'Get the first control in the tab order.
+        ''''''Dim ctl As Control = Me.GetNextControl(ActiveForm, True) 'Get the first control in the tab order.
 
-        Debug.Write("Starting to zero out all the controls...       ")
+        '''''Debug.Write("Starting to zero out all the controls...       ")
 
-        Do Until ctl Is Nothing
-            'do some stuff here, Use ctl as the object name.
-            If (TypeOf ctl Is ComboBox) Then
-                DirectCast(ctl, ComboBox).SelectedIndex = -1  'this sets the combobox selected item to "nothing" 
-            End If
-            'ctl = Me.GetNextControl(ctl, True) 'Get the next control in the tab order.
-            ctl = Me.GetNextControl(MainDataEntryForm.ActiveForm, True) 'Get the next control in the tab order.
+        '''''Do Until ctl Is Nothing
+        '''''    Do some stuff here, Use ctl as the object name.
+        '''''    If (TypeOf ctl Is ComboBox) Then
+        '''''            DirectCast(ctl, ComboBox).SelectedIndex = -1  'this sets the combobox selected item to "nothing" 
+        '''''        End If
+        '''''        ctl = Me.GetNextControl(ctl, True) 'Get the next control in the tab order.
+        '''''        ctl = Me.GetNextControl(ActiveForm, True) 'Get the next control in the tab order.
 
-        Loop
+        '''''    Loop
+        '''''   >>>END of "this works" section.
+
+        '''''''''''''''''''''''''''''
+
+        'To reset the form you need to list *every* box or object to be reset, and reset them individually.
+        '(I wasn't able to find the recursive function that could be LIMITED to just the current tabIndex.)
+        '(It ended up clearing the entire form, all of the tabs and couldn't be limtied.)
+
+        TowPilotNameComboBox5.SelectedValue = -1
+        GliderPilotNameComboBox.SelectedValue = -1
+        FirstNameOnCheckComboBox.SelectedValue = -1
+
 
         Debug.WriteLine("Completed zeroing.")
 
-        'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
-        'I can grab that value and display it.  OK to delete when done.
-        TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
+            'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
+            'I can grab that value and display it.  OK to delete when done.
+            TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
 
     End Sub
 
