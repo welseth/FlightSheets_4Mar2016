@@ -115,7 +115,20 @@
         TowPilotNameComboBox5.SelectedValue = -1
         GliderPilotNameComboBox.SelectedValue = -1
         FirstNameOnCheckComboBox.SelectedValue = -1
-
+        Aircraft_nameComboBox.SelectedValue = -1
+        InstructorNameComboBox.SelectedValue = -1
+        SplitCostCheckBox.Checked = False
+        PasengerNameComboBox.SelectedValue = -1
+        PercentOnFirstCheck.Text = ""
+        Aircraft_nameComboBox2.SelectedValue = -1
+        SecondCheckNameComboBox.SelectedValue = -1
+        FlightDurationTextBox.Text = ""
+        TowAltitude.Text = ""
+        RadioButton1.Checked = False
+        RadioButton2.Checked = False
+        CostThisFlightTextBox.Text = ""
+        RopeBreakCheckBox.Checked = False
+        TakeOffTimePicker.Value = Now
 
         Debug.WriteLine("Completed zeroing.")
 
@@ -124,6 +137,44 @@
             TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
 
     End Sub
+
+    Private Sub SetTestValues_Click(sender As Object, e As EventArgs) Handles SetTestValues2.Click
+        TowPilotNameComboBox5.SelectedIndex = 8
+        GliderPilotNameComboBox.SelectedIndex = 1
+        FirstNameOnCheckComboBox.SelectedIndex = 2
+        Aircraft_nameComboBox.SelectedIndex = 3
+        InstructorNameComboBox.SelectedIndex = 4
+        SplitCostCheckBox.Checked = True
+        PasengerNameComboBox.SelectedIndex = 5
+        PercentOnFirstCheck.Text = "44"
+        Aircraft_nameComboBox2.SelectedIndex = 6
+        SecondCheckNameComboBox.SelectedIndex = 7
+        FlightDurationTextBox.Text = "1:20"
+        TowAltitude.Text = "3000"
+        RadioButton1.Checked = True
+        RadioButton2.Checked = False
+        CostThisFlightTextBox.Text = "120.00"
+        RopeBreakCheckBox.Checked = True
+
+        Debug.WriteLine("Completed setting test values.")
+    End Sub
+
+
+    Private Sub SetTestValues_Click_1(sender As Object, e As EventArgs) Handles SetTestValues.Click
+        ODNameComboBox1.SelectedIndex = 5
+        ODNameComboBox2.SelectedIndex = 6
+        ODNameComboBox3.SelectedIndex = 7
+        AODNameComboBox1.SelectedIndex = 8
+        AODNameComboBox2.SelectedIndex = 9
+        Airport_nameComboBox.SelectedIndex = 2
+
+    End Sub
+
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+
+    End Sub
+
+
 
 
     ''Below is one way to iterate through all controls on page...
