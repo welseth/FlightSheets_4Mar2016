@@ -67,49 +67,26 @@ Partial Class MainDataEntryForm
         Me.NameComboBox6 = New System.Windows.Forms.ComboBox()
         Me.OD_AOD_Tow2MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_Tow2 = New Masa_ver5.OD_AOD_Tow2()
-        Me.NameComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.AODNameComboBox2 = New System.Windows.Forms.ComboBox()
         Me.OD_AOD_AOD2MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_AOD2 = New Masa_ver5.OD_AOD_AOD2()
-        Me.NameComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.AODNameComboBox1 = New System.Windows.Forms.ComboBox()
         Me.OD_AOD_AOD1MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_AOD1 = New Masa_ver5.OD_AOD_AOD1()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.NameComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ODNameComboBox3 = New System.Windows.Forms.ComboBox()
         Me.OD_AOD_OD3MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD3 = New Masa_ver5.OD_AOD_OD3()
-        Me.NameComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ODNameComboBox2 = New System.Windows.Forms.ComboBox()
         Me.OD_AOD_OD2MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD2 = New Masa_ver5.OD_AOD_OD2()
-        Me.NameComboBox = New System.Windows.Forms.ComboBox()
+        Me.ODNameComboBox1 = New System.Windows.Forms.ComboBox()
         Me.OD_AOD_OD1MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New Masa_ver5.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TempTextBox = New System.Windows.Forms.TextBox()
-        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.CutToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.CopyToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.PasteToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.NameComboBox12 = New System.Windows.Forms.ComboBox()
+        Me.RopeBreakCheckBox = New System.Windows.Forms.CheckBox()
+        Me.PasengerNameComboBox = New System.Windows.Forms.ComboBox()
         Me.MembersBindingSource8 = New System.Windows.Forms.BindingSource(Me.components)
         Me.NewFlights_Passenger = New Masa_ver5.NewFlights_Passenger()
         Me.MembersBindingSource10 = New System.Windows.Forms.BindingSource(Me.components)
@@ -120,15 +97,15 @@ Partial Class MainDataEntryForm
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.NameComboBox11 = New System.Windows.Forms.ComboBox()
+        Me.CostThisFlightTextBox = New System.Windows.Forms.TextBox()
+        Me.FlightDurationTextBox = New System.Windows.Forms.TextBox()
+        Me.SecondCheckNameComboBox = New System.Windows.Forms.ComboBox()
         Me.MembersBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.NewFlights_PutSecondNameOnCheck = New Masa_ver5.NewFlights_PutSecondNameOnCheck()
         Me.MembersBindingSource14 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersBindingSource13 = New System.Windows.Forms.BindingSource(Me.components)
         Me.PercentOnFirstCheck = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.SplitCostCheckBox = New System.Windows.Forms.CheckBox()
         Me.FirstNameOnCheckComboBox = New System.Windows.Forms.ComboBox()
         Me.MembersBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.NewFlights_PutOnCheck = New Masa_ver5.NewFlights_PutOnCheck()
@@ -142,7 +119,7 @@ Partial Class MainDataEntryForm
         Me.NewFlights_Glider = New Masa_ver5.NewFlights_Glider()
         Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AircraftBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.NameComboBox9 = New System.Windows.Forms.ComboBox()
+        Me.InstructorNameComboBox = New System.Windows.Forms.ComboBox()
         Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.NewFlights_Instructor = New Masa_ver5.NewFlights_Instructor()
         Me.MembersBindingSource7 = New System.Windows.Forms.BindingSource(Me.components)
@@ -213,6 +190,53 @@ Partial Class MainDataEntryForm
         Me.MASA_allDataSetFlightsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MASA_allDataSetFlightsTableAdapter = New Masa_ver5.MASA_allDataSetTableAdapters.FlightsTableAdapter()
         Me.MASA_allDataSetTableAdapterManager6 = New Masa_ver5.MASA_allDataSetTableAdapters.TableAdapterManager()
+        Me.SetTestValues2 = New System.Windows.Forms.Button()
+        Me.SetTestValues = New System.Windows.Forms.Button()
+        Me.MASA_All_BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.FlightsDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         NameLabel = New System.Windows.Forms.Label()
         NameLabel1 = New System.Windows.Forms.Label()
         NameLabel2 = New System.Windows.Forms.Label()
@@ -262,8 +286,6 @@ Partial Class MainDataEntryForm
         CType(Me.OD_AOD_OD1MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BindingNavigator1.SuspendLayout()
         CType(Me.MembersBindingSource8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NewFlights_Passenger, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -303,6 +325,9 @@ Partial Class MainDataEntryForm
         CType(Me.Not_usedOD_AOD_AirportBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MASA_allDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MASA_allDataSetFlightsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MASA_All_BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MASA_All_BindingNavigator1.SuspendLayout()
+        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NameLabel
@@ -541,7 +566,7 @@ Partial Class MainDataEntryForm
         'Label15
         '
         Label15.AutoSize = True
-        Label15.Location = New System.Drawing.Point(40, 250)
+        Label15.Location = New System.Drawing.Point(471, 29)
         Label15.Name = "Label15"
         Label15.Size = New System.Drawing.Size(165, 13)
         Label15.TabIndex = 65
@@ -550,7 +575,7 @@ Partial Class MainDataEntryForm
         'Label16
         '
         Label16.AutoSize = True
-        Label16.Location = New System.Drawing.Point(697, 356)
+        Label16.Location = New System.Drawing.Point(935, 10)
         Label16.Name = "Label16"
         Label16.Size = New System.Drawing.Size(118, 13)
         Label16.TabIndex = 68
@@ -573,6 +598,7 @@ Partial Class MainDataEntryForm
         '
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPage1.Controls.Add(Me.SetTestValues)
         Me.TabPage1.Controls.Add(Label11)
         Me.TabPage1.Controls.Add(Me.N_numberTextBox)
         Me.TabPage1.Controls.Add(Label5)
@@ -585,16 +611,16 @@ Partial Class MainDataEntryForm
         Me.TabPage1.Controls.Add(NameLabel6)
         Me.TabPage1.Controls.Add(Me.NameComboBox6)
         Me.TabPage1.Controls.Add(NameLabel4)
-        Me.TabPage1.Controls.Add(Me.NameComboBox4)
+        Me.TabPage1.Controls.Add(Me.AODNameComboBox2)
         Me.TabPage1.Controls.Add(NameLabel3)
-        Me.TabPage1.Controls.Add(Me.NameComboBox3)
+        Me.TabPage1.Controls.Add(Me.AODNameComboBox1)
         Me.TabPage1.Controls.Add(Me.DateTimePicker1)
         Me.TabPage1.Controls.Add(NameLabel2)
-        Me.TabPage1.Controls.Add(Me.NameComboBox2)
+        Me.TabPage1.Controls.Add(Me.ODNameComboBox3)
         Me.TabPage1.Controls.Add(NameLabel1)
-        Me.TabPage1.Controls.Add(Me.NameComboBox1)
+        Me.TabPage1.Controls.Add(Me.ODNameComboBox2)
         Me.TabPage1.Controls.Add(NameLabel)
-        Me.TabPage1.Controls.Add(Me.NameComboBox)
+        Me.TabPage1.Controls.Add(Me.ODNameComboBox1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -707,19 +733,19 @@ Partial Class MainDataEntryForm
         Me.OD_AOD_Tow2.DataSetName = "OD_AOD_Tow2"
         Me.OD_AOD_Tow2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'NameComboBox4
+        'AODNameComboBox2
         '
-        Me.NameComboBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_AOD2MembersBindingSource, "Name", True))
-        Me.NameComboBox4.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_AOD2MembersBindingSource, "Name", True))
-        Me.NameComboBox4.DataSource = Me.OD_AOD_AOD2MembersBindingSource
-        Me.NameComboBox4.DisplayMember = "Name"
-        Me.NameComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox4.FormattingEnabled = True
-        Me.NameComboBox4.Location = New System.Drawing.Point(318, 221)
-        Me.NameComboBox4.Name = "NameComboBox4"
-        Me.NameComboBox4.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox4.TabIndex = 15
-        Me.NameComboBox4.ValueMember = "Name"
+        Me.AODNameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_AOD2MembersBindingSource, "Name", True))
+        Me.AODNameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_AOD2MembersBindingSource, "Name", True))
+        Me.AODNameComboBox2.DataSource = Me.OD_AOD_AOD2MembersBindingSource
+        Me.AODNameComboBox2.DisplayMember = "Name"
+        Me.AODNameComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.AODNameComboBox2.FormattingEnabled = True
+        Me.AODNameComboBox2.Location = New System.Drawing.Point(318, 221)
+        Me.AODNameComboBox2.Name = "AODNameComboBox2"
+        Me.AODNameComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.AODNameComboBox2.TabIndex = 15
+        Me.AODNameComboBox2.ValueMember = "Name"
         '
         'OD_AOD_AOD2MembersBindingSource
         '
@@ -731,19 +757,19 @@ Partial Class MainDataEntryForm
         Me.OD_AOD_AOD2.DataSetName = "OD_AOD_AOD2"
         Me.OD_AOD_AOD2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'NameComboBox3
+        'AODNameComboBox1
         '
-        Me.NameComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_AOD1MembersBindingSource, "Name", True))
-        Me.NameComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_AOD1MembersBindingSource, "Name", True))
-        Me.NameComboBox3.DataSource = Me.OD_AOD_AOD1MembersBindingSource
-        Me.NameComboBox3.DisplayMember = "Name"
-        Me.NameComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox3.FormattingEnabled = True
-        Me.NameComboBox3.Location = New System.Drawing.Point(318, 171)
-        Me.NameComboBox3.Name = "NameComboBox3"
-        Me.NameComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox3.TabIndex = 14
-        Me.NameComboBox3.ValueMember = "Name"
+        Me.AODNameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_AOD1MembersBindingSource, "Name", True))
+        Me.AODNameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_AOD1MembersBindingSource, "Name", True))
+        Me.AODNameComboBox1.DataSource = Me.OD_AOD_AOD1MembersBindingSource
+        Me.AODNameComboBox1.DisplayMember = "Name"
+        Me.AODNameComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.AODNameComboBox1.FormattingEnabled = True
+        Me.AODNameComboBox1.Location = New System.Drawing.Point(318, 171)
+        Me.AODNameComboBox1.Name = "AODNameComboBox1"
+        Me.AODNameComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.AODNameComboBox1.TabIndex = 14
+        Me.AODNameComboBox1.ValueMember = "Name"
         '
         'OD_AOD_AOD1MembersBindingSource
         '
@@ -763,19 +789,19 @@ Partial Class MainDataEntryForm
         Me.DateTimePicker1.TabIndex = 10
         Me.DateTimePicker1.Value = New Date(2016, 3, 8, 17, 44, 56, 0)
         '
-        'NameComboBox2
+        'ODNameComboBox3
         '
-        Me.NameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD3MembersBindingSource, "Name", True))
-        Me.NameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD3MembersBindingSource, "Name", True))
-        Me.NameComboBox2.DataSource = Me.OD_AOD_OD3MembersBindingSource
-        Me.NameComboBox2.DisplayMember = "Name"
-        Me.NameComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox2.FormattingEnabled = True
-        Me.NameComboBox2.Location = New System.Drawing.Point(94, 276)
-        Me.NameComboBox2.Name = "NameComboBox2"
-        Me.NameComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox2.TabIndex = 13
-        Me.NameComboBox2.ValueMember = "Name"
+        Me.ODNameComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD3MembersBindingSource, "Name", True))
+        Me.ODNameComboBox3.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD3MembersBindingSource, "Name", True))
+        Me.ODNameComboBox3.DataSource = Me.OD_AOD_OD3MembersBindingSource
+        Me.ODNameComboBox3.DisplayMember = "Name"
+        Me.ODNameComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ODNameComboBox3.FormattingEnabled = True
+        Me.ODNameComboBox3.Location = New System.Drawing.Point(94, 276)
+        Me.ODNameComboBox3.Name = "ODNameComboBox3"
+        Me.ODNameComboBox3.Size = New System.Drawing.Size(121, 21)
+        Me.ODNameComboBox3.TabIndex = 13
+        Me.ODNameComboBox3.ValueMember = "Name"
         '
         'OD_AOD_OD3MembersBindingSource
         '
@@ -787,19 +813,19 @@ Partial Class MainDataEntryForm
         Me.OD_AOD_OD3.DataSetName = "OD_AOD_OD3"
         Me.OD_AOD_OD3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'NameComboBox1
+        'ODNameComboBox2
         '
-        Me.NameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD2MembersBindingSource, "Name", True))
-        Me.NameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD2MembersBindingSource, "Name", True))
-        Me.NameComboBox1.DataSource = Me.OD_AOD_OD2MembersBindingSource
-        Me.NameComboBox1.DisplayMember = "Name"
-        Me.NameComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox1.FormattingEnabled = True
-        Me.NameComboBox1.Location = New System.Drawing.Point(94, 221)
-        Me.NameComboBox1.Name = "NameComboBox1"
-        Me.NameComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox1.TabIndex = 12
-        Me.NameComboBox1.ValueMember = "Name"
+        Me.ODNameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD2MembersBindingSource, "Name", True))
+        Me.ODNameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD2MembersBindingSource, "Name", True))
+        Me.ODNameComboBox2.DataSource = Me.OD_AOD_OD2MembersBindingSource
+        Me.ODNameComboBox2.DisplayMember = "Name"
+        Me.ODNameComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ODNameComboBox2.FormattingEnabled = True
+        Me.ODNameComboBox2.Location = New System.Drawing.Point(94, 221)
+        Me.ODNameComboBox2.Name = "ODNameComboBox2"
+        Me.ODNameComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ODNameComboBox2.TabIndex = 12
+        Me.ODNameComboBox2.ValueMember = "Name"
         '
         'OD_AOD_OD2MembersBindingSource
         '
@@ -811,19 +837,19 @@ Partial Class MainDataEntryForm
         Me.OD_AOD_OD2.DataSetName = "OD_AOD_OD2"
         Me.OD_AOD_OD2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'NameComboBox
+        'ODNameComboBox1
         '
-        Me.NameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD1MembersBindingSource, "Name", True))
-        Me.NameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD1MembersBindingSource, "Name", True))
-        Me.NameComboBox.DataSource = Me.OD_AOD_OD1MembersBindingSource
-        Me.NameComboBox.DisplayMember = "Name"
-        Me.NameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox.FormattingEnabled = True
-        Me.NameComboBox.Location = New System.Drawing.Point(94, 171)
-        Me.NameComboBox.Name = "NameComboBox"
-        Me.NameComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox.TabIndex = 11
-        Me.NameComboBox.ValueMember = "Name"
+        Me.ODNameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD1MembersBindingSource, "Name", True))
+        Me.ODNameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD1MembersBindingSource, "Name", True))
+        Me.ODNameComboBox1.DataSource = Me.OD_AOD_OD1MembersBindingSource
+        Me.ODNameComboBox1.DisplayMember = "Name"
+        Me.ODNameComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ODNameComboBox1.FormattingEnabled = True
+        Me.ODNameComboBox1.Location = New System.Drawing.Point(94, 171)
+        Me.ODNameComboBox1.Name = "ODNameComboBox1"
+        Me.ODNameComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ODNameComboBox1.TabIndex = 11
+        Me.ODNameComboBox1.ValueMember = "Name"
         '
         'OD_AOD_OD1MembersBindingSource
         '
@@ -839,12 +865,14 @@ Partial Class MainDataEntryForm
         '
         Me.TabPage2.AutoScroll = True
         Me.TabPage2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPage2.Controls.Add(Me.FlightsDataGridView)
+        Me.TabPage2.Controls.Add(Me.MASA_All_BindingNavigator1)
+        Me.TabPage2.Controls.Add(Me.SetTestValues2)
         Me.TabPage2.Controls.Add(Label16)
         Me.TabPage2.Controls.Add(Me.TempTextBox)
-        Me.TabPage2.Controls.Add(Me.BindingNavigator1)
-        Me.TabPage2.Controls.Add(Me.CheckBox2)
+        Me.TabPage2.Controls.Add(Me.RopeBreakCheckBox)
         Me.TabPage2.Controls.Add(Label15)
-        Me.TabPage2.Controls.Add(Me.NameComboBox12)
+        Me.TabPage2.Controls.Add(Me.PasengerNameComboBox)
         Me.TabPage2.Controls.Add(Label6)
         Me.TabPage2.Controls.Add(Me.ClearFormButton)
         Me.TabPage2.Controls.Add(Me.SaveFlightButton)
@@ -852,14 +880,14 @@ Partial Class MainDataEntryForm
         Me.TabPage2.Controls.Add(Label14)
         Me.TabPage2.Controls.Add(Label13)
         Me.TabPage2.Controls.Add(Label12)
-        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Controls.Add(Me.CostThisFlightTextBox)
         Me.TabPage2.Controls.Add(Label10)
-        Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.FlightDurationTextBox)
         Me.TabPage2.Controls.Add(NameLabel11)
-        Me.TabPage2.Controls.Add(Me.NameComboBox11)
+        Me.TabPage2.Controls.Add(Me.SecondCheckNameComboBox)
         Me.TabPage2.Controls.Add(Label9)
         Me.TabPage2.Controls.Add(Me.PercentOnFirstCheck)
-        Me.TabPage2.Controls.Add(Me.CheckBox1)
+        Me.TabPage2.Controls.Add(Me.SplitCostCheckBox)
         Me.TabPage2.Controls.Add(NameLabel10)
         Me.TabPage2.Controls.Add(Me.FirstNameOnCheckComboBox)
         Me.TabPage2.Controls.Add(Label8)
@@ -870,7 +898,7 @@ Partial Class MainDataEntryForm
         Me.TabPage2.Controls.Add(Aircraft_nameLabel2)
         Me.TabPage2.Controls.Add(Me.Aircraft_nameComboBox2)
         Me.TabPage2.Controls.Add(NameLabel9)
-        Me.TabPage2.Controls.Add(Me.NameComboBox9)
+        Me.TabPage2.Controls.Add(Me.InstructorNameComboBox)
         Me.TabPage2.Controls.Add(NameLabel8)
         Me.TabPage2.Controls.Add(Me.GliderPilotNameComboBox)
         Me.TabPage2.Controls.Add(Me.N_numberTextBox1)
@@ -887,228 +915,35 @@ Partial Class MainDataEntryForm
         '
         'TempTextBox
         '
-        Me.TempTextBox.Location = New System.Drawing.Point(700, 375)
+        Me.TempTextBox.BackColor = System.Drawing.SystemColors.Info
+        Me.TempTextBox.Location = New System.Drawing.Point(938, 29)
         Me.TempTextBox.Name = "TempTextBox"
         Me.TempTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TempTextBox.TabIndex = 67
         '
-        'BindingNavigator1
+        'RopeBreakCheckBox
         '
-        Me.BindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
-        Me.BindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.BindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
-        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ToolStripButton1, Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.PrintToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.toolStripSeparator1, Me.HelpToolStripButton})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(43, 465)
-        Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.BindingNavigator1.Name = "BindingNavigator1"
-        Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(474, 25)
-        Me.BindingNavigator1.TabIndex = 66
-        Me.BindingNavigator1.Text = "BindingNavigator1"
+        Me.RopeBreakCheckBox.AutoSize = True
+        Me.RopeBreakCheckBox.Location = New System.Drawing.Point(820, 111)
+        Me.RopeBreakCheckBox.Name = "RopeBreakCheckBox"
+        Me.RopeBreakCheckBox.Size = New System.Drawing.Size(83, 17)
+        Me.RopeBreakCheckBox.TabIndex = 43
+        Me.RopeBreakCheckBox.Text = "Rope Break"
+        Me.RopeBreakCheckBox.UseVisualStyleBackColor = True
         '
-        'BindingNavigatorAddNewItem
+        'PasengerNameComboBox
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        '
-        'NewToolStripButton
-        '
-        Me.NewToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.NewToolStripButton.Image = CType(resources.GetObject("NewToolStripButton.Image"), System.Drawing.Image)
-        Me.NewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.NewToolStripButton.Name = "NewToolStripButton"
-        Me.NewToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.NewToolStripButton.Text = "&New"
-        '
-        'OpenToolStripButton
-        '
-        Me.OpenToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OpenToolStripButton.Image = CType(resources.GetObject("OpenToolStripButton.Image"), System.Drawing.Image)
-        Me.OpenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.OpenToolStripButton.Name = "OpenToolStripButton"
-        Me.OpenToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.OpenToolStripButton.Text = "&Open"
-        '
-        'SaveToolStripButton
-        '
-        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
-        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.SaveToolStripButton.Text = "&Save"
-        '
-        'PrintToolStripButton
-        '
-        Me.PrintToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PrintToolStripButton.Image = CType(resources.GetObject("PrintToolStripButton.Image"), System.Drawing.Image)
-        Me.PrintToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PrintToolStripButton.Name = "PrintToolStripButton"
-        Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.PrintToolStripButton.Text = "&Print"
-        '
-        'toolStripSeparator
-        '
-        Me.toolStripSeparator.Name = "toolStripSeparator"
-        Me.toolStripSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'CutToolStripButton
-        '
-        Me.CutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CutToolStripButton.Image = CType(resources.GetObject("CutToolStripButton.Image"), System.Drawing.Image)
-        Me.CutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.CutToolStripButton.Name = "CutToolStripButton"
-        Me.CutToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.CutToolStripButton.Text = "C&ut"
-        '
-        'CopyToolStripButton
-        '
-        Me.CopyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CopyToolStripButton.Image = CType(resources.GetObject("CopyToolStripButton.Image"), System.Drawing.Image)
-        Me.CopyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.CopyToolStripButton.Name = "CopyToolStripButton"
-        Me.CopyToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.CopyToolStripButton.Text = "&Copy"
-        '
-        'PasteToolStripButton
-        '
-        Me.PasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PasteToolStripButton.Image = CType(resources.GetObject("PasteToolStripButton.Image"), System.Drawing.Image)
-        Me.PasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PasteToolStripButton.Name = "PasteToolStripButton"
-        Me.PasteToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.PasteToolStripButton.Text = "&Paste"
-        '
-        'toolStripSeparator1
-        '
-        Me.toolStripSeparator1.Name = "toolStripSeparator1"
-        Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'HelpToolStripButton
-        '
-        Me.HelpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.HelpToolStripButton.Image = CType(resources.GetObject("HelpToolStripButton.Image"), System.Drawing.Image)
-        Me.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.HelpToolStripButton.Name = "HelpToolStripButton"
-        Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.HelpToolStripButton.Text = "He&lp"
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(820, 111)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(83, 17)
-        Me.CheckBox2.TabIndex = 43
-        Me.CheckBox2.Text = "Rope Break"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'NameComboBox12
-        '
-        Me.NameComboBox12.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource8, "Name", True))
-        Me.NameComboBox12.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource10, "Name", True))
-        Me.NameComboBox12.DataSource = Me.MembersBindingSource9
-        Me.NameComboBox12.DisplayMember = "Name"
-        Me.NameComboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox12.FormattingEnabled = True
-        Me.NameComboBox12.Location = New System.Drawing.Point(297, 110)
-        Me.NameComboBox12.Name = "NameComboBox12"
-        Me.NameComboBox12.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox12.TabIndex = 37
-        Me.NameComboBox12.ValueMember = "Name"
+        Me.PasengerNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource8, "Name", True))
+        Me.PasengerNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource10, "Name", True))
+        Me.PasengerNameComboBox.DataSource = Me.MembersBindingSource9
+        Me.PasengerNameComboBox.DisplayMember = "Name"
+        Me.PasengerNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.PasengerNameComboBox.FormattingEnabled = True
+        Me.PasengerNameComboBox.Location = New System.Drawing.Point(297, 110)
+        Me.PasengerNameComboBox.Name = "PasengerNameComboBox"
+        Me.PasengerNameComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.PasengerNameComboBox.TabIndex = 37
+        Me.PasengerNameComboBox.ValueMember = "Name"
         '
         'MembersBindingSource8
         '
@@ -1190,35 +1025,35 @@ Partial Class MainDataEntryForm
         Me.RadioButton1.Text = "Penalty"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'CostThisFlightTextBox
         '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(839, 250)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 53
+        Me.CostThisFlightTextBox.Enabled = False
+        Me.CostThisFlightTextBox.Location = New System.Drawing.Point(839, 250)
+        Me.CostThisFlightTextBox.Name = "CostThisFlightTextBox"
+        Me.CostThisFlightTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.CostThisFlightTextBox.TabIndex = 53
         '
-        'TextBox1
+        'FlightDurationTextBox
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(564, 163)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(57, 20)
-        Me.TextBox1.TabIndex = 49
+        Me.FlightDurationTextBox.Enabled = False
+        Me.FlightDurationTextBox.Location = New System.Drawing.Point(564, 163)
+        Me.FlightDurationTextBox.Name = "FlightDurationTextBox"
+        Me.FlightDurationTextBox.Size = New System.Drawing.Size(57, 20)
+        Me.FlightDurationTextBox.TabIndex = 49
         '
-        'NameComboBox11
+        'SecondCheckNameComboBox
         '
-        Me.NameComboBox11.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource3, "Name", True))
-        Me.NameComboBox11.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource14, "Name", True))
-        Me.NameComboBox11.DataSource = Me.MembersBindingSource13
-        Me.NameComboBox11.DisplayMember = "Name"
-        Me.NameComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox11.FormattingEnabled = True
-        Me.NameComboBox11.Location = New System.Drawing.Point(434, 162)
-        Me.NameComboBox11.Name = "NameComboBox11"
-        Me.NameComboBox11.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox11.TabIndex = 48
-        Me.NameComboBox11.ValueMember = "Name"
+        Me.SecondCheckNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource3, "Name", True))
+        Me.SecondCheckNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource14, "Name", True))
+        Me.SecondCheckNameComboBox.DataSource = Me.MembersBindingSource13
+        Me.SecondCheckNameComboBox.DisplayMember = "Name"
+        Me.SecondCheckNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.SecondCheckNameComboBox.FormattingEnabled = True
+        Me.SecondCheckNameComboBox.Location = New System.Drawing.Point(434, 162)
+        Me.SecondCheckNameComboBox.Name = "SecondCheckNameComboBox"
+        Me.SecondCheckNameComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.SecondCheckNameComboBox.TabIndex = 48
+        Me.SecondCheckNameComboBox.ValueMember = "Name"
         '
         'MembersBindingSource3
         '
@@ -1247,15 +1082,15 @@ Partial Class MainDataEntryForm
         Me.PercentOnFirstCheck.Size = New System.Drawing.Size(63, 20)
         Me.PercentOnFirstCheck.TabIndex = 46
         '
-        'CheckBox1
+        'SplitCostCheckBox
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(191, 163)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(76, 17)
-        Me.CheckBox1.TabIndex = 45
-        Me.CheckBox1.Text = "Split Cost?"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.SplitCostCheckBox.AutoSize = True
+        Me.SplitCostCheckBox.Location = New System.Drawing.Point(191, 163)
+        Me.SplitCostCheckBox.Name = "SplitCostCheckBox"
+        Me.SplitCostCheckBox.Size = New System.Drawing.Size(76, 17)
+        Me.SplitCostCheckBox.TabIndex = 45
+        Me.SplitCostCheckBox.Text = "Split Cost?"
+        Me.SplitCostCheckBox.UseVisualStyleBackColor = True
         '
         'FirstNameOnCheckComboBox
         '
@@ -1351,19 +1186,19 @@ Partial Class MainDataEntryForm
         Me.AircraftBindingSource1.DataMember = "Aircraft"
         Me.AircraftBindingSource1.DataSource = Me.NewFlights_Glider
         '
-        'NameComboBox9
+        'InstructorNameComboBox
         '
-        Me.NameComboBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource1, "Name", True))
-        Me.NameComboBox9.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource7, "Name", True))
-        Me.NameComboBox9.DataSource = Me.MembersBindingSource6
-        Me.NameComboBox9.DisplayMember = "Name"
-        Me.NameComboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.NameComboBox9.FormattingEnabled = True
-        Me.NameComboBox9.Location = New System.Drawing.Point(170, 111)
-        Me.NameComboBox9.Name = "NameComboBox9"
-        Me.NameComboBox9.Size = New System.Drawing.Size(121, 21)
-        Me.NameComboBox9.TabIndex = 36
-        Me.NameComboBox9.ValueMember = "Name"
+        Me.InstructorNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MembersBindingSource1, "Name", True))
+        Me.InstructorNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource7, "Name", True))
+        Me.InstructorNameComboBox.DataSource = Me.MembersBindingSource6
+        Me.InstructorNameComboBox.DisplayMember = "Name"
+        Me.InstructorNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.InstructorNameComboBox.FormattingEnabled = True
+        Me.InstructorNameComboBox.Location = New System.Drawing.Point(170, 111)
+        Me.InstructorNameComboBox.Name = "InstructorNameComboBox"
+        Me.InstructorNameComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.InstructorNameComboBox.TabIndex = 36
+        Me.InstructorNameComboBox.ValueMember = "Name"
         '
         'MembersBindingSource1
         '
@@ -1838,6 +1673,339 @@ Partial Class MainDataEntryForm
         Me.MASA_allDataSetTableAdapterManager6.MembersTableAdapter = Nothing
         Me.MASA_allDataSetTableAdapterManager6.UpdateOrder = Masa_ver5.MASA_allDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'SetTestValues2
+        '
+        Me.SetTestValues2.BackColor = System.Drawing.Color.GreenYellow
+        Me.SetTestValues2.Location = New System.Drawing.Point(802, 26)
+        Me.SetTestValues2.Name = "SetTestValues2"
+        Me.SetTestValues2.Size = New System.Drawing.Size(119, 23)
+        Me.SetTestValues2.TabIndex = 69
+        Me.SetTestValues2.Text = "Set Test Values"
+        Me.SetTestValues2.UseVisualStyleBackColor = False
+        '
+        'SetTestValues
+        '
+        Me.SetTestValues.BackColor = System.Drawing.Color.GreenYellow
+        Me.SetTestValues.Location = New System.Drawing.Point(777, 438)
+        Me.SetTestValues.Name = "SetTestValues"
+        Me.SetTestValues.Size = New System.Drawing.Size(141, 23)
+        Me.SetTestValues.TabIndex = 100
+        Me.SetTestValues.Text = "Set Test Values"
+        Me.SetTestValues.UseVisualStyleBackColor = False
+        '
+        'MASA_All_BindingNavigator1
+        '
+        Me.MASA_All_BindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.MASA_All_BindingNavigator1.BindingSource = Me.MASA_allDataSetFlightsBindingSource
+        Me.MASA_All_BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
+        Me.MASA_All_BindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.MASA_All_BindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
+        Me.MASA_All_BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.SaveToolStripButton, Me.toolStripSeparator, Me.HelpToolStripButton})
+        Me.MASA_All_BindingNavigator1.Location = New System.Drawing.Point(45, 222)
+        Me.MASA_All_BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.MASA_All_BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.MASA_All_BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.MASA_All_BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.MASA_All_BindingNavigator1.Name = "MASA_All_BindingNavigator1"
+        Me.MASA_All_BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
+        Me.MASA_All_BindingNavigator1.Size = New System.Drawing.Size(307, 25)
+        Me.MASA_All_BindingNavigator1.TabIndex = 70
+        Me.MASA_All_BindingNavigator1.Text = "MASA All BindingNavigator"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'SaveToolStripButton
+        '
+        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripButton.Name = "SaveToolStripButton"
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.SaveToolStripButton.Text = "&Save"
+        '
+        'toolStripSeparator
+        '
+        Me.toolStripSeparator.Name = "toolStripSeparator"
+        Me.toolStripSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'HelpToolStripButton
+        '
+        Me.HelpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.HelpToolStripButton.Image = CType(resources.GetObject("HelpToolStripButton.Image"), System.Drawing.Image)
+        Me.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.HelpToolStripButton.Name = "HelpToolStripButton"
+        Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.HelpToolStripButton.Text = "He&lp"
+        '
+        'FlightsDataGridView
+        '
+        Me.FlightsDataGridView.AutoGenerateColumns = False
+        Me.FlightsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.FlightsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewCheckBoxColumn2, Me.DataGridViewTextBoxColumn27})
+        Me.FlightsDataGridView.DataSource = Me.MASA_allDataSetFlightsBindingSource
+        Me.FlightsDataGridView.Location = New System.Drawing.Point(17, 335)
+        Me.FlightsDataGridView.Name = "FlightsDataGridView"
+        Me.FlightsDataGridView.Size = New System.Drawing.Size(1021, 292)
+        Me.FlightsDataGridView.TabIndex = 70
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Flight_refnum"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Flight_refnum"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Glider_Pilot_Name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Glider_Pilot_Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Instructor_name"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Instructor_name"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Passenger_name"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Passenger_name"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "OD1"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "OD1"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "OD2"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "OD2"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "OD3"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "OD3"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "AOD1"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "AOD1"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "AOD2"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "AOD2"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "TowPilot1"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "TowPilot1"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "TowPilot2"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "TowPilot2"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "TowPilot3"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "TowPilot3"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "TowPlane1"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "TowPlane1"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "TowPlane2"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "TowPlane2"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.DataPropertyName = "Date"
+        Me.DataGridViewTextBoxColumn15.HeaderText = "Date"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "Glider_takeoff_time"
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Glider_takeoff_time"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "Glider_landing_time"
+        Me.DataGridViewTextBoxColumn17.HeaderText = "Glider_landing_time"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.DataPropertyName = "Tow_takeoff_time"
+        Me.DataGridViewTextBoxColumn18.HeaderText = "Tow_takeoff_time"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        Me.DataGridViewTextBoxColumn19.DataPropertyName = "Tow_landing_time"
+        Me.DataGridViewTextBoxColumn19.HeaderText = "Tow_landing_time"
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        Me.DataGridViewTextBoxColumn20.DataPropertyName = "Altitude_towed"
+        Me.DataGridViewTextBoxColumn20.HeaderText = "Altitude_towed"
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        Me.DataGridViewTextBoxColumn21.DataPropertyName = "Rope_break"
+        Me.DataGridViewTextBoxColumn21.HeaderText = "Rope_break"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.DataPropertyName = "Airport_name"
+        Me.DataGridViewTextBoxColumn22.HeaderText = "Airport_name"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        '
+        'DataGridViewTextBoxColumn23
+        '
+        Me.DataGridViewTextBoxColumn23.DataPropertyName = "Flight_minutes"
+        Me.DataGridViewTextBoxColumn23.HeaderText = "Flight_minutes"
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        '
+        'DataGridViewTextBoxColumn24
+        '
+        Me.DataGridViewTextBoxColumn24.DataPropertyName = "First_name_on_invoice"
+        Me.DataGridViewTextBoxColumn24.HeaderText = "First_name_on_invoice"
+        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "Split_cost"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Split_cost"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        Me.DataGridViewTextBoxColumn25.DataPropertyName = "Percent_1st_check"
+        Me.DataGridViewTextBoxColumn25.HeaderText = "Percent_1st_check"
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        '
+        'DataGridViewTextBoxColumn26
+        '
+        Me.DataGridViewTextBoxColumn26.DataPropertyName = "Second_name_on_invoice"
+        Me.DataGridViewTextBoxColumn26.HeaderText = "Second_name_on_invoice"
+        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        '
+        'DataGridViewCheckBoxColumn2
+        '
+        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "Penalty_charge"
+        Me.DataGridViewCheckBoxColumn2.HeaderText = "Penalty_charge"
+        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.DataPropertyName = "Cost_this_flight"
+        Me.DataGridViewTextBoxColumn27.HeaderText = "Cost_this_flight"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        '
         'MainDataEntryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1869,9 +2037,6 @@ Partial Class MainDataEntryForm
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.BindingNavigator1.ResumeLayout(False)
-        Me.BindingNavigator1.PerformLayout()
         CType(Me.MembersBindingSource8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NewFlights_Passenger, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1915,6 +2080,10 @@ Partial Class MainDataEntryForm
         CType(Me.Not_usedOD_AOD_AirportBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MASA_allDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MASA_allDataSetFlightsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MASA_All_BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MASA_All_BindingNavigator1.ResumeLayout(False)
+        Me.MASA_All_BindingNavigator1.PerformLayout()
+        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1929,28 +2098,28 @@ Partial Class MainDataEntryForm
     Friend WithEvents OD_AOD_OD1MembersBindingSource As BindingSource
     Friend WithEvents OD_AOD_OD1MembersTableAdapter As OD_AOD_OD1TableAdapters.MembersTableAdapter
     Friend WithEvents OD_AOD_OD1TableAdapterManager As OD_AOD_OD1TableAdapters.TableAdapterManager
-    Friend WithEvents NameComboBox As ComboBox
+    Friend WithEvents ODNameComboBox1 As ComboBox
     Friend WithEvents OD_AOD_OD2 As OD_AOD_OD2
     Friend WithEvents OD_AOD_OD2MembersBindingSource As BindingSource
     Friend WithEvents OD_AOD_OD2MembersTableAdapter As OD_AOD_OD2TableAdapters.MembersTableAdapter
     Friend WithEvents OD_AOD_OD2TableAdapterManager As OD_AOD_OD2TableAdapters.TableAdapterManager
-    Friend WithEvents NameComboBox1 As ComboBox
+    Friend WithEvents ODNameComboBox2 As ComboBox
     Friend WithEvents OD_AOD_OD3 As OD_AOD_OD3
     Friend WithEvents OD_AOD_OD3MembersBindingSource As BindingSource
     Friend WithEvents OD_AOD_OD3MembersTableAdapter As OD_AOD_OD3TableAdapters.MembersTableAdapter
     Friend WithEvents OD_AOD_OD3TableAdapterManager As OD_AOD_OD3TableAdapters.TableAdapterManager
-    Friend WithEvents NameComboBox2 As ComboBox
+    Friend WithEvents ODNameComboBox3 As ComboBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents OD_AOD_AOD1 As OD_AOD_AOD1
     Friend WithEvents OD_AOD_AOD1MembersBindingSource As BindingSource
     Friend WithEvents OD_AOD_AOD1MembersTableAdapter As OD_AOD_AOD1TableAdapters.MembersTableAdapter
     Friend WithEvents OD_AOD_AOD1TableAdapterManager As OD_AOD_AOD1TableAdapters.TableAdapterManager
-    Friend WithEvents NameComboBox3 As ComboBox
+    Friend WithEvents AODNameComboBox1 As ComboBox
     Friend WithEvents OD_AOD_AOD2 As OD_AOD_AOD2
     Friend WithEvents OD_AOD_AOD2MembersBindingSource As BindingSource
     Friend WithEvents OD_AOD_AOD2MembersTableAdapter As OD_AOD_AOD2TableAdapters.MembersTableAdapter
     Friend WithEvents OD_AOD_AOD2TableAdapterManager As OD_AOD_AOD2TableAdapters.TableAdapterManager
-    Friend WithEvents NameComboBox4 As ComboBox
+    Friend WithEvents AODNameComboBox2 As ComboBox
     Friend WithEvents OD_AOD_Tow1 As OD_AOD_Tow1
     Friend WithEvents OD_AOD_Tow1MembersBindingSource As BindingSource
     Friend WithEvents OD_AOD_Tow1MembersTableAdapter As OD_AOD_Tow1TableAdapters.MembersTableAdapter
@@ -2004,7 +2173,7 @@ Partial Class MainDataEntryForm
     Friend WithEvents MembersBindingSource1 As BindingSource
     Friend WithEvents MembersTableAdapter1 As NewFlights_InstructorTableAdapters.MembersTableAdapter
     Friend WithEvents TableAdapterManager1 As NewFlights_InstructorTableAdapters.TableAdapterManager
-    Friend WithEvents NameComboBox9 As ComboBox
+    Friend WithEvents InstructorNameComboBox As ComboBox
     Friend WithEvents NewFlights_Glider As NewFlights_Glider
     Friend WithEvents AircraftBindingSource As BindingSource
     Friend WithEvents AircraftTableAdapter As NewFlights_GliderTableAdapters.AircraftTableAdapter
@@ -2018,15 +2187,15 @@ Partial Class MainDataEntryForm
     Friend WithEvents MembersTableAdapter2 As NewFlights_PutOnCheckTableAdapters.MembersTableAdapter
     Friend WithEvents TableAdapterManager3 As NewFlights_PutOnCheckTableAdapters.TableAdapterManager
     Friend WithEvents PercentOnFirstCheck As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents SplitCostCheckBox As CheckBox
     Friend WithEvents FirstNameOnCheckComboBox As ComboBox
     Friend WithEvents NewFlights_PutSecondNameOnCheck As NewFlights_PutSecondNameOnCheck
     Friend WithEvents MembersBindingSource3 As BindingSource
     Friend WithEvents MembersTableAdapter3 As NewFlights_PutSecondNameOnCheckTableAdapters.MembersTableAdapter
     Friend WithEvents TableAdapterManager4 As NewFlights_PutSecondNameOnCheckTableAdapters.TableAdapterManager
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents NameComboBox11 As ComboBox
+    Friend WithEvents CostThisFlightTextBox As TextBox
+    Friend WithEvents FlightDurationTextBox As TextBox
+    Friend WithEvents SecondCheckNameComboBox As ComboBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
@@ -2042,7 +2211,7 @@ Partial Class MainDataEntryForm
     Friend WithEvents MembersBindingSource8 As BindingSource
     Friend WithEvents MembersTableAdapter4 As NewFlights_PassengerTableAdapters.MembersTableAdapter
     Friend WithEvents TableAdapterManager5 As NewFlights_PassengerTableAdapters.TableAdapterManager
-    Friend WithEvents NameComboBox12 As ComboBox
+    Friend WithEvents PasengerNameComboBox As ComboBox
     Friend WithEvents MembersBindingSource10 As BindingSource
     Friend WithEvents MembersBindingSource9 As BindingSource
     Friend WithEvents MembersBindingSource14 As BindingSource
@@ -2055,8 +2224,11 @@ Partial Class MainDataEntryForm
     Friend WithEvents MASA_allDataSetFlightsBindingSource As BindingSource
     Friend WithEvents MASA_allDataSetFlightsTableAdapter As MASA_allDataSetTableAdapters.FlightsTableAdapter
     Friend WithEvents MASA_allDataSetTableAdapterManager6 As MASA_allDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents BindingNavigator1 As BindingNavigator
+    Friend WithEvents RopeBreakCheckBox As CheckBox
+    Friend WithEvents TempTextBox As TextBox
+    Friend WithEvents SetTestValues2 As Button
+    Friend WithEvents SetTestValues As Button
+    Friend WithEvents MASA_All_BindingNavigator1 As BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
@@ -2068,16 +2240,37 @@ Partial Class MainDataEntryForm
     Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents ToolStripButton1 As ToolStripButton
-    Friend WithEvents NewToolStripButton As ToolStripButton
-    Friend WithEvents OpenToolStripButton As ToolStripButton
     Friend WithEvents SaveToolStripButton As ToolStripButton
-    Friend WithEvents PrintToolStripButton As ToolStripButton
     Friend WithEvents toolStripSeparator As ToolStripSeparator
-    Friend WithEvents CutToolStripButton As ToolStripButton
-    Friend WithEvents CopyToolStripButton As ToolStripButton
-    Friend WithEvents PasteToolStripButton As ToolStripButton
-    Friend WithEvents toolStripSeparator1 As ToolStripSeparator
     Friend WithEvents HelpToolStripButton As ToolStripButton
-    Friend WithEvents TempTextBox As TextBox
+    Friend WithEvents FlightsDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
 End Class
