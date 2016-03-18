@@ -171,6 +171,8 @@
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+        'experimental save the data code
+        MASA_allDataSetFlightsTableAdapter.Update(MASA_allDataSet.Flights)
 
     End Sub
 
