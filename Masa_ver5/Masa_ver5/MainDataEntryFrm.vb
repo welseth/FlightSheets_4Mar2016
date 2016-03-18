@@ -172,7 +172,52 @@
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
         'experimental save the data code
+        'Start adding save-combobox-by-combobox code here.
+        '
+        MASA_allDataSetFlightsTableAdapter.Insert(
+            GliderPilotNameComboBox.SelectedIndex,
+            InstructorNameComboBox.SelectedIndex,
+            PasengerNameComboBox.SelectedIndex,
+            ODNameComboBox1.SelectedIndex,
+            ODNameComboBox2.SelectedIndex,
+            ODNameComboBox3.SelectedIndex,
+            AODNameComboBox1.SelectedIndex,
+            AODNameComboBox2.SelectedIndex,
+            TowPilotNameComboBox5.SelectedIndex,
+            TowPilotNameComboBox5.SelectedIndex,
+            TowPilotNameComboBox5.SelectedIndex,
+            Aircraft_nameComboBox.SelectedIndex,
+            Aircraft_nameComboBox.SelectedIndex,
+            DateTimePicker1.Value,
+            LandingTimePicker.Value - TakeOffTimePicker.Value,
+            LandingTimePicker.Value - TakeOffTimePicker.Value,
+            LandingTimePicker.Value - TakeOffTimePicker.Value,
+            LandingTimePicker.Value - TakeOffTimePicker.Value,
+            TowAltitude.Text,
+            RopeBreakCheckBox.Checked,
+            Airport_nameComboBox.SelectedIndex,
+            LandingTimePicker.Value - TakeOffTimePicker.Value,
+
+
+            
+)
+
         MASA_allDataSetFlightsTableAdapter.Update(MASA_allDataSet.Flights)
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        'Change to the "second tab" when the user wants to enter Flight Data.
+        TabControl1.SelectedIndex = 1
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        TabControl1.SelectedIndex = 2
+
+    End Sub
+
+    Private Sub LandingTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles LandingTimePicker.ValueChanged
 
     End Sub
 
