@@ -3,8 +3,8 @@
 
 
     Private Sub MainDataEntryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'MASA_allDataSet.Flights' table. You can move, or remove it, as needed.
-        Me.MASA_allDataSetFlightsTableAdapter.Fill(Me.MASA_allDataSet.Flights)
+        'TODO: This line of code loads data into the 'MASA_allDataSet2.Flights' table. You can move, or remove it, as needed.
+        Me.MASA_allDataSet_2_FlightsTableAdapter.Fill(Me.MASA_allDataSet2.Flights)
         'TODO: This line of code loads data into the 'NewFlights_Passenger.Members' table. You can move, or remove it, as needed.
         Me.MembersTableAdapter4.Fill(Me.NewFlights_Passenger.Members)
         'TODO: This line of code loads data into the 'NewFlights_PutSecondNameOnCheck.Members' table. You can move, or remove it, as needed.
@@ -124,7 +124,7 @@
         SecondCheckNameComboBox.SelectedValue = -1
         FlightDurationTextBox.Text = ""
         TowAltitude.Text = ""
-        RadioButton1.Checked = False
+        PenaltyRadioButton.Checked = False
         RadioButton2.Checked = False
         CostThisFlightTextBox.Text = ""
         RopeBreakCheckBox.Checked = False
@@ -132,9 +132,9 @@
 
         Debug.WriteLine("Completed zeroing.")
 
-            'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
-            'I can grab that value and display it.  OK to delete when done.
-            TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
+        'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
+        'I can grab that value and display it.  OK to delete when done.
+        TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
 
     End Sub
 
@@ -151,7 +151,7 @@
         SecondCheckNameComboBox.SelectedIndex = 7
         FlightDurationTextBox.Text = "1:20"
         TowAltitude.Text = "3000"
-        RadioButton1.Checked = True
+        PenaltyRadioButton.Checked = True
         RadioButton2.Checked = False
         CostThisFlightTextBox.Text = "120.00"
         RopeBreakCheckBox.Checked = True
@@ -170,12 +170,17 @@
 
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs)
         'experimental save the data code
         'Start adding save-combobox-by-combobox code here.
         '
-        MASA_allDataSetFlightsTableAdapter.Insert(
+        Dim FlightDuration As Int32
+        FlightDuration = DateDiff(DateInterval.Second, TakeOffTimePicker.Value, LandingTimePicker.Value)
+
+
+        MASA_allDataSet_2_FlightsTableAdapter.Insert(
             GliderPilotNameComboBox.SelectedIndex,
+            Aircraft_nameComboBox2.SelectedIndex,
             InstructorNameComboBox.SelectedIndex,
             PasengerNameComboBox.SelectedIndex,
             ODNameComboBox1.SelectedIndex,
@@ -189,20 +194,23 @@
             Aircraft_nameComboBox.SelectedIndex,
             Aircraft_nameComboBox.SelectedIndex,
             DateTimePicker1.Value,
-            LandingTimePicker.Value - TakeOffTimePicker.Value,
-            LandingTimePicker.Value - TakeOffTimePicker.Value,
-            LandingTimePicker.Value - TakeOffTimePicker.Value,
-            LandingTimePicker.Value - TakeOffTimePicker.Value,
+            FlightDuration,
+            FlightDuration,
+            FlightDuration,
+            FlightDuration,
             TowAltitude.Text,
             RopeBreakCheckBox.Checked,
             Airport_nameComboBox.SelectedIndex,
-            LandingTimePicker.Value - TakeOffTimePicker.Value,
-
-
-            
+            FlightDuration,
+            FirstNameOnCheckComboBox.SelectedIndex,
+            SplitCostCheckBox.Checked,
+            PercentOnFirstCheck.Text,
+            SecondCheckNameComboBox.SelectedIndex,
+            PenaltyRadioButton.Checked,
+            CostThisFlightTextBox.Text
 )
 
-        MASA_allDataSetFlightsTableAdapter.Update(MASA_allDataSet.Flights)
+        MASA_allDataSet_2_FlightsTableAdapter.Update(MASA_allDataSet2.Flights)
 
     End Sub
 
@@ -217,9 +225,6 @@
 
     End Sub
 
-    Private Sub LandingTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles LandingTimePicker.ValueChanged
-
-    End Sub
 
 
 

@@ -131,6 +131,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MASA_allDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MASA_allDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MASA_allDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -287,6 +292,17 @@
     </None>
     <None Include="MASA_allDataSet.xss">
       <DependentUpon>MASA_allDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MASA_allDataSet2.xsc">
+      <DependentUpon>MASA_allDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MASA_allDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MASA_allDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MASA_allDataSet2.xss">
+      <DependentUpon>MASA_allDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Masa_ver5_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
