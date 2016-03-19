@@ -1,5 +1,6 @@
 ﻿Public Class MainDataEntryForm
 
+#Const Still_debugging = True   'set this to "True" while working on the program, set to "False" when deploying
 
 
     Private Sub MainDataEntryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -66,11 +67,13 @@
         Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
     End Sub
 
+#If still_debugging = True Then
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
         ' debug item: this just does a quick debug.print with the index of the current selected tab
         Dim TabIndexValue As Integer
         TabIndexValue = TabControl1.SelectedIndex
         Debug.WriteLine("You are in the TabControl.SelectedIndexChanged event. TabIndex:  " & TabIndexValue)
+
 
     End Sub
 
@@ -169,6 +172,7 @@
         Airport_nameComboBox.SelectedIndex = 2
 
     End Sub
+#End If  'end of conditional compilation for "debugging helper items"
 
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
