@@ -150,6 +150,23 @@ Partial Class MainDataEntryForm
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.MASA_allDataSet2_FlightsBindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.MASA_allDataSet_2_FlightsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MASA_allDataSet2 = New Masa_ver5.MASA_allDataSet2()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.FlightsDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -181,8 +198,6 @@ Partial Class MainDataEntryForm
         Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MASA_allDataSet_2_FlightsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MASA_allDataSet2 = New Masa_ver5.MASA_allDataSet2()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SetTestValues2 = New System.Windows.Forms.Button()
         Me.TempTextBox = New System.Windows.Forms.TextBox()
@@ -204,7 +219,7 @@ Partial Class MainDataEntryForm
         Me.FirstNameOnCheckComboBox = New System.Windows.Forms.ComboBox()
         Me.LandingTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.TakeOffTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Aircraft_nameComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Glider_nameComboBox = New System.Windows.Forms.ComboBox()
         Me.InstructorNameComboBox = New System.Windows.Forms.ComboBox()
         Me.GliderPilotNameComboBox = New System.Windows.Forms.ComboBox()
         Me.Aircraft_nameComboBox = New System.Windows.Forms.ComboBox()
@@ -222,21 +237,6 @@ Partial Class MainDataEntryForm
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.MASA_allDataSet_2_FlightsTableAdapter = New Masa_ver5.MASA_allDataSet2TableAdapters.FlightsTableAdapter()
         Me.MASA_allDataSet_2_TableAdapterManager = New Masa_ver5.MASA_allDataSet2TableAdapters.TableAdapterManager()
-        Me.MASA_allDataSet2_FlightsBindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.toolStripSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
         NameLabel5 = New System.Windows.Forms.Label()
         Aircraft_nameLabel = New System.Windows.Forms.Label()
         NameLabel8 = New System.Windows.Forms.Label()
@@ -316,14 +316,14 @@ Partial Class MainDataEntryForm
         Me.TabPage4.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MASA_allDataSet2_FlightsBindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.SuspendLayout()
         CType(Me.MASA_allDataSet_2_FlightsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MASA_allDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        CType(Me.MASA_allDataSet2_FlightsBindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.SuspendLayout()
         Me.SuspendLayout()
         '
         'NameLabel5
@@ -1202,7 +1202,7 @@ Partial Class MainDataEntryForm
         Me.TabPage2.Controls.Add(Label7)
         Me.TabPage2.Controls.Add(Me.TakeOffTimePicker)
         Me.TabPage2.Controls.Add(Aircraft_nameLabel2)
-        Me.TabPage2.Controls.Add(Me.Aircraft_nameComboBox2)
+        Me.TabPage2.Controls.Add(Me.Glider_nameComboBox)
         Me.TabPage2.Controls.Add(NameLabel9)
         Me.TabPage2.Controls.Add(Me.InstructorNameComboBox)
         Me.TabPage2.Controls.Add(NameLabel8)
@@ -1217,6 +1217,143 @@ Partial Class MainDataEntryForm
         Me.TabPage2.Size = New System.Drawing.Size(1129, 553)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
+        '
+        'MASA_allDataSet2_FlightsBindingNavigator1
+        '
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.BindingSource = Me.MASA_allDataSet_2_FlightsBindingSource
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.CountItem = Me.BindingNavigatorCountItem
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.SaveToolStripButton, Me.toolStripSeparator, Me.HelpToolStripButton})
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.Location = New System.Drawing.Point(103, 256)
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.Name = "MASA_allDataSet2_FlightsBindingNavigator1"
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.Size = New System.Drawing.Size(307, 25)
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.TabIndex = 72
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'MASA_allDataSet_2_FlightsBindingSource
+        '
+        Me.MASA_allDataSet_2_FlightsBindingSource.DataMember = "Flights"
+        Me.MASA_allDataSet_2_FlightsBindingSource.DataSource = Me.MASA_allDataSet2
+        '
+        'MASA_allDataSet2
+        '
+        Me.MASA_allDataSet2.DataSetName = "MASA_allDataSet2"
+        Me.MASA_allDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'SaveToolStripButton
+        '
+        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripButton.Name = "SaveToolStripButton"
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.SaveToolStripButton.Text = "&Save"
+        '
+        'toolStripSeparator
+        '
+        Me.toolStripSeparator.Name = "toolStripSeparator"
+        Me.toolStripSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'HelpToolStripButton
+        '
+        Me.HelpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.HelpToolStripButton.Image = CType(resources.GetObject("HelpToolStripButton.Image"), System.Drawing.Image)
+        Me.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.HelpToolStripButton.Name = "HelpToolStripButton"
+        Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.HelpToolStripButton.Text = "He&lp"
         '
         'FlightsDataGridView
         '
@@ -1409,16 +1546,6 @@ Partial Class MainDataEntryForm
         Me.DataGridViewTextBoxColumn28.DataPropertyName = "Cost_this_flight"
         Me.DataGridViewTextBoxColumn28.HeaderText = "Cost_this_flight"
         Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
-        '
-        'MASA_allDataSet_2_FlightsBindingSource
-        '
-        Me.MASA_allDataSet_2_FlightsBindingSource.DataMember = "Flights"
-        Me.MASA_allDataSet_2_FlightsBindingSource.DataSource = Me.MASA_allDataSet2
-        '
-        'MASA_allDataSet2
-        '
-        Me.MASA_allDataSet2.DataSetName = "MASA_allDataSet2"
-        Me.MASA_allDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Button2
         '
@@ -1628,19 +1755,19 @@ Partial Class MainDataEntryForm
         Me.TakeOffTimePicker.TabIndex = 39
         Me.TakeOffTimePicker.Value = New Date(2016, 3, 18, 19, 8, 34, 0)
         '
-        'Aircraft_nameComboBox2
+        'Glider_nameComboBox
         '
-        Me.Aircraft_nameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource, "Aircraft_name", True))
-        Me.Aircraft_nameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.AircraftBindingSource2, "Aircraft_name", True))
-        Me.Aircraft_nameComboBox2.DataSource = Me.AircraftBindingSource1
-        Me.Aircraft_nameComboBox2.DisplayMember = "Aircraft_name"
-        Me.Aircraft_nameComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Aircraft_nameComboBox2.FormattingEnabled = True
-        Me.Aircraft_nameComboBox2.Location = New System.Drawing.Point(408, 98)
-        Me.Aircraft_nameComboBox2.Name = "Aircraft_nameComboBox2"
-        Me.Aircraft_nameComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.Aircraft_nameComboBox2.TabIndex = 38
-        Me.Aircraft_nameComboBox2.ValueMember = "Aircraft_name"
+        Me.Glider_nameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource, "Aircraft_name", True))
+        Me.Glider_nameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.AircraftBindingSource2, "Aircraft_name", True))
+        Me.Glider_nameComboBox.DataSource = Me.AircraftBindingSource1
+        Me.Glider_nameComboBox.DisplayMember = "Aircraft_name"
+        Me.Glider_nameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Glider_nameComboBox.FormattingEnabled = True
+        Me.Glider_nameComboBox.Location = New System.Drawing.Point(408, 98)
+        Me.Glider_nameComboBox.Name = "Glider_nameComboBox"
+        Me.Glider_nameComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Glider_nameComboBox.TabIndex = 38
+        Me.Glider_nameComboBox.ValueMember = "Aircraft_name"
         '
         'InstructorNameComboBox
         '
@@ -1862,133 +1989,6 @@ Partial Class MainDataEntryForm
         Me.MASA_allDataSet_2_TableAdapterManager.MembersTableAdapter = Nothing
         Me.MASA_allDataSet_2_TableAdapterManager.UpdateOrder = Masa_ver5.MASA_allDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'MASA_allDataSet2_FlightsBindingNavigator1
-        '
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.BindingSource = Me.MASA_allDataSet_2_FlightsBindingSource
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.CountItem = Me.BindingNavigatorCountItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.SaveToolStripButton, Me.toolStripSeparator, Me.HelpToolStripButton})
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.Location = New System.Drawing.Point(318, 279)
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.Name = "MASA_allDataSet2_FlightsBindingNavigator1"
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.Size = New System.Drawing.Size(307, 25)
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.TabIndex = 72
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'SaveToolStripButton
-        '
-        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
-        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.SaveToolStripButton.Text = "&Save"
-        '
-        'toolStripSeparator
-        '
-        Me.toolStripSeparator.Name = "toolStripSeparator"
-        Me.toolStripSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'HelpToolStripButton
-        '
-        Me.HelpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.HelpToolStripButton.Image = CType(resources.GetObject("HelpToolStripButton.Image"), System.Drawing.Image)
-        Me.HelpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.HelpToolStripButton.Name = "HelpToolStripButton"
-        Me.HelpToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.HelpToolStripButton.Text = "He&lp"
-        '
         'MainDataEntryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2056,17 +2056,17 @@ Partial Class MainDataEntryForm
         Me.TabPage3.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MASA_allDataSet2_FlightsBindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.ResumeLayout(False)
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.PerformLayout()
         CType(Me.MASA_allDataSet_2_FlightsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MASA_allDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
-        CType(Me.MASA_allDataSet2_FlightsBindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.ResumeLayout(False)
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2192,7 +2192,7 @@ Partial Class MainDataEntryForm
     Friend WithEvents FirstNameOnCheckComboBox As ComboBox
     Friend WithEvents LandingTimePicker As DateTimePicker
     Friend WithEvents TakeOffTimePicker As DateTimePicker
-    Friend WithEvents Aircraft_nameComboBox2 As ComboBox
+    Friend WithEvents Glider_nameComboBox As ComboBox
     Friend WithEvents InstructorNameComboBox As ComboBox
     Friend WithEvents GliderPilotNameComboBox As ComboBox
     Friend WithEvents Aircraft_nameComboBox As ComboBox

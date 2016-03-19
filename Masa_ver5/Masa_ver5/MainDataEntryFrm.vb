@@ -70,7 +70,7 @@
         ' debug item: this just does a quick debug.print with the index of the current selected tab
         Dim TabIndexValue As Integer
         TabIndexValue = TabControl1.SelectedIndex
-        Debug.Print("You are in the TabControl.SelectedIndexChanged event. TabIndex:  " & TabIndexValue)
+        Debug.WriteLine("You are in the TabControl.SelectedIndexChanged event. TabIndex:  " & TabIndexValue)
 
     End Sub
 
@@ -120,7 +120,7 @@
         SplitCostCheckBox.Checked = False
         PasengerNameComboBox.SelectedValue = -1
         PercentOnFirstCheck.Text = ""
-        Aircraft_nameComboBox2.SelectedValue = -1
+        Glider_nameComboBox.SelectedValue = -1
         SecondCheckNameComboBox.SelectedValue = -1
         FlightDurationTextBox.Text = ""
         TowAltitude.Text = ""
@@ -147,7 +147,7 @@
         SplitCostCheckBox.Checked = True
         PasengerNameComboBox.SelectedIndex = 5
         PercentOnFirstCheck.Text = "44"
-        Aircraft_nameComboBox2.SelectedIndex = 6
+        Glider_nameComboBox.SelectedIndex = 6
         SecondCheckNameComboBox.SelectedIndex = 7
         FlightDurationTextBox.Text = "1:20"
         TowAltitude.Text = "3000"
@@ -171,16 +171,34 @@
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        'Change to the "second tab" when the user wants to enter Flight Data.
+        TabControl1.SelectedIndex = 1
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        TabControl1.SelectedIndex = 2
+
+    End Sub
+
+    Private Sub SaveToolStripButton_Click_1(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
         'experimental save the data code
         'Start adding save-combobox-by-combobox code here.
         '
+
+        Debug.WriteLine("INside click 1")
+        Debug.WriteLine("Save button was clicked.")
         Dim FlightDuration As Int32
         FlightDuration = DateDiff(DateInterval.Second, TakeOffTimePicker.Value, LandingTimePicker.Value)
 
 
         MASA_allDataSet_2_FlightsTableAdapter.Insert(
             GliderPilotNameComboBox.SelectedIndex,
-            Aircraft_nameComboBox2.SelectedIndex,
+            Glider_nameComboBox.SelectedIndex,
             InstructorNameComboBox.SelectedIndex,
             PasengerNameComboBox.SelectedIndex,
             ODNameComboBox1.SelectedIndex,
@@ -214,16 +232,10 @@
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        'Change to the "second tab" when the user wants to enter Flight Data.
-        TabControl1.SelectedIndex = 1
 
-    End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        TabControl1.SelectedIndex = 2
 
-    End Sub
+
 
 
 
