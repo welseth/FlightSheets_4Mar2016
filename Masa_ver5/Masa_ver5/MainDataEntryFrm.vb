@@ -140,7 +140,7 @@
 
     Private Sub SetTestValues_Click(sender As Object, e As EventArgs) Handles SetTestValues2.Click
         TowPilotNameComboBox5.SelectedIndex = 8
-        GliderPilotNameComboBox.SelectedIndex = 1
+        GliderPilotNameComboBox.SelectedIndex = 2
         FirstNameOnCheckComboBox.SelectedIndex = 2
         Aircraft_nameComboBox.SelectedIndex = 3
         InstructorNameComboBox.SelectedIndex = 4
@@ -170,9 +170,6 @@
 
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         'Change to the "second tab" when the user wants to enter Flight Data.
@@ -181,6 +178,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'Change to the "third tab" when the user is ready to print reports.
         TabControl1.SelectedIndex = 2
 
     End Sub
@@ -190,10 +188,12 @@
         'Start adding save-combobox-by-combobox code here.
         '
 
-        Debug.WriteLine("INside click 1")
-        Debug.WriteLine("Save button was clicked.")
+        Debug.WriteLine("ToolBar Save button was clicked.")
         Dim FlightDuration As Int32
         FlightDuration = DateDiff(DateInterval.Second, TakeOffTimePicker.Value, LandingTimePicker.Value)
+        FlightDuration = DirectCast(FlightDuration, Int32)
+        Debug.WriteLine("Flightduration:  " & FlightDuration)  'print the calculated duration 
+        Debug.WriteLine("OK, now starting the TableAdapter.Insert:")
 
 
         MASA_allDataSet_2_FlightsTableAdapter.Insert(
@@ -227,7 +227,15 @@
             PenaltyRadioButton.Checked,
             CostThisFlightTextBox.Text
 )
+        Debug.WriteLine("Now STARTING end edit, update all, update")
 
+        Me.Validate()
+        ' Me.OD_AOD_OD1MembersBindingSource.EndEdit()
+        ' Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
+
+
+        Me.MASA_allDataSet_2_FlightsBindingSource.EndEdit()
+        Me.MASA_allDataSet_2_TableAdapterManager.UpdateAll(Me.MASA_allDataSet2)
         MASA_allDataSet_2_FlightsTableAdapter.Update(MASA_allDataSet2.Flights)
 
     End Sub

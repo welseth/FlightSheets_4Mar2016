@@ -472,7 +472,7 @@ Partial Class MainDataEntryForm
         'Label16
         '
         Label16.AutoSize = True
-        Label16.Location = New System.Drawing.Point(972, 13)
+        Label16.Location = New System.Drawing.Point(783, 252)
         Label16.Name = "Label16"
         Label16.Size = New System.Drawing.Size(118, 13)
         Label16.TabIndex = 68
@@ -1549,7 +1549,7 @@ Partial Class MainDataEntryForm
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(889, 279)
+        Me.Button2.Location = New System.Drawing.Point(889, 286)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(103, 37)
         Me.Button2.TabIndex = 71
@@ -1559,7 +1559,7 @@ Partial Class MainDataEntryForm
         'SetTestValues2
         '
         Me.SetTestValues2.BackColor = System.Drawing.Color.GreenYellow
-        Me.SetTestValues2.Location = New System.Drawing.Point(850, 29)
+        Me.SetTestValues2.Location = New System.Drawing.Point(655, 263)
         Me.SetTestValues2.Name = "SetTestValues2"
         Me.SetTestValues2.Size = New System.Drawing.Size(119, 23)
         Me.SetTestValues2.TabIndex = 69
@@ -1569,7 +1569,7 @@ Partial Class MainDataEntryForm
         'TempTextBox
         '
         Me.TempTextBox.BackColor = System.Drawing.SystemColors.Info
-        Me.TempTextBox.Location = New System.Drawing.Point(975, 32)
+        Me.TempTextBox.Location = New System.Drawing.Point(783, 268)
         Me.TempTextBox.Name = "TempTextBox"
         Me.TempTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TempTextBox.TabIndex = 67
@@ -1639,7 +1639,7 @@ Partial Class MainDataEntryForm
         '
         'ClearFormButton
         '
-        Me.ClearFormButton.Location = New System.Drawing.Point(780, 279)
+        Me.ClearFormButton.Location = New System.Drawing.Point(780, 286)
         Me.ClearFormButton.Name = "ClearFormButton"
         Me.ClearFormButton.Size = New System.Drawing.Size(103, 37)
         Me.ClearFormButton.TabIndex = 58
@@ -1648,7 +1648,7 @@ Partial Class MainDataEntryForm
         '
         'SaveFlightButton
         '
-        Me.SaveFlightButton.Location = New System.Drawing.Point(671, 279)
+        Me.SaveFlightButton.Location = New System.Drawing.Point(671, 286)
         Me.SaveFlightButton.Name = "SaveFlightButton"
         Me.SaveFlightButton.Size = New System.Drawing.Size(103, 37)
         Me.SaveFlightButton.TabIndex = 55
@@ -1864,7 +1864,7 @@ Partial Class MainDataEntryForm
         'SetTestValues
         '
         Me.SetTestValues.BackColor = System.Drawing.Color.GreenYellow
-        Me.SetTestValues.Location = New System.Drawing.Point(832, 16)
+        Me.SetTestValues.Location = New System.Drawing.Point(666, 79)
         Me.SetTestValues.Name = "SetTestValues"
         Me.SetTestValues.Size = New System.Drawing.Size(141, 23)
         Me.SetTestValues.TabIndex = 100
