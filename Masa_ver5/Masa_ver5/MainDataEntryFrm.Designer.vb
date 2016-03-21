@@ -219,7 +219,7 @@ Partial Class MainDataEntryForm
         Me.FirstNameOnCheckComboBox = New System.Windows.Forms.ComboBox()
         Me.LandingTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.TakeOffTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Glider_nameComboBox = New System.Windows.Forms.ComboBox()
+        Me.GliderNameComboBox = New System.Windows.Forms.ComboBox()
         Me.InstructorNameComboBox = New System.Windows.Forms.ComboBox()
         Me.GliderPilotNameComboBox = New System.Windows.Forms.ComboBox()
         Me.Aircraft_nameComboBox = New System.Windows.Forms.ComboBox()
@@ -1202,7 +1202,7 @@ Partial Class MainDataEntryForm
         Me.TabPage2.Controls.Add(Label7)
         Me.TabPage2.Controls.Add(Me.TakeOffTimePicker)
         Me.TabPage2.Controls.Add(Aircraft_nameLabel2)
-        Me.TabPage2.Controls.Add(Me.Glider_nameComboBox)
+        Me.TabPage2.Controls.Add(Me.GliderNameComboBox)
         Me.TabPage2.Controls.Add(NameLabel9)
         Me.TabPage2.Controls.Add(Me.InstructorNameComboBox)
         Me.TabPage2.Controls.Add(NameLabel8)
@@ -1233,7 +1233,7 @@ Partial Class MainDataEntryForm
         Me.MASA_allDataSet2_FlightsBindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_allDataSet2_FlightsBindingNavigator1.Name = "MASA_allDataSet2_FlightsBindingNavigator1"
         Me.MASA_allDataSet2_FlightsBindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.Size = New System.Drawing.Size(307, 25)
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.Size = New System.Drawing.Size(306, 25)
         Me.MASA_allDataSet2_FlightsBindingNavigator1.TabIndex = 72
         Me.MASA_allDataSet2_FlightsBindingNavigator1.Text = "BindingNavigator1"
         '
@@ -1259,7 +1259,7 @@ Partial Class MainDataEntryForm
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -1755,19 +1755,19 @@ Partial Class MainDataEntryForm
         Me.TakeOffTimePicker.TabIndex = 39
         Me.TakeOffTimePicker.Value = New Date(2016, 3, 18, 19, 8, 34, 0)
         '
-        'Glider_nameComboBox
+        'GliderNameComboBox
         '
-        Me.Glider_nameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource, "Aircraft_name", True))
-        Me.Glider_nameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.AircraftBindingSource2, "Aircraft_name", True))
-        Me.Glider_nameComboBox.DataSource = Me.AircraftBindingSource1
-        Me.Glider_nameComboBox.DisplayMember = "Aircraft_name"
-        Me.Glider_nameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Glider_nameComboBox.FormattingEnabled = True
-        Me.Glider_nameComboBox.Location = New System.Drawing.Point(408, 98)
-        Me.Glider_nameComboBox.Name = "Glider_nameComboBox"
-        Me.Glider_nameComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.Glider_nameComboBox.TabIndex = 38
-        Me.Glider_nameComboBox.ValueMember = "Aircraft_name"
+        Me.GliderNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource, "Aircraft_name", True))
+        Me.GliderNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.AircraftBindingSource2, "Aircraft_name", True))
+        Me.GliderNameComboBox.DataSource = Me.AircraftBindingSource1
+        Me.GliderNameComboBox.DisplayMember = "Aircraft_name"
+        Me.GliderNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.GliderNameComboBox.FormattingEnabled = True
+        Me.GliderNameComboBox.Location = New System.Drawing.Point(408, 98)
+        Me.GliderNameComboBox.Name = "GliderNameComboBox"
+        Me.GliderNameComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.GliderNameComboBox.TabIndex = 38
+        Me.GliderNameComboBox.ValueMember = "N-number"
         '
         'InstructorNameComboBox
         '
@@ -2192,7 +2192,7 @@ Partial Class MainDataEntryForm
     Friend WithEvents FirstNameOnCheckComboBox As ComboBox
     Friend WithEvents LandingTimePicker As DateTimePicker
     Friend WithEvents TakeOffTimePicker As DateTimePicker
-    Friend WithEvents Glider_nameComboBox As ComboBox
+    Friend WithEvents GliderNameComboBox As ComboBox
     Friend WithEvents InstructorNameComboBox As ComboBox
     Friend WithEvents GliderPilotNameComboBox As ComboBox
     Friend WithEvents Aircraft_nameComboBox As ComboBox

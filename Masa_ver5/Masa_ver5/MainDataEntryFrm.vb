@@ -80,6 +80,83 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles SaveFlightButton.Click
         'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
         'I can grab that value and display it.  OK to delete when done.
+        'the below lines are the .update technique as outlined by MicroSoft
+        '
+
+        Dim FlightDuration As Int32
+        FlightDuration = DateDiff(DateInterval.Second, TakeOffTimePicker.Value, LandingTimePicker.Value)
+        FlightDuration = DirectCast(FlightDuration, Int32)
+        Debug.WriteLine("Flightduration:  " & FlightDuration)  'print the calculated duration 
+        Debug.WriteLine("OK, now starting the TableAdapter.Insert:")
+
+        'MASA_allDataSet_2_FlightsTableAdapter.Insert(
+        '            GliderPilotNameComboBox.SelectedIndex,
+        '            Glider_nameComboBox.SelectedIndex,
+        '            InstructorNameComboBox.SelectedIndex,
+        '            PasengerNameComboBox.SelectedIndex,
+        '            ODNameComboBox1.SelectedIndex,
+        '            ODNameComboBox2.SelectedIndex,
+        '            ODNameComboBox3.SelectedIndex,
+        '            AODNameComboBox1.SelectedIndex,
+        '            AODNameComboBox2.SelectedIndex,
+        '            TowPilotNameComboBox5.SelectedIndex,
+        '            TowPilotNameComboBox5.SelectedIndex,
+        '            TowPilotNameComboBox5.SelectedIndex,
+        '            Aircraft_nameComboBox.SelectedIndex,
+        '            Aircraft_nameComboBox.SelectedIndex,
+        '            DateTimePicker1.Value,
+        '            FlightDuration,
+        '            FlightDuration,
+        '            FlightDuration,
+        '            FlightDuration,
+        '            TowAltitude.Text,
+        '            RopeBreakCheckBox.Checked,
+        '            Airport_nameComboBox.SelectedIndex,
+        '            FlightDuration,
+        '            FirstNameOnCheckComboBox.SelectedIndex,
+        '            SplitCostCheckBox.Checked,
+        '            PercentOnFirstCheck.Text,
+        '            SecondCheckNameComboBox.SelectedIndex,
+        '            PenaltyRadioButton.Checked,
+        '            CostThisFlightTextBox.Text
+        ')
+
+        Dim newFlightRow As MASA_allDataSet2.FlightsRow
+        newFlightRow = Me.MASA_allDataSet2.Flights.NewFlightsRow()
+        ' load the new data into each field in the new record
+        Debug.Print("GliderPilotNameComboBox.SelectedIndex " & GliderPilotNameComboBox.SelectedIndex)
+        Debug.Print("GliderNameComboBox.SelectedIndex " & GliderNameComboBox.SelectedIndex)
+
+
+
+
+
+
+
+        newFlightRow.Glider_Pilot_Name = GliderPilotNameComboBox.SelectedIndex
+        'newFlightRow.Glider = GliderNameComboBox.SelectedIndex
+        'newFlightRow.Instructor_name = InstructorNameComboBox.SelectedIndex
+        'newFlightRow.Passenger_name = PasengerNameComboBox.SelectedIndex
+
+        'newFlightRow.OD1 = ODNameComboBox1.SelectedIndex
+        'newFlightRow.OD2 = ODNameComboBox2.SelectedIndex
+        'newFlightRow.OD3 = ODNameComboBox3.SelectedIndex
+        'newFlightRow.AOD1 = AODNameComboBox1.SelectedIndex
+        'newFlightRow.AOD2 = AODNameComboBox2.SelectedIndex
+        'newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
+
+        'TowPilotNameComboBox5.SelectedIndex,
+        'TowPilotNameComboBox5.SelectedIndex,
+
+
+        'add the row to the table
+        Me.MASA_allDataSet2.Flights.Rows.Add(newFlightRow)
+        'save the new row to the DB
+        Me.MASA_allDataSet_2_FlightsTableAdapter.Update(Me.MASA_allDataSet2.Flights)
+
+
+
+        Debug.WriteLine("Now STARTING end edit, update all, update")
         TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
     End Sub
 
@@ -123,7 +200,7 @@
         SplitCostCheckBox.Checked = False
         PasengerNameComboBox.SelectedValue = -1
         PercentOnFirstCheck.Text = ""
-        Glider_nameComboBox.SelectedValue = -1
+        GliderNameComboBox.SelectedValue = -1
         SecondCheckNameComboBox.SelectedValue = -1
         FlightDurationTextBox.Text = ""
         TowAltitude.Text = ""
@@ -150,7 +227,7 @@
         SplitCostCheckBox.Checked = True
         PasengerNameComboBox.SelectedIndex = 5
         PercentOnFirstCheck.Text = "44"
-        Glider_nameComboBox.SelectedIndex = 6
+        GliderNameComboBox.SelectedIndex = 6
         SecondCheckNameComboBox.SelectedIndex = 7
         FlightDurationTextBox.Text = "1:20"
         TowAltitude.Text = "3000"
@@ -193,11 +270,7 @@
         '
 
         Debug.WriteLine("ToolBar Save button was clicked.")
-        Dim FlightDuration As Int32
-        FlightDuration = DateDiff(DateInterval.Second, TakeOffTimePicker.Value, LandingTimePicker.Value)
-        FlightDuration = DirectCast(FlightDuration, Int32)
-        Debug.WriteLine("Flightduration:  " & FlightDuration)  'print the calculated duration 
-        Debug.WriteLine("OK, now starting the TableAdapter.Insert:")
+
 
         'below .insert gives an error, I'm re-writing the code to try the .update technique instead, following the MicroSoft example fully.
         '        MASA_allDataSet_2_FlightsTableAdapter.Insert(
@@ -232,22 +305,7 @@
         '            CostThisFlightTextBox.Text
         ')
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-        'the below lines are the .update technique as outlined by MicroSoft
-        '
-        Dim newFlightRow As MASA_allDataSet2.FlightsRow
-        newFlightRow = Me.MASA_allDataSet2.Flights.NewFlightsRow()
-        ' load the new data into each field in the new record
-        newFlightRow.Glider_Pilot_Name = 3
 
-
-        'add the row to the table
-        Me.MASA_allDataSet2.Flights.Rows.Add(newFlightRow)
-        'save the new row to the DB
-        Me.MASA_allDataSet_2_FlightsTableAdapter.Update(Me.MASA_allDataSet2.Flights)
-
-
-
-        Debug.WriteLine("Now STARTING end edit, update all, update")
 
         'Me.Validate()
         ' Me.OD_AOD_OD1MembersBindingSource.EndEdit()
