@@ -199,48 +199,64 @@
         Debug.WriteLine("Flightduration:  " & FlightDuration)  'print the calculated duration 
         Debug.WriteLine("OK, now starting the TableAdapter.Insert:")
 
+        'below .insert gives an error, I'm re-writing the code to try the .update technique instead, following the MicroSoft example fully.
+        '        MASA_allDataSet_2_FlightsTableAdapter.Insert(
+        '            GliderPilotNameComboBox.SelectedIndex,
+        '            Glider_nameComboBox.SelectedIndex,
+        '            InstructorNameComboBox.SelectedIndex,
+        '            PasengerNameComboBox.SelectedIndex,
+        '            ODNameComboBox1.SelectedIndex,
+        '            ODNameComboBox2.SelectedIndex,
+        '            ODNameComboBox3.SelectedIndex,
+        '            AODNameComboBox1.SelectedIndex,
+        '            AODNameComboBox2.SelectedIndex,
+        '            TowPilotNameComboBox5.SelectedIndex,
+        '            TowPilotNameComboBox5.SelectedIndex,
+        '            TowPilotNameComboBox5.SelectedIndex,
+        '            Aircraft_nameComboBox.SelectedIndex,
+        '            Aircraft_nameComboBox.SelectedIndex,
+        '            DateTimePicker1.Value,
+        '            FlightDuration,
+        '            FlightDuration,
+        '            FlightDuration,
+        '            FlightDuration,
+        '            TowAltitude.Text,
+        '            RopeBreakCheckBox.Checked,
+        '            Airport_nameComboBox.SelectedIndex,
+        '            FlightDuration,
+        '            FirstNameOnCheckComboBox.SelectedIndex,
+        '            SplitCostCheckBox.Checked,
+        '            PercentOnFirstCheck.Text,
+        '            SecondCheckNameComboBox.SelectedIndex,
+        '            PenaltyRadioButton.Checked,
+        '            CostThisFlightTextBox.Text
+        ')
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        'the below lines are the .update technique as outlined by MicroSoft
+        '
+        Dim newFlightRow As MASA_allDataSet2.FlightsRow
+        newFlightRow = Me.MASA_allDataSet2.Flights.NewFlightsRow()
+        ' load the new data into each field in the new record
+        newFlightRow.Glider_Pilot_Name = 3
 
-        MASA_allDataSet_2_FlightsTableAdapter.Insert(
-            GliderPilotNameComboBox.SelectedIndex,
-            Glider_nameComboBox.SelectedIndex,
-            InstructorNameComboBox.SelectedIndex,
-            PasengerNameComboBox.SelectedIndex,
-            ODNameComboBox1.SelectedIndex,
-            ODNameComboBox2.SelectedIndex,
-            ODNameComboBox3.SelectedIndex,
-            AODNameComboBox1.SelectedIndex,
-            AODNameComboBox2.SelectedIndex,
-            TowPilotNameComboBox5.SelectedIndex,
-            TowPilotNameComboBox5.SelectedIndex,
-            TowPilotNameComboBox5.SelectedIndex,
-            Aircraft_nameComboBox.SelectedIndex,
-            Aircraft_nameComboBox.SelectedIndex,
-            DateTimePicker1.Value,
-            FlightDuration,
-            FlightDuration,
-            FlightDuration,
-            FlightDuration,
-            TowAltitude.Text,
-            RopeBreakCheckBox.Checked,
-            Airport_nameComboBox.SelectedIndex,
-            FlightDuration,
-            FirstNameOnCheckComboBox.SelectedIndex,
-            SplitCostCheckBox.Checked,
-            PercentOnFirstCheck.Text,
-            SecondCheckNameComboBox.SelectedIndex,
-            PenaltyRadioButton.Checked,
-            CostThisFlightTextBox.Text
-)
+
+        'add the row to the table
+        Me.MASA_allDataSet2.Flights.Rows.Add(newFlightRow)
+        'save the new row to the DB
+        Me.MASA_allDataSet_2_FlightsTableAdapter.Update(Me.MASA_allDataSet2.Flights)
+
+
+
         Debug.WriteLine("Now STARTING end edit, update all, update")
 
-        Me.Validate()
+        'Me.Validate()
         ' Me.OD_AOD_OD1MembersBindingSource.EndEdit()
         ' Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
 
 
-        Me.MASA_allDataSet_2_FlightsBindingSource.EndEdit()
-        Me.MASA_allDataSet_2_TableAdapterManager.UpdateAll(Me.MASA_allDataSet2)
-        MASA_allDataSet_2_FlightsTableAdapter.Update(MASA_allDataSet2.Flights)
+        'Me.MASA_allDataSet_2_FlightsBindingSource.EndEdit()
+        'Me.MASA_allDataSet_2_TableAdapterManager.UpdateAll(Me.MASA_allDataSet2)
+        'MASA_allDataSet_2_FlightsTableAdapter.Update(MASA_allDataSet2.Flights)
 
     End Sub
 
