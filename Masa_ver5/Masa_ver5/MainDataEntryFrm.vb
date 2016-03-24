@@ -170,24 +170,22 @@
         End Try
 
         Debug.WriteLine("Now STARTING end edit, update all, update")
-        TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
+        TempTextBox.Text = TowPilotNameComboBox5.SelectedIndex
     End Sub
 
 
     Private Sub ClearFormButton_Click(sender As Object, e As EventArgs) Handles ClearFormButton.Click
         'Reset all the selected comboBoxes back to "blank"
-        'TowPilotNameComboBox5.SelectedIndex = -1
-        'SetContentsBackToNothing()
-        ''''''''''''''''''''''''''''''
-        ''''''''''''''''''''''''''''''''''  This WORKS!!
-        ''''''''''''''''''''''''''''''''''  Need to verify it will grab ALL controls
-        ''''''''''''''''''''''''''''''''''  Need also to check for OTHER TYPES of controls and reset them to zero
+
+        ''''''''''''''''''''''''''''''  >>>>start of "this works" section.
+        ''''''''''''''''''''''''''''''''''
+        ''''''''''''''''''''''''''''''''''  This next commented-out code WORKS!!
+        ''''''''''''''''''''''''''''''''''  but it does NOT limit to the current tab, instead it clears EVERY 
+        ''''''''''''''''''''''''''''''''''  combobox on EVERY tab.  I'm saving it for possible future use, don't delete.
         '''''
         '''''Dim ctl As Control = Me.GetNextControl(Me, True) 'Get the first control in the tab order.
         ''''''Dim ctl As Control = Me.GetNextControl(ActiveForm, True) 'Get the first control in the tab order.
-
         '''''Debug.Write("Starting to zero out all the controls...       ")
-
         '''''Do Until ctl Is Nothing
         '''''    Do some stuff here, Use ctl as the object name.
         '''''    If (TypeOf ctl Is ComboBox) Then
@@ -195,26 +193,23 @@
         '''''        End If
         '''''        ctl = Me.GetNextControl(ctl, True) 'Get the next control in the tab order.
         '''''        ctl = Me.GetNextControl(ActiveForm, True) 'Get the next control in the tab order.
-
         '''''    Loop
         '''''   >>>END of "this works" section.
-
         '''''''''''''''''''''''''''''
-
         'To reset the form you need to list *every* box or object to be reset, and reset them individually.
-        '(I wasn't able to find the recursive function that could be LIMITED to just the current tabIndex.)
-        '(It ended up clearing the entire form, all of the tabs and couldn't be limtied.)
+        '(I wasn't able to find a *working* recursive function that could be LIMITED to *just* the current tabIndex.)
+        '(It ended up clearing the entire form, all of the tabs and couldn't be limited.)
 
-        TowPilotNameComboBox5.SelectedValue = 0
-        GliderPilotNameComboBox.SelectedValue = 0
-        FirstNameOnCheckComboBox.SelectedValue = 0
-        Aircraft_nameComboBox.SelectedValue = 0
-        InstructorNameComboBox.SelectedValue = 0
+        TowPilotNameComboBox5.SelectedIndex = 0
+        GliderPilotNameComboBox.SelectedIndex = 0
+        FirstNameOnCheckComboBox.SelectedIndex = 0
+        Aircraft_nameComboBox.SelectedIndex = 0
+        InstructorNameComboBox.SelectedIndex = 0
         SplitCostCheckBox.Checked = False
-        PasengerNameComboBox.SelectedValue = 0
+        PasengerNameComboBox.SelectedIndex = 0
         PercentOnFirstCheck.Text = vbNullChar
-        GliderNameComboBox.SelectedValue = 0
-        SecondCheckNameComboBox.SelectedValue = 0
+        GliderNameComboBox.SelectedIndex = 0
+        SecondCheckNameComboBox.SelectedIndex = 0
         FlightDurationTextBox.Text = vbNullChar
         TowAltitude.Text = vbNullChar
         PenaltyRadioButton.Checked = False
@@ -227,7 +222,7 @@
 
         'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
         'I can grab that value and display it.  OK to delete when done.
-        TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
+        TempTextBox.Text = TowPilotNameComboBox5.SelectedIndex
 
     End Sub
 
@@ -240,7 +235,7 @@
         SplitCostCheckBox.Checked = True
         PasengerNameComboBox.SelectedIndex = 5
         PercentOnFirstCheck.Text = "44"
-        GliderNameComboBox.SelectedIndex = 6
+        GliderNameComboBox.SelectedValue = 4
         SecondCheckNameComboBox.SelectedIndex = 7
         FlightDurationTextBox.Text = "1:20"
         TowAltitude.Text = "3000"
