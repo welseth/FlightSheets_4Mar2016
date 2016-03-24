@@ -1058,7 +1058,7 @@ Partial Class MainDataEntryForm
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1129, 553)
+        Me.TabPage5.Size = New System.Drawing.Size(1193, 553)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Admin Stuff"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -1129,7 +1129,7 @@ Partial Class MainDataEntryForm
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1129, 553)
+        Me.TabPage4.Size = New System.Drawing.Size(1193, 553)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Add Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -1150,7 +1150,7 @@ Partial Class MainDataEntryForm
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1129, 553)
+        Me.TabPage3.Size = New System.Drawing.Size(1193, 553)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Print Invoices"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -1214,7 +1214,7 @@ Partial Class MainDataEntryForm
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1129, 553)
+        Me.TabPage2.Size = New System.Drawing.Size(1193, 553)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         '
@@ -1363,7 +1363,7 @@ Partial Class MainDataEntryForm
         Me.FlightsDataGridView.DataSource = Me.MASA_allDataSet_2_FlightsBindingSource
         Me.FlightsDataGridView.Location = New System.Drawing.Point(26, 355)
         Me.FlightsDataGridView.Name = "FlightsDataGridView"
-        Me.FlightsDataGridView.Size = New System.Drawing.Size(1064, 220)
+        Me.FlightsDataGridView.Size = New System.Drawing.Size(1145, 185)
         Me.FlightsDataGridView.TabIndex = 71
         '
         'DataGridViewTextBoxColumn1
@@ -1630,7 +1630,6 @@ Partial Class MainDataEntryForm
         Me.PasengerNameComboBox.DataSource = Me.MembersBindingSource9
         Me.PasengerNameComboBox.DisplayMember = "Name"
         Me.PasengerNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.PasengerNameComboBox.FormattingEnabled = True
         Me.PasengerNameComboBox.Location = New System.Drawing.Point(271, 97)
         Me.PasengerNameComboBox.Name = "PasengerNameComboBox"
         Me.PasengerNameComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1704,7 +1703,6 @@ Partial Class MainDataEntryForm
         Me.SecondCheckNameComboBox.DataSource = Me.MembersBindingSource13
         Me.SecondCheckNameComboBox.DisplayMember = "Name"
         Me.SecondCheckNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.SecondCheckNameComboBox.FormattingEnabled = True
         Me.SecondCheckNameComboBox.Location = New System.Drawing.Point(408, 149)
         Me.SecondCheckNameComboBox.Name = "SecondCheckNameComboBox"
         Me.SecondCheckNameComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1728,7 +1726,6 @@ Partial Class MainDataEntryForm
         Me.FirstNameOnCheckComboBox.DataSource = Me.MembersBindingSource11
         Me.FirstNameOnCheckComboBox.DisplayMember = "Name"
         Me.FirstNameOnCheckComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.FirstNameOnCheckComboBox.FormattingEnabled = True
         Me.FirstNameOnCheckComboBox.Location = New System.Drawing.Point(17, 149)
         Me.FirstNameOnCheckComboBox.Name = "FirstNameOnCheckComboBox"
         Me.FirstNameOnCheckComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1757,12 +1754,11 @@ Partial Class MainDataEntryForm
         '
         'GliderNameComboBox
         '
-        Me.GliderNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource, "Aircraft_name", True))
         Me.GliderNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.AircraftBindingSource2, "Aircraft_name", True))
+        Me.GliderNameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource1, "Aircraft_name", True))
         Me.GliderNameComboBox.DataSource = Me.AircraftBindingSource1
         Me.GliderNameComboBox.DisplayMember = "Aircraft_name"
         Me.GliderNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.GliderNameComboBox.FormattingEnabled = True
         Me.GliderNameComboBox.Location = New System.Drawing.Point(408, 98)
         Me.GliderNameComboBox.Name = "GliderNameComboBox"
         Me.GliderNameComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1776,7 +1772,6 @@ Partial Class MainDataEntryForm
         Me.InstructorNameComboBox.DataSource = Me.MembersBindingSource6
         Me.InstructorNameComboBox.DisplayMember = "Name"
         Me.InstructorNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.InstructorNameComboBox.FormattingEnabled = True
         Me.InstructorNameComboBox.Location = New System.Drawing.Point(144, 98)
         Me.InstructorNameComboBox.Name = "InstructorNameComboBox"
         Me.InstructorNameComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1790,7 +1785,6 @@ Partial Class MainDataEntryForm
         Me.GliderPilotNameComboBox.DataSource = Me.MembersBindingSource4
         Me.GliderPilotNameComboBox.DisplayMember = "Name"
         Me.GliderPilotNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.GliderPilotNameComboBox.FormattingEnabled = True
         Me.GliderPilotNameComboBox.Location = New System.Drawing.Point(17, 98)
         Me.GliderPilotNameComboBox.Name = "GliderPilotNameComboBox"
         Me.GliderPilotNameComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1800,25 +1794,23 @@ Partial Class MainDataEntryForm
         'Aircraft_nameComboBox
         '
         Me.Aircraft_nameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_TowPlane1AircraftBindingSource, "Aircraft_name", True))
-        Me.Aircraft_nameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_TowPlane1AircraftBindingSource, "Aircraft_name", True))
+        Me.Aircraft_nameComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_TowPlane2AircraftBindingSource, "Aircraft_name", True))
         Me.Aircraft_nameComboBox.DataSource = Me.OD_AOD_TowPlane1AircraftBindingSource
         Me.Aircraft_nameComboBox.DisplayMember = "Aircraft_name"
         Me.Aircraft_nameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Aircraft_nameComboBox.FormattingEnabled = True
         Me.Aircraft_nameComboBox.Location = New System.Drawing.Point(144, 32)
         Me.Aircraft_nameComboBox.Name = "Aircraft_nameComboBox"
         Me.Aircraft_nameComboBox.Size = New System.Drawing.Size(121, 21)
         Me.Aircraft_nameComboBox.TabIndex = 33
-        Me.Aircraft_nameComboBox.ValueMember = "N-number"
+        Me.Aircraft_nameComboBox.ValueMember = "Aircraft_name"
         '
         'TowPilotNameComboBox5
         '
         Me.TowPilotNameComboBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_Tow1MembersBindingSource, "Name", True))
-        Me.TowPilotNameComboBox5.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_Tow1MembersBindingSource, "Name", True))
+        Me.TowPilotNameComboBox5.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_Tow2MembersBindingSource, "Name", True))
         Me.TowPilotNameComboBox5.DataSource = Me.OD_AOD_Tow1MembersBindingSource
         Me.TowPilotNameComboBox5.DisplayMember = "Name"
         Me.TowPilotNameComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.TowPilotNameComboBox5.FormattingEnabled = True
         Me.TowPilotNameComboBox5.Location = New System.Drawing.Point(17, 32)
         Me.TowPilotNameComboBox5.Name = "TowPilotNameComboBox5"
         Me.TowPilotNameComboBox5.Size = New System.Drawing.Size(121, 21)
@@ -1848,7 +1840,7 @@ Partial Class MainDataEntryForm
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1129, 553)
+        Me.TabPage1.Size = New System.Drawing.Size(1193, 553)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "OD/AOD/Tow Pilot Info"
         '
@@ -1878,7 +1870,6 @@ Partial Class MainDataEntryForm
         Me.Airport_nameComboBox.DataSource = Me.OD_AOD_AirportNameAirportBindingSource
         Me.Airport_nameComboBox.DisplayMember = "Airport_name"
         Me.Airport_nameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Airport_nameComboBox.FormattingEnabled = True
         Me.Airport_nameComboBox.Location = New System.Drawing.Point(386, 108)
         Me.Airport_nameComboBox.Name = "Airport_nameComboBox"
         Me.Airport_nameComboBox.Size = New System.Drawing.Size(121, 21)
@@ -1892,7 +1883,6 @@ Partial Class MainDataEntryForm
         Me.AODNameComboBox2.DataSource = Me.OD_AOD_AOD2MembersBindingSource
         Me.AODNameComboBox2.DisplayMember = "Name"
         Me.AODNameComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.AODNameComboBox2.FormattingEnabled = True
         Me.AODNameComboBox2.Location = New System.Drawing.Point(211, 158)
         Me.AODNameComboBox2.Name = "AODNameComboBox2"
         Me.AODNameComboBox2.Size = New System.Drawing.Size(121, 21)
@@ -1906,7 +1896,6 @@ Partial Class MainDataEntryForm
         Me.AODNameComboBox1.DataSource = Me.OD_AOD_AOD1MembersBindingSource
         Me.AODNameComboBox1.DisplayMember = "Name"
         Me.AODNameComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.AODNameComboBox1.FormattingEnabled = True
         Me.AODNameComboBox1.Location = New System.Drawing.Point(211, 108)
         Me.AODNameComboBox1.Name = "AODNameComboBox1"
         Me.AODNameComboBox1.Size = New System.Drawing.Size(121, 21)
@@ -1928,7 +1917,6 @@ Partial Class MainDataEntryForm
         Me.ODNameComboBox3.DataSource = Me.OD_AOD_OD3MembersBindingSource
         Me.ODNameComboBox3.DisplayMember = "Name"
         Me.ODNameComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ODNameComboBox3.FormattingEnabled = True
         Me.ODNameComboBox3.Location = New System.Drawing.Point(35, 213)
         Me.ODNameComboBox3.Name = "ODNameComboBox3"
         Me.ODNameComboBox3.Size = New System.Drawing.Size(121, 21)
@@ -1942,7 +1930,6 @@ Partial Class MainDataEntryForm
         Me.ODNameComboBox2.DataSource = Me.OD_AOD_OD2MembersBindingSource
         Me.ODNameComboBox2.DisplayMember = "Name"
         Me.ODNameComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ODNameComboBox2.FormattingEnabled = True
         Me.ODNameComboBox2.Location = New System.Drawing.Point(35, 158)
         Me.ODNameComboBox2.Name = "ODNameComboBox2"
         Me.ODNameComboBox2.Size = New System.Drawing.Size(121, 21)
@@ -1956,7 +1943,6 @@ Partial Class MainDataEntryForm
         Me.ODNameComboBox1.DataSource = Me.OD_AOD_OD1MembersBindingSource
         Me.ODNameComboBox1.DisplayMember = "Name"
         Me.ODNameComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ODNameComboBox1.FormattingEnabled = True
         Me.ODNameComboBox1.Location = New System.Drawing.Point(35, 108)
         Me.ODNameComboBox1.Name = "ODNameComboBox1"
         Me.ODNameComboBox1.Size = New System.Drawing.Size(121, 21)
@@ -1973,7 +1959,7 @@ Partial Class MainDataEntryForm
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1137, 579)
+        Me.TabControl1.Size = New System.Drawing.Size(1201, 579)
         Me.TabControl1.TabIndex = 0
         '
         'MASA_allDataSet_2_FlightsTableAdapter
@@ -1993,7 +1979,7 @@ Partial Class MainDataEntryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1161, 655)
+        Me.ClientSize = New System.Drawing.Size(1225, 655)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "MainDataEntryForm"
         Me.Text = "MASA - FlightSheets"

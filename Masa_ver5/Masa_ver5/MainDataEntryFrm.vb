@@ -131,9 +131,16 @@
 
 
 
-
+        newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
         newFlightRow.Glider_Pilot_Name = GliderPilotNameComboBox.SelectedIndex
+        newFlightRow.First_name_on_invoice = FirstNameOnCheckComboBox.SelectedIndex
+        newFlightRow.TowPlane1 = Aircraft_nameComboBox.SelectedIndex
+        newFlightRow.Instructor_name = InstructorNameComboBox.SelectedIndex
+
+
         newFlightRow.Glider = GliderNameComboBox.SelectedIndex
+
+
         'newFlightRow.Instructor_name = InstructorNameComboBox.SelectedIndex
         'newFlightRow.Passenger_name = PasengerNameComboBox.SelectedIndex
 
@@ -161,8 +168,6 @@
         Catch ex As Exception
             MessageBox.Show("Update failed  " & newFlightRow.Glider_Pilot_Name)
         End Try
-
-
 
         Debug.WriteLine("Now STARTING end edit, update all, update")
         TempTextBox.Text = TowPilotNameComboBox5.SelectedValue
@@ -200,16 +205,16 @@
         '(I wasn't able to find the recursive function that could be LIMITED to just the current tabIndex.)
         '(It ended up clearing the entire form, all of the tabs and couldn't be limtied.)
 
-        TowPilotNameComboBox5.SelectedValue = -1
-        GliderPilotNameComboBox.SelectedValue = -1
-        FirstNameOnCheckComboBox.SelectedValue = -1
-        Aircraft_nameComboBox.SelectedValue = -1
-        InstructorNameComboBox.SelectedValue = -1
+        TowPilotNameComboBox5.SelectedValue = 0
+        GliderPilotNameComboBox.SelectedValue = 0
+        FirstNameOnCheckComboBox.SelectedValue = 0
+        Aircraft_nameComboBox.SelectedValue = 0
+        InstructorNameComboBox.SelectedValue = 0
         SplitCostCheckBox.Checked = False
-        PasengerNameComboBox.SelectedValue = -1
+        PasengerNameComboBox.SelectedValue = 0
         PercentOnFirstCheck.Text = vbNullChar
-        GliderNameComboBox.SelectedValue = -1
-        SecondCheckNameComboBox.SelectedValue = -1
+        GliderNameComboBox.SelectedValue = 0
+        SecondCheckNameComboBox.SelectedValue = 0
         FlightDurationTextBox.Text = vbNullChar
         TowAltitude.Text = vbNullChar
         PenaltyRadioButton.Checked = False
@@ -325,11 +330,6 @@
         'MASA_allDataSet_2_FlightsTableAdapter.Update(MASA_allDataSet2.Flights)
 
     End Sub
-
-
-
-
-
 
 
 
