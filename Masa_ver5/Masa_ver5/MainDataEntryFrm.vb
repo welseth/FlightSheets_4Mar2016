@@ -124,9 +124,8 @@
         Dim newFlightRow As MASA_allDataSet2.FlightsRow
         newFlightRow = Me.MASA_allDataSet2.Flights.NewFlightsRow()
         ' load the new data into each field in the new record
-        Debug.Print("GliderPilotNameComboBox.SelectedIndex " & GliderPilotNameComboBox.SelectedIndex)
-        Debug.Print("GliderNameComboBox.SelectedIndex " & GliderNameComboBox.SelectedIndex)
-
+        Debug.Print("GliderPilotNameComboBox.SelectedIndex:  " & GliderPilotNameComboBox.SelectedIndex)
+        Debug.Print("GliderNameComboBox.SelectedIndex:  " & GliderNameComboBox.SelectedIndex)
 
 
 
@@ -134,7 +133,7 @@
 
 
         newFlightRow.Glider_Pilot_Name = GliderPilotNameComboBox.SelectedIndex
-        'newFlightRow.Glider = GliderNameComboBox.SelectedIndex
+        newFlightRow.Glider = GliderNameComboBox.SelectedIndex
         'newFlightRow.Instructor_name = InstructorNameComboBox.SelectedIndex
         'newFlightRow.Passenger_name = PasengerNameComboBox.SelectedIndex
 
@@ -150,9 +149,18 @@
 
 
         'add the row to the table
-        Me.MASA_allDataSet2.Flights.Rows.Add(newFlightRow)
+        Try
+            Me.MASA_allDataSet2.Flights.Rows.Add(newFlightRow)
+        Catch ex As Exception
+            MessageBox.Show("Add failed")
+        End Try
+
         'save the new row to the DB
-        Me.MASA_allDataSet_2_FlightsTableAdapter.Update(Me.MASA_allDataSet2.Flights)
+        Try
+            Me.MASA_allDataSet_2_FlightsTableAdapter.Update(Me.MASA_allDataSet2.Flights)
+        Catch ex As Exception
+            MessageBox.Show("Update failed  " & newFlightRow.Glider_Pilot_Name)
+        End Try
 
 
 
@@ -199,14 +207,14 @@
         InstructorNameComboBox.SelectedValue = -1
         SplitCostCheckBox.Checked = False
         PasengerNameComboBox.SelectedValue = -1
-        PercentOnFirstCheck.Text = ""
+        PercentOnFirstCheck.Text = vbNullChar
         GliderNameComboBox.SelectedValue = -1
         SecondCheckNameComboBox.SelectedValue = -1
-        FlightDurationTextBox.Text = ""
-        TowAltitude.Text = ""
+        FlightDurationTextBox.Text = vbNullChar
+        TowAltitude.Text = vbNullChar
         PenaltyRadioButton.Checked = False
         RadioButton2.Checked = False
-        CostThisFlightTextBox.Text = ""
+        CostThisFlightTextBox.Text = vbNullChar
         RopeBreakCheckBox.Checked = False
         TakeOffTimePicker.Value = Now
 
