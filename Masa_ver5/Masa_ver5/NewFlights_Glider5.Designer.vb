@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("MASA_allDataSet2"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("NewFlights_Glider5"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class MASA_allDataSet2
+Partial Public Class NewFlights_Glider5
     Inherits Global.System.Data.DataSet
     
     Private tableAircraft As AircraftDataTable
@@ -40,6 +40,8 @@ Partial Public Class MASA_allDataSet2
     Private relationFK_Flights_AOD2 As Global.System.Data.DataRelation
     
     Private relationFK_Flights_First_name_inv As Global.System.Data.DataRelation
+    
+    Private relationFK_Flights_Glider As Global.System.Data.DataRelation
     
     Private relationFK_Flights_Instructor As Global.System.Data.DataRelation
     
@@ -62,8 +64,6 @@ Partial Public Class MASA_allDataSet2
     Private relationFK_Flights_TowPlane1 As Global.System.Data.DataRelation
     
     Private relationFK_Flights_TowPlane2 As Global.System.Data.DataRelation
-    
-    Private relationFK_Flights_Glider As Global.System.Data.DataRelation
     
     Private relationFK_Passenger_name As Global.System.Data.DataRelation
     
@@ -207,7 +207,7 @@ Partial Public Class MASA_allDataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As MASA_allDataSet2 = CType(MyBase.Clone,MASA_allDataSet2)
+        Dim cln As NewFlights_Glider5 = CType(MyBase.Clone,NewFlights_Glider5)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -304,6 +304,7 @@ Partial Public Class MASA_allDataSet2
         Me.relationFK_Flights_AOD1 = Me.Relations("FK_Flights_AOD1")
         Me.relationFK_Flights_AOD2 = Me.Relations("FK_Flights_AOD2")
         Me.relationFK_Flights_First_name_inv = Me.Relations("FK_Flights_First_name_inv")
+        Me.relationFK_Flights_Glider = Me.Relations("FK_Flights_Glider")
         Me.relationFK_Flights_Instructor = Me.Relations("FK_Flights_Instructor")
         Me.relationFK_Flights_Name = Me.Relations("FK_Flights_Name")
         Me.relationFK_Flights_OD1 = Me.Relations("FK_Flights_OD1")
@@ -315,16 +316,15 @@ Partial Public Class MASA_allDataSet2
         Me.relationFK_Flights_TowPilot3 = Me.Relations("FK_Flights_TowPilot3")
         Me.relationFK_Flights_TowPlane1 = Me.Relations("FK_Flights_TowPlane1")
         Me.relationFK_Flights_TowPlane2 = Me.Relations("FK_Flights_TowPlane2")
-        Me.relationFK_Flights_Glider = Me.Relations("FK_Flights_Glider")
         Me.relationFK_Passenger_name = Me.Relations("FK_Passenger_name")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "MASA_allDataSet2"
+        Me.DataSetName = "NewFlights_Glider5"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/MASA_allDataSet2.xsd"
+        Me.Namespace = "http://tempuri.org/NewFlights_Glider5.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableAircraft = New AircraftDataTable()
@@ -343,6 +343,8 @@ Partial Public Class MASA_allDataSet2
         Me.Relations.Add(Me.relationFK_Flights_AOD2)
         Me.relationFK_Flights_First_name_inv = New Global.System.Data.DataRelation("FK_Flights_First_name_inv", New Global.System.Data.DataColumn() {Me.tableMembers.Member_refnumColumn}, New Global.System.Data.DataColumn() {Me.tableFlights.First_name_on_invoiceColumn}, false)
         Me.Relations.Add(Me.relationFK_Flights_First_name_inv)
+        Me.relationFK_Flights_Glider = New Global.System.Data.DataRelation("FK_Flights_Glider", New Global.System.Data.DataColumn() {Me.tableAircraft.Aircraft_refnumColumn}, New Global.System.Data.DataColumn() {Me.tableFlights.GliderColumn}, false)
+        Me.Relations.Add(Me.relationFK_Flights_Glider)
         Me.relationFK_Flights_Instructor = New Global.System.Data.DataRelation("FK_Flights_Instructor", New Global.System.Data.DataColumn() {Me.tableMembers.Member_refnumColumn}, New Global.System.Data.DataColumn() {Me.tableFlights.Instructor_nameColumn}, false)
         Me.Relations.Add(Me.relationFK_Flights_Instructor)
         Me.relationFK_Flights_Name = New Global.System.Data.DataRelation("FK_Flights_Name", New Global.System.Data.DataColumn() {Me.tableMembers.Member_refnumColumn}, New Global.System.Data.DataColumn() {Me.tableFlights.Glider_Pilot_NameColumn}, false)
@@ -365,8 +367,6 @@ Partial Public Class MASA_allDataSet2
         Me.Relations.Add(Me.relationFK_Flights_TowPlane1)
         Me.relationFK_Flights_TowPlane2 = New Global.System.Data.DataRelation("FK_Flights_TowPlane2", New Global.System.Data.DataColumn() {Me.tableAircraft.Aircraft_refnumColumn}, New Global.System.Data.DataColumn() {Me.tableFlights.TowPlane2Column}, false)
         Me.Relations.Add(Me.relationFK_Flights_TowPlane2)
-        Me.relationFK_Flights_Glider = New Global.System.Data.DataRelation("FK_Flights_Glider", New Global.System.Data.DataColumn() {Me.tableAircraft.Aircraft_refnumColumn}, New Global.System.Data.DataColumn() {Me.tableFlights.GliderColumn}, false)
-        Me.Relations.Add(Me.relationFK_Flights_Glider)
         Me.relationFK_Passenger_name = New Global.System.Data.DataRelation("FK_Passenger_name", New Global.System.Data.DataColumn() {Me.tableMembers.Member_refnumColumn}, New Global.System.Data.DataColumn() {Me.tableFlights.Passenger_nameColumn}, false)
         Me.Relations.Add(Me.relationFK_Passenger_name)
     End Sub
@@ -406,7 +406,7 @@ Partial Public Class MASA_allDataSet2
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As MASA_allDataSet2 = New MASA_allDataSet2()
+        Dim ds As NewFlights_Glider5 = New NewFlights_Glider5()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -816,7 +816,7 @@ Partial Public Class MASA_allDataSet2
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As MASA_allDataSet2 = New MASA_allDataSet2()
+            Dim ds As NewFlights_Glider5 = New NewFlights_Glider5()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1095,7 +1095,7 @@ Partial Public Class MASA_allDataSet2
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As MASA_allDataSet2 = New MASA_allDataSet2()
+            Dim ds As NewFlights_Glider5 = New NewFlights_Glider5()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1553,14 +1553,14 @@ Partial Public Class MASA_allDataSet2
                     ByVal parentAircraftRowByFK_Flights_TowPlane1 As AircraftRow,  _
                     ByVal parentAircraftRowByFK_Flights_TowPlane2 As AircraftRow,  _
                     ByVal _Date As Date,  _
-                    ByVal Glider_takeoff_time As System.DateTimeOffset,  _
-                    ByVal Glider_landing_time As System.DateTimeOffset,  _
-                    ByVal Tow_takeoff_time As Date,  _
-                    ByVal Tow_landing_time As Date,  _
+                    ByVal Glider_takeoff_time As Integer,  _
+                    ByVal Glider_landing_time As Integer,  _
+                    ByVal Tow_takeoff_time As Integer,  _
+                    ByVal Tow_landing_time As Integer,  _
                     ByVal Altitude_towed As Integer,  _
-                    ByVal Rope_break As Boolean,  _
+                    ByVal Rope_break As Integer,  _
                     ByVal parentAirportRowByFK_Flights_Airport As AirportRow,  _
-                    ByVal Flight_minutes As Date,  _
+                    ByVal Flight_minutes As Integer,  _
                     ByVal parentMembersRowByFK_Flights_First_name_inv As MembersRow,  _
                     ByVal Split_cost As Boolean,  _
                     ByVal Percent_1st_check As Integer,  _
@@ -1718,21 +1718,21 @@ Partial Public Class MASA_allDataSet2
             Me.columnDate.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnDate")
             Me.columnDate.ExtendedProperties.Add("Generator_UserColumnName", "Date")
             MyBase.Columns.Add(Me.columnDate)
-            Me.columnGlider_takeoff_time = New Global.System.Data.DataColumn("Glider_takeoff_time", GetType(Global.System.DateTimeOffset), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnGlider_takeoff_time = New Global.System.Data.DataColumn("Glider_takeoff_time", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGlider_takeoff_time)
-            Me.columnGlider_landing_time = New Global.System.Data.DataColumn("Glider_landing_time", GetType(Global.System.DateTimeOffset), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnGlider_landing_time = New Global.System.Data.DataColumn("Glider_landing_time", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGlider_landing_time)
-            Me.columnTow_takeoff_time = New Global.System.Data.DataColumn("Tow_takeoff_time", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnTow_takeoff_time = New Global.System.Data.DataColumn("Tow_takeoff_time", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTow_takeoff_time)
-            Me.columnTow_landing_time = New Global.System.Data.DataColumn("Tow_landing_time", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnTow_landing_time = New Global.System.Data.DataColumn("Tow_landing_time", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTow_landing_time)
             Me.columnAltitude_towed = New Global.System.Data.DataColumn("Altitude_towed", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAltitude_towed)
-            Me.columnRope_break = New Global.System.Data.DataColumn("Rope_break", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnRope_break = New Global.System.Data.DataColumn("Rope_break", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRope_break)
             Me.columnAirport_name = New Global.System.Data.DataColumn("Airport_name", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAirport_name)
-            Me.columnFlight_minutes = New Global.System.Data.DataColumn("Flight_minutes", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnFlight_minutes = New Global.System.Data.DataColumn("Flight_minutes", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFlight_minutes)
             Me.columnFirst_name_on_invoice = New Global.System.Data.DataColumn("First_name_on_invoice", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFirst_name_on_invoice)
@@ -1820,7 +1820,7 @@ Partial Public Class MASA_allDataSet2
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As MASA_allDataSet2 = New MASA_allDataSet2()
+            Dim ds As NewFlights_Glider5 = New NewFlights_Glider5()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2151,7 +2151,7 @@ Partial Public Class MASA_allDataSet2
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As MASA_allDataSet2 = New MASA_allDataSet2()
+            Dim ds As NewFlights_Glider5 = New NewFlights_Glider5()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2538,6 +2538,16 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetFlightsRowsByFK_Flights_Glider() As FlightsRow()
+            If (Me.Table.ChildRelations("FK_Flights_Glider") Is Nothing) Then
+                Return New FlightsRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_Flights_Glider")),FlightsRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function GetFlightsRowsByFK_Flights_TowPlane1() As FlightsRow()
             If (Me.Table.ChildRelations("FK_Flights_TowPlane1") Is Nothing) Then
                 Return New FlightsRow(-1) {}
@@ -2553,16 +2563,6 @@ Partial Public Class MASA_allDataSet2
                 Return New FlightsRow(-1) {}
             Else
                 Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_Flights_TowPlane2")),FlightsRow())
-            End If
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function GetFlightsRowsByFK_Flights_Glider() As FlightsRow()
-            If (Me.Table.ChildRelations("FK_Flights_Glider") Is Nothing) Then
-                Return New FlightsRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_Flights_Glider")),FlightsRow())
             End If
         End Function
     End Class
@@ -2884,10 +2884,10 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Glider_takeoff_time() As System.DateTimeOffset
+        Public Property Glider_takeoff_time() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.Glider_takeoff_timeColumn),Global.System.DateTimeOffset)
+                    Return CType(Me(Me.tableFlights.Glider_takeoff_timeColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Glider_takeoff_time' in table 'Flights' is DBNull.", e)
                 End Try
@@ -2899,10 +2899,10 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Glider_landing_time() As System.DateTimeOffset
+        Public Property Glider_landing_time() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.Glider_landing_timeColumn),Global.System.DateTimeOffset)
+                    Return CType(Me(Me.tableFlights.Glider_landing_timeColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Glider_landing_time' in table 'Flights' is DBNull.", e)
                 End Try
@@ -2914,10 +2914,10 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Tow_takeoff_time() As Date
+        Public Property Tow_takeoff_time() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.Tow_takeoff_timeColumn),Date)
+                    Return CType(Me(Me.tableFlights.Tow_takeoff_timeColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Tow_takeoff_time' in table 'Flights' is DBNull.", e)
                 End Try
@@ -2929,10 +2929,10 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Tow_landing_time() As Date
+        Public Property Tow_landing_time() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.Tow_landing_timeColumn),Date)
+                    Return CType(Me(Me.tableFlights.Tow_landing_timeColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Tow_landing_time' in table 'Flights' is DBNull.", e)
                 End Try
@@ -2959,10 +2959,10 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Rope_break() As Boolean
+        Public Property Rope_break() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.Rope_breakColumn),Boolean)
+                    Return CType(Me(Me.tableFlights.Rope_breakColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Rope_break' in table 'Flights' is DBNull.", e)
                 End Try
@@ -2989,10 +2989,10 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Flight_minutes() As Date
+        Public Property Flight_minutes() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.Flight_minutesColumn),Date)
+                    Return CType(Me(Me.tableFlights.Flight_minutesColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Flight_minutes' in table 'Flights' is DBNull.", e)
                 End Try
@@ -3138,6 +3138,17 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property AircraftRowByFK_Flights_Glider() As AircraftRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Flights_Glider")),AircraftRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK_Flights_Glider"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property MembersRowByFK_Flights_Instructor() As MembersRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Flights_Instructor")),MembersRow)
@@ -3254,17 +3265,6 @@ Partial Public Class MASA_allDataSet2
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("FK_Flights_TowPlane2"))
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property AircraftRowByFK_Flights_Glider() As AircraftRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Flights_Glider")),AircraftRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK_Flights_Glider"))
             End Set
         End Property
         
@@ -4065,7 +4065,7 @@ Partial Public Class MASA_allDataSet2
     End Class
 End Class
 
-Namespace MASA_allDataSet2TableAdapters
+Namespace NewFlights_Glider5TableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -4337,7 +4337,7 @@ Namespace MASA_allDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As MASA_allDataSet2.AircraftDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As NewFlights_Glider5.AircraftDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -4350,9 +4350,9 @@ Namespace MASA_allDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As MASA_allDataSet2.AircraftDataTable
+        Public Overloads Overridable Function GetData() As NewFlights_Glider5.AircraftDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As MASA_allDataSet2.AircraftDataTable = New MASA_allDataSet2.AircraftDataTable()
+            Dim dataTable As NewFlights_Glider5.AircraftDataTable = New NewFlights_Glider5.AircraftDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -4360,14 +4360,14 @@ Namespace MASA_allDataSet2TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As MASA_allDataSet2.AircraftDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As NewFlights_Glider5.AircraftDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As MASA_allDataSet2) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As NewFlights_Glider5) As Integer
             Return Me.Adapter.Update(dataSet, "Aircraft")
         End Function
         
@@ -4894,7 +4894,7 @@ Namespace MASA_allDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As MASA_allDataSet2.AirportDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As NewFlights_Glider5.AirportDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -4907,9 +4907,9 @@ Namespace MASA_allDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As MASA_allDataSet2.AirportDataTable
+        Public Overloads Overridable Function GetData() As NewFlights_Glider5.AirportDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As MASA_allDataSet2.AirportDataTable = New MASA_allDataSet2.AirportDataTable()
+            Dim dataTable As NewFlights_Glider5.AirportDataTable = New NewFlights_Glider5.AirportDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -4917,14 +4917,14 @@ Namespace MASA_allDataSet2TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As MASA_allDataSet2.AirportDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As NewFlights_Glider5.AirportDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As MASA_allDataSet2) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As NewFlights_Glider5) As Integer
             Return Me.Adapter.Update(dataSet, "Airport")
         End Function
         
@@ -5509,7 +5509,7 @@ Namespace MASA_allDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As MASA_allDataSet2.FlightsDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As NewFlights_Glider5.FlightsDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5522,9 +5522,9 @@ Namespace MASA_allDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As MASA_allDataSet2.FlightsDataTable
+        Public Overloads Overridable Function GetData() As NewFlights_Glider5.FlightsDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As MASA_allDataSet2.FlightsDataTable = New MASA_allDataSet2.FlightsDataTable()
+            Dim dataTable As NewFlights_Glider5.FlightsDataTable = New NewFlights_Glider5.FlightsDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5532,14 +5532,14 @@ Namespace MASA_allDataSet2TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As MASA_allDataSet2.FlightsDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As NewFlights_Glider5.FlightsDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As MASA_allDataSet2) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As NewFlights_Glider5) As Integer
             Return Me.Adapter.Update(dataSet, "Flights")
         End Function
         
@@ -6719,7 +6719,7 @@ Namespace MASA_allDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As MASA_allDataSet2.MembersDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As NewFlights_Glider5.MembersDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6732,9 +6732,9 @@ Namespace MASA_allDataSet2TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As MASA_allDataSet2.MembersDataTable
+        Public Overloads Overridable Function GetData() As NewFlights_Glider5.MembersDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As MASA_allDataSet2.MembersDataTable = New MASA_allDataSet2.MembersDataTable()
+            Dim dataTable As NewFlights_Glider5.MembersDataTable = New NewFlights_Glider5.MembersDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6742,14 +6742,14 @@ Namespace MASA_allDataSet2TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As MASA_allDataSet2.MembersDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As NewFlights_Glider5.MembersDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As MASA_allDataSet2) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As NewFlights_Glider5) As Integer
             Return Me.Adapter.Update(dataSet, "Members")
         End Function
         
@@ -7106,7 +7106,7 @@ Namespace MASA_allDataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As MASA_allDataSet2, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As NewFlights_Glider5, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._aircraftTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.Aircraft.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
@@ -7152,7 +7152,7 @@ Namespace MASA_allDataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As MASA_allDataSet2, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As NewFlights_Glider5, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._aircraftTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.Aircraft.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
@@ -7194,7 +7194,7 @@ Namespace MASA_allDataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As MASA_allDataSet2, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As NewFlights_Glider5, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._flightsTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Flights.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -7262,7 +7262,7 @@ Namespace MASA_allDataSet2TableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As MASA_allDataSet2) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As NewFlights_Glider5) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

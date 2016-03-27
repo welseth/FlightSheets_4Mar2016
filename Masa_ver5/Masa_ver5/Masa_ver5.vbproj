@@ -136,6 +136,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MASA_allDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MASA_allDataSet2.vb">
+      <DependentUpon>MASA_allDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -155,6 +158,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NewFlights_Glider.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewFlights_Glider2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFlights_Glider2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewFlights_Glider3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFlights_Glider3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewFlights_Glider4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFlights_Glider4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewFlights_Glider5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewFlights_Glider5.xsd</DependentUpon>
     </Compile>
     <Compile Include="NewFlights_GliderPilot.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -235,6 +258,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OD_AOD_TowPlane2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_TowPlane3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_TowPlane3.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -326,6 +354,50 @@
     </None>
     <None Include="NewFlights_Glider.xss">
       <DependentUpon>NewFlights_Glider.xsd</DependentUpon>
+    </None>
+    <None Include="NewFlights_Glider2.xsc">
+      <DependentUpon>NewFlights_Glider2.xsd</DependentUpon>
+    </None>
+    <None Include="NewFlights_Glider2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewFlights_Glider2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewFlights_Glider2.xss">
+      <DependentUpon>NewFlights_Glider2.xsd</DependentUpon>
+    </None>
+    <None Include="NewFlights_Glider3.xsc">
+      <DependentUpon>NewFlights_Glider3.xsd</DependentUpon>
+    </None>
+    <None Include="NewFlights_Glider3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewFlights_Glider3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewFlights_Glider3.xss">
+      <DependentUpon>NewFlights_Glider3.xsd</DependentUpon>
+    </None>
+    <None Include="NewFlights_Glider4.xsc">
+      <DependentUpon>NewFlights_Glider4.xsd</DependentUpon>
+    </None>
+    <None Include="NewFlights_Glider4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewFlights_Glider4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewFlights_Glider4.xss">
+      <DependentUpon>NewFlights_Glider4.xsd</DependentUpon>
+    </None>
+    <None Include="NewFlights_Glider5.xsc">
+      <DependentUpon>NewFlights_Glider5.xsd</DependentUpon>
+    </None>
+    <None Include="NewFlights_Glider5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewFlights_Glider5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewFlights_Glider5.xss">
+      <DependentUpon>NewFlights_Glider5.xsd</DependentUpon>
     </None>
     <None Include="NewFlights_GliderPilot.xsc">
       <DependentUpon>NewFlights_GliderPilot.xsd</DependentUpon>
@@ -502,6 +574,17 @@
     </None>
     <None Include="OD_AOD_TowPlane2.xss">
       <DependentUpon>OD_AOD_TowPlane2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_TowPlane3.xsc">
+      <DependentUpon>OD_AOD_TowPlane3.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_TowPlane3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_TowPlane3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_TowPlane3.xss">
+      <DependentUpon>OD_AOD_TowPlane3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
