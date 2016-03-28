@@ -132,37 +132,37 @@
         Dim newFlightRow As MASA_allDataSet2.FlightsRow
         newFlightRow = Me.MASA_allDataSet2.Flights.NewFlightsRow()
         ' load the new data into each field in the new record
-        Debug.Print("GliderPilotNameComboBox.SelectedIndex:  " & GliderPilotNameComboBox.SelectedIndex)
-        Debug.Print("GliderNameComboBox2.SelectedIndex: >>  " & GliderNameComboBox2.SelectedIndex)
+        'Debug.Print("GliderPilotNameComboBox.SelectedIndex:  " & GliderPilotNameComboBox.SelectedIndex)
+        'Debug.Print("GliderNameComboBox2.SelectedIndex: >>  " & GliderNameComboBox2.SelectedIndex)
 
 
 
         newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
         newFlightRow.Glider_Pilot_Name = GliderPilotNameComboBox.SelectedIndex
-        newFlightRow.First_name_on_invoice = FirstNameOnCheckComboBox.SelectedIndex
-        newFlightRow.TowPlane1 = Aircraft_nameComboBox.SelectedIndex
-        newFlightRow.Instructor_name = InstructorNameComboBox.SelectedIndex
-        newFlightRow.Split_cost = SplitCostCheckBox.CheckState
-        newFlightRow.Passenger_name = PasengerNameComboBox.SelectedIndex
-        newFlightRow.Percent_1st_check = PercentOnFirstCheck.Text
-        newFlightRow.Glider = GliderNameComboBox2.SelectedIndex
-        newFlightRow.Second_name_on_invoice = SecondCheckNameComboBox.SelectedIndex
+        'newFlightRow.First_name_on_invoice = FirstNameOnCheckComboBox.SelectedIndex
+        'newFlightRow.TowPlane1 = Aircraft_nameComboBox.SelectedIndex
+        'newFlightRow.Instructor_name = InstructorNameComboBox.SelectedIndex
+        'newFlightRow.Split_cost = SplitCostCheckBox.CheckState
+        'newFlightRow.Passenger_name = PasengerNameComboBox.SelectedIndex
+        'newFlightRow.Percent_1st_check = PercentOnFirstCheck.Text
+        'newFlightRow.Glider = GliderNameComboBox2.SelectedIndex
+        'newFlightRow.Second_name_on_invoice = SecondCheckNameComboBox.SelectedIndex
 
-        Debug.WriteLine("Value of TakeOfFTimePicker:   " & TakeOffTimePicker.Value.ToLongTimeString)
-        newFlightRow.Glider_takeoff_time = TakeOffTimePicker.Value.ToShortTimeString
+        'Debug.WriteLine("Value of TakeOfFTimePicker:   " & TakeOffTimePicker.Value.ToLongTimeString)
+        'newFlightRow.Glider_takeoff_time = TakeOffTimePicker.Value.ToShortTimeString
 
         'newFlightRow.Glider_landing_time = LandingTimePicker.Value
 
-        newFlightRow.Altitude_towed = TowAltitude.Text
-        newFlightRow.Rope_break = RopeBreakCheckBox.Checked
-        newFlightRow.Penalty_charge = PenaltyRadioButton.Checked
-        newFlightRow.Cost_this_flight = CostThisFlightTextBox.Text
-        newFlightRow.OD1 = ODNameComboBox1.SelectedIndex
-        newFlightRow.OD2 = ODNameComboBox2.SelectedIndex
-        newFlightRow.OD3 = ODNameComboBox3.SelectedIndex
-        newFlightRow.AOD1 = AODNameComboBox1.SelectedIndex
-        newFlightRow.AOD2 = AODNameComboBox2.SelectedIndex
-        newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
+        'newFlightRow.Altitude_towed = TowAltitude.Text
+        'newFlightRow.Rope_break = RopeBreakCheckBox.Checked
+        'newFlightRow.Penalty_charge = PenaltyRadioButton.Checked
+        'newFlightRow.Cost_this_flight = CostThisFlightTextBox.Text
+        'newFlightRow.OD1 = ODNameComboBox1.SelectedIndex
+        'newFlightRow.OD2 = ODNameComboBox2.SelectedIndex
+        'newFlightRow.OD3 = ODNameComboBox3.SelectedIndex
+        'newFlightRow.AOD1 = AODNameComboBox1.SelectedIndex
+        'newFlightRow.AOD2 = AODNameComboBox2.SelectedIndex
+        'newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
 
 
 
