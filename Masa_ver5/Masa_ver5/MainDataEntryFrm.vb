@@ -65,6 +65,8 @@
         TakeOffTimePicker.CustomFormat = "HH:mm"
         LandingTimePicker.Format = DateTimePickerFormat.Custom
         LandingTimePicker.CustomFormat = "HH:mm"
+        TakeOffTimePicker.Value = Now
+        LandingTimePicker.Value = Now
 
     End Sub
 
@@ -75,7 +77,6 @@
         Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
     End Sub
 
-#If still_debugging = True Then
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
         ' debug item: this just does a quick debug.print with the index of the current selected tab
         Dim TabIndexValue As Integer
@@ -132,20 +133,33 @@
         Dim newFlightRow As MASA_allDataSet2.FlightsRow
         newFlightRow = Me.MASA_allDataSet2.Flights.NewFlightsRow()
         ' load the new data into each field in the new record
-        'Debug.Print("GliderPilotNameComboBox.SelectedIndex:  " & GliderPilotNameComboBox.SelectedIndex)
-        'Debug.Print("GliderNameComboBox2.SelectedIndex: >>  " & GliderNameComboBox2.SelectedIndex)
+        Debug.Print("GliderPilotNameComboBox.SelectedIndex:  " & GliderPilotNameComboBox.SelectedIndex)
+        Debug.Print("GliderNameComboBox2.SelectedIndex: >>  " & GliderNameComboBox2.SelectedIndex)
 
 
-
-        newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
         newFlightRow.Glider_Pilot_Name = GliderPilotNameComboBox.SelectedIndex
+        newFlightRow.Glider = GliderNameComboBox2.SelectedIndex
+        newFlightRow.Instructor_name = InstructorNameComboBox.SelectedIndex
+        newFlightRow.Passenger_name = PasengerNameComboBox.SelectedIndex
+        newFlightRow.OD1 = ODNameComboBox1.SelectedIndex
+        newFlightRow.OD2 = ODNameComboBox2.SelectedIndex
+        newFlightRow.OD3 = ODNameComboBox3.SelectedIndex
+        newFlightRow.AOD1 = AODNameComboBox1.SelectedIndex
+        newFlightRow.AOD2 = AODNameComboBox2.SelectedIndex
+
+
+        newFlightRow.Airport_name = Aircraft_nameComboBox.SelectedIndex
+
+
+        'newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
+
         'newFlightRow.First_name_on_invoice = FirstNameOnCheckComboBox.SelectedIndex
-        'newFlightRow.TowPlane1 = Aircraft_nameComboBox.SelectedIndex
-        'newFlightRow.Instructor_name = InstructorNameComboBox.SelectedIndex
+
+
         'newFlightRow.Split_cost = SplitCostCheckBox.CheckState
-        'newFlightRow.Passenger_name = PasengerNameComboBox.SelectedIndex
+
         'newFlightRow.Percent_1st_check = PercentOnFirstCheck.Text
-        'newFlightRow.Glider = GliderNameComboBox2.SelectedIndex
+
         'newFlightRow.Second_name_on_invoice = SecondCheckNameComboBox.SelectedIndex
 
         'Debug.WriteLine("Value of TakeOfFTimePicker:   " & TakeOffTimePicker.Value.ToLongTimeString)
@@ -157,11 +171,8 @@
         'newFlightRow.Rope_break = RopeBreakCheckBox.Checked
         'newFlightRow.Penalty_charge = PenaltyRadioButton.Checked
         'newFlightRow.Cost_this_flight = CostThisFlightTextBox.Text
-        'newFlightRow.OD1 = ODNameComboBox1.SelectedIndex
-        'newFlightRow.OD2 = ODNameComboBox2.SelectedIndex
-        'newFlightRow.OD3 = ODNameComboBox3.SelectedIndex
-        'newFlightRow.AOD1 = AODNameComboBox1.SelectedIndex
-        'newFlightRow.AOD2 = AODNameComboBox2.SelectedIndex
+
+
         'newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
 
 
@@ -184,6 +195,7 @@
 
     End Sub
 
+#If Still_debugging = True Then
 
     Private Sub ClearFormButton_Click(sender As Object, e As EventArgs) Handles ClearFormButton.Click
         'Reset all the selected comboBoxes back to "blank"
@@ -218,14 +230,14 @@
         InstructorNameComboBox.SelectedIndex = 0
         SplitCostCheckBox.Checked = False
         PasengerNameComboBox.SelectedIndex = 0
-        PercentOnFirstCheck.Text = vbNullChar
+        PercentOnFirstCheck.Clear()
         GliderNameComboBox2.SelectedIndex = 0
         SecondCheckNameComboBox.SelectedIndex = 0
-        FlightDurationTextBox.Text = vbNullChar
-        TowAltitude.Text = vbNullChar
+        FlightDurationTextBox.Clear()
+        TowAltitude.Clear()
         PenaltyRadioButton.Checked = False
         RadioButton2.Checked = False
-        CostThisFlightTextBox.Text = vbNullChar
+        CostThisFlightTextBox.Clear()
         RopeBreakCheckBox.Checked = False
         TakeOffTimePicker.Value = Now
 
@@ -254,6 +266,8 @@
         RadioButton2.Checked = False
         CostThisFlightTextBox.Text = "120.00"
         RopeBreakCheckBox.Checked = True
+        TakeOffTimePicker.Value = Now
+        LandingTimePicker.Value = DateAdd(DateInterval.Minute, 30, Now)
 
         Debug.WriteLine("Completed setting test values.")
     End Sub
