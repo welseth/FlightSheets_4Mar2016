@@ -1183,7 +1183,7 @@ Partial Public Class Enter_New
         
         Private columnTowPlane2 As Global.System.Data.DataColumn
         
-        Private columnDate As Global.System.Data.DataColumn
+        Private columnTodays_Date As Global.System.Data.DataColumn
         
         Private columnGlider_takeoff_time As Global.System.Data.DataColumn
         
@@ -1362,9 +1362,9 @@ Partial Public Class Enter_New
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property DateColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Todays_DateColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnDate
+                Return Me.columnTodays_Date
             End Get
         End Property
         
@@ -1531,7 +1531,7 @@ Partial Public Class Enter_New
                     ByVal parentMembersRowByFK_Flights_TowPilot3 As MembersRow,  _
                     ByVal parentAircraftRowByFK_Flights_TowPlane1 As AircraftRow,  _
                     ByVal parentAircraftRowByFK_Flights_TowPlane2 As AircraftRow,  _
-                    ByVal _Date As Date,  _
+                    ByVal Todays_Date As Integer,  _
                     ByVal Glider_takeoff_time As System.TimeSpan,  _
                     ByVal Glider_landing_time As System.TimeSpan,  _
                     ByVal Tow_takeoff_time As System.TimeSpan,  _
@@ -1547,7 +1547,7 @@ Partial Public Class Enter_New
                     ByVal Penalty_charge As Boolean,  _
                     ByVal Cost_this_flight As Decimal) As FlightsRow
             Dim rowFlightsRow As FlightsRow = CType(Me.NewRow,FlightsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, Passenger_name, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, _Date, Glider_takeoff_time, Glider_landing_time, Tow_takeoff_time, Tow_landing_time, Altitude_towed, Rope_break, Nothing, Flight_minutes, Nothing, Split_cost, Percent_1st_check, Nothing, Penalty_charge, Cost_this_flight}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, Passenger_name, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Todays_Date, Glider_takeoff_time, Glider_landing_time, Tow_takeoff_time, Tow_landing_time, Altitude_towed, Rope_break, Nothing, Flight_minutes, Nothing, Split_cost, Percent_1st_check, Nothing, Penalty_charge, Cost_this_flight}
             If (Not (parentMembersRowByFK_Flights_Name) Is Nothing) Then
                 columnValuesArray(1) = parentMembersRowByFK_Flights_Name(0)
             End If
@@ -1635,7 +1635,7 @@ Partial Public Class Enter_New
             Me.columnTowPilot3 = MyBase.Columns("TowPilot3")
             Me.columnTowPlane1 = MyBase.Columns("TowPlane1")
             Me.columnTowPlane2 = MyBase.Columns("TowPlane2")
-            Me.columnDate = MyBase.Columns("Date")
+            Me.columnTodays_Date = MyBase.Columns("Todays_Date")
             Me.columnGlider_takeoff_time = MyBase.Columns("Glider_takeoff_time")
             Me.columnGlider_landing_time = MyBase.Columns("Glider_landing_time")
             Me.columnTow_takeoff_time = MyBase.Columns("Tow_takeoff_time")
@@ -1683,11 +1683,8 @@ Partial Public Class Enter_New
             MyBase.Columns.Add(Me.columnTowPlane1)
             Me.columnTowPlane2 = New Global.System.Data.DataColumn("TowPlane2", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTowPlane2)
-            Me.columnDate = New Global.System.Data.DataColumn("Date", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            Me.columnDate.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "DateColumn")
-            Me.columnDate.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnDate")
-            Me.columnDate.ExtendedProperties.Add("Generator_UserColumnName", "Date")
-            MyBase.Columns.Add(Me.columnDate)
+            Me.columnTodays_Date = New Global.System.Data.DataColumn("Todays_Date", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTodays_Date)
             Me.columnGlider_takeoff_time = New Global.System.Data.DataColumn("Glider_takeoff_time", GetType(Global.System.TimeSpan), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGlider_takeoff_time)
             Me.columnGlider_landing_time = New Global.System.Data.DataColumn("Glider_landing_time", GetType(Global.System.TimeSpan), Nothing, Global.System.Data.MappingType.Element)
@@ -2814,16 +2811,16 @@ Partial Public Class Enter_New
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property _Date() As Date
+        Public Property Todays_Date() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.DateColumn),Date)
+                    Return CType(Me(Me.tableFlights.Todays_DateColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Date' in table 'Flights' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Todays_Date' in table 'Flights' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableFlights.DateColumn) = value
+                Me(Me.tableFlights.Todays_DateColumn) = value
             End Set
         End Property
         
@@ -3360,14 +3357,14 @@ Partial Public Class Enter_New
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Is_DateNull() As Boolean
-            Return Me.IsNull(Me.tableFlights.DateColumn)
+        Public Function IsTodays_DateNull() As Boolean
+            Return Me.IsNull(Me.tableFlights.Todays_DateColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Set_DateNull()
-            Me(Me.tableFlights.DateColumn) = Global.System.Convert.DBNull
+        Public Sub SetTodays_DateNull()
+            Me(Me.tableFlights.Todays_DateColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5066,7 +5063,7 @@ Namespace Enter_NewTableAdapters
             tableMapping.ColumnMappings.Add("TowPilot3", "TowPilot3")
             tableMapping.ColumnMappings.Add("TowPlane1", "TowPlane1")
             tableMapping.ColumnMappings.Add("TowPlane2", "TowPlane2")
-            tableMapping.ColumnMappings.Add("Date", "Date")
+            tableMapping.ColumnMappings.Add("Date", "Todays_Date")
             tableMapping.ColumnMappings.Add("Glider_takeoff_time", "Glider_takeoff_time")
             tableMapping.ColumnMappings.Add("Glider_landing_time", "Glider_landing_time")
             tableMapping.ColumnMappings.Add("Tow_takeoff_time", "Tow_takeoff_time")
