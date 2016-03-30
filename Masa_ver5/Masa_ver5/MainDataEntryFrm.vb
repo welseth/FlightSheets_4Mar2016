@@ -199,14 +199,14 @@
         Try
             Me.MASA_allDataSet2.Flights.Rows.Add(newFlightRow)
         Catch ex As Exception
-            MessageBox.Show("Add failed")
+            MessageBox.Show("Add failed" & vbCrLf & ex.Message)
         End Try
 
         'save the new row to the DB
         Try
             Me.MASA_allDataSet_2_FlightsTableAdapter.Update(Me.MASA_allDataSet2.Flights)
         Catch ex As Exception
-            MessageBox.Show("Update failed  " & newFlightRow.Glider_Pilot_Name)
+            MessageBox.Show("Update failed  " & vbCrLf & ex.Message)
         End Try
 
         Debug.WriteLine("Now FINISHED the DB .add and the DB .update")
