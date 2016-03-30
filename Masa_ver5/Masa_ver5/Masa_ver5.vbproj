@@ -219,11 +219,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OD_AOD_AirportName3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="OD_AOD_AirportName4.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OD_AOD_AirportName4.xsd</DependentUpon>
-    </Compile>
     <Compile Include="OD_AOD_AOD1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -268,11 +263,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OD_AOD_OD15.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OD_AOD_OD16.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OD_AOD_OD16.xsd</DependentUpon>
     </Compile>
     <Compile Include="OD_AOD_OD2.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -567,17 +557,6 @@
     <None Include="OD_AOD_AirportName3.xss">
       <DependentUpon>OD_AOD_AirportName3.xsd</DependentUpon>
     </None>
-    <None Include="OD_AOD_AirportName4.xsc">
-      <DependentUpon>OD_AOD_AirportName4.xsd</DependentUpon>
-    </None>
-    <None Include="OD_AOD_AirportName4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OD_AOD_AirportName4.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OD_AOD_AirportName4.xss">
-      <DependentUpon>OD_AOD_AirportName4.xsd</DependentUpon>
-    </None>
     <None Include="OD_AOD_AOD1.xsc">
       <DependentUpon>OD_AOD_AOD1.xsd</DependentUpon>
     </None>
@@ -676,17 +655,6 @@
     </None>
     <None Include="OD_AOD_OD15.xss">
       <DependentUpon>OD_AOD_OD15.xsd</DependentUpon>
-    </None>
-    <None Include="OD_AOD_OD16.xsc">
-      <DependentUpon>OD_AOD_OD16.xsd</DependentUpon>
-    </None>
-    <None Include="OD_AOD_OD16.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OD_AOD_OD16.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OD_AOD_OD16.xss">
-      <DependentUpon>OD_AOD_OD16.xsd</DependentUpon>
     </None>
     <None Include="OD_AOD_OD2.xsc">
       <DependentUpon>OD_AOD_OD2.xsd</DependentUpon>

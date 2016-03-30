@@ -4,10 +4,6 @@
 
 
     Private Sub MainDataEntryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'OD_AOD_AirportName4.Airport' table. You can move, or remove it, as needed.
-        Me.AirportTableAdapter2.Fill(Me.OD_AOD_AirportName4.Airport)
-        'TODO: This line of code loads data into the 'OD_AOD_OD16.Members' table. You can move, or remove it, as needed.
-        Me.MembersTableAdapter17.Fill(Me.OD_AOD_OD16.Members)
         'TODO: This line of code loads data into the 'OD_AOD_OD13.Members' table. You can move, or remove it, as needed.
         Me.MembersTableAdapter16.Fill(Me.OD_AOD_OD13.Members)
         'TODO: This line of code loads data into the 'OD_AOD_OD15.Members' table. You can move, or remove it, as needed.
@@ -168,16 +164,12 @@
         newFlightRow.OD3 = ODNameComboBox3.SelectedIndex
         newFlightRow.AOD1 = AODNameComboBox1.SelectedIndex
         newFlightRow.AOD2 = AODNameComboBox2.SelectedIndex
-        newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
-        newFlightRow.TowPilot2 = TowPilotNameComboBox5.SelectedIndex  'not using TowPilot2, but setting a value anyway
-        newFlightRow.TowPilot3 = TowPilotNameComboBox5.SelectedIndex  'not using TowPilot3, but setting a value anyway
-        newFlightRow.TowPlane1 = Aircraft_nameComboBox.SelectedIndex
-        newFlightRow.TowPlane2 = Aircraft_nameComboBox.SelectedIndex  'not using TowPlane2, but setting a value anyway
-        newFlightRow.Todays_Date = DateTimePicker1.Value  '.value returns a datetime
+
+
         newFlightRow.Airport_name = Aircraft_nameComboBox.SelectedIndex
 
 
-
+        'newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
 
         'newFlightRow.First_name_on_invoice = FirstNameOnCheckComboBox.SelectedIndex
 
@@ -199,6 +191,7 @@
         'newFlightRow.Cost_this_flight = CostThisFlightTextBox.Text
 
 
+        'newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
 
 
 
