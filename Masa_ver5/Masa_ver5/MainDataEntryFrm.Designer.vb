@@ -252,6 +252,15 @@ Partial Class MainDataEntryForm
         Me.AircraftTableAdapter2 = New Masa_ver5.NewFlights_Glider3TableAdapters.AircraftTableAdapter()
         Me.AircraftTableAdapter3 = New Masa_ver5.NewFlights_Glider4TableAdapters.AircraftTableAdapter()
         Me.AircraftTableAdapter4 = New Masa_ver5.NewFlights_Glider5TableAdapters.AircraftTableAdapter()
+        Me.OD_AOD_OD4 = New Masa_ver5.OD_AOD_OD4()
+        Me.OD_AOD_OD4MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter5 = New Masa_ver5.OD_AOD_OD4TableAdapters.MembersTableAdapter()
+        Me.OD_AOD_OD5 = New Masa_ver5.OD_AOD_OD5()
+        Me.OD_AOD_OD5MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter6 = New Masa_ver5.OD_AOD_OD5TableAdapters.MembersTableAdapter()
+        Me.OD_AOD_OD6 = New Masa_ver5.OD_AOD_OD6()
+        Me.OD_AOD_OD6MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter7 = New Masa_ver5.OD_AOD_OD6TableAdapters.MembersTableAdapter()
         NameLabel5 = New System.Windows.Forms.Label()
         Aircraft_nameLabel = New System.Windows.Forms.Label()
         NameLabel8 = New System.Windows.Forms.Label()
@@ -350,6 +359,12 @@ Partial Class MainDataEntryForm
         CType(Me.AircraftBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NewFlights_Glider2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NewFlightsGlider2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD4MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD5MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD6MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NameLabel5
@@ -1302,7 +1317,7 @@ Partial Class MainDataEntryForm
         Me.MASA_allDataSet2_FlightsBindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_allDataSet2_FlightsBindingNavigator1.Name = "MASA_allDataSet2_FlightsBindingNavigator1"
         Me.MASA_allDataSet2_FlightsBindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.Size = New System.Drawing.Size(307, 25)
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.Size = New System.Drawing.Size(306, 25)
         Me.MASA_allDataSet2_FlightsBindingNavigator1.TabIndex = 72
         Me.MASA_allDataSet2_FlightsBindingNavigator1.Text = "BindingNavigator1"
         '
@@ -1328,7 +1343,7 @@ Partial Class MainDataEntryForm
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -2016,9 +2031,9 @@ Partial Class MainDataEntryForm
         '
         'ODNameComboBox2
         '
-        Me.ODNameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD2MembersBindingSource, "Name", True))
-        Me.ODNameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD2MembersBindingSource, "Name", True))
-        Me.ODNameComboBox2.DataSource = Me.OD_AOD_OD2MembersBindingSource
+        Me.ODNameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD5MembersBindingSource, "Name", True))
+        Me.ODNameComboBox2.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD6MembersBindingSource, "Name", True))
+        Me.ODNameComboBox2.DataSource = Me.OD_AOD_OD4MembersBindingSource
         Me.ODNameComboBox2.DisplayMember = "Name"
         Me.ODNameComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ODNameComboBox2.Location = New System.Drawing.Point(35, 158)
@@ -2029,8 +2044,8 @@ Partial Class MainDataEntryForm
         '
         'ODNameComboBox1
         '
-        Me.ODNameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD1MembersBindingSource, "Name", True))
-        Me.ODNameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD1MembersBindingSource, "Name", True))
+        Me.ODNameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.OD_AOD_OD2MembersBindingSource, "Name", True))
+        Me.ODNameComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.OD_AOD_OD3MembersBindingSource, "Name", True))
         Me.ODNameComboBox1.DataSource = Me.OD_AOD_OD1MembersBindingSource
         Me.ODNameComboBox1.DisplayMember = "Name"
         Me.ODNameComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -2101,6 +2116,48 @@ Partial Class MainDataEntryForm
         'AircraftTableAdapter4
         '
         Me.AircraftTableAdapter4.ClearBeforeFill = True
+        '
+        'OD_AOD_OD4
+        '
+        Me.OD_AOD_OD4.DataSetName = "OD_AOD_OD4"
+        Me.OD_AOD_OD4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'OD_AOD_OD4MembersBindingSource
+        '
+        Me.OD_AOD_OD4MembersBindingSource.DataMember = "Members"
+        Me.OD_AOD_OD4MembersBindingSource.DataSource = Me.OD_AOD_OD4
+        '
+        'MembersTableAdapter5
+        '
+        Me.MembersTableAdapter5.ClearBeforeFill = True
+        '
+        'OD_AOD_OD5
+        '
+        Me.OD_AOD_OD5.DataSetName = "OD_AOD_OD5"
+        Me.OD_AOD_OD5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'OD_AOD_OD5MembersBindingSource
+        '
+        Me.OD_AOD_OD5MembersBindingSource.DataMember = "Members"
+        Me.OD_AOD_OD5MembersBindingSource.DataSource = Me.OD_AOD_OD5
+        '
+        'MembersTableAdapter6
+        '
+        Me.MembersTableAdapter6.ClearBeforeFill = True
+        '
+        'OD_AOD_OD6
+        '
+        Me.OD_AOD_OD6.DataSetName = "OD_AOD_OD6"
+        Me.OD_AOD_OD6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'OD_AOD_OD6MembersBindingSource
+        '
+        Me.OD_AOD_OD6MembersBindingSource.DataMember = "Members"
+        Me.OD_AOD_OD6MembersBindingSource.DataSource = Me.OD_AOD_OD6
+        '
+        'MembersTableAdapter7
+        '
+        Me.MembersTableAdapter7.ClearBeforeFill = True
         '
         'MainDataEntryForm
         '
@@ -2191,6 +2248,12 @@ Partial Class MainDataEntryForm
         CType(Me.AircraftBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NewFlights_Glider2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NewFlightsGlider2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD4MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD5MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD6MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2398,4 +2461,13 @@ Partial Class MainDataEntryForm
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn28 As DataGridViewTextBoxColumn
+    Friend WithEvents OD_AOD_OD4 As OD_AOD_OD4
+    Friend WithEvents OD_AOD_OD4MembersBindingSource As BindingSource
+    Friend WithEvents MembersTableAdapter5 As OD_AOD_OD4TableAdapters.MembersTableAdapter
+    Friend WithEvents OD_AOD_OD5 As OD_AOD_OD5
+    Friend WithEvents OD_AOD_OD5MembersBindingSource As BindingSource
+    Friend WithEvents MembersTableAdapter6 As OD_AOD_OD5TableAdapters.MembersTableAdapter
+    Friend WithEvents OD_AOD_OD6 As OD_AOD_OD6
+    Friend WithEvents OD_AOD_OD6MembersBindingSource As BindingSource
+    Friend WithEvents MembersTableAdapter7 As OD_AOD_OD6TableAdapters.MembersTableAdapter
 End Class

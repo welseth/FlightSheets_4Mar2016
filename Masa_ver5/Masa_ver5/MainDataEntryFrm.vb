@@ -4,6 +4,12 @@
 
 
     Private Sub MainDataEntryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'OD_AOD_OD6.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter7.Fill(Me.OD_AOD_OD6.Members)
+        'TODO: This line of code loads data into the 'OD_AOD_OD5.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter6.Fill(Me.OD_AOD_OD5.Members)
+        'TODO: This line of code loads data into the 'OD_AOD_OD4.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter5.Fill(Me.OD_AOD_OD4.Members)
         'TODO: This line of code loads data into the 'NewFlights_Glider5.Aircraft' table. You can move, or remove it, as needed.
         Me.AircraftTableAdapter4.Fill(Me.NewFlights_Glider5.Aircraft)
         'TODO: This line of code loads data into the 'NewFlights_Glider4.Aircraft' table. You can move, or remove it, as needed.
@@ -70,34 +76,23 @@
 
     End Sub
 
-
+    ' I am not sure if next method is actually used for anything, it might be unnecessary.
     Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.OD_AOD_OD1MembersBindingSource.EndEdit()
         Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
     End Sub
 
-    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
-        ' debug item: this just does a quick debug.print with the index of the current selected tab
-        Dim TabIndexValue As Integer
-        TabIndexValue = TabControl1.SelectedIndex
-        Debug.WriteLine("You are in the TabControl.SelectedIndexChanged event. TabIndex:  " & TabIndexValue)
 
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles SaveFlightButton.Click
-        'debug item:  TempTextBox displays the SELECTED item from ComboBox5, just to make sure
-        'I can grab that value and display it.  OK to delete when done.
-        'the below lines are the .update technique as outlined by MicroSoft
+        'the below lines use the .update technique as outlined by MicroSoft
         '
-
         Dim FlightDuration As Long
         FlightDuration = DateDiff(DateInterval.Second, TakeOffTimePicker.Value, LandingTimePicker.Value)
-        'FlightDuration = DirectCast(FlightDuration, Int32)
-        Debug.WriteLine("Flightduration:  " & FlightDuration)  'print the calculated duration 
+        Debug.WriteLine("Calculated Flightduration value:  " & FlightDuration)  'print the calculated duration 
         Debug.WriteLine("OK, now starting the TableAdapter.Insert:")
-
+        'following .insert technique commented-out lines are OBE, ok to delete when the other technique is working.
         'MASA_allDataSet_2_FlightsTableAdapter.Insert(
         '            GliderPilotNameComboBox.SelectedIndex,
         '            Glider_nameComboBox.SelectedIndex,
@@ -130,13 +125,14 @@
         '            CostThisFlightTextBox.Text
         ')
 
+        'create a newFlightRow to store the new flight info into.
         Dim newFlightRow As MASA_allDataSet2.FlightsRow
         newFlightRow = Me.MASA_allDataSet2.Flights.NewFlightsRow()
-        ' load the new data into each field in the new record
+
         Debug.Print("GliderPilotNameComboBox.SelectedIndex:  " & GliderPilotNameComboBox.SelectedIndex)
         Debug.Print("GliderNameComboBox2.SelectedIndex: >>  " & GliderNameComboBox2.SelectedIndex)
 
-
+        ' load the new data into each, and every, field in the new record
         newFlightRow.Glider_Pilot_Name = GliderPilotNameComboBox.SelectedIndex
         newFlightRow.Glider = GliderNameComboBox2.SelectedIndex
         newFlightRow.Instructor_name = InstructorNameComboBox.SelectedIndex
@@ -280,6 +276,14 @@
         AODNameComboBox1.SelectedIndex = 8
         AODNameComboBox2.SelectedIndex = 9
         Airport_nameComboBox.SelectedIndex = 2
+
+    End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+        ' debug item: this just does a quick debug.print with the index of the current selected tab
+        Dim TabIndexValue As Integer
+        TabIndexValue = TabControl1.SelectedIndex
+        Debug.WriteLine("You are in the TabControl.SelectedIndexChanged event. TabIndex:  " & TabIndexValue)
 
     End Sub
 #End If  'end of conditional compilation for "debugging helper items"
