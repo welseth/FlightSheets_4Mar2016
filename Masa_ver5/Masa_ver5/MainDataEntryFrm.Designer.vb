@@ -254,7 +254,6 @@ Partial Class MainDataEntryForm
         Me.MembersBindingSource18 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ODAODOD10BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD10 = New Masa_ver5.OD_AOD_OD10()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.ODNameComboBox3 = New System.Windows.Forms.ComboBox()
         Me.OD_AOD_OD8MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD8 = New Masa_ver5.OD_AOD_OD8()
@@ -299,6 +298,7 @@ Partial Class MainDataEntryForm
         Me.MembersTableAdapter14 = New Masa_ver5.OD_AOD_OD14TableAdapters.MembersTableAdapter()
         Me.MembersTableAdapter15 = New Masa_ver5.OD_AOD_OD15TableAdapters.MembersTableAdapter()
         Me.MembersTableAdapter16 = New Masa_ver5.OD_AOD_OD13TableAdapters.MembersTableAdapter()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         NameLabel5 = New System.Windows.Forms.Label()
         Aircraft_nameLabel = New System.Windows.Forms.Label()
         NameLabel8 = New System.Windows.Forms.Label()
@@ -1382,7 +1382,7 @@ Partial Class MainDataEntryForm
         Me.MASA_allDataSet2_FlightsBindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_allDataSet2_FlightsBindingNavigator1.Name = "MASA_allDataSet2_FlightsBindingNavigator1"
         Me.MASA_allDataSet2_FlightsBindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_allDataSet2_FlightsBindingNavigator1.Size = New System.Drawing.Size(306, 25)
+        Me.MASA_allDataSet2_FlightsBindingNavigator1.Size = New System.Drawing.Size(307, 25)
         Me.MASA_allDataSet2_FlightsBindingNavigator1.TabIndex = 72
         Me.MASA_allDataSet2_FlightsBindingNavigator1.Text = "BindingNavigator1"
         '
@@ -1408,7 +1408,7 @@ Partial Class MainDataEntryForm
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -1992,6 +1992,7 @@ Partial Class MainDataEntryForm
         '
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TabPage1.Controls.Add(Me.DateTimePicker1)
         Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.SetTestValues)
         Me.TabPage1.Controls.Add(Label5)
@@ -2001,7 +2002,6 @@ Partial Class MainDataEntryForm
         Me.TabPage1.Controls.Add(Me.AODNameComboBox2)
         Me.TabPage1.Controls.Add(NameLabel3)
         Me.TabPage1.Controls.Add(Me.AODNameComboBox1)
-        Me.TabPage1.Controls.Add(Me.DateTimePicker1)
         Me.TabPage1.Controls.Add(NameLabel2)
         Me.TabPage1.Controls.Add(Me.ODNameComboBox3)
         Me.TabPage1.Controls.Add(NameLabel1)
@@ -2157,14 +2157,6 @@ Partial Class MainDataEntryForm
         '
         Me.OD_AOD_OD10.DataSetName = "OD_AOD_OD10"
         Me.OD_AOD_OD10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(35, 42)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 10
-        Me.DateTimePicker1.Value = New Date(2016, 3, 8, 17, 44, 56, 0)
         '
         'ODNameComboBox3
         '
@@ -2402,6 +2394,13 @@ Partial Class MainDataEntryForm
         'MembersTableAdapter16
         '
         Me.MembersTableAdapter16.ClearBeforeFill = True
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(35, 42)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 102
         '
         'MainDataEntryForm
         '
@@ -2659,7 +2658,6 @@ Partial Class MainDataEntryForm
     Friend WithEvents Airport_nameComboBox As ComboBox
     Friend WithEvents AODNameComboBox2 As ComboBox
     Friend WithEvents AODNameComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents ODNameComboBox3 As ComboBox
     Friend WithEvents ODNameComboBox2 As ComboBox
     Friend WithEvents ODNameComboBox1 As ComboBox
@@ -2779,4 +2777,5 @@ Partial Class MainDataEntryForm
     Friend WithEvents MembersTableAdapter15 As OD_AOD_OD15TableAdapters.MembersTableAdapter
     Friend WithEvents MembersBindingSource21 As BindingSource
     Friend WithEvents MembersTableAdapter16 As OD_AOD_OD13TableAdapters.MembersTableAdapter
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

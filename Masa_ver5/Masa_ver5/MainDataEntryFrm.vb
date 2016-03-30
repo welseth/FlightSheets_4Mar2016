@@ -95,6 +95,8 @@
         LandingTimePicker.CustomFormat = "HH:mm"
         TakeOffTimePicker.Value = Now
         LandingTimePicker.Value = Now
+        DateTimePicker1.Value = Now
+
 
     End Sub
 
@@ -164,12 +166,14 @@
         newFlightRow.OD3 = ODNameComboBox3.SelectedIndex
         newFlightRow.AOD1 = AODNameComboBox1.SelectedIndex
         newFlightRow.AOD2 = AODNameComboBox2.SelectedIndex
+        newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
+        newFlightRow.TowPilot2 = TowPilotNameComboBox5.SelectedIndex  'towpilot2 not used, but assigning anyway
+        newFlightRow.TowPilot3 = TowPilotNameComboBox5.SelectedIndex  'towpilot3 not used, but assigning anyway
+        newFlightRow.TowPlane1 = Aircraft_nameComboBox.SelectedIndex
+        newFlightRow.TowPlane2 = Aircraft_nameComboBox.SelectedIndex  'towplane2 not used, but assigning anyway
+        newFlightRow._Date = DateTimePicker1.Value  'saves in format DateTime 
+        MessageBox.Show(DateTimePicker1.Value.ToString())  'get rid of this after debugging is complete 
 
-
-        newFlightRow.Airport_name = Aircraft_nameComboBox.SelectedIndex
-
-
-        'newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
 
         'newFlightRow.First_name_on_invoice = FirstNameOnCheckComboBox.SelectedIndex
 
