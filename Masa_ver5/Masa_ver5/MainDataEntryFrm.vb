@@ -171,9 +171,8 @@
         newFlightRow.TowPilot3 = TowPilotNameComboBox5.SelectedIndex  'towpilot3 not used, but assigning anyway
         newFlightRow.TowPlane1 = Aircraft_nameComboBox.SelectedIndex
         newFlightRow.TowPlane2 = Aircraft_nameComboBox.SelectedIndex  'towplane2 not used, but assigning anyway
-        'MessageBox.Show(DateTimePicker1.Value.ToString())  'get rid of this after debugging is complete 
         Debug.Print("DateTimePicker1: " & DateTimePicker1.Value)
-        MessageBox.Show("DateTimePicker:  " & DateTimePicker1.Value)  'get rid of this after debugging is complete 
+        'MessageBox.Show("DateTimePicker:  " & DateTimePicker1.Value)  'get rid of this after debugging is complete 
         Debug.Print("Glider Takeoff:  " & TakeOffTimePicker.Value)
         newFlightRow.Glider_takeoff_time = TakeOffTimePicker.Value
         Debug.Print("Glider Landing:  " & LandingTimePicker.Value)
@@ -203,7 +202,12 @@
 
         'save the new row to the DB
         Try
+            Me.Validate()   'this line is probably NOT needed. 
+            Me.MASA_allDataSet_2_FlightsBindingSource.EndEdit()  'this line is probably NOT needed
+            'Me.MASA_allDataSet_2_TableAdapterManager.UpdateAll(Me.MASA_allDataSet2)
             Me.MASA_allDataSet_2_FlightsTableAdapter.Update(Me.MASA_allDataSet2.Flights)
+
+            'Me.OD_AOD_OD1TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
         Catch ex As Exception
             MessageBox.Show("Update failed  " & vbCrLf & ex.Message)
         End Try
