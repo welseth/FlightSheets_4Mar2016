@@ -1553,14 +1553,14 @@ Partial Public Class MASA_allDataSet2
                     ByVal parentAircraftRowByFK_Flights_TowPlane1 As AircraftRow,  _
                     ByVal parentAircraftRowByFK_Flights_TowPlane2 As AircraftRow,  _
                     ByVal _Date As Date,  _
-                    ByVal Glider_takeoff_time As System.DateTimeOffset,  _
-                    ByVal Glider_landing_time As System.DateTimeOffset,  _
+                    ByVal Glider_takeoff_time As Date,  _
+                    ByVal Glider_landing_time As Date,  _
                     ByVal Tow_takeoff_time As Date,  _
                     ByVal Tow_landing_time As Date,  _
                     ByVal Altitude_towed As Integer,  _
                     ByVal Rope_break As Boolean,  _
                     ByVal parentAirportRowByFK_Flights_Airport As AirportRow,  _
-                    ByVal Flight_minutes As Date,  _
+                    ByVal Flight_minutes As Integer,  _
                     ByVal parentMembersRowByFK_Flights_First_name_inv As MembersRow,  _
                     ByVal Split_cost As Boolean,  _
                     ByVal Percent_1st_check As Integer,  _
@@ -1718,9 +1718,9 @@ Partial Public Class MASA_allDataSet2
             Me.columnDate.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnDate")
             Me.columnDate.ExtendedProperties.Add("Generator_UserColumnName", "Date")
             MyBase.Columns.Add(Me.columnDate)
-            Me.columnGlider_takeoff_time = New Global.System.Data.DataColumn("Glider_takeoff_time", GetType(Global.System.DateTimeOffset), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnGlider_takeoff_time = New Global.System.Data.DataColumn("Glider_takeoff_time", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGlider_takeoff_time)
-            Me.columnGlider_landing_time = New Global.System.Data.DataColumn("Glider_landing_time", GetType(Global.System.DateTimeOffset), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnGlider_landing_time = New Global.System.Data.DataColumn("Glider_landing_time", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGlider_landing_time)
             Me.columnTow_takeoff_time = New Global.System.Data.DataColumn("Tow_takeoff_time", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTow_takeoff_time)
@@ -1732,7 +1732,7 @@ Partial Public Class MASA_allDataSet2
             MyBase.Columns.Add(Me.columnRope_break)
             Me.columnAirport_name = New Global.System.Data.DataColumn("Airport_name", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAirport_name)
-            Me.columnFlight_minutes = New Global.System.Data.DataColumn("Flight_minutes", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnFlight_minutes = New Global.System.Data.DataColumn("Flight_minutes", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFlight_minutes)
             Me.columnFirst_name_on_invoice = New Global.System.Data.DataColumn("First_name_on_invoice", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFirst_name_on_invoice)
@@ -2884,10 +2884,10 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Glider_takeoff_time() As System.DateTimeOffset
+        Public Property Glider_takeoff_time() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.Glider_takeoff_timeColumn),Global.System.DateTimeOffset)
+                    Return CType(Me(Me.tableFlights.Glider_takeoff_timeColumn),Date)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Glider_takeoff_time' in table 'Flights' is DBNull.", e)
                 End Try
@@ -2899,10 +2899,10 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Glider_landing_time() As System.DateTimeOffset
+        Public Property Glider_landing_time() As Date
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.Glider_landing_timeColumn),Global.System.DateTimeOffset)
+                    Return CType(Me(Me.tableFlights.Glider_landing_timeColumn),Date)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Glider_landing_time' in table 'Flights' is DBNull.", e)
                 End Try
@@ -2989,10 +2989,10 @@ Partial Public Class MASA_allDataSet2
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Flight_minutes() As Date
+        Public Property Flight_minutes() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableFlights.Flight_minutesColumn),Date)
+                    Return CType(Me(Me.tableFlights.Flight_minutesColumn),Integer)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Flight_minutes' in table 'Flights' is DBNull.", e)
                 End Try

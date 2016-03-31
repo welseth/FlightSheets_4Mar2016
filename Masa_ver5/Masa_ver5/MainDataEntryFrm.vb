@@ -171,7 +171,6 @@
         newFlightRow.TowPilot3 = TowPilotNameComboBox5.SelectedIndex  'towpilot3 not used, but assigning anyway
         newFlightRow.TowPlane1 = Aircraft_nameComboBox.SelectedIndex
         newFlightRow.TowPlane2 = Aircraft_nameComboBox.SelectedIndex  'towplane2 not used, but assigning anyway
-        newFlightRow._Date = DateTimePicker1.Value  'saves in format DateTime 
         'MessageBox.Show(DateTimePicker1.Value.ToString())  'get rid of this after debugging is complete 
         Debug.Print("DateTimePicker1: " & DateTimePicker1.Value)
         MessageBox.Show("DateTimePicker:  " & DateTimePicker1.Value)  'get rid of this after debugging is complete 
@@ -179,26 +178,19 @@
         newFlightRow.Glider_takeoff_time = TakeOffTimePicker.Value
         Debug.Print("Glider Landing:  " & LandingTimePicker.Value)
         newFlightRow.Glider_landing_time = LandingTimePicker.Value
-
-        'newFlightRow.First_name_on_invoice = FirstNameOnCheckComboBox.SelectedIndex
-
-
-        'newFlightRow.Split_cost = SplitCostCheckBox.CheckState
-
-        'newFlightRow.Percent_1st_check = PercentOnFirstCheck.Text
-
-        'newFlightRow.Second_name_on_invoice = SecondCheckNameComboBox.SelectedIndex
-
-        'Debug.WriteLine("Value of TakeOfFTimePicker:   " & TakeOffTimePicker.Value.ToLongTimeString)
-
-
-        'newFlightRow.Altitude_towed = TowAltitude.Text
-        'newFlightRow.Rope_break = RopeBreakCheckBox.Checked
-        'newFlightRow.Penalty_charge = PenaltyRadioButton.Checked
-        'newFlightRow.Cost_this_flight = CostThisFlightTextBox.Text
-
-
-        'newFlightRow.TowPilot1 = TowPilotNameComboBox5.SelectedIndex
+        newFlightRow.Tow_takeoff_time = TakeOffTimePicker.Value
+        newFlightRow.Tow_landing_time = LandingTimePicker.Value
+        newFlightRow._Date = DateTimePicker1.Value  'saves in format DateTime 
+        newFlightRow.Altitude_towed = TowAltitude.Text
+        newFlightRow.Rope_break = RopeBreakCheckBox.Checked
+        newFlightRow.Airport_name = Airport_nameComboBox.SelectedIndex
+        newFlightRow.Flight_minutes = 0  '<<<<<<<<<<<<need to do the math on this one!!   >>>>>>>>>>>>>>>>>>
+        newFlightRow.First_name_on_invoice = FirstNameOnCheckComboBox.SelectedIndex
+        newFlightRow.Split_cost = SplitCostCheckBox.Checked
+        newFlightRow.Percent_1st_check = PercentOnFirstCheck.Text
+        newFlightRow.Second_name_on_invoice = SecondCheckNameComboBox.SelectedIndex
+        newFlightRow.Penalty_charge = PenaltyRadioButton.Checked
+        newFlightRow.Cost_this_flight = 0        '<<<<<<<<<<<<<<<<<<<<<<<<<<<need to do the math on this one!!!  >>>>>>>>>>>>>>>>>>
 
 
 
@@ -383,6 +375,8 @@
         'MASA_allDataSet_2_FlightsTableAdapter.Update(MASA_allDataSet2.Flights)
 
     End Sub
+
+
 
 
 
