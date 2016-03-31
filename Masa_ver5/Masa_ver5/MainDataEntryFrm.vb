@@ -172,8 +172,13 @@
         newFlightRow.TowPlane1 = Aircraft_nameComboBox.SelectedIndex
         newFlightRow.TowPlane2 = Aircraft_nameComboBox.SelectedIndex  'towplane2 not used, but assigning anyway
         newFlightRow._Date = DateTimePicker1.Value  'saves in format DateTime 
-        MessageBox.Show(DateTimePicker1.Value.ToString())  'get rid of this after debugging is complete 
-
+        'MessageBox.Show(DateTimePicker1.Value.ToString())  'get rid of this after debugging is complete 
+        Debug.Print("DateTimePicker1: " & DateTimePicker1.Value)
+        MessageBox.Show("DateTimePicker:  " & DateTimePicker1.Value)  'get rid of this after debugging is complete 
+        Debug.Print("Glider Takeoff:  " & TakeOffTimePicker.Value)
+        newFlightRow.Glider_takeoff_time = TakeOffTimePicker.Value
+        Debug.Print("Glider Landing:  " & LandingTimePicker.Value)
+        newFlightRow.Glider_landing_time = LandingTimePicker.Value
 
         'newFlightRow.First_name_on_invoice = FirstNameOnCheckComboBox.SelectedIndex
 
@@ -185,9 +190,7 @@
         'newFlightRow.Second_name_on_invoice = SecondCheckNameComboBox.SelectedIndex
 
         'Debug.WriteLine("Value of TakeOfFTimePicker:   " & TakeOffTimePicker.Value.ToLongTimeString)
-        'newFlightRow.Glider_takeoff_time = TakeOffTimePicker.Value.ToShortTimeString
 
-        'newFlightRow.Glider_landing_time = LandingTimePicker.Value
 
         'newFlightRow.Altitude_towed = TowAltitude.Text
         'newFlightRow.Rope_break = RopeBreakCheckBox.Checked
