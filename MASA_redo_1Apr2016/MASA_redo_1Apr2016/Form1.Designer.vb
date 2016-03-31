@@ -26,44 +26,32 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.MASA_allDataSet_all_features = New MASA_redo_1Apr2016.MASA_allDataSet_all_features()
-        Me.AircraftBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AircraftTableAdapter = New MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.AircraftTableAdapter()
-        Me.AircraftTableAdapterManager = New MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.TableAdapterManager()
+        Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.AircraftBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.FlightsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MASA_allDataSet_all_features = New MASA_redo_1Apr2016.MASA_allDataSet_all_features()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.AircraftBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.AirportBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AirportTableAdapter = New MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.AirportTableAdapter()
-        Me.AirportDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AircraftDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn3 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FlightsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FlightsTableAdapter = New MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.FlightsTableAdapter()
+        Me.MembersDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn39 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn40 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn7 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewCheckBoxColumn8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewCheckBoxColumn9 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewCheckBoxColumn10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FlightsDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -95,39 +83,59 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn37 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewCheckBoxColumn6 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn38 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AircraftDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn3 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AircraftBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AirportDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AirportBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.AircraftTableAdapter = New MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.AircraftTableAdapter()
+        Me.AircraftTableAdapterManager = New MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.TableAdapterManager()
+        Me.AirportTableAdapter = New MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.AirportTableAdapter()
+        Me.FlightsTableAdapter = New MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.FlightsTableAdapter()
         Me.MembersTableAdapter = New MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.MembersTableAdapter()
-        Me.MembersDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn39 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn40 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn7 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewCheckBoxColumn8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewCheckBoxColumn9 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewCheckBoxColumn10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.TabControl2 = New System.Windows.Forms.TabControl()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.TabPage8 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.MASA_allDataSet_all_features, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AircraftBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl2.SuspendLayout()
         CType(Me.AircraftBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AircraftBindingNavigator.SuspendLayout()
-        CType(Me.AirportBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AirportDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AircraftDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FlightsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MASA_allDataSet_all_features, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl2.SuspendLayout()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AircraftDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AircraftBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AirportDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AirportBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
+        Me.TabControl1.Controls.Add(Me.TabPage7)
+        Me.TabControl1.Controls.Add(Me.TabPage8)
+        Me.TabControl1.Location = New System.Drawing.Point(55, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1384, 583)
@@ -135,6 +143,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TabPage1.Controls.Add(Me.TabControl2)
         Me.TabPage1.Controls.Add(Me.AircraftBindingNavigator)
         Me.TabPage1.Controls.Add(Me.MembersDataGridView)
@@ -146,41 +155,38 @@ Partial Class Form1
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1376, 557)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.Text = "Wayne Maintenance"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TabPage2
+        'TabControl2
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(192, 74)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.TabControl2.Controls.Add(Me.TabPage3)
+        Me.TabControl2.Controls.Add(Me.TabPage4)
+        Me.TabControl2.Location = New System.Drawing.Point(107, 334)
+        Me.TabControl2.Name = "TabControl2"
+        Me.TabControl2.SelectedIndex = 0
+        Me.TabControl2.Size = New System.Drawing.Size(8, 8)
+        Me.TabControl2.TabIndex = 4
         '
-        'MASA_allDataSet_all_features
+        'TabPage3
         '
-        Me.MASA_allDataSet_all_features.DataSetName = "MASA_allDataSet_all_features"
-        Me.MASA_allDataSet_all_features.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(0, 0)
+        Me.TabPage3.TabIndex = 0
+        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'AircraftBindingSource
+        'TabPage4
         '
-        Me.AircraftBindingSource.DataMember = "Aircraft"
-        Me.AircraftBindingSource.DataSource = Me.MASA_allDataSet_all_features
-        '
-        'AircraftTableAdapter
-        '
-        Me.AircraftTableAdapter.ClearBeforeFill = True
-        '
-        'AircraftTableAdapterManager
-        '
-        Me.AircraftTableAdapterManager.AircraftTableAdapter = Me.AircraftTableAdapter
-        Me.AircraftTableAdapterManager.AirportTableAdapter = Me.AirportTableAdapter
-        Me.AircraftTableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.AircraftTableAdapterManager.FlightsTableAdapter = Me.FlightsTableAdapter
-        Me.AircraftTableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter
-        Me.AircraftTableAdapterManager.UpdateOrder = MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(0, 0)
+        Me.TabPage4.TabIndex = 1
+        Me.TabPage4.Text = "TabPage4"
+        Me.TabPage4.UseVisualStyleBackColor = True
         '
         'AircraftBindingNavigator
         '
@@ -190,7 +196,7 @@ Partial Class Form1
         Me.AircraftBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.AircraftBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.AircraftBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.AircraftBindingNavigatorSaveItem})
-        Me.AircraftBindingNavigator.Location = New System.Drawing.Point(136, 278)
+        Me.AircraftBindingNavigator.Location = New System.Drawing.Point(111, 278)
         Me.AircraftBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.AircraftBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.AircraftBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -200,6 +206,41 @@ Partial Class Form1
         Me.AircraftBindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.AircraftBindingNavigator.TabIndex = 1
         Me.AircraftBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'FlightsBindingSource
+        '
+        Me.FlightsBindingSource.DataMember = "Flights"
+        Me.FlightsBindingSource.DataSource = Me.MASA_allDataSet_all_features
+        '
+        'MASA_allDataSet_all_features
+        '
+        Me.MASA_allDataSet_all_features.DataSetName = "MASA_allDataSet_all_features"
+        Me.MASA_allDataSet_all_features.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -233,16 +274,9 @@ Partial Class Form1
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -265,26 +299,8 @@ Partial Class Form1
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'AircraftBindingNavigatorSaveItem
         '
@@ -294,131 +310,58 @@ Partial Class Form1
         Me.AircraftBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.AircraftBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'AirportBindingSource
+        'MembersDataGridView
         '
-        Me.AirportBindingSource.DataMember = "Airport"
-        Me.AirportBindingSource.DataSource = Me.MASA_allDataSet_all_features
+        Me.MembersDataGridView.AutoGenerateColumns = False
+        Me.MembersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MembersDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn40, Me.DataGridViewCheckBoxColumn7, Me.DataGridViewCheckBoxColumn8, Me.DataGridViewCheckBoxColumn9, Me.DataGridViewCheckBoxColumn10})
+        Me.MembersDataGridView.DataSource = Me.MembersBindingSource
+        Me.MembersDataGridView.Location = New System.Drawing.Point(685, 18)
+        Me.MembersDataGridView.Name = "MembersDataGridView"
+        Me.MembersDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.MembersDataGridView.TabIndex = 3
         '
-        'AirportTableAdapter
+        'DataGridViewTextBoxColumn39
         '
-        Me.AirportTableAdapter.ClearBeforeFill = True
+        Me.DataGridViewTextBoxColumn39.DataPropertyName = "Member_refnum"
+        Me.DataGridViewTextBoxColumn39.HeaderText = "Member_refnum"
+        Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
+        Me.DataGridViewTextBoxColumn39.ReadOnly = True
         '
-        'AirportDataGridView
+        'DataGridViewTextBoxColumn40
         '
-        Me.AirportDataGridView.AutoGenerateColumns = False
-        Me.AirportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.AirportDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.AirportDataGridView.DataSource = Me.AirportBindingSource
-        Me.AirportDataGridView.Location = New System.Drawing.Point(352, 18)
-        Me.AirportDataGridView.Name = "AirportDataGridView"
-        Me.AirportDataGridView.Size = New System.Drawing.Size(300, 220)
-        Me.AirportDataGridView.TabIndex = 1
+        Me.DataGridViewTextBoxColumn40.DataPropertyName = "Name"
+        Me.DataGridViewTextBoxColumn40.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
         '
-        'DataGridViewTextBoxColumn1
+        'DataGridViewCheckBoxColumn7
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Airport_refnum"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Airport_refnum"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewCheckBoxColumn7.DataPropertyName = "Instructor"
+        Me.DataGridViewCheckBoxColumn7.HeaderText = "Instructor"
+        Me.DataGridViewCheckBoxColumn7.Name = "DataGridViewCheckBoxColumn7"
         '
-        'DataGridViewTextBoxColumn2
+        'DataGridViewCheckBoxColumn8
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Airport_name"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Airport_name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewCheckBoxColumn8.DataPropertyName = "Tow Pilot"
+        Me.DataGridViewCheckBoxColumn8.HeaderText = "Tow Pilot"
+        Me.DataGridViewCheckBoxColumn8.Name = "DataGridViewCheckBoxColumn8"
         '
-        'AircraftDataGridView
+        'DataGridViewCheckBoxColumn9
         '
-        Me.AircraftDataGridView.AutoGenerateColumns = False
-        Me.AircraftDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.AircraftDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewCheckBoxColumn2, Me.DataGridViewTextBoxColumn8, Me.DataGridViewCheckBoxColumn3, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
-        Me.AircraftDataGridView.DataSource = Me.AircraftBindingSource
-        Me.AircraftDataGridView.Location = New System.Drawing.Point(20, 18)
-        Me.AircraftDataGridView.Name = "AircraftDataGridView"
-        Me.AircraftDataGridView.Size = New System.Drawing.Size(300, 220)
-        Me.AircraftDataGridView.TabIndex = 1
+        Me.DataGridViewCheckBoxColumn9.DataPropertyName = "MASA_Member"
+        Me.DataGridViewCheckBoxColumn9.HeaderText = "MASA_Member"
+        Me.DataGridViewCheckBoxColumn9.Name = "DataGridViewCheckBoxColumn9"
         '
-        'DataGridViewTextBoxColumn3
+        'DataGridViewCheckBoxColumn10
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Aircraft_refnum"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Aircraft_refnum"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewCheckBoxColumn10.DataPropertyName = "Guest_Member"
+        Me.DataGridViewCheckBoxColumn10.HeaderText = "Guest_Member"
+        Me.DataGridViewCheckBoxColumn10.Name = "DataGridViewCheckBoxColumn10"
         '
-        'DataGridViewTextBoxColumn4
+        'MembersBindingSource
         '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Aircraft_name"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Aircraft_name"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Manufacturer"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Manufacturer"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "N-number"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "N-number"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Seats"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Seats"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "Glider"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "Glider"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        '
-        'DataGridViewCheckBoxColumn2
-        '
-        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "TowPlane"
-        Me.DataGridViewCheckBoxColumn2.HeaderText = "TowPlane"
-        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Cost_per_hour"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Cost_per_hour"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        '
-        'DataGridViewCheckBoxColumn3
-        '
-        Me.DataGridViewCheckBoxColumn3.DataPropertyName = "Privately_owned"
-        Me.DataGridViewCheckBoxColumn3.HeaderText = "Privately_owned"
-        Me.DataGridViewCheckBoxColumn3.Name = "DataGridViewCheckBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Total_flight_time"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Total_flight_time"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "Total_launches"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Total_launches"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "Last_annual_performed"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Last_annual_performed"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        '
-        'FlightsBindingSource
-        '
-        Me.FlightsBindingSource.DataMember = "Flights"
-        Me.FlightsBindingSource.DataSource = Me.MASA_allDataSet_all_features
-        '
-        'FlightsTableAdapter
-        '
-        Me.FlightsTableAdapter.ClearBeforeFill = True
+        Me.MembersBindingSource.DataMember = "Members"
+        Me.MembersBindingSource.DataSource = Me.MASA_allDataSet_all_features
         '
         'FlightsDataGridView
         '
@@ -612,92 +555,199 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn38.HeaderText = "Cost_this_flight"
         Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
         '
-        'MembersBindingSource
+        'AircraftDataGridView
         '
-        Me.MembersBindingSource.DataMember = "Members"
-        Me.MembersBindingSource.DataSource = Me.MASA_allDataSet_all_features
+        Me.AircraftDataGridView.AutoGenerateColumns = False
+        Me.AircraftDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.AircraftDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewCheckBoxColumn2, Me.DataGridViewTextBoxColumn8, Me.DataGridViewCheckBoxColumn3, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11})
+        Me.AircraftDataGridView.DataSource = Me.AircraftBindingSource
+        Me.AircraftDataGridView.Location = New System.Drawing.Point(20, 18)
+        Me.AircraftDataGridView.Name = "AircraftDataGridView"
+        Me.AircraftDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.AircraftDataGridView.TabIndex = 1
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Aircraft_refnum"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Aircraft_refnum"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Aircraft_name"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Aircraft_name"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Manufacturer"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Manufacturer"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "N-number"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "N-number"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Seats"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Seats"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "Glider"
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Glider"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        '
+        'DataGridViewCheckBoxColumn2
+        '
+        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "TowPlane"
+        Me.DataGridViewCheckBoxColumn2.HeaderText = "TowPlane"
+        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Cost_per_hour"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Cost_per_hour"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'DataGridViewCheckBoxColumn3
+        '
+        Me.DataGridViewCheckBoxColumn3.DataPropertyName = "Privately_owned"
+        Me.DataGridViewCheckBoxColumn3.HeaderText = "Privately_owned"
+        Me.DataGridViewCheckBoxColumn3.Name = "DataGridViewCheckBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Total_flight_time"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Total_flight_time"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "Total_launches"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Total_launches"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "Last_annual_performed"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Last_annual_performed"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
+        'AircraftBindingSource
+        '
+        Me.AircraftBindingSource.DataMember = "Aircraft"
+        Me.AircraftBindingSource.DataSource = Me.MASA_allDataSet_all_features
+        '
+        'AirportDataGridView
+        '
+        Me.AirportDataGridView.AutoGenerateColumns = False
+        Me.AirportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.AirportDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
+        Me.AirportDataGridView.DataSource = Me.AirportBindingSource
+        Me.AirportDataGridView.Location = New System.Drawing.Point(352, 18)
+        Me.AirportDataGridView.Name = "AirportDataGridView"
+        Me.AirportDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.AirportDataGridView.TabIndex = 1
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Airport_refnum"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Airport_refnum"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Airport_name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Airport_name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'AirportBindingSource
+        '
+        Me.AirportBindingSource.DataMember = "Airport"
+        Me.AirportBindingSource.DataSource = Me.MASA_allDataSet_all_features
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1376, 557)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "OD/AOD/Tow Pilot Info"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'AircraftTableAdapter
+        '
+        Me.AircraftTableAdapter.ClearBeforeFill = True
+        '
+        'AircraftTableAdapterManager
+        '
+        Me.AircraftTableAdapterManager.AircraftTableAdapter = Me.AircraftTableAdapter
+        Me.AircraftTableAdapterManager.AirportTableAdapter = Me.AirportTableAdapter
+        Me.AircraftTableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.AircraftTableAdapterManager.FlightsTableAdapter = Me.FlightsTableAdapter
+        Me.AircraftTableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter
+        Me.AircraftTableAdapterManager.UpdateOrder = MASA_redo_1Apr2016.MASA_allDataSet_all_featuresTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'AirportTableAdapter
+        '
+        Me.AirportTableAdapter.ClearBeforeFill = True
+        '
+        'FlightsTableAdapter
+        '
+        Me.FlightsTableAdapter.ClearBeforeFill = True
         '
         'MembersTableAdapter
         '
         Me.MembersTableAdapter.ClearBeforeFill = True
         '
-        'MembersDataGridView
+        'TabPage5
         '
-        Me.MembersDataGridView.AutoGenerateColumns = False
-        Me.MembersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.MembersDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn40, Me.DataGridViewCheckBoxColumn7, Me.DataGridViewCheckBoxColumn8, Me.DataGridViewCheckBoxColumn9, Me.DataGridViewCheckBoxColumn10})
-        Me.MembersDataGridView.DataSource = Me.MembersBindingSource
-        Me.MembersDataGridView.Location = New System.Drawing.Point(685, 18)
-        Me.MembersDataGridView.Name = "MembersDataGridView"
-        Me.MembersDataGridView.Size = New System.Drawing.Size(300, 220)
-        Me.MembersDataGridView.TabIndex = 3
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage5.Size = New System.Drawing.Size(1376, 557)
+        Me.TabPage5.TabIndex = 2
+        Me.TabPage5.Text = "Enter New Flights"
+        Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'DataGridViewTextBoxColumn39
+        'TabPage6
         '
-        Me.DataGridViewTextBoxColumn39.DataPropertyName = "Member_refnum"
-        Me.DataGridViewTextBoxColumn39.HeaderText = "Member_refnum"
-        Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
-        Me.DataGridViewTextBoxColumn39.ReadOnly = True
+        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage6.Size = New System.Drawing.Size(1376, 557)
+        Me.TabPage6.TabIndex = 3
+        Me.TabPage6.Text = "Print Invoices"
+        Me.TabPage6.UseVisualStyleBackColor = True
         '
-        'DataGridViewTextBoxColumn40
+        'TabPage7
         '
-        Me.DataGridViewTextBoxColumn40.DataPropertyName = "Name"
-        Me.DataGridViewTextBoxColumn40.HeaderText = "Name"
-        Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
+        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage7.Size = New System.Drawing.Size(1376, 557)
+        Me.TabPage7.TabIndex = 4
+        Me.TabPage7.Text = "Add Pilot Names"
+        Me.TabPage7.UseVisualStyleBackColor = True
         '
-        'DataGridViewCheckBoxColumn7
+        'TabPage8
         '
-        Me.DataGridViewCheckBoxColumn7.DataPropertyName = "Instructor"
-        Me.DataGridViewCheckBoxColumn7.HeaderText = "Instructor"
-        Me.DataGridViewCheckBoxColumn7.Name = "DataGridViewCheckBoxColumn7"
-        '
-        'DataGridViewCheckBoxColumn8
-        '
-        Me.DataGridViewCheckBoxColumn8.DataPropertyName = "Tow Pilot"
-        Me.DataGridViewCheckBoxColumn8.HeaderText = "Tow Pilot"
-        Me.DataGridViewCheckBoxColumn8.Name = "DataGridViewCheckBoxColumn8"
-        '
-        'DataGridViewCheckBoxColumn9
-        '
-        Me.DataGridViewCheckBoxColumn9.DataPropertyName = "MASA_Member"
-        Me.DataGridViewCheckBoxColumn9.HeaderText = "MASA_Member"
-        Me.DataGridViewCheckBoxColumn9.Name = "DataGridViewCheckBoxColumn9"
-        '
-        'DataGridViewCheckBoxColumn10
-        '
-        Me.DataGridViewCheckBoxColumn10.DataPropertyName = "Guest_Member"
-        Me.DataGridViewCheckBoxColumn10.HeaderText = "Guest_Member"
-        Me.DataGridViewCheckBoxColumn10.Name = "DataGridViewCheckBoxColumn10"
-        '
-        'TabControl2
-        '
-        Me.TabControl2.Controls.Add(Me.TabPage3)
-        Me.TabControl2.Controls.Add(Me.TabPage4)
-        Me.TabControl2.Location = New System.Drawing.Point(107, 334)
-        Me.TabControl2.Name = "TabControl2"
-        Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(8, 8)
-        Me.TabControl2.TabIndex = 4
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(0, 0)
-        Me.TabPage3.TabIndex = 0
-        Me.TabPage3.Text = "TabPage3"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'TabPage4
-        '
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(0, 0)
-        Me.TabPage4.TabIndex = 1
-        Me.TabPage4.Text = "TabPage4"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.TabPage8.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage8.Name = "TabPage8"
+        Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage8.Size = New System.Drawing.Size(1376, 557)
+        Me.TabPage8.TabIndex = 5
+        Me.TabPage8.Text = "Admin Stuff"
+        Me.TabPage8.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -710,19 +760,19 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.MASA_allDataSet_all_features, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AircraftBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl2.ResumeLayout(False)
         CType(Me.AircraftBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AircraftBindingNavigator.ResumeLayout(False)
         Me.AircraftBindingNavigator.PerformLayout()
-        CType(Me.AirportBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AirportDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AircraftDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FlightsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MASA_allDataSet_all_features, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl2.ResumeLayout(False)
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AircraftDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AircraftBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AirportDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AirportBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -810,4 +860,8 @@ Partial Class Form1
     Friend WithEvents TabControl2 As TabControl
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents TabPage7 As TabPage
+    Friend WithEvents TabPage8 As TabPage
 End Class
