@@ -100,4 +100,27 @@
         Debug.Print("AOD2:   " & OD_AOD_AOD2_ComboBox.Text)
         Debug.Print("Airport:   " & OD_AOD_AirportName_Combobox.Text & vbCrLf)
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Set_Test_Vals_Tab1.Click
+        OD_AOD_OD1_ComboBox.SelectedIndex = 1
+        OD_AOD_OD2_ComboBox.SelectedIndex = 2
+        OD_AOD_OD3_ComboBox.SelectedIndex = 3
+        OD_AOD_AOD1_ComboBox.SelectedIndex = 4
+        OD_AOD_AOD2_ComboBox.SelectedIndex = 5
+        OD_AOD_AirportName_Combobox.SelectedIndex = 3
+        DateTimePicker1.Value = "3/22/1983"
+        Debug.Print("Finished setting Test Vals Tab1")
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        TabControl1.SelectedIndex = 1
+        Dim TabIndexValue As Integer
+        TabIndexValue = TabControl1.SelectedIndex
+        Debug.WriteLine("Changed Tab.  TabIndex:  " & TabIndexValue)
+    End Sub
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        Debug.Print("Date:  " & DateTimePicker1.Value)
+    End Sub
 End Class
