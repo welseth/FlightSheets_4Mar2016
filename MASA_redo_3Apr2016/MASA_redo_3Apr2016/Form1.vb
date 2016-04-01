@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MembersBindingNavigatorSaveItem.Click
+    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.MembersBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.OD_AOD_OD1)
@@ -7,6 +7,40 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'MASA_all_1Apr2016DataSet.Flights' table. You can move, or remove it, as needed.
+        Me.FlightsTableAdapter.Fill(Me.MASA_all_1Apr2016DataSet.Flights)
+        'TODO: This line of code loads data into the 'Enter_SecondName2.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter22.Fill(Me.Enter_SecondName2.Members)
+        'TODO: This line of code loads data into the 'Enter_SecondName1.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter21.Fill(Me.Enter_SecondName1.Members)
+        'TODO: This line of code loads data into the 'Enter_Glider2.Aircraft' table. You can move, or remove it, as needed.
+        Me.AircraftTableAdapter3.Fill(Me.Enter_Glider2.Aircraft)
+        'TODO: This line of code loads data into the 'Enter_Glider1.Aircraft' table. You can move, or remove it, as needed.
+        Me.AircraftTableAdapter2.Fill(Me.Enter_Glider1.Aircraft)
+        'TODO: This line of code loads data into the 'Enter_Passenger2.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter20.Fill(Me.Enter_Passenger2.Members)
+        'TODO: This line of code loads data into the 'Enter_Passenger1.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter19.Fill(Me.Enter_Passenger1.Members)
+        'TODO: This line of code loads data into the 'Enter_Instructor2.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter18.Fill(Me.Enter_Instructor2.Members)
+        'TODO: This line of code loads data into the 'Enter_Instructor1.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter17.Fill(Me.Enter_Instructor1.Members)
+        'TODO: This line of code loads data into the 'Enter_Tow_Plane2.Aircraft' table. You can move, or remove it, as needed.
+        Me.AircraftTableAdapter1.Fill(Me.Enter_Tow_Plane2.Aircraft)
+        'TODO: This line of code loads data into the 'Enter_Tow_Plane1.Aircraft' table. You can move, or remove it, as needed.
+        Me.AircraftTableAdapter.Fill(Me.Enter_Tow_Plane1.Aircraft)
+        'TODO: This line of code loads data into the 'Enter_FirstName2.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter16.Fill(Me.Enter_FirstName2.Members)
+        'TODO: This line of code loads data into the 'Enter_FirstName1.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter15.Fill(Me.Enter_FirstName1.Members)
+        'TODO: This line of code loads data into the 'Enter_Glider_Pilot2.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter14.Fill(Me.Enter_Glider_Pilot2.Members)
+        'TODO: This line of code loads data into the 'Enter_Glider_Pilot1.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter13.Fill(Me.Enter_Glider_Pilot1.Members)
+        'TODO: This line of code loads data into the 'Enter_Tow_Pilot1.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter12.Fill(Me.Enter_Tow_Pilot1.Members)
+        'TODO: This line of code loads data into the 'Enter_Tow_Pilot2.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter11.Fill(Me.Enter_Tow_Pilot2.Members)
         'TODO: This line of code loads data into the 'OD_AOD_Airport2.Airport' table. You can move, or remove it, as needed.
         Me.AirportTableAdapter1.Fill(Me.OD_AOD_Airport2.Airport)
         'TODO: This line of code loads data into the 'OD_AOD_Airport1.Airport' table. You can move, or remove it, as needed.
@@ -34,16 +68,23 @@
         'TODO: This line of code loads data into the 'OD_AOD_OD1.Members' table. You can move, or remove it, as needed.
         Me.MembersTableAdapter.Fill(Me.OD_AOD_OD1.Members)
 
+        'set the airport displayed to be the "first one in the list" when form loads first time.
+        If OD_AOD_AirportName_Combobox.Items.Count > 0 Then
+            OD_AOD_AirportName_Combobox.SelectedIndex = 1
+        End If
 
-
-
+        ' Set the Format type and the CustomFormat string for both time pickers when form loads first time.
+        TakeOff_DateTimePicker.Format = DateTimePickerFormat.Custom
+        TakeOff_DateTimePicker.CustomFormat = "HH:mm"
+        Landing_DateTimePicker.Format = DateTimePickerFormat.Custom
+        Landing_DateTimePicker.CustomFormat = "HH:mm"
+        TakeOff_DateTimePicker.Value = Now
+        Landing_DateTimePicker.Value = Now
+        Todays_Date_DateTimePicker.Value = Now
 
     End Sub
 
-
-
-
-
+    ' debug item
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OD_AOD_OD1_ComboBox.SelectedIndexChanged
         Debug.Print("OD_AOD_OD1:  " & OD_AOD_OD1_ComboBox.Text)
         Debug.Print("OD_AOD_OD2:  " & OD_AOD_OD2_ComboBox.Text)
@@ -53,7 +94,7 @@
         Debug.Print("Airport:   " & OD_AOD_AirportName_Combobox.Text & vbCrLf)
 
     End Sub
-
+    ' debug item
     Private Sub OD_AOD_OD2_ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OD_AOD_OD2_ComboBox.SelectedIndexChanged
         Debug.Print("OD_AOD_OD1:  " & OD_AOD_OD1_ComboBox.Text)
         Debug.Print("OD_AOD_OD2:  " & OD_AOD_OD2_ComboBox.Text)
@@ -62,7 +103,7 @@
         Debug.Print("AOD2:   " & OD_AOD_AOD2_ComboBox.Text)
         Debug.Print("Airport:   " & OD_AOD_AirportName_Combobox.Text & vbCrLf)
     End Sub
-
+    ' debug item
     Private Sub OD_AOD_OD3_ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OD_AOD_OD3_ComboBox.SelectedIndexChanged
         Debug.Print("OD_AOD_OD1:  " & OD_AOD_OD1_ComboBox.Text)
         Debug.Print("OD_AOD_OD2:  " & OD_AOD_OD2_ComboBox.Text)
@@ -71,7 +112,7 @@
         Debug.Print("AOD2:   " & OD_AOD_AOD2_ComboBox.Text)
         Debug.Print("Airport:   " & OD_AOD_AirportName_Combobox.Text & vbCrLf)
     End Sub
-
+    ' debug item
     Private Sub OD_AOD_AOD1_ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OD_AOD_AOD1_ComboBox.SelectedIndexChanged
         Debug.Print("OD_AOD_OD1:  " & OD_AOD_OD1_ComboBox.Text)
         Debug.Print("OD_AOD_OD2:  " & OD_AOD_OD2_ComboBox.Text)
@@ -80,7 +121,7 @@
         Debug.Print("AOD2:   " & OD_AOD_AOD2_ComboBox.Text)
         Debug.Print("Airport:   " & OD_AOD_AirportName_Combobox.Text & vbCrLf)
     End Sub
-
+    ' debug item
     Private Sub OD_AOD_AOD2_ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OD_AOD_AOD2_ComboBox.SelectedIndexChanged
         Debug.Print("OD_AOD_OD1:  " & OD_AOD_OD1_ComboBox.Text)
         Debug.Print("OD_AOD_OD2:  " & OD_AOD_OD2_ComboBox.Text)
@@ -89,7 +130,7 @@
         Debug.Print("AOD2:   " & OD_AOD_AOD2_ComboBox.Text)
         Debug.Print("Airport:   " & OD_AOD_AirportName_Combobox.Text & vbCrLf)
     End Sub
-
+    ' debug item
     Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OD_AOD_AirportName_Combobox.SelectedIndexChanged
         Debug.Print("OD_AOD_OD1:  " & OD_AOD_OD1_ComboBox.Text)
         Debug.Print("OD_AOD_OD2:  " & OD_AOD_OD2_ComboBox.Text)
@@ -98,7 +139,7 @@
         Debug.Print("AOD2:   " & OD_AOD_AOD2_ComboBox.Text)
         Debug.Print("Airport:   " & OD_AOD_AirportName_Combobox.Text & vbCrLf)
     End Sub
-
+    ' debug item
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Set_Test_Vals_Tab1.Click
         OD_AOD_OD1_ComboBox.SelectedIndex = 1
         OD_AOD_OD2_ComboBox.SelectedIndex = 2
@@ -106,22 +147,39 @@
         OD_AOD_AOD1_ComboBox.SelectedIndex = 4
         OD_AOD_AOD2_ComboBox.SelectedIndex = 5
         OD_AOD_AirportName_Combobox.SelectedIndex = 3
-        DateTimePicker1.Value = "3/22/1983"
+        Todays_Date_DateTimePicker.Value = "3/22/1983"
         Debug.Print("Finished setting Test Vals Tab1")
-
     End Sub
-
+    ' debug item
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles SetTestValsTab2.Click
+        TowPilotNameComboBox.SelectedIndex = 6
+        TowPlaneComboBox.SelectedIndex = 3
+        GliderPilotComboBox.SelectedIndex = 7
+        FirstNameComboBox.SelectedIndex = 8
+        InstructorComboBox.SelectedIndex = 9
+        PassengerComboBox.SelectedIndex = 10
+        GliderComboBox.SelectedIndex = 4
+        TakeOff_DateTimePicker.Value = "3/25/2015 10:01:01"
+        Landing_DateTimePicker.Value = "3/25/2015 11:30:22"
+        TowAltitude.Text = "3000"
+        SecondNameComboBox.SelectedIndex = 11
+        SplitCost.Checked = True
+        PercentFirstCheck.Text = "95"
+        FlightDurationTextBox.Text = "2hr 39min"
+        PenaltyRadioButton.Checked = True
+    End Sub
+    ' debug item
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TabControl1.SelectedIndex = 1
         Dim TabIndexValue As Integer
         TabIndexValue = TabControl1.SelectedIndex
         Debug.WriteLine("Changed Tab.  TabIndex:  " & TabIndexValue)
     End Sub
-
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
-        Debug.Print("Date:  " & DateTimePicker1.Value)
+    ' debug item
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles Todays_Date_DateTimePicker.ValueChanged
+        Debug.Print("Date:  " & Todays_Date_DateTimePicker.Value)
     End Sub
-
+    ' debug item
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
         ' debug item: this just does a quick debug.print with the index of the current selected tab
         Dim TabIndexValue As Integer
@@ -129,5 +187,6 @@
         Debug.WriteLine("Tab Just Changed TabIndex:  " & TabIndexValue)
 
     End Sub
+
 
 End Class
