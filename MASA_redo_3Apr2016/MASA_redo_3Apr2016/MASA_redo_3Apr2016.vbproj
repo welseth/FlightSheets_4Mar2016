@@ -94,6 +94,11 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MASA_all_1Apr2016DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MASA_all_1Apr2016DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -114,6 +119,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OD_AOD_OD1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="OD_AOD_OD2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_OD2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_OD3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_OD3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_OD4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_OD4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_OD5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_OD5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OD_AOD_OD6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OD_AOD_OD6.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -127,6 +157,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="MASA_all_1Apr2016DataSet.xsc">
+      <DependentUpon>MASA_all_1Apr2016DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MASA_all_1Apr2016DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MASA_all_1Apr2016DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MASA_all_1Apr2016DataSet.xss">
+      <DependentUpon>MASA_all_1Apr2016DataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -147,6 +188,61 @@
     </None>
     <None Include="OD_AOD_OD1.xss">
       <DependentUpon>OD_AOD_OD1.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD2.xsc">
+      <DependentUpon>OD_AOD_OD2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_OD2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_OD2.xss">
+      <DependentUpon>OD_AOD_OD2.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD3.xsc">
+      <DependentUpon>OD_AOD_OD3.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_OD3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_OD3.xss">
+      <DependentUpon>OD_AOD_OD3.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD4.xsc">
+      <DependentUpon>OD_AOD_OD4.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_OD4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_OD4.xss">
+      <DependentUpon>OD_AOD_OD4.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD5.xsc">
+      <DependentUpon>OD_AOD_OD5.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_OD5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_OD5.xss">
+      <DependentUpon>OD_AOD_OD5.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD6.xsc">
+      <DependentUpon>OD_AOD_OD6.xsd</DependentUpon>
+    </None>
+    <None Include="OD_AOD_OD6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OD_AOD_OD6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OD_AOD_OD6.xss">
+      <DependentUpon>OD_AOD_OD6.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
