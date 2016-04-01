@@ -87,6 +87,86 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enter_FirstName1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_FirstName1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_FirstName2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_FirstName2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Glider1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Glider1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Glider2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Glider2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Glider_Pilot1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Glider_Pilot1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Glider_Pilot2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Glider_Pilot2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Instructor1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Instructor1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Instructor2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Instructor2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Passenger1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Passenger1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Passenger2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Passenger2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_SecondName1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_SecondName1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_SecondName2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_SecondName2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Tow_Pilot1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Tow_Pilot1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Tow_Pilot2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Tow_Pilot2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Tow_Plane1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Tow_Plane1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enter_Tow_Plane2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enter_Tow_Plane2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +267,182 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Enter_FirstName1.xsc">
+      <DependentUpon>Enter_FirstName1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_FirstName1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_FirstName1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_FirstName1.xss">
+      <DependentUpon>Enter_FirstName1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_FirstName2.xsc">
+      <DependentUpon>Enter_FirstName2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_FirstName2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_FirstName2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_FirstName2.xss">
+      <DependentUpon>Enter_FirstName2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Glider1.xsc">
+      <DependentUpon>Enter_Glider1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Glider1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Glider1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Glider1.xss">
+      <DependentUpon>Enter_Glider1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Glider2.xsc">
+      <DependentUpon>Enter_Glider2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Glider2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Glider2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Glider2.xss">
+      <DependentUpon>Enter_Glider2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Glider_Pilot1.xsc">
+      <DependentUpon>Enter_Glider_Pilot1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Glider_Pilot1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Glider_Pilot1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Glider_Pilot1.xss">
+      <DependentUpon>Enter_Glider_Pilot1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Glider_Pilot2.xsc">
+      <DependentUpon>Enter_Glider_Pilot2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Glider_Pilot2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Glider_Pilot2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Glider_Pilot2.xss">
+      <DependentUpon>Enter_Glider_Pilot2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Instructor1.xsc">
+      <DependentUpon>Enter_Instructor1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Instructor1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Instructor1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Instructor1.xss">
+      <DependentUpon>Enter_Instructor1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Instructor2.xsc">
+      <DependentUpon>Enter_Instructor2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Instructor2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Instructor2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Instructor2.xss">
+      <DependentUpon>Enter_Instructor2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Passenger1.xsc">
+      <DependentUpon>Enter_Passenger1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Passenger1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Passenger1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Passenger1.xss">
+      <DependentUpon>Enter_Passenger1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Passenger2.xsc">
+      <DependentUpon>Enter_Passenger2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Passenger2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Passenger2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Passenger2.xss">
+      <DependentUpon>Enter_Passenger2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_SecondName1.xsc">
+      <DependentUpon>Enter_SecondName1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_SecondName1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_SecondName1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_SecondName1.xss">
+      <DependentUpon>Enter_SecondName1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_SecondName2.xsc">
+      <DependentUpon>Enter_SecondName2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_SecondName2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_SecondName2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_SecondName2.xss">
+      <DependentUpon>Enter_SecondName2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Tow_Pilot1.xsc">
+      <DependentUpon>Enter_Tow_Pilot1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Tow_Pilot1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Tow_Pilot1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Tow_Pilot1.xss">
+      <DependentUpon>Enter_Tow_Pilot1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Tow_Pilot2.xsc">
+      <DependentUpon>Enter_Tow_Pilot2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Tow_Pilot2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Tow_Pilot2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Tow_Pilot2.xss">
+      <DependentUpon>Enter_Tow_Pilot2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Tow_Plane1.xsc">
+      <DependentUpon>Enter_Tow_Plane1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Tow_Plane1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Tow_Plane1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Tow_Plane1.xss">
+      <DependentUpon>Enter_Tow_Plane1.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Tow_Plane2.xsc">
+      <DependentUpon>Enter_Tow_Plane2.xsd</DependentUpon>
+    </None>
+    <None Include="Enter_Tow_Plane2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Enter_Tow_Plane2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Enter_Tow_Plane2.xss">
+      <DependentUpon>Enter_Tow_Plane2.xsd</DependentUpon>
+    </None>
     <None Include="MASA_all_1Apr2016DataSet.xsc">
       <DependentUpon>MASA_all_1Apr2016DataSet.xsd</DependentUpon>
     </None>

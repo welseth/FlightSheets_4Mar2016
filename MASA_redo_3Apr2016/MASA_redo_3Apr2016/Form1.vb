@@ -44,8 +44,6 @@
 
 
 
-
-
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OD_AOD_OD1_ComboBox.SelectedIndexChanged
         Debug.Print("OD_AOD_OD1:  " & OD_AOD_OD1_ComboBox.Text)
         Debug.Print("OD_AOD_OD2:  " & OD_AOD_OD2_ComboBox.Text)
@@ -123,4 +121,13 @@
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
         Debug.Print("Date:  " & DateTimePicker1.Value)
     End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+        ' debug item: this just does a quick debug.print with the index of the current selected tab
+        Dim TabIndexValue As Integer
+        TabIndexValue = TabControl1.SelectedIndex
+        Debug.WriteLine("Tab Just Changed TabIndex:  " & TabIndexValue)
+
+    End Sub
+
 End Class

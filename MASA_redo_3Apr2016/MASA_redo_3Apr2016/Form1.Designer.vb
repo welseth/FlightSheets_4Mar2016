@@ -26,6 +26,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.MembersBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -79,6 +80,38 @@ Partial Class Form1
         Me.OD_AOD_OD2 = New MASA_redo_3Apr2016.OD_AOD_OD2()
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PenaltyCharge = New System.Windows.Forms.GroupBox()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
@@ -103,7 +136,8 @@ Partial Class Form1
         Me.MembersTableAdapter10 = New MASA_redo_3Apr2016.OD_AOD_AOD4TableAdapters.MembersTableAdapter()
         Me.AirportTableAdapter = New MASA_redo_3Apr2016.OD_AOD_Airport1TableAdapters.AirportTableAdapter()
         Me.AirportTableAdapter1 = New MASA_redo_3Apr2016.OD_AOD_Airport2TableAdapters.AirportTableAdapter()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.MembersBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,6 +167,8 @@ Partial Class Form1
         CType(Me.MembersBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OD_AOD_OD2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        Me.PenaltyCharge.SuspendLayout()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MASA_all_1Apr2016DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -180,6 +216,13 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "OD/AOD/Tow Pilot Info"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(36, 49)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 15
         '
         'MembersBindingNavigator
         '
@@ -565,6 +608,37 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label20)
+        Me.TabPage2.Controls.Add(Me.PenaltyCharge)
+        Me.TabPage2.Controls.Add(Me.Label19)
+        Me.TabPage2.Controls.Add(Me.Label18)
+        Me.TabPage2.Controls.Add(Me.CheckBox2)
+        Me.TabPage2.Controls.Add(Me.Label17)
+        Me.TabPage2.Controls.Add(Me.Label16)
+        Me.TabPage2.Controls.Add(Me.Label15)
+        Me.TabPage2.Controls.Add(Me.TextBox4)
+        Me.TabPage2.Controls.Add(Me.DateTimePicker3)
+        Me.TabPage2.Controls.Add(Me.DateTimePicker2)
+        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Controls.Add(Me.Label14)
+        Me.TabPage2.Controls.Add(Me.ComboBox8)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.CheckBox1)
+        Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.Label13)
+        Me.TabPage2.Controls.Add(Me.ComboBox7)
+        Me.TabPage2.Controls.Add(Me.Label12)
+        Me.TabPage2.Controls.Add(Me.ComboBox6)
+        Me.TabPage2.Controls.Add(Me.Label11)
+        Me.TabPage2.Controls.Add(Me.ComboBox5)
+        Me.TabPage2.Controls.Add(Me.Label10)
+        Me.TabPage2.Controls.Add(Me.ComboBox4)
+        Me.TabPage2.Controls.Add(Me.Label9)
+        Me.TabPage2.Controls.Add(Me.ComboBox3)
+        Me.TabPage2.Controls.Add(Me.Label8)
+        Me.TabPage2.Controls.Add(Me.ComboBox2)
+        Me.TabPage2.Controls.Add(Me.Label7)
+        Me.TabPage2.Controls.Add(Me.ComboBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -572,6 +646,287 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'PenaltyCharge
+        '
+        Me.PenaltyCharge.Controls.Add(Me.Label21)
+        Me.PenaltyCharge.Controls.Add(Me.RadioButton2)
+        Me.PenaltyCharge.Controls.Add(Me.RadioButton1)
+        Me.PenaltyCharge.Location = New System.Drawing.Point(766, 182)
+        Me.PenaltyCharge.Name = "PenaltyCharge"
+        Me.PenaltyCharge.Size = New System.Drawing.Size(224, 100)
+        Me.PenaltyCharge.TabIndex = 31
+        Me.PenaltyCharge.TabStop = False
+        Me.PenaltyCharge.Text = "Penalty Charge?"
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(17, 53)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(65, 17)
+        Me.RadioButton2.TabIndex = 17
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Override"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(17, 28)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(60, 17)
+        Me.RadioButton1.TabIndex = 16
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Penalty"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(555, 167)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(75, 13)
+        Me.Label19.TabIndex = 30
+        Me.Label19.Text = "Flight Duration"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(301, 167)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(115, 13)
+        Me.Label18.TabIndex = 29
+        Me.Label18.Text = "Percent on First Check"
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(904, 136)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(83, 17)
+        Me.CheckBox2.TabIndex = 28
+        Me.CheckBox2.Text = "Rope Break"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(555, 117)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(49, 13)
+        Me.Label17.TabIndex = 27
+        Me.Label17.Text = "Take Off"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(659, 117)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(45, 13)
+        Me.Label16.TabIndex = 26
+        Me.Label16.Text = "Landing"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(763, 116)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(66, 13)
+        Me.Label15.TabIndex = 25
+        Me.Label15.Text = "Tow Altitude"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(766, 133)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(91, 20)
+        Me.TextBox4.TabIndex = 24
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePicker3.Location = New System.Drawing.Point(662, 133)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(98, 20)
+        Me.DateTimePicker3.TabIndex = 23
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePicker2.Location = New System.Drawing.Point(558, 133)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(98, 20)
+        Me.DateTimePicker2.TabIndex = 22
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Location = New System.Drawing.Point(558, 183)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(91, 20)
+        Me.TextBox3.TabIndex = 21
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(428, 166)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(130, 13)
+        Me.Label14.TabIndex = 20
+        Me.Label14.Text = "Second Name On Invoice"
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(431, 182)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox8.TabIndex = 19
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(304, 183)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(73, 20)
+        Me.TextBox2.TabIndex = 18
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(201, 182)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(76, 17)
+        Me.CheckBox1.TabIndex = 17
+        Me.CheckBox1.Text = "Split Cost?"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(325, 55)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(91, 20)
+        Me.TextBox1.TabIndex = 16
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(428, 116)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(34, 13)
+        Me.Label13.TabIndex = 15
+        Me.Label13.Text = "Glider"
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Location = New System.Drawing.Point(431, 132)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox7.TabIndex = 14
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(301, 116)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(57, 13)
+        Me.Label12.TabIndex = 13
+        Me.Label12.Text = "Passenger"
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(304, 132)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox6.TabIndex = 12
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(174, 116)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(51, 13)
+        Me.Label11.TabIndex = 11
+        Me.Label11.Text = "Instructor"
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(177, 132)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox5.TabIndex = 10
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(47, 166)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(112, 13)
+        Me.Label10.TabIndex = 9
+        Me.Label10.Text = "First Name On Invoice"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(50, 182)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox4.TabIndex = 8
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(47, 116)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(57, 13)
+        Me.Label9.TabIndex = 7
+        Me.Label9.Text = "Glider Pilot"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(50, 132)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox3.TabIndex = 6
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(174, 38)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(58, 13)
+        Me.Label8.TabIndex = 5
+        Me.Label8.Text = "Tow Plane"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(177, 54)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 4
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(47, 38)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(51, 13)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "Tow Pilot"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(50, 54)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 0
         '
         'TabPage3
         '
@@ -701,12 +1056,22 @@ Partial Class Form1
         '
         Me.AirportTableAdapter1.ClearBeforeFill = True
         '
-        'DateTimePicker1
+        'Label21
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(36, 49)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 15
+        Me.Label21.Location = New System.Drawing.Point(88, 28)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(132, 48)
+        Me.Label21.TabIndex = 33
+        Me.Label21.Text = "OK to override penalty ONLY if OD gave permission for long flight."
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(512, 28)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(162, 13)
+        Me.Label20.TabIndex = 32
+        Me.Label20.Text = "Use TAB to move between items"
         '
         'Form1
         '
@@ -747,6 +1112,10 @@ Partial Class Form1
         CType(Me.MembersBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OD_AOD_OD2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        Me.PenaltyCharge.ResumeLayout(False)
+        Me.PenaltyCharge.PerformLayout()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MASA_all_1Apr2016DataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -837,4 +1206,38 @@ Partial Class Form1
     Friend WithEvents AirportBindingSource1 As BindingSource
     Friend WithEvents AirportTableAdapter1 As OD_AOD_Airport2TableAdapters.AirportTableAdapter
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label15 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents DateTimePicker3 As DateTimePicker
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents ComboBox8 As ComboBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents ComboBox7 As ComboBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents PenaltyCharge As GroupBox
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
 End Class
