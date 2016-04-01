@@ -115,14 +115,13 @@
         newFlightRow.Altitude_towed = TowAltitude.Text
         newFlightRow.Rope_break = RopeBreakCheckBox.Checked
         newFlightRow.Airport_name = OD_AOD_AirportName_Combobox.SelectedIndex
-        newFlightRow.Flight_minutes_integer = 132  '<<<<<<<<<<<<need to do the math on this one!!   >>>>>>>>>>>>>>>>>>
+        newFlightRow.Flight_minutes_integer = 132                                  '<<<<<<<<<<<<need to do the math on this one!!   >>>>>>>>>>>>>>>>>>
         newFlightRow.First_name_on_invoice = FirstNameComboBox.SelectedIndex
         newFlightRow.Split_cost = SplitCost.Checked
         newFlightRow.Percent_1st_check = PercentFirstCheck.Text
         newFlightRow.Second_name_on_invoice = SecondNameComboBox.SelectedIndex
         newFlightRow.Penalty_charge = PenaltyRadioButton.Checked
         newFlightRow.Cost_this_flight = Cost_This_Flight_TextBox.Text        '<<<<<<<<<<<<<<<<<<<<<<<<<<<need to do the math on this one!!!  >>>>>>>>>>>>>>>>>>
-
 
 
         Me.Validate()
@@ -146,7 +145,33 @@
         End Try
 
         Debug.WriteLine("Now FINISHED the DB .add and the DB .update")
+
+        'now zero-out the already-saved data so the user can enter new rows
+        ' but send "false" to NOT delete time and altitude
+        Button1_Click_3(sender, e)
+
     End Sub
+
+    Private Sub Button1_Click_3(sender As Object, e As EventArgs) Handles ClearFormButton.Click
+        'zero out most of the boxes, leave Times, percent, and Altitude as-is for convenience of user.
+        TowPilotNameComboBox.SelectedIndex = 0
+        TowPlaneComboBox.SelectedIndex = 0
+        GliderPilotComboBox.SelectedIndex = 0
+        FirstNameComboBox.SelectedIndex = 0
+        InstructorComboBox.SelectedIndex = 0
+        PassengerComboBox.SelectedIndex = 0
+        GliderComboBox.SelectedIndex = 0
+        TowAltitude.Text = "3000"
+        SecondNameComboBox.SelectedIndex = 0
+        SplitCost.Checked = False
+        PercentFirstCheck.Text = "100"
+        FlightDurationTextBox.Text = ""
+        PenaltyRadioButton.Checked = False
+        RopeBreakCheckBox.Checked = False
+        Cost_This_Flight_TextBox.Text = ""
+
+    End Sub
+
 
     ' debug item
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OD_AOD_OD1_ComboBox.SelectedIndexChanged

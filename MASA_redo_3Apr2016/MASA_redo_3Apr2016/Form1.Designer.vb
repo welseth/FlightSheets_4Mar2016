@@ -67,6 +67,8 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Cost_This_Flight_TextBox = New System.Windows.Forms.TextBox()
         Me.Save_Button = New System.Windows.Forms.Button()
         Me.FlightsDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -224,8 +226,7 @@ Partial Class Form1
         Me.MembersTableAdapter22 = New MASA_redo_3Apr2016.Enter_SecondName2TableAdapters.MembersTableAdapter()
         Me.FlightsTableAdapter = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.FlightsTableAdapter()
         Me.MASA_All_Flights_TableAdapterManager = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager()
-        Me.Cost_This_Flight_TextBox = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.ClearFormButton = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -624,6 +625,7 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.ClearFormButton)
         Me.TabPage2.Controls.Add(Me.Label23)
         Me.TabPage2.Controls.Add(Me.Cost_This_Flight_TextBox)
         Me.TabPage2.Controls.Add(Me.Save_Button)
@@ -669,13 +671,30 @@ Partial Class Form1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(659, 167)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(79, 13)
+        Me.Label23.TabIndex = 37
+        Me.Label23.Text = "Cost This Flight"
+        '
+        'Cost_This_Flight_TextBox
+        '
+        Me.Cost_This_Flight_TextBox.Enabled = False
+        Me.Cost_This_Flight_TextBox.Location = New System.Drawing.Point(662, 183)
+        Me.Cost_This_Flight_TextBox.Name = "Cost_This_Flight_TextBox"
+        Me.Cost_This_Flight_TextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Cost_This_Flight_TextBox.TabIndex = 36
+        '
         'Save_Button
         '
-        Me.Save_Button.Location = New System.Drawing.Point(488, 257)
+        Me.Save_Button.Location = New System.Drawing.Point(443, 249)
         Me.Save_Button.Name = "Save_Button"
-        Me.Save_Button.Size = New System.Drawing.Size(75, 23)
+        Me.Save_Button.Size = New System.Drawing.Size(105, 48)
         Me.Save_Button.TabIndex = 35
-        Me.Save_Button.Text = "Save"
+        Me.Save_Button.Text = "Save and Create Another"
         Me.Save_Button.UseVisualStyleBackColor = True
         '
         'FlightsDataGridView
@@ -1026,9 +1045,9 @@ Partial Class Form1
         'SetTestValsTab2
         '
         Me.SetTestValsTab2.BackColor = System.Drawing.Color.GreenYellow
-        Me.SetTestValsTab2.Location = New System.Drawing.Point(768, 285)
+        Me.SetTestValsTab2.Location = New System.Drawing.Point(431, 220)
         Me.SetTestValsTab2.Name = "SetTestValsTab2"
-        Me.SetTestValsTab2.Size = New System.Drawing.Size(101, 23)
+        Me.SetTestValsTab2.Size = New System.Drawing.Size(117, 23)
         Me.SetTestValsTab2.TabIndex = 33
         Me.SetTestValsTab2.Text = "Set Test Values"
         Me.SetTestValsTab2.UseVisualStyleBackColor = False
@@ -1735,22 +1754,14 @@ Partial Class Form1
         Me.MASA_All_Flights_TableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter1
         Me.MASA_All_Flights_TableAdapterManager.UpdateOrder = MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Cost_This_Flight_TextBox
+        'ClearFormButton
         '
-        Me.Cost_This_Flight_TextBox.Enabled = False
-        Me.Cost_This_Flight_TextBox.Location = New System.Drawing.Point(662, 183)
-        Me.Cost_This_Flight_TextBox.Name = "Cost_This_Flight_TextBox"
-        Me.Cost_This_Flight_TextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Cost_This_Flight_TextBox.TabIndex = 36
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(659, 167)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(79, 13)
-        Me.Label23.TabIndex = 37
-        Me.Label23.Text = "Cost This Flight"
+        Me.ClearFormButton.Location = New System.Drawing.Point(554, 249)
+        Me.ClearFormButton.Name = "ClearFormButton"
+        Me.ClearFormButton.Size = New System.Drawing.Size(105, 48)
+        Me.ClearFormButton.TabIndex = 38
+        Me.ClearFormButton.Text = "Clear Form"
+        Me.ClearFormButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -2042,4 +2053,5 @@ Partial Class Form1
     Friend WithEvents Save_Button As Button
     Friend WithEvents Label23 As Label
     Friend WithEvents Cost_This_Flight_TextBox As TextBox
+    Friend WithEvents ClearFormButton As Button
 End Class
