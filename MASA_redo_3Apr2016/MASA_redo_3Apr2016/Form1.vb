@@ -112,18 +112,39 @@
         newFlightRow.Tow_takeoff_time = TakeOff_DateTimePicker.Value
         newFlightRow.Tow_landing_time = Landing_DateTimePicker.Value
         newFlightRow._Date = Todays_Date_DateTimePicker.Value  'saves in format DateTime 
-        newFlightRow.Altitude_towed = TowAltitude.Text
+
         newFlightRow.Rope_break = RopeBreakCheckBox.Checked
         newFlightRow.Airport_name = OD_AOD_AirportName_Combobox.SelectedIndex
         newFlightRow.Flight_minutes_integer = 132                                  '<<<<<<<<<<<<need to do the math on this one!!   >>>>>>>>>>>>>>>>>>
         newFlightRow.First_name_on_invoice = FirstNameComboBox.SelectedIndex
         newFlightRow.Split_cost = SplitCost.Checked
-        newFlightRow.Percent_1st_check = PercentFirstCheck.Text
+
         newFlightRow.Second_name_on_invoice = SecondNameComboBox.SelectedIndex
         newFlightRow.Penalty_charge = PenaltyRadioButton.Checked
-        newFlightRow.Cost_this_flight = Cost_This_Flight_TextBox.Text        '<<<<<<<<<<<<<<<<<<<<<<<<<<<need to do the math on this one!!!  >>>>>>>>>>>>>>>>>>
+
+        'Text boxes can't be blank, need to check that user didn't backspace and delete everything in the textbox.
+        Try
+            newFlightRow.Altitude_towed = TowAltitude.Text
+        Catch ex As Exception
+            newFlightRow.Altitude_towed = "0"
+            Debug.Print("Reset AltTowed to 0")
+        End Try
+        Try
+            newFlightRow.Percent_1st_check = PercentFirstCheck.Text
+        Catch ex As Exception
+            newFlightRow.Percent_1st_check = "0"
+            Debug.Print("Reset Percent to 0")
+        End Try
+        Try
+            newFlightRow.Cost_this_flight = Cost_This_Flight_TextBox.Text        '<<<<<<<<<<<<<<<<<<<<<<<<<<<need to do the math on this one!!!  >>>>>>>>>>>>>>>>>>
+        Catch ex As Exception
+            newFlightRow.Cost_this_flight = "0"
+            Debug.Print("Reset CostThisFlight to 0")
+        End Try
 
 
+
+        'ok, close everything and write to the DB file.
         Me.Validate()
         Me.MembersBindingSource.EndEdit()
 
@@ -136,8 +157,8 @@
 
         'save the new row to the DB
         Try
-            Me.Validate()   'this line is probably NOT needed. 
-            Me.MASA_All_BindingSource.EndEdit()  'this line is probably NOT needed
+            'Me.Validate()   'this line is probably NOT needed. 
+            'Me.MASA_All_BindingSource.EndEdit()  'this line is probably NOT needed
             Me.MASA_All_Flights_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
 
         Catch ex As Exception
@@ -147,7 +168,6 @@
         Debug.WriteLine("Now FINISHED the DB .add and the DB .update")
 
         'now zero-out the already-saved data so the user can enter new rows
-        ' but send "false" to NOT delete time and altitude
         Button1_Click_3(sender, e)
 
     End Sub
