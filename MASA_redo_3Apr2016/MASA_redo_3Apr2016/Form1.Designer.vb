@@ -44,17 +44,28 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.OD_AOD_AirportName_Combobox = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.OD_AOD_AOD2_ComboBox = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.OD_AOD_AOD1_ComboBox = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.OD_AOD_OD2_ComboBox = New System.Windows.Forms.ComboBox()
+        Me.MembersBindingSource7 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OD_AOD_OD4 = New MASA_redo_3Apr2016.OD_AOD_OD4()
+        Me.MembersBindingSource6 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OD_AOD_OD3 = New MASA_redo_3Apr2016.OD_AOD_OD3()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OD_AOD_OD3_ComboBox = New System.Windows.Forms.ComboBox()
+        Me.MembersBindingSource9 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OD_AOD_OD6 = New MASA_redo_3Apr2016.OD_AOD_OD6()
+        Me.MembersBindingSource8 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OD_AOD_OD5 = New MASA_redo_3Apr2016.OD_AOD_OD5()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OD_AOD_OD1_ComboBox = New System.Windows.Forms.ComboBox()
+        Me.MembersBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OD_AOD_OD2 = New MASA_redo_3Apr2016.OD_AOD_OD2()
+        Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -68,43 +79,66 @@ Partial Class Form1
         Me.MASA_all_1Apr2016DataSet = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSet()
         Me.MembersBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter1 = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.MembersTableAdapter()
-        Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OD_AOD_OD2 = New MASA_redo_3Apr2016.OD_AOD_OD2()
-        Me.MembersBindingSource5 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter2 = New MASA_redo_3Apr2016.OD_AOD_OD2TableAdapters.MembersTableAdapter()
-        Me.OD_AOD_OD3 = New MASA_redo_3Apr2016.OD_AOD_OD3()
-        Me.MembersBindingSource6 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter3 = New MASA_redo_3Apr2016.OD_AOD_OD3TableAdapters.MembersTableAdapter()
-        Me.OD_AOD_OD4 = New MASA_redo_3Apr2016.OD_AOD_OD4()
-        Me.MembersBindingSource7 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter4 = New MASA_redo_3Apr2016.OD_AOD_OD4TableAdapters.MembersTableAdapter()
-        Me.OD_AOD_OD5 = New MASA_redo_3Apr2016.OD_AOD_OD5()
-        Me.MembersBindingSource8 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter5 = New MASA_redo_3Apr2016.OD_AOD_OD5TableAdapters.MembersTableAdapter()
-        Me.OD_AOD_OD6 = New MASA_redo_3Apr2016.OD_AOD_OD6()
-        Me.MembersBindingSource9 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter6 = New MASA_redo_3Apr2016.OD_AOD_OD6TableAdapters.MembersTableAdapter()
+        Me.OD_AOD_AOD1 = New MASA_redo_3Apr2016.OD_AOD_AOD1()
+        Me.ODAODAOD1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OD_AOD_AOD2 = New MASA_redo_3Apr2016.OD_AOD_AOD2()
+        Me.MembersBindingSource10 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter7 = New MASA_redo_3Apr2016.OD_AOD_AOD2TableAdapters.MembersTableAdapter()
+        Me.MembersBindingSource11 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersBindingSource12 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter8 = New MASA_redo_3Apr2016.OD_AOD_AOD1TableAdapters.MembersTableAdapter()
+        Me.OD_AOD_AOD3 = New MASA_redo_3Apr2016.OD_AOD_AOD3()
+        Me.MembersBindingSource13 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter9 = New MASA_redo_3Apr2016.OD_AOD_AOD3TableAdapters.MembersTableAdapter()
+        Me.OD_AOD_AOD4 = New MASA_redo_3Apr2016.OD_AOD_AOD4()
+        Me.MembersBindingSource14 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter10 = New MASA_redo_3Apr2016.OD_AOD_AOD4TableAdapters.MembersTableAdapter()
+        Me.OD_AOD_Airport1 = New MASA_redo_3Apr2016.OD_AOD_Airport1()
+        Me.AirportBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AirportTableAdapter = New MASA_redo_3Apr2016.OD_AOD_Airport1TableAdapters.AirportTableAdapter()
+        Me.OD_AOD_Airport2 = New MASA_redo_3Apr2016.OD_AOD_Airport2()
+        Me.AirportBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AirportTableAdapter1 = New MASA_redo_3Apr2016.OD_AOD_Airport2TableAdapters.AirportTableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.MembersBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MembersBindingNavigator.SuspendLayout()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_OD2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MASA_all_1Apr2016DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OD_AOD_OD2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MembersBindingSource5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OD_AOD_OD3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MembersBindingSource6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OD_AOD_OD4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MembersBindingSource7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OD_AOD_OD5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MembersBindingSource8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OD_AOD_OD6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MembersBindingSource9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_AOD1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ODAODAOD1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_AOD2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_AOD3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_AOD4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_Airport1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AirportBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OD_AOD_Airport2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -127,11 +161,11 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.Label6)
-        Me.TabPage1.Controls.Add(Me.ComboBox6)
+        Me.TabPage1.Controls.Add(Me.OD_AOD_AirportName_Combobox)
         Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.ComboBox5)
+        Me.TabPage1.Controls.Add(Me.OD_AOD_AOD2_ComboBox)
         Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.ComboBox4)
+        Me.TabPage1.Controls.Add(Me.OD_AOD_AOD1_ComboBox)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.OD_AOD_OD2_ComboBox)
         Me.TabPage1.Controls.Add(Me.Label2)
@@ -297,13 +331,17 @@ Partial Class Form1
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Airport Name"
         '
-        'ComboBox6
+        'OD_AOD_AirportName_Combobox
         '
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(410, 213)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox6.TabIndex = 11
+        Me.OD_AOD_AirportName_Combobox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.AirportBindingSource1, "Airport_name", True))
+        Me.OD_AOD_AirportName_Combobox.DataSource = Me.AirportBindingSource
+        Me.OD_AOD_AirportName_Combobox.DisplayMember = "Airport_name"
+        Me.OD_AOD_AirportName_Combobox.FormattingEnabled = True
+        Me.OD_AOD_AirportName_Combobox.Location = New System.Drawing.Point(410, 213)
+        Me.OD_AOD_AirportName_Combobox.Name = "OD_AOD_AirportName_Combobox"
+        Me.OD_AOD_AirportName_Combobox.Size = New System.Drawing.Size(121, 21)
+        Me.OD_AOD_AirportName_Combobox.TabIndex = 11
+        Me.OD_AOD_AirportName_Combobox.ValueMember = "Airport_name"
         '
         'Label5
         '
@@ -312,15 +350,19 @@ Partial Class Form1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(130, 13)
         Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Asst Operations Director 1"
+        Me.Label5.Text = "Asst Operations Director 2"
         '
-        'ComboBox5
+        'OD_AOD_AOD2_ComboBox
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(219, 261)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox5.TabIndex = 9
+        Me.OD_AOD_AOD2_ComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource14, "Name", True))
+        Me.OD_AOD_AOD2_ComboBox.DataSource = Me.MembersBindingSource13
+        Me.OD_AOD_AOD2_ComboBox.DisplayMember = "Name"
+        Me.OD_AOD_AOD2_ComboBox.FormattingEnabled = True
+        Me.OD_AOD_AOD2_ComboBox.Location = New System.Drawing.Point(219, 261)
+        Me.OD_AOD_AOD2_ComboBox.Name = "OD_AOD_AOD2_ComboBox"
+        Me.OD_AOD_AOD2_ComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.OD_AOD_AOD2_ComboBox.TabIndex = 9
+        Me.OD_AOD_AOD2_ComboBox.ValueMember = "Name"
         '
         'Label4
         '
@@ -331,13 +373,17 @@ Partial Class Form1
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Asst Operations Director 1"
         '
-        'ComboBox4
+        'OD_AOD_AOD1_ComboBox
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(219, 213)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox4.TabIndex = 7
+        Me.OD_AOD_AOD1_ComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MembersBindingSource11, "Name", True))
+        Me.OD_AOD_AOD1_ComboBox.DataSource = Me.MembersBindingSource12
+        Me.OD_AOD_AOD1_ComboBox.DisplayMember = "Name"
+        Me.OD_AOD_AOD1_ComboBox.FormattingEnabled = True
+        Me.OD_AOD_AOD1_ComboBox.Location = New System.Drawing.Point(219, 213)
+        Me.OD_AOD_AOD1_ComboBox.Name = "OD_AOD_AOD1_ComboBox"
+        Me.OD_AOD_AOD1_ComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.OD_AOD_AOD1_ComboBox.TabIndex = 7
+        Me.OD_AOD_AOD1_ComboBox.ValueMember = "Name"
         '
         'Label3
         '
@@ -360,6 +406,26 @@ Partial Class Form1
         Me.OD_AOD_OD2_ComboBox.TabIndex = 5
         Me.OD_AOD_OD2_ComboBox.ValueMember = "Name"
         '
+        'MembersBindingSource7
+        '
+        Me.MembersBindingSource7.DataMember = "Members"
+        Me.MembersBindingSource7.DataSource = Me.OD_AOD_OD4
+        '
+        'OD_AOD_OD4
+        '
+        Me.OD_AOD_OD4.DataSetName = "OD_AOD_OD4"
+        Me.OD_AOD_OD4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersBindingSource6
+        '
+        Me.MembersBindingSource6.DataMember = "Members"
+        Me.MembersBindingSource6.DataSource = Me.OD_AOD_OD3
+        '
+        'OD_AOD_OD3
+        '
+        Me.OD_AOD_OD3.DataSetName = "OD_AOD_OD3"
+        Me.OD_AOD_OD3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -381,6 +447,26 @@ Partial Class Form1
         Me.OD_AOD_OD3_ComboBox.TabIndex = 3
         Me.OD_AOD_OD3_ComboBox.ValueMember = "Name"
         '
+        'MembersBindingSource9
+        '
+        Me.MembersBindingSource9.DataMember = "Members"
+        Me.MembersBindingSource9.DataSource = Me.OD_AOD_OD6
+        '
+        'OD_AOD_OD6
+        '
+        Me.OD_AOD_OD6.DataSetName = "OD_AOD_OD6"
+        Me.OD_AOD_OD6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersBindingSource8
+        '
+        Me.MembersBindingSource8.DataMember = "Members"
+        Me.MembersBindingSource8.DataSource = Me.OD_AOD_OD5
+        '
+        'OD_AOD_OD5
+        '
+        Me.OD_AOD_OD5.DataSetName = "OD_AOD_OD5"
+        Me.OD_AOD_OD5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -401,6 +487,21 @@ Partial Class Form1
         Me.OD_AOD_OD1_ComboBox.Size = New System.Drawing.Size(121, 21)
         Me.OD_AOD_OD1_ComboBox.TabIndex = 1
         Me.OD_AOD_OD1_ComboBox.ValueMember = "Name"
+        '
+        'MembersBindingSource5
+        '
+        Me.MembersBindingSource5.DataMember = "Members"
+        Me.MembersBindingSource5.DataSource = Me.OD_AOD_OD2
+        '
+        'OD_AOD_OD2
+        '
+        Me.OD_AOD_OD2.DataSetName = "OD_AOD_OD2"
+        Me.OD_AOD_OD2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersBindingSource4
+        '
+        Me.MembersBindingSource4.DataMember = "Members"
+        Me.MembersBindingSource4.DataSource = Me.OD_AOD_OD1
         '
         'MonthCalendar1
         '
@@ -492,80 +593,119 @@ Partial Class Form1
         '
         Me.MembersTableAdapter1.ClearBeforeFill = True
         '
-        'MembersBindingSource4
-        '
-        Me.MembersBindingSource4.DataMember = "Members"
-        Me.MembersBindingSource4.DataSource = Me.OD_AOD_OD1
-        '
-        'OD_AOD_OD2
-        '
-        Me.OD_AOD_OD2.DataSetName = "OD_AOD_OD2"
-        Me.OD_AOD_OD2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MembersBindingSource5
-        '
-        Me.MembersBindingSource5.DataMember = "Members"
-        Me.MembersBindingSource5.DataSource = Me.OD_AOD_OD2
-        '
         'MembersTableAdapter2
         '
         Me.MembersTableAdapter2.ClearBeforeFill = True
-        '
-        'OD_AOD_OD3
-        '
-        Me.OD_AOD_OD3.DataSetName = "OD_AOD_OD3"
-        Me.OD_AOD_OD3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MembersBindingSource6
-        '
-        Me.MembersBindingSource6.DataMember = "Members"
-        Me.MembersBindingSource6.DataSource = Me.OD_AOD_OD3
         '
         'MembersTableAdapter3
         '
         Me.MembersTableAdapter3.ClearBeforeFill = True
         '
-        'OD_AOD_OD4
-        '
-        Me.OD_AOD_OD4.DataSetName = "OD_AOD_OD4"
-        Me.OD_AOD_OD4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MembersBindingSource7
-        '
-        Me.MembersBindingSource7.DataMember = "Members"
-        Me.MembersBindingSource7.DataSource = Me.OD_AOD_OD4
-        '
         'MembersTableAdapter4
         '
         Me.MembersTableAdapter4.ClearBeforeFill = True
-        '
-        'OD_AOD_OD5
-        '
-        Me.OD_AOD_OD5.DataSetName = "OD_AOD_OD5"
-        Me.OD_AOD_OD5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MembersBindingSource8
-        '
-        Me.MembersBindingSource8.DataMember = "Members"
-        Me.MembersBindingSource8.DataSource = Me.OD_AOD_OD5
         '
         'MembersTableAdapter5
         '
         Me.MembersTableAdapter5.ClearBeforeFill = True
         '
-        'OD_AOD_OD6
-        '
-        Me.OD_AOD_OD6.DataSetName = "OD_AOD_OD6"
-        Me.OD_AOD_OD6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MembersBindingSource9
-        '
-        Me.MembersBindingSource9.DataMember = "Members"
-        Me.MembersBindingSource9.DataSource = Me.OD_AOD_OD6
-        '
         'MembersTableAdapter6
         '
         Me.MembersTableAdapter6.ClearBeforeFill = True
+        '
+        'OD_AOD_AOD1
+        '
+        Me.OD_AOD_AOD1.DataSetName = "OD_AOD_AOD1"
+        Me.OD_AOD_AOD1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ODAODAOD1BindingSource
+        '
+        Me.ODAODAOD1BindingSource.DataSource = Me.OD_AOD_AOD1
+        Me.ODAODAOD1BindingSource.Position = 0
+        '
+        'OD_AOD_AOD2
+        '
+        Me.OD_AOD_AOD2.DataSetName = "OD_AOD_AOD2"
+        Me.OD_AOD_AOD2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersBindingSource10
+        '
+        Me.MembersBindingSource10.DataMember = "Members"
+        Me.MembersBindingSource10.DataSource = Me.OD_AOD_AOD2
+        '
+        'MembersTableAdapter7
+        '
+        Me.MembersTableAdapter7.ClearBeforeFill = True
+        '
+        'MembersBindingSource11
+        '
+        Me.MembersBindingSource11.DataMember = "Members"
+        Me.MembersBindingSource11.DataSource = Me.OD_AOD_AOD2
+        '
+        'MembersBindingSource12
+        '
+        Me.MembersBindingSource12.DataMember = "Members"
+        Me.MembersBindingSource12.DataSource = Me.OD_AOD_AOD1
+        '
+        'MembersTableAdapter8
+        '
+        Me.MembersTableAdapter8.ClearBeforeFill = True
+        '
+        'OD_AOD_AOD3
+        '
+        Me.OD_AOD_AOD3.DataSetName = "OD_AOD_AOD3"
+        Me.OD_AOD_AOD3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersBindingSource13
+        '
+        Me.MembersBindingSource13.DataMember = "Members"
+        Me.MembersBindingSource13.DataSource = Me.OD_AOD_AOD3
+        '
+        'MembersTableAdapter9
+        '
+        Me.MembersTableAdapter9.ClearBeforeFill = True
+        '
+        'OD_AOD_AOD4
+        '
+        Me.OD_AOD_AOD4.DataSetName = "OD_AOD_AOD4"
+        Me.OD_AOD_AOD4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersBindingSource14
+        '
+        Me.MembersBindingSource14.DataMember = "Members"
+        Me.MembersBindingSource14.DataSource = Me.OD_AOD_AOD4
+        '
+        'MembersTableAdapter10
+        '
+        Me.MembersTableAdapter10.ClearBeforeFill = True
+        '
+        'OD_AOD_Airport1
+        '
+        Me.OD_AOD_Airport1.DataSetName = "OD_AOD_Airport1"
+        Me.OD_AOD_Airport1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AirportBindingSource
+        '
+        Me.AirportBindingSource.DataMember = "Airport"
+        Me.AirportBindingSource.DataSource = Me.OD_AOD_Airport1
+        '
+        'AirportTableAdapter
+        '
+        Me.AirportTableAdapter.ClearBeforeFill = True
+        '
+        'OD_AOD_Airport2
+        '
+        Me.OD_AOD_Airport2.DataSetName = "OD_AOD_Airport2"
+        Me.OD_AOD_Airport2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AirportBindingSource1
+        '
+        Me.AirportBindingSource1.DataMember = "Airport"
+        Me.AirportBindingSource1.DataSource = Me.OD_AOD_Airport2
+        '
+        'AirportTableAdapter1
+        '
+        Me.AirportTableAdapter1.ClearBeforeFill = True
         '
         'Form1
         '
@@ -574,7 +714,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1228, 614)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "MASA Flight Sheet Entry"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -583,21 +723,35 @@ Partial Class Form1
         Me.MembersBindingNavigator.PerformLayout()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_OD2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MASA_all_1Apr2016DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OD_AOD_OD2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MembersBindingSource5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OD_AOD_OD3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MembersBindingSource6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OD_AOD_OD4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MembersBindingSource7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OD_AOD_OD5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MembersBindingSource8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OD_AOD_OD6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MembersBindingSource9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_AOD1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ODAODAOD1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_AOD2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_AOD3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_AOD4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_Airport1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AirportBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OD_AOD_Airport2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -630,11 +784,11 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents OD_AOD_AirportName_Combobox As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents OD_AOD_AOD2_ComboBox As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents OD_AOD_AOD1_ComboBox As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents OD_AOD_OD2_ComboBox As ComboBox
     Friend WithEvents Label2 As Label
@@ -662,4 +816,24 @@ Partial Class Form1
     Friend WithEvents OD_AOD_OD6 As OD_AOD_OD6
     Friend WithEvents MembersBindingSource9 As BindingSource
     Friend WithEvents MembersTableAdapter6 As OD_AOD_OD6TableAdapters.MembersTableAdapter
+    Friend WithEvents ODAODAOD1BindingSource As BindingSource
+    Friend WithEvents OD_AOD_AOD1 As OD_AOD_AOD1
+    Friend WithEvents OD_AOD_AOD2 As OD_AOD_AOD2
+    Friend WithEvents MembersBindingSource10 As BindingSource
+    Friend WithEvents MembersTableAdapter7 As OD_AOD_AOD2TableAdapters.MembersTableAdapter
+    Friend WithEvents MembersBindingSource11 As BindingSource
+    Friend WithEvents MembersBindingSource12 As BindingSource
+    Friend WithEvents MembersTableAdapter8 As OD_AOD_AOD1TableAdapters.MembersTableAdapter
+    Friend WithEvents OD_AOD_AOD3 As OD_AOD_AOD3
+    Friend WithEvents MembersBindingSource13 As BindingSource
+    Friend WithEvents MembersTableAdapter9 As OD_AOD_AOD3TableAdapters.MembersTableAdapter
+    Friend WithEvents OD_AOD_AOD4 As OD_AOD_AOD4
+    Friend WithEvents MembersBindingSource14 As BindingSource
+    Friend WithEvents MembersTableAdapter10 As OD_AOD_AOD4TableAdapters.MembersTableAdapter
+    Friend WithEvents OD_AOD_Airport1 As OD_AOD_Airport1
+    Friend WithEvents AirportBindingSource As BindingSource
+    Friend WithEvents AirportTableAdapter As OD_AOD_Airport1TableAdapters.AirportTableAdapter
+    Friend WithEvents OD_AOD_Airport2 As OD_AOD_Airport2
+    Friend WithEvents AirportBindingSource1 As BindingSource
+    Friend WithEvents AirportTableAdapter1 As OD_AOD_Airport2TableAdapters.AirportTableAdapter
 End Class
