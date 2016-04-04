@@ -89,20 +89,51 @@
         Debug.Print("GliderNameComboBox2.SelectedIndex: >>  " & GliderComboBox.SelectedIndex)
 
         ' load the new data into each, and every, field in the new record
-        newFlightRow.Glider_Pilot_Name = GliderPilotComboBox.SelectedIndex
-        newFlightRow.Glider = GliderComboBox.SelectedIndex
+        If GliderPilotComboBox.SelectedIndex > 0 Then
+            newFlightRow.Glider_Pilot_Name = GliderPilotComboBox.SelectedIndex
+        Else
+            MessageBox.Show("Must Select Glider Pilot")
+            Exit Sub
+        End If
+
+        If GliderComboBox.SelectedIndex > 0 Then
+            newFlightRow.Glider = GliderComboBox.SelectedIndex
+        Else
+            MessageBox.Show("Must Select The Glider That Was Used")
+            Exit Sub
+        End If
+
+        If OD_AOD_OD1_ComboBox.SelectedIndex > 0 Then
+            newFlightRow.OD1 = OD_AOD_OD1_ComboBox.SelectedIndex
+        Else
+            MessageBox.Show("Must Select The OD For These Flight Operations")
+            Exit Sub
+        End If
+
+        If TowPilotNameComboBox.SelectedIndex > 0 Then
+            newFlightRow.TowPilot1 = TowPilotNameComboBox.SelectedIndex
+            newFlightRow.TowPilot2 = 0 'towpilot2 not used, but assigning anyway
+            newFlightRow.TowPilot3 = 0  'towpilot3 not used, but assigning anyway
+        Else
+            MessageBox.Show("Must Select The Tow Pilot For These Flight Operations")
+            Exit Sub
+        End If
+
+        If TowPlaneComboBox.SelectedIndex > 0 Then
+            newFlightRow.TowPlane1 = TowPlaneComboBox.SelectedIndex
+            newFlightRow.TowPlane2 = 0  'towplane2 not used anywhere, but assigning anyway
+        Else
+            MessageBox.Show("Must Select The Tow Plane For These Flight Operations")
+            Exit Sub
+        End If
+
         newFlightRow.Instructor_name = InstructorComboBox.SelectedIndex
         newFlightRow.Passenger_name = PassengerComboBox.SelectedIndex
-        newFlightRow.OD1 = OD_AOD_OD1_ComboBox.SelectedIndex
-        newFlightRow.OD2 = OD_AOD_OD2_ComboBox.SelectedIndex
-        newFlightRow.OD3 = OD_AOD_OD3_ComboBox.SelectedIndex
-        newFlightRow.AOD1 = OD_AOD_AOD1_ComboBox.SelectedIndex
-        newFlightRow.AOD2 = OD_AOD_AOD2_ComboBox.SelectedIndex
-        newFlightRow.TowPilot1 = TowPilotNameComboBox.SelectedIndex
-        newFlightRow.TowPilot2 = 0 'towpilot2 not used, but assigning anyway
-        newFlightRow.TowPilot3 = 0  'towpilot3 not used, but assigning anyway
-        newFlightRow.TowPlane1 = TowPlaneComboBox.SelectedIndex
-        newFlightRow.TowPlane2 = 0  'towplane2 not used, but assigning anyway
+        newFlightRow.OD2 = OD_AOD_OD2_ComboBox.SelectedIndex 'optional, might not be selected for this day's operations
+        newFlightRow.OD3 = OD_AOD_OD3_ComboBox.SelectedIndex 'optional, might not be selected for this day's operations
+        newFlightRow.AOD1 = OD_AOD_AOD1_ComboBox.SelectedIndex 'optional, might not be selected for this day's operations
+        newFlightRow.AOD2 = OD_AOD_AOD2_ComboBox.SelectedIndex 'optional, might not be selected for this day's operations
+
         Debug.Print("Todays DateTimePicker1: " & Todays_Date_DateTimePicker.Value)
         'MessageBox.Show("DateTimePicker:  " & DateTimePicker1.Value)  'get rid of this after debugging is complete 
         Debug.Print("Glider Takeoff:  " & TakeOff_DateTimePicker.Value)
@@ -113,10 +144,18 @@
         newFlightRow.Tow_landing_time = Nothing 'CType(Nothing, DateTime)   'TowLandingTime not used, just setting it to Nothing
         newFlightRow._Date = Todays_Date_DateTimePicker.Value  'saves in format DateTime 
 
+
         newFlightRow.Rope_break = RopeBreakCheckBox.Checked
         newFlightRow.Airport_name = OD_AOD_AirportName_Combobox.SelectedIndex
-        newFlightRow.Flight_minutes_integer = 132                                  '<<<<<<<<<<<<need to do the math on this one!!   >>>>>>>>>>>>>>>>>>
-        newFlightRow.First_name_on_invoice = FirstNameComboBox.SelectedIndex
+        newFlightRow.Flight_minutes_integer = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value)
+
+        If FirstNameComboBox.SelectedIndex > 0 Then   'MUST assign who will pay invoice
+            newFlightRow.First_name_on_invoice = FirstNameComboBox.SelectedIndex
+        Else
+            MessageBox.Show("Must Select Who Will Pay")
+            Exit Sub   'DUMP out of the "writing to the DB" because there is NO primary pilot, we don't want to save anything without a pilot.
+        End If
+
         newFlightRow.Split_cost = SplitCost.Checked
 
         newFlightRow.Second_name_on_invoice = SecondNameComboBox.SelectedIndex
