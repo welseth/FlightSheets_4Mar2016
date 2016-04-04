@@ -314,7 +314,7 @@
         InstructorComboBox.SelectedIndex = 9
         PassengerComboBox.SelectedIndex = 10
         GliderComboBox.SelectedIndex = 4
-        TakeOff_DateTimePicker.Value = "3/25/2015 10:01:01"
+        TakeOff_DateTimePicker.Value = "3/25/2015 10:45:00"
         Landing_DateTimePicker.Value = "3/25/2015 11:30:22"
         TowAltitude.Text = "3000"
         SecondNameComboBox.SelectedIndex = 11
@@ -324,6 +324,7 @@
         PenaltyRadioButton.Checked = True
         RopeBreakCheckBox.Checked = True
         'Cost_This_Flight_TextBox.Text = "9.99"
+        TakeOff_DateTimePicker_ValueChanged(vbNull, EventArgs.Empty)
     End Sub
     ' debug item
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -348,8 +349,9 @@
     Private Sub TakeOff_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles TakeOff_DateTimePicker.ValueChanged, Landing_DateTimePicker.ValueChanged, GliderComboBox.SelectedIndexChanged
 
         If DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) > 0 Then   'can't have "negative time duration!"
+
             FlightDurationTextBox.Text = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) 'display the total time for this flight
-            Cost_This_Flight_TextBox.Text = Val(Aircraft_Cost_TextBox.Text) * CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
+            Cost_This_Flight_TextBox.Text = (Val(Aircraft_Cost_TextBox.Text) / 60) * CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
 
             ' more than 1 hour for two-seater, and more than 2 hours for single-seater gliders gets a penalty
             If DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) > 60 Then
@@ -372,5 +374,9 @@
 
     Private Sub FirstNameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FirstNameComboBox.SelectedIndexChanged
         PercentFirstCheck.Text = 100
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
     End Sub
 End Class

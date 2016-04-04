@@ -228,6 +228,7 @@ Partial Class Form1
         Me.MembersTableAdapter22 = New MASA_redo_3Apr2016.Enter_SecondName2TableAdapters.MembersTableAdapter()
         Me.FlightsTableAdapter = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.FlightsTableAdapter()
         Me.MASA_All_Flights_TableAdapterManager = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -626,6 +627,7 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.Label24)
         Me.TabPage2.Controls.Add(Me.Aircraft_Cost_TextBox)
         Me.TabPage2.Controls.Add(Me.ClearFormButton)
         Me.TabPage2.Controls.Add(Me.Label23)
@@ -675,9 +677,9 @@ Partial Class Form1
         '
         'Aircraft_Cost_TextBox
         '
-        Me.Aircraft_Cost_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Cost_per_hour", True))
+        Me.Aircraft_Cost_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource, "Cost_per_hour", True))
         Me.Aircraft_Cost_TextBox.Enabled = False
-        Me.Aircraft_Cost_TextBox.Location = New System.Drawing.Point(768, 54)
+        Me.Aircraft_Cost_TextBox.Location = New System.Drawing.Point(668, 290)
         Me.Aircraft_Cost_TextBox.Name = "Aircraft_Cost_TextBox"
         Me.Aircraft_Cost_TextBox.Size = New System.Drawing.Size(91, 20)
         Me.Aircraft_Cost_TextBox.TabIndex = 39
@@ -974,7 +976,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_All_FlightsBindingNavigator.Name = "MASA_All_FlightsBindingNavigator"
         Me.MASA_All_FlightsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.MASA_All_FlightsBindingNavigator.TabIndex = 34
         Me.MASA_All_FlightsBindingNavigator.TabStop = True
         Me.MASA_All_FlightsBindingNavigator.Text = "FlightsBindingNavigator1"
@@ -991,7 +993,7 @@ Partial Class Form1
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -1777,6 +1779,15 @@ Partial Class Form1
         Me.MASA_All_Flights_TableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter1
         Me.MASA_All_Flights_TableAdapterManager.UpdateOrder = MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(663, 274)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(102, 13)
+        Me.Label24.TabIndex = 40
+        Me.Label24.Text = "Aircraft Cost Per HR"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2069,4 +2080,5 @@ Partial Class Form1
     Friend WithEvents Cost_This_Flight_TextBox As TextBox
     Friend WithEvents ClearFormButton As Button
     Friend WithEvents Aircraft_Cost_TextBox As TextBox
+    Friend WithEvents Label24 As Label
 End Class
