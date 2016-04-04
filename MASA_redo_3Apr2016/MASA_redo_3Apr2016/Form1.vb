@@ -127,6 +127,13 @@
             Exit Sub
         End If
 
+        If OD_AOD_AirportName_Combobox.SelectedIndex > 0 Then
+            newFlightRow.Airport_name = OD_AOD_AirportName_Combobox.SelectedIndex
+        Else
+            MessageBox.Show("Must Select The Airport For These Flight Operations")
+            Exit Sub
+        End If
+
         newFlightRow.Instructor_name = InstructorComboBox.SelectedIndex
         newFlightRow.Passenger_name = PassengerComboBox.SelectedIndex
         newFlightRow.OD2 = OD_AOD_OD2_ComboBox.SelectedIndex 'optional, might not be selected for this day's operations
@@ -146,7 +153,7 @@
 
 
         newFlightRow.Rope_break = RopeBreakCheckBox.Checked
-        newFlightRow.Airport_name = OD_AOD_AirportName_Combobox.SelectedIndex
+
         newFlightRow.Flight_minutes_integer = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value)
 
         If FirstNameComboBox.SelectedIndex > 0 Then   'MUST assign who will pay invoice

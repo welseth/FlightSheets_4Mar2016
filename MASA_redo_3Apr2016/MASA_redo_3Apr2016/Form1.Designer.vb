@@ -1262,6 +1262,7 @@ Partial Class Form1
         '
         'TowPlane_N_Number
         '
+        Me.TowPlane_N_Number.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource, "N-number", True))
         Me.TowPlane_N_Number.Enabled = False
         Me.TowPlane_N_Number.Location = New System.Drawing.Point(325, 55)
         Me.TowPlane_N_Number.Name = "TowPlane_N_Number"
