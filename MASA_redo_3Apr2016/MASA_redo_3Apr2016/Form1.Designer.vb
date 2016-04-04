@@ -67,6 +67,9 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Aircraft_Cost_TextBox = New System.Windows.Forms.TextBox()
+        Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Enter_Glider1 = New MASA_redo_3Apr2016.Enter_Glider1()
         Me.ClearFormButton = New System.Windows.Forms.Button()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Cost_This_Flight_TextBox = New System.Windows.Forms.TextBox()
@@ -142,12 +145,12 @@ Partial Class Form1
         Me.PercentFirstCheck = New System.Windows.Forms.TextBox()
         Me.SplitCost = New System.Windows.Forms.CheckBox()
         Me.TowPlane_N_Number = New System.Windows.Forms.TextBox()
+        Me.AircraftBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Enter_Tow_Plane1 = New MASA_redo_3Apr2016.Enter_Tow_Plane1()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GliderComboBox = New System.Windows.Forms.ComboBox()
         Me.AircraftBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Enter_Glider2 = New MASA_redo_3Apr2016.Enter_Glider2()
-        Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Enter_Glider1 = New MASA_redo_3Apr2016.Enter_Glider1()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PassengerComboBox = New System.Windows.Forms.ComboBox()
         Me.MembersBindingSource24 = New System.Windows.Forms.BindingSource(Me.components)
@@ -176,8 +179,6 @@ Partial Class Form1
         Me.TowPlaneComboBox = New System.Windows.Forms.ComboBox()
         Me.AircraftBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Enter_Tow_Plane2 = New MASA_redo_3Apr2016.Enter_Tow_Plane2()
-        Me.AircraftBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Enter_Tow_Plane1 = New MASA_redo_3Apr2016.Enter_Tow_Plane1()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TowPilotNameComboBox = New System.Windows.Forms.ComboBox()
         Me.MembersBindingSource15 = New System.Windows.Forms.BindingSource(Me.components)
@@ -254,6 +255,8 @@ Partial Class Form1
         CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MASA_All_BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MASA_all_1Apr2016DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -264,10 +267,10 @@ Partial Class Form1
         CType(Me.Enter_SecondName2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_SecondName1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AircraftBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Enter_Tow_Plane1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AircraftBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Glider2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Passenger2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource23, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -286,8 +289,6 @@ Partial Class Form1
         CType(Me.Enter_Glider_Pilot1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AircraftBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Tow_Plane2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AircraftBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Enter_Tow_Plane1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -625,6 +626,7 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.Aircraft_Cost_TextBox)
         Me.TabPage2.Controls.Add(Me.ClearFormButton)
         Me.TabPage2.Controls.Add(Me.Label23)
         Me.TabPage2.Controls.Add(Me.Cost_This_Flight_TextBox)
@@ -670,6 +672,25 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Aircraft_Cost_TextBox
+        '
+        Me.Aircraft_Cost_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Cost_per_hour", True))
+        Me.Aircraft_Cost_TextBox.Enabled = False
+        Me.Aircraft_Cost_TextBox.Location = New System.Drawing.Point(768, 54)
+        Me.Aircraft_Cost_TextBox.Name = "Aircraft_Cost_TextBox"
+        Me.Aircraft_Cost_TextBox.Size = New System.Drawing.Size(91, 20)
+        Me.Aircraft_Cost_TextBox.TabIndex = 39
+        '
+        'AircraftBindingSource2
+        '
+        Me.AircraftBindingSource2.DataMember = "Aircraft"
+        Me.AircraftBindingSource2.DataSource = Me.Enter_Glider1
+        '
+        'Enter_Glider1
+        '
+        Me.Enter_Glider1.DataSetName = "Enter_Glider1"
+        Me.Enter_Glider1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ClearFormButton
         '
@@ -1269,14 +1290,24 @@ Partial Class Form1
         Me.TowPlane_N_Number.Size = New System.Drawing.Size(91, 20)
         Me.TowPlane_N_Number.TabIndex = 16
         '
+        'AircraftBindingSource
+        '
+        Me.AircraftBindingSource.DataMember = "Aircraft"
+        Me.AircraftBindingSource.DataSource = Me.Enter_Tow_Plane1
+        '
+        'Enter_Tow_Plane1
+        '
+        Me.Enter_Tow_Plane1.DataSetName = "Enter_Tow_Plane1"
+        Me.Enter_Tow_Plane1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(428, 116)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(34, 13)
+        Me.Label13.Size = New System.Drawing.Size(108, 13)
         Me.Label13.TabIndex = 15
-        Me.Label13.Text = "Glider"
+        Me.Label13.Text = "Aircraft Being Rented"
         '
         'GliderComboBox
         '
@@ -1299,16 +1330,6 @@ Partial Class Form1
         '
         Me.Enter_Glider2.DataSetName = "Enter_Glider2"
         Me.Enter_Glider2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AircraftBindingSource2
-        '
-        Me.AircraftBindingSource2.DataMember = "Aircraft"
-        Me.AircraftBindingSource2.DataSource = Me.Enter_Glider1
-        '
-        'Enter_Glider1
-        '
-        Me.Enter_Glider1.DataSetName = "Enter_Glider1"
-        Me.Enter_Glider1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label12
         '
@@ -1504,16 +1525,6 @@ Partial Class Form1
         '
         Me.Enter_Tow_Plane2.DataSetName = "Enter_Tow_Plane2"
         Me.Enter_Tow_Plane2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AircraftBindingSource
-        '
-        Me.AircraftBindingSource.DataMember = "Aircraft"
-        Me.AircraftBindingSource.DataSource = Me.Enter_Tow_Plane1
-        '
-        'Enter_Tow_Plane1
-        '
-        Me.Enter_Tow_Plane1.DataSetName = "Enter_Tow_Plane1"
-        Me.Enter_Tow_Plane1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label7
         '
@@ -1803,6 +1814,8 @@ Partial Class Form1
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MASA_All_BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MASA_all_1Apr2016DataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1815,10 +1828,10 @@ Partial Class Form1
         CType(Me.Enter_SecondName2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource25, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_SecondName1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AircraftBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Enter_Tow_Plane1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AircraftBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Glider2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Passenger2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource23, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1837,8 +1850,6 @@ Partial Class Form1
         CType(Me.Enter_Glider_Pilot1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AircraftBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Tow_Plane2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AircraftBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Enter_Tow_Plane1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2057,4 +2068,5 @@ Partial Class Form1
     Friend WithEvents Label23 As Label
     Friend WithEvents Cost_This_Flight_TextBox As TextBox
     Friend WithEvents ClearFormButton As Button
+    Friend WithEvents Aircraft_Cost_TextBox As TextBox
 End Class
