@@ -99,18 +99,18 @@
         newFlightRow.AOD1 = OD_AOD_AOD1_ComboBox.SelectedIndex
         newFlightRow.AOD2 = OD_AOD_AOD2_ComboBox.SelectedIndex
         newFlightRow.TowPilot1 = TowPilotNameComboBox.SelectedIndex
-        newFlightRow.TowPilot2 = vbNull 'towpilot2 not used, but assigning anyway
-        newFlightRow.TowPilot3 = vbNull  'towpilot3 not used, but assigning anyway
+        newFlightRow.TowPilot2 = 0 'towpilot2 not used, but assigning anyway
+        newFlightRow.TowPilot3 = 0  'towpilot3 not used, but assigning anyway
         newFlightRow.TowPlane1 = TowPlaneComboBox.SelectedIndex
-        newFlightRow.TowPlane2 = vbNull  'towplane2 not used, but assigning anyway
+        newFlightRow.TowPlane2 = 0  'towplane2 not used, but assigning anyway
         Debug.Print("Todays DateTimePicker1: " & Todays_Date_DateTimePicker.Value)
         'MessageBox.Show("DateTimePicker:  " & DateTimePicker1.Value)  'get rid of this after debugging is complete 
         Debug.Print("Glider Takeoff:  " & TakeOff_DateTimePicker.Value)
         newFlightRow.Glider_takeoff_time = TakeOff_DateTimePicker.Value
         Debug.Print("Glider Landing:  " & Landing_DateTimePicker.Value)
         newFlightRow.Glider_landing_time = Landing_DateTimePicker.Value
-        newFlightRow.Tow_takeoff_time = CType(Nothing, DateTime)   'TowTakeoffTime not used, just setting it to Nothing
-        newFlightRow.Tow_landing_time = CType(Nothing, DateTime)   'TowLandingTime not used, just setting it to Nothing
+        newFlightRow.Tow_takeoff_time = Nothing 'CType(Nothing, DateTime)   'TowTakeoffTime not used, just setting it to Nothing
+        newFlightRow.Tow_landing_time = Nothing 'CType(Nothing, DateTime)   'TowLandingTime not used, just setting it to Nothing
         newFlightRow._Date = Todays_Date_DateTimePicker.Value  'saves in format DateTime 
 
         newFlightRow.Rope_break = RopeBreakCheckBox.Checked
@@ -274,7 +274,7 @@
         SecondNameComboBox.SelectedIndex = 11
         SplitCost.Checked = True
         PercentFirstCheck.Text = "95"
-        FlightDurationTextBox.Text = "2hr 39min"
+        FlightDurationTextBox.Text = "45"
         PenaltyRadioButton.Checked = True
         RopeBreakCheckBox.Checked = True
         Cost_This_Flight_TextBox.Text = "9.99"
@@ -296,6 +296,18 @@
         Dim TabIndexValue As Integer
         TabIndexValue = TabControl1.SelectedIndex
         Debug.WriteLine("Tab Just Changed TabIndex:  " & TabIndexValue)
+
+    End Sub
+
+    Private Sub TakeOff_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles TakeOff_DateTimePicker.ValueChanged, Landing_DateTimePicker.ValueChanged
+
+        If DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) > 0 Then   'can't have "negative time duration!"
+            FlightDurationTextBox.Text = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) 'display the total time for this flight
+            Cost_This_Flight_TextBox.Text = 2.33 * CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
+        Else
+            FlightDurationTextBox.Text = ""
+            Cost_This_Flight_TextBox.Text = ""
+        End If
 
     End Sub
 

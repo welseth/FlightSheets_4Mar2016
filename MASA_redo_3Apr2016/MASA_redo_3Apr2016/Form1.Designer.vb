@@ -67,6 +67,7 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.ClearFormButton = New System.Windows.Forms.Button()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Cost_This_Flight_TextBox = New System.Windows.Forms.TextBox()
         Me.Save_Button = New System.Windows.Forms.Button()
@@ -226,7 +227,6 @@ Partial Class Form1
         Me.MembersTableAdapter22 = New MASA_redo_3Apr2016.Enter_SecondName2TableAdapters.MembersTableAdapter()
         Me.FlightsTableAdapter = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.FlightsTableAdapter()
         Me.MASA_All_Flights_TableAdapterManager = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager()
-        Me.ClearFormButton = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -671,10 +671,19 @@ Partial Class Form1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'ClearFormButton
+        '
+        Me.ClearFormButton.Location = New System.Drawing.Point(554, 249)
+        Me.ClearFormButton.Name = "ClearFormButton"
+        Me.ClearFormButton.Size = New System.Drawing.Size(105, 48)
+        Me.ClearFormButton.TabIndex = 38
+        Me.ClearFormButton.Text = "Clear Form"
+        Me.ClearFormButton.UseVisualStyleBackColor = True
+        '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(659, 167)
+        Me.Label23.Location = New System.Drawing.Point(889, 274)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(79, 13)
         Me.Label23.TabIndex = 37
@@ -683,7 +692,7 @@ Partial Class Form1
         'Cost_This_Flight_TextBox
         '
         Me.Cost_This_Flight_TextBox.Enabled = False
-        Me.Cost_This_Flight_TextBox.Location = New System.Drawing.Point(662, 183)
+        Me.Cost_This_Flight_TextBox.Location = New System.Drawing.Point(892, 290)
         Me.Cost_This_Flight_TextBox.Name = "Cost_This_Flight_TextBox"
         Me.Cost_This_Flight_TextBox.Size = New System.Drawing.Size(100, 20)
         Me.Cost_This_Flight_TextBox.TabIndex = 36
@@ -1108,11 +1117,11 @@ Partial Class Form1
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(555, 167)
+        Me.Label19.Location = New System.Drawing.Point(765, 274)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(75, 13)
+        Me.Label19.Size = New System.Drawing.Size(105, 13)
         Me.Label19.TabIndex = 30
-        Me.Label19.Text = "Flight Duration"
+        Me.Label19.Text = "Flight Duration (mins)"
         '
         'Label18
         '
@@ -1172,6 +1181,7 @@ Partial Class Form1
         Me.Landing_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time
         Me.Landing_DateTimePicker.Location = New System.Drawing.Point(662, 133)
         Me.Landing_DateTimePicker.Name = "Landing_DateTimePicker"
+        Me.Landing_DateTimePicker.ShowUpDown = True
         Me.Landing_DateTimePicker.Size = New System.Drawing.Size(98, 20)
         Me.Landing_DateTimePicker.TabIndex = 23
         '
@@ -1180,13 +1190,14 @@ Partial Class Form1
         Me.TakeOff_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time
         Me.TakeOff_DateTimePicker.Location = New System.Drawing.Point(558, 133)
         Me.TakeOff_DateTimePicker.Name = "TakeOff_DateTimePicker"
+        Me.TakeOff_DateTimePicker.ShowUpDown = True
         Me.TakeOff_DateTimePicker.Size = New System.Drawing.Size(98, 20)
         Me.TakeOff_DateTimePicker.TabIndex = 22
         '
         'FlightDurationTextBox
         '
         Me.FlightDurationTextBox.Enabled = False
-        Me.FlightDurationTextBox.Location = New System.Drawing.Point(558, 183)
+        Me.FlightDurationTextBox.Location = New System.Drawing.Point(768, 290)
         Me.FlightDurationTextBox.Name = "FlightDurationTextBox"
         Me.FlightDurationTextBox.Size = New System.Drawing.Size(91, 20)
         Me.FlightDurationTextBox.TabIndex = 21
@@ -1753,15 +1764,6 @@ Partial Class Form1
         Me.MASA_All_Flights_TableAdapterManager.FlightsTableAdapter = Me.FlightsTableAdapter
         Me.MASA_All_Flights_TableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter1
         Me.MASA_All_Flights_TableAdapterManager.UpdateOrder = MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'ClearFormButton
-        '
-        Me.ClearFormButton.Location = New System.Drawing.Point(554, 249)
-        Me.ClearFormButton.Name = "ClearFormButton"
-        Me.ClearFormButton.Size = New System.Drawing.Size(105, 48)
-        Me.ClearFormButton.TabIndex = 38
-        Me.ClearFormButton.Text = "Clear Form"
-        Me.ClearFormButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
