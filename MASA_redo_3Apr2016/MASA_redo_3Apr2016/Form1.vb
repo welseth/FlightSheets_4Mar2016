@@ -348,54 +348,86 @@
 
     End Sub
 
-    Private Sub TakeOff_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles TakeOff_DateTimePicker.ValueChanged, Landing_DateTimePicker.ValueChanged, GliderComboBox.SelectionChangeCommitted
-
-
-        ' http://stackoverflow.com/questions/17556487/combobox-databinding-bug-wont-write-value-if-programmatically-losing-focus
-        ' another:  http://stackoverflow.com/questions/1956081/alternatives-to-selectedindexchanged-that-dont-fire-on-form-load 
-        ' one potential solution:  http://stackoverflow.com/questions/9844567/winforms-combobox-selectionchangecommitted-event-doesnt-always-change-selectedv
-        ' another is below 
-        ' http://www.vbforums.com/showthread.php?468840-RESOLVED-2005-SelectionChangeCommitted-problem
-        'I just did some testing. With the DropDownStyle Property Set To DropDown, 
-        'the Text property returns the old value And the SelectedItem property returns 
-        '    the New value in the SelectionChangeCommitted event handler. With the 
-        '    DropDownStyle property set to DropDownList they both return the New value.
-
-        Aircraft_Cost_TextBox.Update()
-        Debug.Print("GliderComboBox selectedIndex:  " & GliderComboBox.SelectedIndex)
-        Debug.Print("Aircraft rental Cost---: " & Val(Aircraft_Cost_TextBox.Text))
-        If DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) > 0 Then  'verify time is a positive number
-            'a new time duration was selected so get the new cost per hour
-            FlightDurationTextBox.Text = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) 'display the total time for this flight
-            Cost_This_Flight_TextBox.Text = (Val(Aircraft_Cost_TextBox.Text) / 60) * CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
-
-
-            ' more than 1 hour for two-seater, and more than 2 hours for single-seater gliders gets a penalty
-            If DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) > 60 Then
-                '>>>>>>>>>>>>>>>>>>>>>>>>>>still working on getting the penalty logic to work.
-                'add logic to see how many seats are in the aircraft
-                'add logic to add penalty fee for too long in the air
-                MessageBox.Show("Too long in the air, penalty applies. See OD *before* overriding penalty.")
-                PenaltyRadioButton.Checked = True
-            End If
-
-        Else  'can't have "negative time duration!" so blank out the duration and cost
-            FlightDurationTextBox.Text = ""
-            Cost_This_Flight_TextBox.Text = ""
-        End If
-
-
-        Debug.Print("Cost for this flight:  " & Val(Cost_This_Flight_TextBox.Text))
-
-    End Sub
-
-    'Private Sub GliderComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GliderComboBox.SelectionChangeCommitted
-    '    Debug.Print("Just return...")
-
-    'End Sub
-
-
     Private Sub FirstNameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FirstNameComboBox.SelectedIndexChanged
         PercentFirstCheck.Text = 100   'just assume there'll only be ONE pilot, so set percentage to 100%
     End Sub
+
+
+    Private Sub TakeOff_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles TakeOff_DateTimePicker.ValueChanged
+        'time was changed so calculate new minutes
+        FlightDurationTextBox.Text = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) 'display the total time for this flight
+        Cost_This_Flight_TextBox_TextChanged()
+    End Sub
+
+    Private Sub Landing_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles Landing_DateTimePicker.ValueChanged
+        'time was changed so calculate new minutes
+        FlightDurationTextBox.Text = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) 'display the total time for this flight
+        Cost_This_Flight_TextBox_TextChanged()
+    End Sub
+
+    Private Sub Cost_This_Flight_TextBox_TextChanged()
+        'update the cost text box
+        Dim temp_Cost As Int32 = (Val(Aircraft_Cost_TextBox.Text))
+        Dim temp_Dates As Int32 = CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
+        'Cost_This_Flight_TextBox.Text = (Val(Aircraft_Cost_TextBox.Text) / 60) * CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
+        Cost_This_Flight_TextBox.Text = ((temp_Cost / 60) * temp_Dates)
+        Debug.Print(vbCrLf & vbCrLf & "temp_Cost: " & temp_Cost)
+        Debug.Print("temp_Date: " & temp_Dates)
+        Debug.Print("costThisFlight: " & Cost_This_Flight_TextBox.Text)
+    End Sub
+
+
+    Private Sub GliderComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GliderComboBox.SelectionChangeCommitted
+        'each glider has a different cost, so update the cost text box
+        Cost_This_Flight_TextBox_TextChanged()
+    End Sub
+
+    Private Sub Aircraft_Cost_TextBox_TextChanged(sender As Object, e As EventArgs) Handles Aircraft_Cost_TextBox.TextChanged
+        'cost per hour changed, so update the total cost text box
+        Cost_This_Flight_TextBox_TextChanged()
+    End Sub
+
+
+    '-----------------------------------------
+    ' this is the older code that I'm rewriting to get the various text boxes to calculate cost properly
+    'Private Sub TakeOff_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles TakeOff_DateTimePicker.ValueChanged, Landing_DateTimePicker.ValueChanged, GliderComboBox.SelectionChangeCommitted
+
+
+    '    ' http://stackoverflow.com/questions/17556487/combobox-databinding-bug-wont-write-value-if-programmatically-losing-focus
+    '    ' another:  http://stackoverflow.com/questions/1956081/alternatives-to-selectedindexchanged-that-dont-fire-on-form-load 
+    '    ' one potential solution:  http://stackoverflow.com/questions/9844567/winforms-combobox-selectionchangecommitted-event-doesnt-always-change-selectedv
+    '    ' another is below 
+    '    ' http://www.vbforums.com/showthread.php?468840-RESOLVED-2005-SelectionChangeCommitted-problem
+    '    'I just did some testing. With the DropDownStyle Property Set To DropDown, 
+    '    'the Text property returns the old value And the SelectedItem property returns 
+    '    '    the New value in the SelectionChangeCommitted event handler. With the 
+    '    '    DropDownStyle property set to DropDownList they both return the New value.
+
+    '    Aircraft_Cost_TextBox.Update()
+    '    Debug.Print("GliderComboBox selectedIndex:  " & GliderComboBox.SelectedIndex)
+    '    Debug.Print("Aircraft rental Cost---: " & Val(Aircraft_Cost_TextBox.Text))
+    '    If DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) > 0 Then  'verify time is a positive number
+    '        'a new time duration was selected so get the new cost per hour
+    '        FlightDurationTextBox.Text = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) 'display the total time for this flight
+    '        Cost_This_Flight_TextBox.Text = (Val(Aircraft_Cost_TextBox.Text) / 60) * CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
+
+
+    '        ' more than 1 hour for two-seater, and more than 2 hours for single-seater gliders gets a penalty
+    '        If DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) > 60 Then
+    '            '>>>>>>>>>>>>>>>>>>>>>>>>>>still working on getting the penalty logic to work.
+    '            'add logic to see how many seats are in the aircraft
+    '            'add logic to add penalty fee for too long in the air
+    '            MessageBox.Show("Too long in the air, penalty applies. See OD *before* overriding penalty.")
+    '            PenaltyRadioButton.Checked = True
+    '        End If
+
+    '    Else  'can't have "negative time duration!" so blank out the duration and cost
+    '        FlightDurationTextBox.Text = ""
+    '        Cost_This_Flight_TextBox.Text = ""
+    '    End If
+
+
+    '    Debug.Print("Cost for this flight:  " & Val(Cost_This_Flight_TextBox.Text))
+
+    'End Sub
 End Class

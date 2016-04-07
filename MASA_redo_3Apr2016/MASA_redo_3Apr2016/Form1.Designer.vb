@@ -67,6 +67,7 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Aircraft_Cost_TextBox = New System.Windows.Forms.TextBox()
         Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
@@ -229,7 +230,6 @@ Partial Class Form1
         Me.MembersTableAdapter22 = New MASA_redo_3Apr2016.Enter_SecondName2TableAdapters.MembersTableAdapter()
         Me.FlightsTableAdapter = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.FlightsTableAdapter()
         Me.MASA_All_Flights_TableAdapterManager = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -676,6 +676,16 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(1090, 252)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.TabIndex = 41
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Label24
         '
@@ -1789,16 +1799,6 @@ Partial Class Form1
         Me.MASA_All_Flights_TableAdapterManager.FlightsTableAdapter = Me.FlightsTableAdapter
         Me.MASA_All_Flights_TableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter1
         Me.MASA_All_Flights_TableAdapterManager.UpdateOrder = MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(1090, 252)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox1.TabIndex = 41
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Form1
         '
