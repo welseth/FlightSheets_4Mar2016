@@ -254,6 +254,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OD_AOD_OD6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RatesAndFees.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RatesAndFees.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -595,6 +600,17 @@
     </None>
     <None Include="OD_AOD_OD6.xss">
       <DependentUpon>OD_AOD_OD6.xsd</DependentUpon>
+    </None>
+    <None Include="RatesAndFees.xsc">
+      <DependentUpon>RatesAndFees.xsd</DependentUpon>
+    </None>
+    <None Include="RatesAndFees.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RatesAndFees.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RatesAndFees.xss">
+      <DependentUpon>RatesAndFees.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

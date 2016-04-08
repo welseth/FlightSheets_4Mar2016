@@ -1,6 +1,8 @@
 ﻿Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'RatesAndFees._RatesAndFees' table. You can move, or remove it, as needed.
+        Me.RatesAndFeesTableAdapter.Fill(Me.RatesAndFees._RatesAndFees)
         'TODO: This line of code loads data into the 'MASA_all_1Apr2016DataSet.Flights' table. You can move, or remove it, as needed.
         Me.FlightsTableAdapter.Fill(Me.MASA_all_1Apr2016DataSet.Flights)
         'TODO: This line of code loads data into the 'Enter_SecondName2.Members' table. You can move, or remove it, as needed.
@@ -456,6 +458,10 @@
     Private Sub Aircraft_Cost_TextBox_TextChanged(sender As Object, e As EventArgs) Handles Aircraft_Cost_TextBox.TextChanged
         'cost per hour changed, so update the total cost text box
         Cost_This_Flight_TextBox_TextChanged()
+    End Sub
+
+    Private Sub TabPage6_Click(sender As Object, e As EventArgs) Handles TabPage6.Click
+
     End Sub
 
 

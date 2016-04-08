@@ -67,12 +67,8 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Glider_TextBox = New System.Windows.Forms.TextBox()
         Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Enter_Glider1 = New MASA_redo_3Apr2016.Enter_Glider1()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Seats_TextBox = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Aircraft_Cost_TextBox = New System.Windows.Forms.TextBox()
         Me.ClearFormButton = New System.Windows.Forms.Button()
@@ -128,7 +124,9 @@ Partial Class Form1
         Me.SetTestValsTab2 = New System.Windows.Forms.Button()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.PenaltyCharge = New System.Windows.Forms.GroupBox()
+        Me.Override_CheckBox = New System.Windows.Forms.CheckBox()
         Me.Penalty_Label = New System.Windows.Forms.Label()
+        Me.Penalty_CheckBox = New System.Windows.Forms.CheckBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.RopeBreakCheckBox = New System.Windows.Forms.CheckBox()
@@ -231,8 +229,32 @@ Partial Class Form1
         Me.MembersTableAdapter22 = New MASA_redo_3Apr2016.Enter_SecondName2TableAdapters.MembersTableAdapter()
         Me.FlightsTableAdapter = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.FlightsTableAdapter()
         Me.MASA_All_Flights_TableAdapterManager = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager()
-        Me.Penalty_CheckBox = New System.Windows.Forms.CheckBox()
-        Me.Override_CheckBox = New System.Windows.Forms.CheckBox()
+        Me.RatesAndFees = New MASA_redo_3Apr2016.RatesAndFees()
+        Me.RatesAndFeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RatesAndFeesTableAdapter = New MASA_redo_3Apr2016.RatesAndFeesTableAdapters.RatesAndFeesTableAdapter()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Glider_TextBox = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Seats_TextBox = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -298,6 +320,7 @@ Partial Class Form1
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage6.SuspendLayout()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -305,6 +328,8 @@ Partial Class Form1
         CType(Me.ODAODAOD1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnterTowPilot1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RatesAndFees, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RatesAndFeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -631,10 +656,6 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
-        Me.TabPage2.Controls.Add(Me.Label26)
-        Me.TabPage2.Controls.Add(Me.Glider_TextBox)
-        Me.TabPage2.Controls.Add(Me.Label25)
-        Me.TabPage2.Controls.Add(Me.Seats_TextBox)
         Me.TabPage2.Controls.Add(Me.Label24)
         Me.TabPage2.Controls.Add(Me.Aircraft_Cost_TextBox)
         Me.TabPage2.Controls.Add(Me.ClearFormButton)
@@ -683,24 +704,6 @@ Partial Class Form1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(987, 9)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(40, 13)
-        Me.Label26.TabIndex = 44
-        Me.Label26.Text = "Glider?"
-        '
-        'Glider_TextBox
-        '
-        Me.Glider_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Glider", True))
-        Me.Glider_TextBox.Enabled = False
-        Me.Glider_TextBox.Location = New System.Drawing.Point(990, 25)
-        Me.Glider_TextBox.Name = "Glider_TextBox"
-        Me.Glider_TextBox.Size = New System.Drawing.Size(91, 20)
-        Me.Glider_TextBox.TabIndex = 43
-        '
         'AircraftBindingSource2
         '
         Me.AircraftBindingSource2.DataMember = "Aircraft"
@@ -710,24 +713,6 @@ Partial Class Form1
         '
         Me.Enter_Glider1.DataSetName = "Enter_Glider1"
         Me.Enter_Glider1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(877, 9)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(86, 13)
-        Me.Label25.TabIndex = 42
-        Me.Label25.Text = "Number of Seats"
-        '
-        'Seats_TextBox
-        '
-        Me.Seats_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Seats", True))
-        Me.Seats_TextBox.Enabled = False
-        Me.Seats_TextBox.Location = New System.Drawing.Point(880, 25)
-        Me.Seats_TextBox.Name = "Seats_TextBox"
-        Me.Seats_TextBox.Size = New System.Drawing.Size(91, 20)
-        Me.Seats_TextBox.TabIndex = 41
         '
         'Label24
         '
@@ -1158,6 +1143,16 @@ Partial Class Form1
         Me.PenaltyCharge.TabStop = False
         Me.PenaltyCharge.Text = "Penalty Charge?"
         '
+        'Override_CheckBox
+        '
+        Me.Override_CheckBox.AutoSize = True
+        Me.Override_CheckBox.Location = New System.Drawing.Point(12, 56)
+        Me.Override_CheckBox.Name = "Override_CheckBox"
+        Me.Override_CheckBox.Size = New System.Drawing.Size(66, 17)
+        Me.Override_CheckBox.TabIndex = 46
+        Me.Override_CheckBox.Text = "Override"
+        Me.Override_CheckBox.UseVisualStyleBackColor = True
+        '
         'Penalty_Label
         '
         Me.Penalty_Label.BackColor = System.Drawing.Color.LemonChiffon
@@ -1167,6 +1162,16 @@ Partial Class Form1
         Me.Penalty_Label.TabIndex = 33
         Me.Penalty_Label.Text = "It's OK to override penalty ONLY if OD gave permission for long flight."
         Me.Penalty_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Penalty_CheckBox
+        '
+        Me.Penalty_CheckBox.AutoSize = True
+        Me.Penalty_CheckBox.Location = New System.Drawing.Point(12, 28)
+        Me.Penalty_CheckBox.Name = "Penalty_CheckBox"
+        Me.Penalty_CheckBox.Size = New System.Drawing.Size(61, 17)
+        Me.Penalty_CheckBox.TabIndex = 45
+        Me.Penalty_CheckBox.Text = "Penalty"
+        Me.Penalty_CheckBox.UseVisualStyleBackColor = True
         '
         'Label19
         '
@@ -1632,6 +1637,29 @@ Partial Class Form1
         '
         'TabPage6
         '
+        Me.TabPage6.Controls.Add(Me.Label35)
+        Me.TabPage6.Controls.Add(Me.TextBox9)
+        Me.TabPage6.Controls.Add(Me.Label34)
+        Me.TabPage6.Controls.Add(Me.TextBox8)
+        Me.TabPage6.Controls.Add(Me.Label33)
+        Me.TabPage6.Controls.Add(Me.TextBox7)
+        Me.TabPage6.Controls.Add(Me.Label32)
+        Me.TabPage6.Controls.Add(Me.TextBox6)
+        Me.TabPage6.Controls.Add(Me.Label31)
+        Me.TabPage6.Controls.Add(Me.TextBox5)
+        Me.TabPage6.Controls.Add(Me.Label30)
+        Me.TabPage6.Controls.Add(Me.TextBox4)
+        Me.TabPage6.Controls.Add(Me.Label29)
+        Me.TabPage6.Controls.Add(Me.TextBox3)
+        Me.TabPage6.Controls.Add(Me.Label28)
+        Me.TabPage6.Controls.Add(Me.Label27)
+        Me.TabPage6.Controls.Add(Me.TextBox2)
+        Me.TabPage6.Controls.Add(Me.Label21)
+        Me.TabPage6.Controls.Add(Me.TextBox1)
+        Me.TabPage6.Controls.Add(Me.Label26)
+        Me.TabPage6.Controls.Add(Me.Glider_TextBox)
+        Me.TabPage6.Controls.Add(Me.Label25)
+        Me.TabPage6.Controls.Add(Me.Seats_TextBox)
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
@@ -1810,25 +1838,226 @@ Partial Class Form1
         Me.MASA_All_Flights_TableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter1
         Me.MASA_All_Flights_TableAdapterManager.UpdateOrder = MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Penalty_CheckBox
+        'RatesAndFees
         '
-        Me.Penalty_CheckBox.AutoSize = True
-        Me.Penalty_CheckBox.Location = New System.Drawing.Point(12, 28)
-        Me.Penalty_CheckBox.Name = "Penalty_CheckBox"
-        Me.Penalty_CheckBox.Size = New System.Drawing.Size(61, 17)
-        Me.Penalty_CheckBox.TabIndex = 45
-        Me.Penalty_CheckBox.Text = "Penalty"
-        Me.Penalty_CheckBox.UseVisualStyleBackColor = True
+        Me.RatesAndFees.DataSetName = "RatesAndFees"
+        Me.RatesAndFees.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Override_CheckBox
+        'RatesAndFeesBindingSource
         '
-        Me.Override_CheckBox.AutoSize = True
-        Me.Override_CheckBox.Location = New System.Drawing.Point(12, 56)
-        Me.Override_CheckBox.Name = "Override_CheckBox"
-        Me.Override_CheckBox.Size = New System.Drawing.Size(66, 17)
-        Me.Override_CheckBox.TabIndex = 46
-        Me.Override_CheckBox.Text = "Override"
-        Me.Override_CheckBox.UseVisualStyleBackColor = True
+        Me.RatesAndFeesBindingSource.DataMember = "RatesAndFees"
+        Me.RatesAndFeesBindingSource.DataSource = Me.RatesAndFees
+        '
+        'RatesAndFeesTableAdapter
+        '
+        Me.RatesAndFeesTableAdapter.ClearBeforeFill = True
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(21, 135)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(113, 13)
+        Me.Label27.TabIndex = 56
+        Me.Label27.Text = "Simulated Rope Break"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "simulated_rope_break", True))
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(191, 128)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox2.TabIndex = 55
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(21, 109)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(97, 13)
+        Me.Label21.TabIndex = 54
+        Me.Label21.Text = "Actual Rope Break"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "actual_rope_break", True))
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(191, 102)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox1.TabIndex = 53
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(21, 79)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(40, 13)
+        Me.Label26.TabIndex = 52
+        Me.Label26.Text = "Glider?"
+        '
+        'Glider_TextBox
+        '
+        Me.Glider_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Glider", True))
+        Me.Glider_TextBox.Enabled = False
+        Me.Glider_TextBox.Location = New System.Drawing.Point(191, 76)
+        Me.Glider_TextBox.Name = "Glider_TextBox"
+        Me.Glider_TextBox.Size = New System.Drawing.Size(49, 20)
+        Me.Glider_TextBox.TabIndex = 51
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(21, 51)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(86, 13)
+        Me.Label25.TabIndex = 50
+        Me.Label25.Text = "Number of Seats"
+        '
+        'Seats_TextBox
+        '
+        Me.Seats_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Seats", True))
+        Me.Seats_TextBox.Enabled = False
+        Me.Seats_TextBox.Location = New System.Drawing.Point(191, 50)
+        Me.Seats_TextBox.Name = "Seats_TextBox"
+        Me.Seats_TextBox.Size = New System.Drawing.Size(49, 20)
+        Me.Seats_TextBox.TabIndex = 49
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(21, 17)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(279, 13)
+        Me.Label28.TabIndex = 57
+        Me.Label28.Text = "These are ""constants"" pulled from the DB for use in billing"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(21, 161)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(55, 13)
+        Me.Label29.TabIndex = 59
+        Me.Label29.Text = "Base Tow"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "base_tow", True))
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Location = New System.Drawing.Point(191, 154)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox3.TabIndex = 58
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(21, 187)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(130, 13)
+        Me.Label30.TabIndex = 61
+        Me.Label30.Text = "Addtl Per Hndrd Feet Tow"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "addtl_per_hundred_feet_tow", True))
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Location = New System.Drawing.Point(191, 180)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox4.TabIndex = 60
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(21, 213)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(72, 13)
+        Me.Label31.TabIndex = 63
+        Me.Label31.Text = "Aero Retrieve"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "aero_retrieve", True))
+        Me.TextBox5.Enabled = False
+        Me.TextBox5.Location = New System.Drawing.Point(191, 206)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox5.TabIndex = 62
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(21, 239)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(125, 13)
+        Me.Label32.TabIndex = 65
+        Me.Label32.Text = "Single Seat Penalty Rate"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "single_seat_penalty_rate", True))
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Location = New System.Drawing.Point(191, 232)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox6.TabIndex = 64
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(21, 291)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(118, 13)
+        Me.Label33.TabIndex = 67
+        Me.Label33.Text = "Dual Seat Penalty Rate"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "dual_seat_penalty_rate", True))
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Location = New System.Drawing.Point(191, 284)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox7.TabIndex = 66
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(21, 317)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(157, 13)
+        Me.Label34.TabIndex = 69
+        Me.Label34.Text = "Dual Seat Start Penalty Minutes"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "dual_seat_start_penalty_minutes", True))
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.Location = New System.Drawing.Point(191, 310)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox8.TabIndex = 68
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(21, 265)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(164, 13)
+        Me.Label35.TabIndex = 71
+        Me.Label35.Text = "Single Seat Start Penalty Minutes"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "single_seat_start_penalty_minutes", True))
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.Location = New System.Drawing.Point(191, 258)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(49, 20)
+        Me.TextBox9.TabIndex = 70
         '
         'Form1
         '
@@ -1907,6 +2136,8 @@ Partial Class Form1
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1914,6 +2145,8 @@ Partial Class Form1
         CType(Me.ODAODAOD1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnterTowPilot1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RatesAndFees, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RatesAndFeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2121,10 +2354,32 @@ Partial Class Form1
     Friend WithEvents ClearFormButton As Button
     Friend WithEvents Aircraft_Cost_TextBox As TextBox
     Friend WithEvents Label24 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Seats_TextBox As TextBox
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Glider_TextBox As TextBox
     Friend WithEvents Override_CheckBox As CheckBox
     Friend WithEvents Penalty_CheckBox As CheckBox
+    Friend WithEvents RatesAndFees As RatesAndFees
+    Friend WithEvents RatesAndFeesBindingSource As BindingSource
+    Friend WithEvents RatesAndFeesTableAdapter As RatesAndFeesTableAdapters.RatesAndFeesTableAdapter
+    Friend WithEvents Label34 As Label
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label33 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label32 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Glider_TextBox As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Seats_TextBox As TextBox
+    Friend WithEvents Label35 As Label
+    Friend WithEvents TextBox9 As TextBox
 End Class
