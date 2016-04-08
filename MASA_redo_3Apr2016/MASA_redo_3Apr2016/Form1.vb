@@ -388,6 +388,8 @@
     End Sub
 
 
+
+
     '-----------------------------------------
     ' this is the older code that I'm rewriting to get the various text boxes to calculate cost properly
     'Private Sub TakeOff_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles TakeOff_DateTimePicker.ValueChanged, Landing_DateTimePicker.ValueChanged, GliderComboBox.SelectionChangeCommitted

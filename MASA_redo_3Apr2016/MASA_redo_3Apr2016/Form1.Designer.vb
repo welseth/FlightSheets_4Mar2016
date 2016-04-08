@@ -67,7 +67,6 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Aircraft_Cost_TextBox = New System.Windows.Forms.TextBox()
         Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
@@ -628,7 +627,6 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
-        Me.TabPage2.Controls.Add(Me.CheckBox1)
         Me.TabPage2.Controls.Add(Me.Label24)
         Me.TabPage2.Controls.Add(Me.Aircraft_Cost_TextBox)
         Me.TabPage2.Controls.Add(Me.ClearFormButton)
@@ -677,20 +675,10 @@ Partial Class Form1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(1090, 252)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
-        Me.CheckBox1.TabIndex = 41
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(663, 274)
+        Me.Label24.Location = New System.Drawing.Point(663, 278)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(102, 13)
         Me.Label24.TabIndex = 40
@@ -700,7 +688,7 @@ Partial Class Form1
         '
         Me.Aircraft_Cost_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Cost_per_hour", True))
         Me.Aircraft_Cost_TextBox.Enabled = False
-        Me.Aircraft_Cost_TextBox.Location = New System.Drawing.Point(666, 290)
+        Me.Aircraft_Cost_TextBox.Location = New System.Drawing.Point(666, 294)
         Me.Aircraft_Cost_TextBox.Name = "Aircraft_Cost_TextBox"
         Me.Aircraft_Cost_TextBox.Size = New System.Drawing.Size(91, 20)
         Me.Aircraft_Cost_TextBox.TabIndex = 39
@@ -717,7 +705,7 @@ Partial Class Form1
         '
         'ClearFormButton
         '
-        Me.ClearFormButton.Location = New System.Drawing.Point(554, 249)
+        Me.ClearFormButton.Location = New System.Drawing.Point(543, 264)
         Me.ClearFormButton.Name = "ClearFormButton"
         Me.ClearFormButton.Size = New System.Drawing.Size(105, 48)
         Me.ClearFormButton.TabIndex = 38
@@ -727,23 +715,23 @@ Partial Class Form1
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(889, 274)
+        Me.Label23.Location = New System.Drawing.Point(889, 278)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(79, 13)
+        Me.Label23.Size = New System.Drawing.Size(106, 13)
         Me.Label23.TabIndex = 37
-        Me.Label23.Text = "Cost This Flight"
+        Me.Label23.Text = "Total Cost This Flight"
         '
         'Cost_This_Flight_TextBox
         '
         Me.Cost_This_Flight_TextBox.Enabled = False
-        Me.Cost_This_Flight_TextBox.Location = New System.Drawing.Point(892, 290)
+        Me.Cost_This_Flight_TextBox.Location = New System.Drawing.Point(892, 294)
         Me.Cost_This_Flight_TextBox.Name = "Cost_This_Flight_TextBox"
         Me.Cost_This_Flight_TextBox.Size = New System.Drawing.Size(100, 20)
         Me.Cost_This_Flight_TextBox.TabIndex = 36
         '
         'Save_Button
         '
-        Me.Save_Button.Location = New System.Drawing.Point(443, 249)
+        Me.Save_Button.Location = New System.Drawing.Point(432, 264)
         Me.Save_Button.Name = "Save_Button"
         Me.Save_Button.Size = New System.Drawing.Size(105, 48)
         Me.Save_Button.TabIndex = 35
@@ -756,7 +744,7 @@ Partial Class Form1
         Me.FlightsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.FlightsDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewCheckBoxColumn2, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewCheckBoxColumn3, Me.DataGridViewTextBoxColumn27})
         Me.FlightsDataGridView.DataSource = Me.MASA_All_BindingSource
-        Me.FlightsDataGridView.Location = New System.Drawing.Point(6, 329)
+        Me.FlightsDataGridView.Location = New System.Drawing.Point(6, 338)
         Me.FlightsDataGridView.Name = "FlightsDataGridView"
         Me.FlightsDataGridView.Size = New System.Drawing.Size(1545, 220)
         Me.FlightsDataGridView.TabIndex = 34
@@ -990,7 +978,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.MASA_All_FlightsBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.MASA_All_FlightsBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.MembersBindingNavigatorSaveItem})
-        Me.MASA_All_FlightsBindingNavigator.Location = New System.Drawing.Point(50, 257)
+        Me.MASA_All_FlightsBindingNavigator.Location = New System.Drawing.Point(20, 310)
         Me.MASA_All_FlightsBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.MASA_All_FlightsBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.MASA_All_FlightsBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -1161,7 +1149,7 @@ Partial Class Form1
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(777, 274)
+        Me.Label19.Location = New System.Drawing.Point(777, 278)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(105, 13)
         Me.Label19.TabIndex = 30
@@ -1241,7 +1229,7 @@ Partial Class Form1
         'FlightDurationTextBox
         '
         Me.FlightDurationTextBox.Enabled = False
-        Me.FlightDurationTextBox.Location = New System.Drawing.Point(780, 290)
+        Me.FlightDurationTextBox.Location = New System.Drawing.Point(780, 294)
         Me.FlightDurationTextBox.Name = "FlightDurationTextBox"
         Me.FlightDurationTextBox.Size = New System.Drawing.Size(91, 20)
         Me.FlightDurationTextBox.TabIndex = 21
@@ -1308,7 +1296,7 @@ Partial Class Form1
         '
         Me.TowPlane_N_Number.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource, "N-number", True))
         Me.TowPlane_N_Number.Enabled = False
-        Me.TowPlane_N_Number.Location = New System.Drawing.Point(325, 55)
+        Me.TowPlane_N_Number.Location = New System.Drawing.Point(325, 45)
         Me.TowPlane_N_Number.Name = "TowPlane_N_Number"
         Me.TowPlane_N_Number.Size = New System.Drawing.Size(91, 20)
         Me.TowPlane_N_Number.TabIndex = 16
@@ -1521,7 +1509,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(174, 38)
+        Me.Label8.Location = New System.Drawing.Point(174, 28)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(58, 13)
         Me.Label8.TabIndex = 5
@@ -1533,7 +1521,7 @@ Partial Class Form1
         Me.TowPlaneComboBox.DataSource = Me.AircraftBindingSource
         Me.TowPlaneComboBox.DisplayMember = "Aircraft_name"
         Me.TowPlaneComboBox.FormattingEnabled = True
-        Me.TowPlaneComboBox.Location = New System.Drawing.Point(177, 54)
+        Me.TowPlaneComboBox.Location = New System.Drawing.Point(177, 44)
         Me.TowPlaneComboBox.Name = "TowPlaneComboBox"
         Me.TowPlaneComboBox.Size = New System.Drawing.Size(121, 21)
         Me.TowPlaneComboBox.TabIndex = 4
@@ -1552,7 +1540,7 @@ Partial Class Form1
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(47, 38)
+        Me.Label7.Location = New System.Drawing.Point(47, 28)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(51, 13)
         Me.Label7.TabIndex = 3
@@ -1564,7 +1552,7 @@ Partial Class Form1
         Me.TowPilotNameComboBox.DataSource = Me.MembersBindingSource16
         Me.TowPilotNameComboBox.DisplayMember = "Name"
         Me.TowPilotNameComboBox.FormattingEnabled = True
-        Me.TowPilotNameComboBox.Location = New System.Drawing.Point(50, 54)
+        Me.TowPilotNameComboBox.Location = New System.Drawing.Point(50, 44)
         Me.TowPilotNameComboBox.Name = "TowPilotNameComboBox"
         Me.TowPilotNameComboBox.Size = New System.Drawing.Size(121, 21)
         Me.TowPilotNameComboBox.TabIndex = 0
@@ -2093,5 +2081,4 @@ Partial Class Form1
     Friend WithEvents ClearFormButton As Button
     Friend WithEvents Aircraft_Cost_TextBox As TextBox
     Friend WithEvents Label24 As Label
-    Friend WithEvents CheckBox1 As CheckBox
 End Class
