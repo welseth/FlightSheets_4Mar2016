@@ -75,6 +75,7 @@
         TakeOff_DateTimePicker.Value = Now
         Landing_DateTimePicker.Value = Now
         Todays_Date_DateTimePicker.Value = Now
+        Penalty_Label.Visible = False  'Don't want to see the penalty_label at initial load.
 
     End Sub
 
@@ -105,8 +106,10 @@
             Exit Sub
         End If
 
-        If OD_AOD_OD1_ComboBox.SelectedIndex > 0 Then
-            newFlightRow.OD1 = OD_AOD_OD1_ComboBox.SelectedIndex
+        If (OD_AOD_OD1_ComboBox.SelectedIndex > 0) Or (OD_AOD_OD2_ComboBox.SelectedIndex > 0) Or (OD_AOD_OD3_ComboBox.SelectedIndex > 0) Then
+            If (OD_AOD_OD1_ComboBox.SelectedIndex > 0) Then newFlightRow.OD1 = OD_AOD_OD1_ComboBox.SelectedIndex
+            If (OD_AOD_OD2_ComboBox.SelectedIndex > 0) Then newFlightRow.OD2 = OD_AOD_OD2_ComboBox.SelectedIndex
+            If (OD_AOD_OD3_ComboBox.SelectedIndex > 0) Then newFlightRow.OD3 = OD_AOD_OD3_ComboBox.SelectedIndex
         Else
             MessageBox.Show("Must Select The OD For These Flight Operations")
             Exit Sub
@@ -168,7 +171,7 @@
         newFlightRow.Split_cost = SplitCost.Checked
 
         newFlightRow.Second_name_on_invoice = SecondNameComboBox.SelectedIndex
-        newFlightRow.Penalty_charge = PenaltyRadioButton.Checked
+        newFlightRow.Penalty_charge = Penalty_CheckBox.Checked
 
         'Text boxes can't be blank, need to check that user didn't backspace and delete everything in the textbox.
         Try
@@ -184,7 +187,7 @@
             Debug.Print("Reset Percent to 0")
         End Try
         Try
-            newFlightRow.Cost_this_flight = Cost_This_Flight_TextBox.Text        '<<<<<<<<<<<<<<<<<<<<<<<<<<<need to do the math on this one!!!  >>>>>>>>>>>>>>>>>>
+            newFlightRow.Cost_this_flight = Cost_This_Flight_TextBox.Text        '<<<<<<<<<<<<<<<<<<<<<<<<<<<need to verify the math on this one!!!  >>>>>>>>>>>>>>>>>>
         Catch ex As Exception
             newFlightRow.Cost_this_flight = "0"
             Debug.Print("Reset CostThisFlight to 0")
@@ -217,6 +220,9 @@
 
         'now zero-out the already-saved data so the user can enter new rows
         Button1_Click_3(sender, e)
+        Override_CheckBox.Checked = False  ' un-set the penalty override box after saving details of flight 
+        Override_CheckBox.Enabled = False  'we'll enable or disable the override only if there is a penalty
+        Penalty_CheckBox.Enabled = False  'we don't ever want user to actually change this button. We do it programmatically.
 
     End Sub
 
@@ -234,7 +240,7 @@
         SplitCost.Checked = False
         PercentFirstCheck.Text = "100"
         FlightDurationTextBox.Text = ""
-        PenaltyRadioButton.Checked = False
+        Penalty_CheckBox.Checked = False
         RopeBreakCheckBox.Checked = False
         Cost_This_Flight_TextBox.Text = ""
 
@@ -323,7 +329,7 @@
         SplitCost.Checked = True
         PercentFirstCheck.Text = "95"
         'FlightDurationTextBox.Text = "45"
-        PenaltyRadioButton.Checked = True
+        Penalty_CheckBox.Checked = True
         RopeBreakCheckBox.Checked = True
         'Cost_This_Flight_TextBox.Text = "9.99"
         TakeOff_DateTimePicker_ValueChanged(vbNull, EventArgs.Empty)
@@ -337,6 +343,8 @@
     End Sub
     ' debug item
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles Todays_Date_DateTimePicker.ValueChanged
+        'this is just a "date for reference", we don't actually use this date other than
+        ' to store it in the DB.  So, we do nothing in this sub.
         Debug.Print("Date:  " & Todays_Date_DateTimePicker.Value)
     End Sub
     ' debug item
@@ -366,16 +374,79 @@
     End Sub
 
     Private Sub Cost_This_Flight_TextBox_TextChanged()
-        'update the cost text box
         Dim temp_Cost As Int32 = (Val(Aircraft_Cost_TextBox.Text))
-        Dim temp_Dates As Int32 = CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
-        'Cost_This_Flight_TextBox.Text = (Val(Aircraft_Cost_TextBox.Text) / 60) * CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
-        Cost_This_Flight_TextBox.Text = ((temp_Cost / 60) * temp_Dates)
+        Dim temp_Time As Int32 = CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
+        Dim temp_Penalty As Int32 = 0
+        Dim two_seat_penalty As Int32 = 10  ' I'm not sure of exact penalty $$, this is just a guess
+        Dim single_seat_penalty As Int32 = 10  ' I'm not sure of exact penalty $$, this is just a guess
+        Dim two_seat_minutes As Int32 = 60
+        Dim single_seat_minutes As Int32 = 120
+        Dim base_tow_rate As Int32 = 17
+        Dim per_hundred_tow_rate As Int32 = 1
+        Dim actual_rope_break As Int32 = 0
+        Dim simulated_rope_break As Int32 = 10
+
+
+        'check if the flight was too long, and so requires a penalty charge
+        ' power plane does NOT get penalty
+        '  2 seater glider:  longer than 60 mins needs penalty
+        '  1 seater glider: longer than 120 mins needs penalty
+        Penalty_CheckBox.Enabled = False  'we don't ever want user to actually change this button. We do it programmatically.
+        Override_CheckBox.Enabled = False  'we'll enable or disable the override only if there is a penalty
+
+        'Set the "penalty check box"
+        If (temp_Time > 0) And (temp_Time <= two_seat_minutes) Then
+            'No penalty
+            Penalty_CheckBox.Checked = False
+            Override_CheckBox.Enabled = False
+            Penalty_Label.Visible = False
+            temp_Penalty = 0
+        End If
+        If (temp_Time > two_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 2) Then  '2-seater
+            'Yes, penalty for 2-seater
+            Penalty_CheckBox.Checked = True
+            Override_CheckBox.Enabled = True
+            Penalty_Label.Visible = True
+            temp_Penalty = two_seat_penalty * temp_Time
+        End If
+        If (temp_Time > single_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 1) Then  '1-seater
+            'Yes, penalty for 1-seater
+            Penalty_CheckBox.Checked = True
+            Override_CheckBox.Enabled = True
+            Penalty_Label.Visible = True
+            temp_Penalty = single_seat_penalty * temp_Time
+        End If
+
+
+
+        If Override_CheckBox.Checked = True Then
+            Cost_This_Flight_TextBox.Text = ((temp_Cost / 60) * temp_Time)
+            Debug.Print("OverRide = TRUE")
+        ElseIf OverRide_Checkbox.Checked = False Then
+            Debug.Print("OverRide = FALSE")
+            Cost_This_Flight_TextBox.Text = ((temp_Cost / 60) * temp_Time) + temp_Penalty
+        End If
+
         Debug.Print(vbCrLf & vbCrLf & "temp_Cost: " & temp_Cost)
-        Debug.Print("temp_Date: " & temp_Dates)
+        Debug.Print("temp_Date: " & temp_Time)
         Debug.Print("costThisFlight: " & Cost_This_Flight_TextBox.Text)
     End Sub
 
+    Private Sub Override_CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles Override_CheckBox.CheckedChanged
+        Cost_This_Flight_TextBox_TextChanged()
+    End Sub
+
+    'Private Sub OverRide_Checkbox_CheckedChanged(sender As Object, e As EventArgs) Handles OverRide_Checkbox.CheckedChanged
+    '    'Override the penalty
+    '    'If the override box changes in any way, just re-calculate the cost 
+    '    'update the cost text box, accounting for the possibility of a penalty for a too-long flight
+    '    ' I think the penalty is PER MINUTE!
+
+    '    'just add or subtract the penalty if checkbox is checked
+    '    Cost_This_Flight_TextBox_TextChanged()
+
+
+    'End Sub
 
     Private Sub GliderComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GliderComboBox.SelectionChangeCommitted
         'each glider has a different cost, so update the cost text box
@@ -386,6 +457,12 @@
         'cost per hour changed, so update the total cost text box
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
+
+
+
+
+
+
 
 
 
@@ -420,7 +497,7 @@
     '            'add logic to see how many seats are in the aircraft
     '            'add logic to add penalty fee for too long in the air
     '            MessageBox.Show("Too long in the air, penalty applies. See OD *before* overriding penalty.")
-    '            PenaltyRadioButton.Checked = True
+    '            Penalty_Checkbox.Checked = True
     '        End If
 
     '    Else  'can't have "negative time duration!" so blank out the duration and cost
