@@ -460,9 +460,7 @@
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
 
-    Private Sub TabPage6_Click(sender As Object, e As EventArgs) Handles TabPage6.Click
 
-    End Sub
 
 
 
