@@ -398,10 +398,12 @@
         Dim single_seat_penalty As Int32 = Val(Single_Seat_Penalty_Rate_TextBox.Text)  'pulled from DB table 
         Dim two_seat_minutes As Int32 = Val(Dual_Seat_Penalty_Start_Mins_TextBox.Text)  'pulled from DB table
         Dim single_seat_minutes As Int32 = Val(Single_Seat_Penalty_Start_Mins_TextBox.Text)  'pulled from DB table
-        Dim base_tow_rate As Int32 = Val(Base_Tow_Rate_TextBox.Text)  'pulled from DB table 
+        Dim base_tow_altitude As Int32 = Val(Base_Tow_Altitude_TextBox.Text)  'pulled from DB table 
         Dim per_hundred_tow_rate As Int32 = Val(Addtl_Per_Hndrd_Feet_Tow_TextBox.Text)  'pulled from DB table
         Dim actual_rope_break As Int32 = Val(Actual_Rope_Break_Rate_TextBox.Text)  'pulled from DB table 
         Dim simulated_rope_break As Int32 = Val(Simulated_Rope_Break_Rate_TextBox.Text)  'pulled from DB table 
+        Dim temp_feet_above_base_tow As Int32 = Val(TowAltitude.Text) - base_tow_altitude '
+
 
         'check if the flight was too long, and so requires a penalty charge
         ' power plane does NOT get penalty
@@ -436,7 +438,7 @@
             Debug.Print("Single Seat:  TOO Long. Temp_Penalty: " & temp_Penalty)
         End If
 
-
+        Debug.Print("TempFeetAboveBaseTow:  " & temp_feet_above_base_tow)
         If Override_CheckBox.Checked = True Then
             Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", ((temp_Cost_Per_Hour / 60) * temp_Time))
             Debug.Print("OverRide = TRUE")
@@ -477,24 +479,32 @@
         'cost per hour changed, so update the total cost text box
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
-
     Private Sub Simulated_Rope_Break_CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles Simulated_Rope_Break_CheckBox.CheckedChanged
-        'it's a rope break, this overrides everything, so update the total cost text box
+        'it's a simulated rope break, this overrides everything, so update the total cost text box
         If Simulated_Rope_Break_CheckBox.Checked = True Then
             Debug.Print("Simulated Break is CHECKED")
             Actual_Rope_Break_CheckBox.Checked = False
+            SimulatedRopeBreak_Label.Visible = True
+        Else
+            SimulatedRopeBreak_Label.Visible = False
+        End If
+
+        Cost_This_Flight_TextBox_TextChanged()
+    End Sub
+    Private Sub Actual_Rope_Break_CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles Actual_Rope_Break_CheckBox.CheckedChanged
+        'it's an actual rope break, this overrides everything, so update the total cost text box
+        If Actual_Rope_Break_CheckBox.Checked = True Then
+            Debug.Print("Actual Break is CHECKED")
+            Simulated_Rope_Break_CheckBox.Checked = False
+            ActualRopeBreak_Label.Visible = True
+        Else
+            ActualRopeBreak_Label.Visible = False
         End If
 
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
 
-    Private Sub Actual_Rope_Break_CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles Actual_Rope_Break_CheckBox.CheckedChanged
-        'it's a rope break, this overrides everything, so update the total cost text box
-        If Actual_Rope_Break_CheckBox.Checked = True Then
-            Debug.Print("Actual Break is CHECKED")
-            Simulated_Rope_Break_CheckBox.Checked = False
-        End If
-
+    Private Sub TowAltitude_TextChanged(sender As Object, e As EventArgs) Handles TowAltitude.TextChanged
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
 

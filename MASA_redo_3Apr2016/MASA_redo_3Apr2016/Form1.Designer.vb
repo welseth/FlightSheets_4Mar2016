@@ -67,9 +67,11 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Actual_Rope_Break_CheckBox = New System.Windows.Forms.CheckBox()
+        Me.Simulated_Rope_Break_CheckBox = New System.Windows.Forms.CheckBox()
         Me.SimulatedRopeBreak_Label = New System.Windows.Forms.Label()
         Me.ActualRopeBreak_Label = New System.Windows.Forms.Label()
-        Me.Simulated_Rope_Break_CheckBox = New System.Windows.Forms.CheckBox()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
@@ -89,7 +91,7 @@ Partial Class Form1
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Addtl_Per_Hndrd_Feet_Tow_TextBox = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.Base_Tow_Rate_TextBox = New System.Windows.Forms.TextBox()
+        Me.Base_Tow_Altitude_TextBox = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Simulated_Rope_Break_Rate_TextBox = New System.Windows.Forms.TextBox()
@@ -159,7 +161,6 @@ Partial Class Form1
         Me.Penalty_CheckBox = New System.Windows.Forms.CheckBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Actual_Rope_Break_CheckBox = New System.Windows.Forms.CheckBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -260,7 +261,6 @@ Partial Class Form1
         Me.FlightsTableAdapter = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.FlightsTableAdapter()
         Me.MASA_All_Flights_TableAdapterManager = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager()
         Me.RatesAndFeesTableAdapter = New MASA_redo_3Apr2016.RatesAndFeesTableAdapters.RatesAndFeesTableAdapter()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -288,6 +288,7 @@ Partial Class Form1
         CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RatesAndFeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -335,7 +336,6 @@ Partial Class Form1
         CType(Me.ODAODAOD1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnterTowPilot1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -680,7 +680,7 @@ Partial Class Form1
         Me.TabPage2.Controls.Add(Me.Label30)
         Me.TabPage2.Controls.Add(Me.Addtl_Per_Hndrd_Feet_Tow_TextBox)
         Me.TabPage2.Controls.Add(Me.Label29)
-        Me.TabPage2.Controls.Add(Me.Base_Tow_Rate_TextBox)
+        Me.TabPage2.Controls.Add(Me.Base_Tow_Altitude_TextBox)
         Me.TabPage2.Controls.Add(Me.Label28)
         Me.TabPage2.Controls.Add(Me.Label27)
         Me.TabPage2.Controls.Add(Me.Simulated_Rope_Break_Rate_TextBox)
@@ -737,25 +737,25 @@ Partial Class Form1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'SimulatedRopeBreak_Label
+        'GroupBox1
         '
-        Me.SimulatedRopeBreak_Label.BackColor = System.Drawing.Color.LemonChiffon
-        Me.SimulatedRopeBreak_Label.Location = New System.Drawing.Point(939, 45)
-        Me.SimulatedRopeBreak_Label.Name = "SimulatedRopeBreak_Label"
-        Me.SimulatedRopeBreak_Label.Size = New System.Drawing.Size(118, 48)
-        Me.SimulatedRopeBreak_Label.TabIndex = 98
-        Me.SimulatedRopeBreak_Label.Text = "Simulated rope breaks are $10"
-        Me.SimulatedRopeBreak_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.GroupBox1.Controls.Add(Me.Actual_Rope_Break_CheckBox)
+        Me.GroupBox1.Controls.Add(Me.Simulated_Rope_Break_CheckBox)
+        Me.GroupBox1.Location = New System.Drawing.Point(863, 95)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(155, 76)
+        Me.GroupBox1.TabIndex = 99
+        Me.GroupBox1.TabStop = False
         '
-        'ActualRopeBreak_Label
+        'Actual_Rope_Break_CheckBox
         '
-        Me.ActualRopeBreak_Label.BackColor = System.Drawing.Color.LemonChiffon
-        Me.ActualRopeBreak_Label.Location = New System.Drawing.Point(815, 45)
-        Me.ActualRopeBreak_Label.Name = "ActualRopeBreak_Label"
-        Me.ActualRopeBreak_Label.Size = New System.Drawing.Size(118, 48)
-        Me.ActualRopeBreak_Label.TabIndex = 47
-        Me.ActualRopeBreak_Label.Text = "ACTUAL rope breaks are FREE."
-        Me.ActualRopeBreak_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Actual_Rope_Break_CheckBox.AutoSize = True
+        Me.Actual_Rope_Break_CheckBox.Location = New System.Drawing.Point(13, 46)
+        Me.Actual_Rope_Break_CheckBox.Name = "Actual_Rope_Break_CheckBox"
+        Me.Actual_Rope_Break_CheckBox.Size = New System.Drawing.Size(116, 17)
+        Me.Actual_Rope_Break_CheckBox.TabIndex = 28
+        Me.Actual_Rope_Break_CheckBox.Text = "Actual Rope Break"
+        Me.Actual_Rope_Break_CheckBox.UseVisualStyleBackColor = True
         '
         'Simulated_Rope_Break_CheckBox
         '
@@ -766,6 +766,26 @@ Partial Class Form1
         Me.Simulated_Rope_Break_CheckBox.TabIndex = 97
         Me.Simulated_Rope_Break_CheckBox.Text = "Simulated Rope Break"
         Me.Simulated_Rope_Break_CheckBox.UseVisualStyleBackColor = True
+        '
+        'SimulatedRopeBreak_Label
+        '
+        Me.SimulatedRopeBreak_Label.BackColor = System.Drawing.Color.LemonChiffon
+        Me.SimulatedRopeBreak_Label.Location = New System.Drawing.Point(880, 45)
+        Me.SimulatedRopeBreak_Label.Name = "SimulatedRopeBreak_Label"
+        Me.SimulatedRopeBreak_Label.Size = New System.Drawing.Size(118, 48)
+        Me.SimulatedRopeBreak_Label.TabIndex = 98
+        Me.SimulatedRopeBreak_Label.Text = "Simulated rope breaks are $10"
+        Me.SimulatedRopeBreak_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ActualRopeBreak_Label
+        '
+        Me.ActualRopeBreak_Label.BackColor = System.Drawing.Color.LemonChiffon
+        Me.ActualRopeBreak_Label.Location = New System.Drawing.Point(881, 45)
+        Me.ActualRopeBreak_Label.Name = "ActualRopeBreak_Label"
+        Me.ActualRopeBreak_Label.Size = New System.Drawing.Size(118, 48)
+        Me.ActualRopeBreak_Label.TabIndex = 47
+        Me.ActualRopeBreak_Label.Text = "ACTUAL rope breaks are FREE."
+        Me.ActualRopeBreak_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label36
         '
@@ -922,14 +942,14 @@ Partial Class Form1
         Me.Label29.TabIndex = 82
         Me.Label29.Text = "Base Tow"
         '
-        'Base_Tow_Rate_TextBox
+        'Base_Tow_Altitude_TextBox
         '
-        Me.Base_Tow_Rate_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "base_tow", True))
-        Me.Base_Tow_Rate_TextBox.Enabled = False
-        Me.Base_Tow_Rate_TextBox.Location = New System.Drawing.Point(1096, 151)
-        Me.Base_Tow_Rate_TextBox.Name = "Base_Tow_Rate_TextBox"
-        Me.Base_Tow_Rate_TextBox.Size = New System.Drawing.Size(49, 20)
-        Me.Base_Tow_Rate_TextBox.TabIndex = 81
+        Me.Base_Tow_Altitude_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "base_tow", True))
+        Me.Base_Tow_Altitude_TextBox.Enabled = False
+        Me.Base_Tow_Altitude_TextBox.Location = New System.Drawing.Point(1096, 151)
+        Me.Base_Tow_Altitude_TextBox.Name = "Base_Tow_Altitude_TextBox"
+        Me.Base_Tow_Altitude_TextBox.Size = New System.Drawing.Size(49, 20)
+        Me.Base_Tow_Altitude_TextBox.TabIndex = 81
         '
         'Label28
         '
@@ -1488,16 +1508,6 @@ Partial Class Form1
         Me.Label18.Size = New System.Drawing.Size(115, 13)
         Me.Label18.TabIndex = 29
         Me.Label18.Text = "Percent on First Check"
-        '
-        'Actual_Rope_Break_CheckBox
-        '
-        Me.Actual_Rope_Break_CheckBox.AutoSize = True
-        Me.Actual_Rope_Break_CheckBox.Location = New System.Drawing.Point(13, 46)
-        Me.Actual_Rope_Break_CheckBox.Name = "Actual_Rope_Break_CheckBox"
-        Me.Actual_Rope_Break_CheckBox.Size = New System.Drawing.Size(116, 17)
-        Me.Actual_Rope_Break_CheckBox.TabIndex = 28
-        Me.Actual_Rope_Break_CheckBox.Text = "Actual Rope Break"
-        Me.Actual_Rope_Break_CheckBox.UseVisualStyleBackColor = True
         '
         'Label17
         '
@@ -2117,16 +2127,6 @@ Partial Class Form1
         '
         Me.RatesAndFeesTableAdapter.ClearBeforeFill = True
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Actual_Rope_Break_CheckBox)
-        Me.GroupBox1.Controls.Add(Me.Simulated_Rope_Break_CheckBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(863, 95)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(155, 76)
-        Me.GroupBox1.TabIndex = 99
-        Me.GroupBox1.TabStop = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2164,6 +2164,8 @@ Partial Class Form1
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RatesAndFeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2213,8 +2215,6 @@ Partial Class Form1
         CType(Me.ODAODAOD1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnterTowPilot1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2440,7 +2440,7 @@ Partial Class Form1
     Friend WithEvents Label30 As Label
     Friend WithEvents Addtl_Per_Hndrd_Feet_Tow_TextBox As TextBox
     Friend WithEvents Label29 As Label
-    Friend WithEvents Base_Tow_Rate_TextBox As TextBox
+    Friend WithEvents Base_Tow_Altitude_TextBox As TextBox
     Friend WithEvents Label28 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Simulated_Rope_Break_Rate_TextBox As TextBox
