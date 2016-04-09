@@ -280,6 +280,8 @@ Partial Class Form1
         Me.MASA_All_Flights_TableAdapterManager = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager()
         Me.RatesAndFeesTableAdapter = New MASA_redo_3Apr2016.RatesAndFeesTableAdapters.RatesAndFeesTableAdapter()
         Me.RatesAndFeesTableAdapter1 = New MASA_redo_3Apr2016.RatesAndFees2TableAdapters.RatesAndFeesTableAdapter()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Tow_Plane_TextBox = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -683,6 +685,8 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.Label44)
+        Me.TabPage2.Controls.Add(Me.Tow_Plane_TextBox)
         Me.TabPage2.Controls.Add(Me.MinAltTowWarningText)
         Me.TabPage2.Controls.Add(Me.MinAltitudeWarning)
         Me.TabPage2.Controls.Add(Me.Label43)
@@ -900,7 +904,7 @@ Partial Class Form1
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(1320, 137)
+        Me.Label37.Location = New System.Drawing.Point(1320, 167)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(111, 13)
         Me.Label37.TabIndex = 101
@@ -910,7 +914,7 @@ Partial Class Form1
         '
         Me.Base_Tow_Fee_Dollars.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource1, "base_tow_fee_dollars", True))
         Me.Base_Tow_Fee_Dollars.Enabled = False
-        Me.Base_Tow_Fee_Dollars.Location = New System.Drawing.Point(1323, 153)
+        Me.Base_Tow_Fee_Dollars.Location = New System.Drawing.Point(1323, 183)
         Me.Base_Tow_Fee_Dollars.Name = "Base_Tow_Fee_Dollars"
         Me.Base_Tow_Fee_Dollars.Size = New System.Drawing.Size(49, 20)
         Me.Base_Tow_Fee_Dollars.TabIndex = 100
@@ -1006,7 +1010,7 @@ Partial Class Form1
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(1151, 258)
+        Me.Label35.Location = New System.Drawing.Point(1151, 289)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(164, 13)
         Me.Label35.TabIndex = 94
@@ -1016,7 +1020,7 @@ Partial Class Form1
         '
         Me.Single_Seat_Penalty_Start_Mins_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "single_seat_start_penalty_minutes", True))
         Me.Single_Seat_Penalty_Start_Mins_TextBox.Enabled = False
-        Me.Single_Seat_Penalty_Start_Mins_TextBox.Location = New System.Drawing.Point(1096, 255)
+        Me.Single_Seat_Penalty_Start_Mins_TextBox.Location = New System.Drawing.Point(1096, 286)
         Me.Single_Seat_Penalty_Start_Mins_TextBox.Name = "Single_Seat_Penalty_Start_Mins_TextBox"
         Me.Single_Seat_Penalty_Start_Mins_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Single_Seat_Penalty_Start_Mins_TextBox.TabIndex = 93
@@ -1034,7 +1038,7 @@ Partial Class Form1
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(1151, 310)
+        Me.Label34.Location = New System.Drawing.Point(1151, 341)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(157, 13)
         Me.Label34.TabIndex = 92
@@ -1044,7 +1048,7 @@ Partial Class Form1
         '
         Me.Dual_Seat_Penalty_Start_Mins_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "dual_seat_start_penalty_minutes", True))
         Me.Dual_Seat_Penalty_Start_Mins_TextBox.Enabled = False
-        Me.Dual_Seat_Penalty_Start_Mins_TextBox.Location = New System.Drawing.Point(1096, 307)
+        Me.Dual_Seat_Penalty_Start_Mins_TextBox.Location = New System.Drawing.Point(1096, 338)
         Me.Dual_Seat_Penalty_Start_Mins_TextBox.Name = "Dual_Seat_Penalty_Start_Mins_TextBox"
         Me.Dual_Seat_Penalty_Start_Mins_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Dual_Seat_Penalty_Start_Mins_TextBox.TabIndex = 91
@@ -1052,7 +1056,7 @@ Partial Class Form1
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(1151, 284)
+        Me.Label33.Location = New System.Drawing.Point(1151, 315)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(118, 13)
         Me.Label33.TabIndex = 90
@@ -1062,7 +1066,7 @@ Partial Class Form1
         '
         Me.Dual_Seat_Penalty_Rate_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "dual_seat_penalty_rate", True))
         Me.Dual_Seat_Penalty_Rate_TextBox.Enabled = False
-        Me.Dual_Seat_Penalty_Rate_TextBox.Location = New System.Drawing.Point(1096, 281)
+        Me.Dual_Seat_Penalty_Rate_TextBox.Location = New System.Drawing.Point(1096, 312)
         Me.Dual_Seat_Penalty_Rate_TextBox.Name = "Dual_Seat_Penalty_Rate_TextBox"
         Me.Dual_Seat_Penalty_Rate_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Dual_Seat_Penalty_Rate_TextBox.TabIndex = 89
@@ -1070,7 +1074,7 @@ Partial Class Form1
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(1151, 232)
+        Me.Label32.Location = New System.Drawing.Point(1151, 263)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(125, 13)
         Me.Label32.TabIndex = 88
@@ -1080,7 +1084,7 @@ Partial Class Form1
         '
         Me.Single_Seat_Penalty_Rate_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "single_seat_penalty_rate", True))
         Me.Single_Seat_Penalty_Rate_TextBox.Enabled = False
-        Me.Single_Seat_Penalty_Rate_TextBox.Location = New System.Drawing.Point(1096, 229)
+        Me.Single_Seat_Penalty_Rate_TextBox.Location = New System.Drawing.Point(1096, 260)
         Me.Single_Seat_Penalty_Rate_TextBox.Name = "Single_Seat_Penalty_Rate_TextBox"
         Me.Single_Seat_Penalty_Rate_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Single_Seat_Penalty_Rate_TextBox.TabIndex = 87
@@ -1088,7 +1092,7 @@ Partial Class Form1
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(1151, 206)
+        Me.Label31.Location = New System.Drawing.Point(1151, 237)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(72, 13)
         Me.Label31.TabIndex = 86
@@ -1098,7 +1102,7 @@ Partial Class Form1
         '
         Me.Aero_Retrieve_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "aero_retrieve", True))
         Me.Aero_Retrieve_TextBox.Enabled = False
-        Me.Aero_Retrieve_TextBox.Location = New System.Drawing.Point(1096, 203)
+        Me.Aero_Retrieve_TextBox.Location = New System.Drawing.Point(1096, 234)
         Me.Aero_Retrieve_TextBox.Name = "Aero_Retrieve_TextBox"
         Me.Aero_Retrieve_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Aero_Retrieve_TextBox.TabIndex = 85
@@ -1106,7 +1110,7 @@ Partial Class Form1
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(1151, 180)
+        Me.Label30.Location = New System.Drawing.Point(1151, 211)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(139, 13)
         Me.Label30.TabIndex = 84
@@ -1116,7 +1120,7 @@ Partial Class Form1
         '
         Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "addtl_per_hundred_feet_tow", True))
         Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.Enabled = False
-        Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.Location = New System.Drawing.Point(1096, 177)
+        Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.Location = New System.Drawing.Point(1096, 208)
         Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.Name = "Addtl_Per_Hndrd_Feet_Tow_TextBox"
         Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.TabIndex = 83
@@ -1124,7 +1128,7 @@ Partial Class Form1
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(1151, 154)
+        Me.Label29.Location = New System.Drawing.Point(1151, 185)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(93, 13)
         Me.Label29.TabIndex = 82
@@ -1134,7 +1138,7 @@ Partial Class Form1
         '
         Me.Base_Tow_Altitude_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "base_tow", True))
         Me.Base_Tow_Altitude_TextBox.Enabled = False
-        Me.Base_Tow_Altitude_TextBox.Location = New System.Drawing.Point(1096, 151)
+        Me.Base_Tow_Altitude_TextBox.Location = New System.Drawing.Point(1096, 182)
         Me.Base_Tow_Altitude_TextBox.Name = "Base_Tow_Altitude_TextBox"
         Me.Base_Tow_Altitude_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Base_Tow_Altitude_TextBox.TabIndex = 81
@@ -1151,7 +1155,7 @@ Partial Class Form1
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(1151, 128)
+        Me.Label27.Location = New System.Drawing.Point(1151, 159)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(113, 13)
         Me.Label27.TabIndex = 79
@@ -1161,7 +1165,7 @@ Partial Class Form1
         '
         Me.Simulated_Rope_Break_Rate_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "simulated_rope_break", True))
         Me.Simulated_Rope_Break_Rate_TextBox.Enabled = False
-        Me.Simulated_Rope_Break_Rate_TextBox.Location = New System.Drawing.Point(1096, 125)
+        Me.Simulated_Rope_Break_Rate_TextBox.Location = New System.Drawing.Point(1096, 156)
         Me.Simulated_Rope_Break_Rate_TextBox.Name = "Simulated_Rope_Break_Rate_TextBox"
         Me.Simulated_Rope_Break_Rate_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Simulated_Rope_Break_Rate_TextBox.TabIndex = 78
@@ -1169,7 +1173,7 @@ Partial Class Form1
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(1151, 102)
+        Me.Label21.Location = New System.Drawing.Point(1151, 133)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(97, 13)
         Me.Label21.TabIndex = 77
@@ -1179,7 +1183,7 @@ Partial Class Form1
         '
         Me.Actual_Rope_Break_Rate_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "actual_rope_break", True))
         Me.Actual_Rope_Break_Rate_TextBox.Enabled = False
-        Me.Actual_Rope_Break_Rate_TextBox.Location = New System.Drawing.Point(1096, 99)
+        Me.Actual_Rope_Break_Rate_TextBox.Location = New System.Drawing.Point(1096, 130)
         Me.Actual_Rope_Break_Rate_TextBox.Name = "Actual_Rope_Break_Rate_TextBox"
         Me.Actual_Rope_Break_Rate_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Actual_Rope_Break_Rate_TextBox.TabIndex = 76
@@ -1996,9 +2000,9 @@ Partial Class Form1
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(47, 116)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(57, 13)
+        Me.Label9.Size = New System.Drawing.Size(102, 13)
         Me.Label9.TabIndex = 7
-        Me.Label9.Text = "Glider Pilot"
+        Me.Label9.Text = "Pilot In Charge (PIC)"
         '
         'GliderPilotComboBox
         '
@@ -2121,7 +2125,7 @@ Partial Class Form1
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage4.Size = New System.Drawing.Size(1440, 564)
         Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Add Pilot Names"
+        Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'TabPage5
@@ -2321,6 +2325,24 @@ Partial Class Form1
         'RatesAndFeesTableAdapter1
         '
         Me.RatesAndFeesTableAdapter1.ClearBeforeFill = True
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Location = New System.Drawing.Point(1151, 103)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(64, 13)
+        Me.Label44.TabIndex = 117
+        Me.Label44.Text = "Tow Plane?"
+        '
+        'Tow_Plane_TextBox
+        '
+        Me.Tow_Plane_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "TowPlane", True))
+        Me.Tow_Plane_TextBox.Enabled = False
+        Me.Tow_Plane_TextBox.Location = New System.Drawing.Point(1096, 99)
+        Me.Tow_Plane_TextBox.Name = "Tow_Plane_TextBox"
+        Me.Tow_Plane_TextBox.Size = New System.Drawing.Size(49, 20)
+        Me.Tow_Plane_TextBox.TabIndex = 116
         '
         'Form1
         '
@@ -2672,4 +2694,6 @@ Partial Class Form1
     Friend WithEvents BaseTowFeeDollars As TextBox
     Friend WithEvents MinAltitudeWarning As Label
     Friend WithEvents MinAltTowWarningText As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents Tow_Plane_TextBox As TextBox
 End Class
