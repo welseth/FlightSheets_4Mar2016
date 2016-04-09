@@ -259,6 +259,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RatesAndFees.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RatesAndFees2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RatesAndFees2.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -611,6 +616,17 @@
     </None>
     <None Include="RatesAndFees.xss">
       <DependentUpon>RatesAndFees.xsd</DependentUpon>
+    </None>
+    <None Include="RatesAndFees2.xsc">
+      <DependentUpon>RatesAndFees2.xsd</DependentUpon>
+    </None>
+    <None Include="RatesAndFees2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RatesAndFees2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RatesAndFees2.xss">
+      <DependentUpon>RatesAndFees2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

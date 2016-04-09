@@ -3,6 +3,8 @@
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'RatesAndFees2.RatesAndFees' table. You can move, or remove it, as needed.
+        Me.RatesAndFeesTableAdapter1.Fill(Me.RatesAndFees2.RatesAndFees)
         'TODO: This line of code loads data into the 'RatesAndFees._RatesAndFees' table. You can move, or remove it, as needed.
         Me.RatesAndFeesTableAdapter.Fill(Me.RatesAndFees._RatesAndFees)
         'TODO: This line of code loads data into the 'MASA_all_1Apr2016DataSet.Flights' table. You can move, or remove it, as needed.
@@ -87,6 +89,8 @@
         Penalty_CheckBox.Checked = False
         SimulatedRopeBreak_Label.Visible = False
         ActualRopeBreak_Label.Visible = False
+        MinAltTowWarningText.Visible = False
+        MinAltitudeWarning.Visible = False
 
 
     End Sub
@@ -347,9 +351,11 @@
         PercentFirstCheck.Text = "95"
         'FlightDurationTextBox.Text = "45"
         'Penalty_CheckBox.Checked = True
-        Actual_Rope_Break_CheckBox.Checked = True
+        Actual_Rope_Break_CheckBox.Checked = False
         'Cost_This_Flight_TextBox.Text = "9.99"
         TakeOff_DateTimePicker_ValueChanged(vbNull, EventArgs.Empty)
+        MinAltTowWarningText.Visible = False
+        MinAltitudeWarning.Visible = False
     End Sub
     ' debug item
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -382,12 +388,14 @@
         'time was changed so calculate new minutes
         FlightDurationTextBox.Text = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) 'display the total time for this flight
         Cost_This_Flight_TextBox_TextChanged()
+
     End Sub
 
     Private Sub Landing_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles Landing_DateTimePicker.ValueChanged
         'time was changed so calculate new minutes
         FlightDurationTextBox.Text = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value) 'display the total time for this flight
         Cost_This_Flight_TextBox_TextChanged()
+
     End Sub
 
     Private Sub Cost_This_Flight_TextBox_TextChanged()
@@ -402,7 +410,11 @@
         Dim per_hundred_tow_rate As Int32 = Val(Addtl_Per_Hndrd_Feet_Tow_TextBox.Text)  'pulled from DB table
         Dim actual_rope_break As Int32 = Val(Actual_Rope_Break_Rate_TextBox.Text)  'pulled from DB table 
         Dim simulated_rope_break As Int32 = Val(Simulated_Rope_Break_Rate_TextBox.Text)  'pulled from DB table 
-        Dim temp_feet_above_base_tow As Int32 = Val(TowAltitude.Text) - base_tow_altitude
+        Dim temp_feet_above_base_tow_hundreds As Int32
+        temp_feet_above_base_tow_hundreds = ((Val(TowAltitude.Text) - base_tow_altitude) \ 100)   'divide by 100 , and truncate, return to lower 100 ft
+        If temp_feet_above_base_tow_hundreds < 0 Then   'can't have "negative altitude", so set to zero if it's less.
+            temp_feet_above_base_tow_hundreds = 0
+        End If
 
 
         'check if the flight was too long, and so requires a penalty charge
@@ -438,16 +450,30 @@
             Debug.Print("Single Seat:  TOO Long. Temp_Penalty: " & temp_Penalty)
         End If
 
+        '-------------------------------------------------------------
         'now calc all the various options for the cost-for-this-flight
-        Debug.Print("TempFeetAboveBaseTow:  " & temp_feet_above_base_tow)
+        Debug.Print("TempFeetAboveBaseTow Hundreds:  " & temp_feet_above_base_tow_hundreds)
         If Override_CheckBox.Checked = True Then
-            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", ((temp_Cost_Per_Hour / 60) * temp_Time))
+            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", ((temp_Cost_Per_Hour / 60) * temp_Time) +
+                                                          Val(Base_Tow_Fee_Dollars.Text) +
+                                                          (temp_feet_above_base_tow_hundreds * per_hundred_tow_rate))
             Debug.Print("OverRide = TRUE")
         ElseIf Override_CheckBox.Checked = False Then
             Debug.Print("OverRide = FALSE")
-            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", (((temp_Cost_Per_Hour / 60) * temp_Time) + temp_Penalty))
+            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", (((temp_Cost_Per_Hour / 60) * temp_Time) +
+                                                          Val(Base_Tow_Fee_Dollars.Text) +
+                                                          (temp_feet_above_base_tow_hundreds * per_hundred_tow_rate) +
+                                                          temp_Penalty))
         End If
-        'now calculate RopeBreak situation. RopeBreak overrides everything, so keep these lines at END END of the subroutine
+        CostPerHour.Text = String.Format("{0:n2}", (temp_Cost_Per_Hour / 60))
+        Time.Text = temp_Time
+        BaseTowCost.Text = Base_Tow_Altitude_TextBox.Text
+        FtAboveBase.Text = temp_feet_above_base_tow_hundreds
+        PerHundredRowRate.Text = per_hundred_tow_rate
+        BaseTowFeeDollars.Text = Base_Tow_Fee_Dollars.Text
+
+        'now calculate RopeBreak situation. RopeBreak overrides *EVERYTHING**, so keep these lines at END END of the subroutine
+        'all previous calculations are thrown away, RopeBreaks have fixed fees.
         If Actual_Rope_Break_CheckBox.CheckState = CheckState.Checked Then
             'fee is taken from DB
             Debug.Print("ACTUAL Break")
@@ -505,7 +531,22 @@
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
 
-    Private Sub TowAltitude_TextChanged(sender As Object, e As EventArgs) Handles TowAltitude.TextChanged
+    'Private Sub TowAltitude_TextChanged(sender As Object, e As EventArgs) Handles TowAltitude.TextChanged
+    '    Cost_This_Flight_TextBox_TextChanged()
+    'End Sub
+
+    Private Sub TowAltitude_TextChanged(sender As Object, e As EventArgs) Handles TowAltitude.Validated
+        Dim base_tow_altitude As Int32 = Val(Base_Tow_Altitude_TextBox.Text)  'pulled from DB table 
+        If Val(TowAltitude.Text) < base_tow_altitude Then   'you CAN'T have a tow lower than the base, so set the altitude to base_tow_altitude
+            TowAltitude.Text = base_tow_altitude
+            TowAltitude.SelectAll()
+            MinAltitudeWarning.Visible = True
+            MinAltTowWarningText.Visible = True
+        Else
+            MinAltitudeWarning.Visible = False
+            MinAltTowWarningText.Visible = False
+        End If
+
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
 

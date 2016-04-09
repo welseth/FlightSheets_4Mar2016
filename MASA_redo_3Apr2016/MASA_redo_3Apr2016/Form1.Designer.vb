@@ -67,6 +67,24 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.MinAltTowWarningText = New System.Windows.Forms.Label()
+        Me.MinAltitudeWarning = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.BaseTowFeeDollars = New System.Windows.Forms.TextBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.PerHundredRowRate = New System.Windows.Forms.TextBox()
+        Me.FtAboveBase = New System.Windows.Forms.TextBox()
+        Me.BaseTowCost = New System.Windows.Forms.TextBox()
+        Me.Time = New System.Windows.Forms.TextBox()
+        Me.CostPerHour = New System.Windows.Forms.TextBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Base_Tow_Fee_Dollars = New System.Windows.Forms.TextBox()
+        Me.RatesAndFeesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RatesAndFees2 = New MASA_redo_3Apr2016.RatesAndFees2()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Actual_Rope_Break_CheckBox = New System.Windows.Forms.CheckBox()
         Me.Simulated_Rope_Break_CheckBox = New System.Windows.Forms.CheckBox()
@@ -261,6 +279,7 @@ Partial Class Form1
         Me.FlightsTableAdapter = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.FlightsTableAdapter()
         Me.MASA_All_Flights_TableAdapterManager = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager()
         Me.RatesAndFeesTableAdapter = New MASA_redo_3Apr2016.RatesAndFeesTableAdapters.RatesAndFeesTableAdapter()
+        Me.RatesAndFeesTableAdapter1 = New MASA_redo_3Apr2016.RatesAndFees2TableAdapters.RatesAndFeesTableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -288,6 +307,8 @@ Partial Class Form1
         CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        CType(Me.RatesAndFeesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RatesAndFees2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -662,6 +683,22 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.MinAltTowWarningText)
+        Me.TabPage2.Controls.Add(Me.MinAltitudeWarning)
+        Me.TabPage2.Controls.Add(Me.Label43)
+        Me.TabPage2.Controls.Add(Me.BaseTowFeeDollars)
+        Me.TabPage2.Controls.Add(Me.Label42)
+        Me.TabPage2.Controls.Add(Me.Label41)
+        Me.TabPage2.Controls.Add(Me.Label40)
+        Me.TabPage2.Controls.Add(Me.Label39)
+        Me.TabPage2.Controls.Add(Me.Label38)
+        Me.TabPage2.Controls.Add(Me.PerHundredRowRate)
+        Me.TabPage2.Controls.Add(Me.FtAboveBase)
+        Me.TabPage2.Controls.Add(Me.BaseTowCost)
+        Me.TabPage2.Controls.Add(Me.Time)
+        Me.TabPage2.Controls.Add(Me.CostPerHour)
+        Me.TabPage2.Controls.Add(Me.Label37)
+        Me.TabPage2.Controls.Add(Me.Base_Tow_Fee_Dollars)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Controls.Add(Me.SimulatedRopeBreak_Label)
         Me.TabPage2.Controls.Add(Me.ActualRopeBreak_Label)
@@ -736,6 +773,157 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'MinAltTowWarningText
+        '
+        Me.MinAltTowWarningText.BackColor = System.Drawing.Color.LemonChiffon
+        Me.MinAltTowWarningText.Location = New System.Drawing.Point(455, 50)
+        Me.MinAltTowWarningText.Name = "MinAltTowWarningText"
+        Me.MinAltTowWarningText.Size = New System.Drawing.Size(278, 57)
+        Me.MinAltTowWarningText.TabIndex = 115
+        Me.MinAltTowWarningText.Text = "Club Policy: Unless there is a rope break, the minimum charge is for a tow to 170" &
+    "0. "
+        Me.MinAltTowWarningText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'MinAltitudeWarning
+        '
+        Me.MinAltitudeWarning.BackColor = System.Drawing.Color.LemonChiffon
+        Me.MinAltitudeWarning.Location = New System.Drawing.Point(739, 50)
+        Me.MinAltitudeWarning.Name = "MinAltitudeWarning"
+        Me.MinAltitudeWarning.Size = New System.Drawing.Size(118, 57)
+        Me.MinAltitudeWarning.TabIndex = 114
+        Me.MinAltitudeWarning.Text = "Minimum permitted altitude is 1700 ft.  This is a ""base tow""."
+        Me.MinAltitudeWarning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Location = New System.Drawing.Point(752, 328)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(111, 13)
+        Me.Label43.TabIndex = 113
+        Me.Label43.Text = "Base Tow Fee Dollars"
+        '
+        'BaseTowFeeDollars
+        '
+        Me.BaseTowFeeDollars.Enabled = False
+        Me.BaseTowFeeDollars.Location = New System.Drawing.Point(755, 344)
+        Me.BaseTowFeeDollars.Name = "BaseTowFeeDollars"
+        Me.BaseTowFeeDollars.Size = New System.Drawing.Size(100, 20)
+        Me.BaseTowFeeDollars.TabIndex = 112
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(969, 328)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(117, 13)
+        Me.Label42.TabIndex = 111
+        Me.Label42.Text = "Per Hundred Tow Rate"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(863, 328)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(101, 13)
+        Me.Label41.TabIndex = 110
+        Me.Label41.Text = "Ft Above Base Tow"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(646, 326)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(70, 13)
+        Me.Label40.TabIndex = 109
+        Me.Label40.Text = "Base Tow Alt"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(540, 326)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(57, 13)
+        Me.Label39.TabIndex = 108
+        Me.Label39.Text = "Time In Air"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(428, 326)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(92, 13)
+        Me.Label38.TabIndex = 107
+        Me.Label38.Text = "Cost Per MINUTE"
+        '
+        'PerHundredRowRate
+        '
+        Me.PerHundredRowRate.Enabled = False
+        Me.PerHundredRowRate.Location = New System.Drawing.Point(972, 344)
+        Me.PerHundredRowRate.Name = "PerHundredRowRate"
+        Me.PerHundredRowRate.Size = New System.Drawing.Size(100, 20)
+        Me.PerHundredRowRate.TabIndex = 106
+        '
+        'FtAboveBase
+        '
+        Me.FtAboveBase.Enabled = False
+        Me.FtAboveBase.Location = New System.Drawing.Point(866, 344)
+        Me.FtAboveBase.Name = "FtAboveBase"
+        Me.FtAboveBase.Size = New System.Drawing.Size(100, 20)
+        Me.FtAboveBase.TabIndex = 105
+        '
+        'BaseTowCost
+        '
+        Me.BaseTowCost.Enabled = False
+        Me.BaseTowCost.Location = New System.Drawing.Point(649, 342)
+        Me.BaseTowCost.Name = "BaseTowCost"
+        Me.BaseTowCost.Size = New System.Drawing.Size(100, 20)
+        Me.BaseTowCost.TabIndex = 104
+        '
+        'Time
+        '
+        Me.Time.Enabled = False
+        Me.Time.Location = New System.Drawing.Point(543, 342)
+        Me.Time.Name = "Time"
+        Me.Time.Size = New System.Drawing.Size(100, 20)
+        Me.Time.TabIndex = 103
+        '
+        'CostPerHour
+        '
+        Me.CostPerHour.Enabled = False
+        Me.CostPerHour.Location = New System.Drawing.Point(432, 342)
+        Me.CostPerHour.Name = "CostPerHour"
+        Me.CostPerHour.Size = New System.Drawing.Size(100, 20)
+        Me.CostPerHour.TabIndex = 102
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(1320, 137)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(111, 13)
+        Me.Label37.TabIndex = 101
+        Me.Label37.Text = "Base Tow Fee Dollars"
+        '
+        'Base_Tow_Fee_Dollars
+        '
+        Me.Base_Tow_Fee_Dollars.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource1, "base_tow_fee_dollars", True))
+        Me.Base_Tow_Fee_Dollars.Enabled = False
+        Me.Base_Tow_Fee_Dollars.Location = New System.Drawing.Point(1323, 153)
+        Me.Base_Tow_Fee_Dollars.Name = "Base_Tow_Fee_Dollars"
+        Me.Base_Tow_Fee_Dollars.Size = New System.Drawing.Size(49, 20)
+        Me.Base_Tow_Fee_Dollars.TabIndex = 100
+        '
+        'RatesAndFeesBindingSource1
+        '
+        Me.RatesAndFeesBindingSource1.DataMember = "RatesAndFees"
+        Me.RatesAndFeesBindingSource1.DataSource = Me.RatesAndFees2
+        '
+        'RatesAndFees2
+        '
+        Me.RatesAndFees2.DataSetName = "RatesAndFees2"
+        Me.RatesAndFees2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox1
         '
@@ -818,7 +1006,7 @@ Partial Class Form1
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(1151, 264)
+        Me.Label35.Location = New System.Drawing.Point(1151, 258)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(164, 13)
         Me.Label35.TabIndex = 94
@@ -846,7 +1034,7 @@ Partial Class Form1
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(1151, 316)
+        Me.Label34.Location = New System.Drawing.Point(1151, 310)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(157, 13)
         Me.Label34.TabIndex = 92
@@ -864,7 +1052,7 @@ Partial Class Form1
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(1151, 290)
+        Me.Label33.Location = New System.Drawing.Point(1151, 284)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(118, 13)
         Me.Label33.TabIndex = 90
@@ -882,7 +1070,7 @@ Partial Class Form1
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(1151, 238)
+        Me.Label32.Location = New System.Drawing.Point(1151, 232)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(125, 13)
         Me.Label32.TabIndex = 88
@@ -900,7 +1088,7 @@ Partial Class Form1
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(1151, 212)
+        Me.Label31.Location = New System.Drawing.Point(1151, 206)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(72, 13)
         Me.Label31.TabIndex = 86
@@ -918,11 +1106,11 @@ Partial Class Form1
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(1151, 186)
+        Me.Label30.Location = New System.Drawing.Point(1151, 180)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(130, 13)
+        Me.Label30.Size = New System.Drawing.Size(139, 13)
         Me.Label30.TabIndex = 84
-        Me.Label30.Text = "Addtl Per Hndrd Feet Tow"
+        Me.Label30.Text = "Addtl $ Per Hndrd Feet Tow"
         '
         'Addtl_Per_Hndrd_Feet_Tow_TextBox
         '
@@ -936,7 +1124,7 @@ Partial Class Form1
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(1151, 160)
+        Me.Label29.Location = New System.Drawing.Point(1151, 154)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(93, 13)
         Me.Label29.TabIndex = 82
@@ -963,7 +1151,7 @@ Partial Class Form1
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(1151, 134)
+        Me.Label27.Location = New System.Drawing.Point(1151, 128)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(113, 13)
         Me.Label27.TabIndex = 79
@@ -981,7 +1169,7 @@ Partial Class Form1
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(1151, 108)
+        Me.Label21.Location = New System.Drawing.Point(1151, 102)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(97, 13)
         Me.Label21.TabIndex = 77
@@ -999,7 +1187,7 @@ Partial Class Form1
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(1151, 78)
+        Me.Label26.Location = New System.Drawing.Point(1151, 77)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(40, 13)
         Me.Label26.TabIndex = 75
@@ -1070,7 +1258,10 @@ Partial Class Form1
         '
         'Cost_This_Flight_TextBox
         '
+        Me.Cost_This_Flight_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Cost_This_Flight_TextBox.Enabled = False
+        Me.Cost_This_Flight_TextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cost_This_Flight_TextBox.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Cost_This_Flight_TextBox.Location = New System.Drawing.Point(892, 294)
         Me.Cost_This_Flight_TextBox.Name = "Cost_This_Flight_TextBox"
         Me.Cost_This_Flight_TextBox.Size = New System.Drawing.Size(100, 20)
@@ -2127,6 +2318,10 @@ Partial Class Form1
         '
         Me.RatesAndFeesTableAdapter.ClearBeforeFill = True
         '
+        'RatesAndFeesTableAdapter1
+        '
+        Me.RatesAndFeesTableAdapter1.ClearBeforeFill = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2164,6 +2359,8 @@ Partial Class Form1
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.RatesAndFeesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RatesAndFees2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2456,4 +2653,23 @@ Partial Class Form1
     Friend WithEvents ActualRopeBreak_Label As Label
     Friend WithEvents Simulated_Rope_Break_CheckBox As CheckBox
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Base_Tow_Fee_Dollars As TextBox
+    Friend WithEvents RatesAndFees2 As RatesAndFees2
+    Friend WithEvents RatesAndFeesBindingSource1 As BindingSource
+    Friend WithEvents RatesAndFeesTableAdapter1 As RatesAndFees2TableAdapters.RatesAndFeesTableAdapter
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents PerHundredRowRate As TextBox
+    Friend WithEvents FtAboveBase As TextBox
+    Friend WithEvents BaseTowCost As TextBox
+    Friend WithEvents Time As TextBox
+    Friend WithEvents CostPerHour As TextBox
+    Friend WithEvents Label43 As Label
+    Friend WithEvents BaseTowFeeDollars As TextBox
+    Friend WithEvents MinAltitudeWarning As Label
+    Friend WithEvents MinAltTowWarningText As Label
 End Class
