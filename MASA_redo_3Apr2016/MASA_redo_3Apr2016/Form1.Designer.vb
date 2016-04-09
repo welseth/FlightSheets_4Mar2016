@@ -741,7 +741,7 @@ Partial Class Form1
         '
         Me.GroupBox1.Controls.Add(Me.Actual_Rope_Break_CheckBox)
         Me.GroupBox1.Controls.Add(Me.Simulated_Rope_Break_CheckBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(863, 95)
+        Me.GroupBox1.Location = New System.Drawing.Point(863, 78)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(155, 76)
         Me.GroupBox1.TabIndex = 99
@@ -770,7 +770,7 @@ Partial Class Form1
         'SimulatedRopeBreak_Label
         '
         Me.SimulatedRopeBreak_Label.BackColor = System.Drawing.Color.LemonChiffon
-        Me.SimulatedRopeBreak_Label.Location = New System.Drawing.Point(880, 45)
+        Me.SimulatedRopeBreak_Label.Location = New System.Drawing.Point(880, 28)
         Me.SimulatedRopeBreak_Label.Name = "SimulatedRopeBreak_Label"
         Me.SimulatedRopeBreak_Label.Size = New System.Drawing.Size(118, 48)
         Me.SimulatedRopeBreak_Label.TabIndex = 98
@@ -780,7 +780,7 @@ Partial Class Form1
         'ActualRopeBreak_Label
         '
         Me.ActualRopeBreak_Label.BackColor = System.Drawing.Color.LemonChiffon
-        Me.ActualRopeBreak_Label.Location = New System.Drawing.Point(881, 45)
+        Me.ActualRopeBreak_Label.Location = New System.Drawing.Point(881, 28)
         Me.ActualRopeBreak_Label.Name = "ActualRopeBreak_Label"
         Me.ActualRopeBreak_Label.Size = New System.Drawing.Size(118, 48)
         Me.ActualRopeBreak_Label.TabIndex = 47
@@ -938,9 +938,9 @@ Partial Class Form1
         Me.Label29.AutoSize = True
         Me.Label29.Location = New System.Drawing.Point(1151, 160)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(55, 13)
+        Me.Label29.Size = New System.Drawing.Size(93, 13)
         Me.Label29.TabIndex = 82
-        Me.Label29.Text = "Base Tow"
+        Me.Label29.Text = "Base Tow Altitude"
         '
         'Base_Tow_Altitude_TextBox
         '
@@ -1459,7 +1459,7 @@ Partial Class Form1
         Me.PenaltyCharge.Size = New System.Drawing.Size(224, 100)
         Me.PenaltyCharge.TabIndex = 31
         Me.PenaltyCharge.TabStop = False
-        Me.PenaltyCharge.Text = "Penalty Charge?"
+        Me.PenaltyCharge.Text = "Penalty Charge For Too Long Flight?"
         '
         'Override_CheckBox
         '

@@ -402,7 +402,7 @@
         Dim per_hundred_tow_rate As Int32 = Val(Addtl_Per_Hndrd_Feet_Tow_TextBox.Text)  'pulled from DB table
         Dim actual_rope_break As Int32 = Val(Actual_Rope_Break_Rate_TextBox.Text)  'pulled from DB table 
         Dim simulated_rope_break As Int32 = Val(Simulated_Rope_Break_Rate_TextBox.Text)  'pulled from DB table 
-        Dim temp_feet_above_base_tow As Int32 = Val(TowAltitude.Text) - base_tow_altitude '
+        Dim temp_feet_above_base_tow As Int32 = Val(TowAltitude.Text) - base_tow_altitude
 
 
         'check if the flight was too long, and so requires a penalty charge
@@ -438,6 +438,7 @@
             Debug.Print("Single Seat:  TOO Long. Temp_Penalty: " & temp_Penalty)
         End If
 
+        'now calc all the various options for the cost-for-this-flight
         Debug.Print("TempFeetAboveBaseTow:  " & temp_feet_above_base_tow)
         If Override_CheckBox.Checked = True Then
             Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", ((temp_Cost_Per_Hour / 60) * temp_Time))
