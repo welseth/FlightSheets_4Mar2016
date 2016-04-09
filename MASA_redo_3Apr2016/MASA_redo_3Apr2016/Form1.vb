@@ -1,5 +1,7 @@
 ﻿Public Class Form1
 
+
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'RatesAndFees._RatesAndFees' table. You can move, or remove it, as needed.
         Me.RatesAndFeesTableAdapter.Fill(Me.RatesAndFees._RatesAndFees)
@@ -83,6 +85,9 @@
         Override_CheckBox.Enabled = False
         Penalty_CheckBox.Enabled = False
         Penalty_CheckBox.Checked = False
+        SimulatedRopeBreak_Label.Visible = False
+        ActualRopeBreak_Label.Visible = False
+
 
     End Sub
 
@@ -94,7 +99,7 @@
 
         Dim newFlightRow As MASA_all_1Apr2016DataSet.FlightsRow
         newFlightRow = Me.MASA_all_1Apr2016DataSet.Flights.NewFlightsRow()
-        Debug.Print(vbCrLf, vbCrLf)
+        'Debug.Print(vbCrLf, vbCrLf)
         Debug.Print("GliderPilotNameComboBox.SelectedIndex:  " & GliderPilotComboBox.SelectedIndex)
         Debug.Print("GliderNameComboBox2.SelectedIndex: >>  " & GliderComboBox.SelectedIndex)
 
@@ -164,7 +169,7 @@
         newFlightRow._Date = Todays_Date_DateTimePicker.Value  'saves in format DateTime 
 
 
-        newFlightRow.Rope_break = RopeBreakCheckBox.Checked
+        newFlightRow.Rope_break = Actual_Rope_Break_CheckBox.Checked
 
         newFlightRow.Flight_minutes_integer = DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value)
 
@@ -249,7 +254,7 @@
         PercentFirstCheck.Text = "100"
         FlightDurationTextBox.Text = ""
         Penalty_CheckBox.Checked = False
-        RopeBreakCheckBox.Checked = False
+        Actual_Rope_Break_CheckBox.Checked = False
         Cost_This_Flight_TextBox.Text = ""
         Override_CheckBox.Checked = False
         Override_CheckBox.Enabled = False
@@ -333,7 +338,7 @@
         FirstNameComboBox.SelectedIndex = 8
         InstructorComboBox.SelectedIndex = 9
         PassengerComboBox.SelectedIndex = 10
-        GliderComboBox.SelectedIndex = 4
+        GliderComboBox.SelectedIndex = 1
         TakeOff_DateTimePicker.Value = "3/25/2015 10:45:00"
         Landing_DateTimePicker.Value = "3/25/2015 11:45:00"
         TowAltitude.Text = "3000"
@@ -342,7 +347,7 @@
         PercentFirstCheck.Text = "95"
         'FlightDurationTextBox.Text = "45"
         'Penalty_CheckBox.Checked = True
-        RopeBreakCheckBox.Checked = True
+        Actual_Rope_Break_CheckBox.Checked = True
         'Cost_This_Flight_TextBox.Text = "9.99"
         TakeOff_DateTimePicker_ValueChanged(vbNull, EventArgs.Empty)
     End Sub
@@ -386,62 +391,79 @@
     End Sub
 
     Private Sub Cost_This_Flight_TextBox_TextChanged()
-        Dim temp_Cost As Int32 = (Val(Aircraft_Cost_TextBox.Text))
+        Dim temp_Cost_Per_Hour As Int32 = (Val(Aircraft_Cost_TextBox.Text))
         Dim temp_Time As Int32 = CType(DateDiff(DateInterval.Minute, TakeOff_DateTimePicker.Value, Landing_DateTimePicker.Value), Int32)
-        Dim temp_Penalty As Int32 = 0  'initialize this local variable
+        Dim temp_Penalty As Int32 = 0
         Dim two_seat_penalty As Int32 = Val(Dual_Seat_Penalty_Rate_TextBox.Text)  'pulled from DB table 
         Dim single_seat_penalty As Int32 = Val(Single_Seat_Penalty_Rate_TextBox.Text)  'pulled from DB table 
-        Dim two_seat_minutes As Int32 = Val(Dual_Seat_Penalty_Start_Mins_TextBox.Text)  'pulled from DB table 
-        Dim single_seat_minutes As Int32 = Val(Single_Seat_Penalty_Start_Mins_TextBox.Text)  'pulled from DB table 
+        Dim two_seat_minutes As Int32 = Val(Dual_Seat_Penalty_Start_Mins_TextBox.Text)  'pulled from DB table
+        Dim single_seat_minutes As Int32 = Val(Single_Seat_Penalty_Start_Mins_TextBox.Text)  'pulled from DB table
         Dim base_tow_rate As Int32 = Val(Base_Tow_Rate_TextBox.Text)  'pulled from DB table 
-        Dim per_hundred_tow_rate As Int32 = Val(Addtl_Per_Hndrd_Feet_Tow_TextBox.Text)  'pulled from DB table 
+        Dim per_hundred_tow_rate As Int32 = Val(Addtl_Per_Hndrd_Feet_Tow_TextBox.Text)  'pulled from DB table
         Dim actual_rope_break As Int32 = Val(Actual_Rope_Break_Rate_TextBox.Text)  'pulled from DB table 
         Dim simulated_rope_break As Int32 = Val(Simulated_Rope_Break_Rate_TextBox.Text)  'pulled from DB table 
 
-
         'check if the flight was too long, and so requires a penalty charge
         ' power plane does NOT get penalty
-        '  2 seater glider:  longer than 60 mins needs penalty
-        '  1 seater glider: longer than 120 mins needs penalty
-        Penalty_CheckBox.Enabled = False  'we don't ever want user to actually change this button. We do it programmatically.
+        '  2 seater glider:  longer than 60 mins needs penalty (this is stored in DB table)
+        '  1 seater glider: longer than 120 mins needs penalty (this is stored in DB table)
+        Penalty_CheckBox.Enabled = False  'we don't ever want user to actually change this button. We change it programmatically.
         Override_CheckBox.Enabled = False  'we'll enable or disable the override only if there is a penalty
 
         'Set the "penalty check box"
-        If (temp_Time > 0) And (temp_Time <= two_seat_minutes) Then
+        If (temp_Time > 0) And (temp_Time <= two_seat_minutes) And (temp_Time <= single_seat_minutes) Then
             'No penalty
             Penalty_CheckBox.Checked = False
             Override_CheckBox.Enabled = False
             Penalty_Label.Visible = False
             temp_Penalty = 0
+            Debug.Print("*NOT* over time")
         End If
         If (temp_Time > two_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 2) Then  '2-seater
             'Yes, penalty for 2-seater
             Penalty_CheckBox.Checked = True
             Override_CheckBox.Enabled = True
             Penalty_Label.Visible = True
-            temp_Penalty = two_seat_penalty * temp_Time
+            temp_Penalty = two_seat_penalty * (temp_Time - two_seat_minutes)  'penalty for "extra" minutes beyond permitted amount
+            Debug.Print("2-seat:  TOO long. Temp_Penalty: " & temp_Penalty)
         End If
         If (temp_Time > single_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 1) Then  '1-seater
             'Yes, penalty for 1-seater
             Penalty_CheckBox.Checked = True
             Override_CheckBox.Enabled = True
             Penalty_Label.Visible = True
-            temp_Penalty = single_seat_penalty * temp_Time
+            temp_Penalty = single_seat_penalty * (temp_Time - single_seat_minutes)  'penalty for "extra" minutes beyone permitted amount
+            Debug.Print("Single Seat:  TOO Long. Temp_Penalty: " & temp_Penalty)
         End If
-
 
 
         If Override_CheckBox.Checked = True Then
-            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", ((temp_Cost / 60) * temp_Time))
+            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", ((temp_Cost_Per_Hour / 60) * temp_Time))
             Debug.Print("OverRide = TRUE")
-        ElseIf OverRide_Checkbox.Checked = False Then
+        ElseIf Override_CheckBox.Checked = False Then
             Debug.Print("OverRide = FALSE")
-            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", (((temp_Cost / 60) * temp_Time) + temp_Penalty))
+            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", (((temp_Cost_Per_Hour / 60) * temp_Time) + temp_Penalty))
+        End If
+        'now calculate RopeBreak situation. RopeBreak overrides everything, so keep these lines at END END of the subroutine
+        If Actual_Rope_Break_CheckBox.CheckState = CheckState.Checked Then
+            'fee is taken from DB
+            Debug.Print("ACTUAL Break")
+            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", Val(Actual_Rope_Break_Rate_TextBox.Text))
+        End If
+        If Simulated_Rope_Break_CheckBox.CheckState = CheckState.Checked Then
+            'fee is taken from DB
+            Debug.Print("SIMULATED Break")
+            Cost_This_Flight_TextBox.Text = String.Format("{0:n2}", Val(Simulated_Rope_Break_Rate_TextBox.Text))
         End If
 
-        Debug.Print(vbCrLf & vbCrLf & "temp_Cost: " & temp_Cost)
+        Debug.Print("-------------temp_Time: " & temp_Time)
+        Debug.Print("two seat mins: " & two_seat_minutes)
+        Debug.Print("Glider TextBox:  " & Glider_TextBox.Text)
+        Debug.Print("Seats Textbox: " & Seats_TextBox.Text)
+        Debug.Print("temp_Cost_Per_Hour: " & temp_Cost_Per_Hour)
         Debug.Print("temp_Date: " & temp_Time)
-        Debug.Print("costThisFlight: " & Cost_This_Flight_TextBox.Text)
+        Debug.Print("OverRide Checked: " & Override_CheckBox.CheckState)
+        Debug.Print("costThisFlight: " & Cost_This_Flight_TextBox.Text & vbCrLf & vbCrLf)
     End Sub
 
     Private Sub Override_CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles Override_CheckBox.CheckedChanged
@@ -455,6 +477,28 @@
         'cost per hour changed, so update the total cost text box
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
+
+    Private Sub Simulated_Rope_Break_CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles Simulated_Rope_Break_CheckBox.CheckedChanged
+        'it's a rope break, this overrides everything, so update the total cost text box
+        If Simulated_Rope_Break_CheckBox.Checked = True Then
+            Debug.Print("Simulated Break is CHECKED")
+            Actual_Rope_Break_CheckBox.Checked = False
+        End If
+
+        Cost_This_Flight_TextBox_TextChanged()
+    End Sub
+
+    Private Sub Actual_Rope_Break_CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles Actual_Rope_Break_CheckBox.CheckedChanged
+        'it's a rope break, this overrides everything, so update the total cost text box
+        If Actual_Rope_Break_CheckBox.Checked = True Then
+            Debug.Print("Actual Break is CHECKED")
+            Simulated_Rope_Break_CheckBox.Checked = False
+        End If
+
+        Cost_This_Flight_TextBox_TextChanged()
+    End Sub
+
+
 
 
 
