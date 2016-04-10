@@ -556,10 +556,48 @@
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
 
+    Private Sub Edit_Names_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Login_Button.Click
+        'check for null password
+        If ((Trim(UserName_Login_TextBox.Text)) = "") Then
+            MsgBox("User Name required.", vbExclamation)
+            UserName_Login_TextBox.Focus()
+            Exit Sub
+        End If
+
+        'check for null password
+        If ((Trim(Password_Login_TextBox.Text)) = "") Then
+            MsgBox("Password required.", vbExclamation)
+            Password_Login_TextBox.Focus()
+            Exit Sub
+        End If
 
 
+        'Dim tempRecordSet As IDataRecord, Password As String
 
+        ''open the AdminUsers table
+        ''(recordset object variables allow access to records and fields in tables and queries.
+        ''This modified version opens a recordset via a SQL statement to pull the record (if any) where the field matches the txtUser field in the form.
+        ''Since the field is a primary key, there should only be one record if any matches are found.
+        'Set tempRecordSet = CurrentDb.OpenRecordset("select * from AdminUsers where UCase(trim(UserID)) = '" & UCase(Trim(txtUser)) & "'")
 
+        ''retrieve the Password field from the AdminUsers table if the UserID matches the txtUser Field
+        'If tempRecordSet.RecordCount <> 0 Then
+        '    Password = UCase(Trim(tempRecordSet("Password")))
+        'End If
+
+        ''close the recordset and release the recordset object variable
+        'tempRecordSet.Close
+        'Set tempRecordSet = Nothing
+
+        ''check the password
+        'If Password <> UCase(Trim(txtPassword)) Then
+        '    MsgBox "Incorrect password", vbExclamation
+        'Else
+        '    'passwords match, allow the user to the maintenance switchboard
+        '    MsgBox "Congratulations! Right Password!!!", vbExclamation
+        'End If
+        'txtPassword = Empty
+    End Sub
 
 
 
