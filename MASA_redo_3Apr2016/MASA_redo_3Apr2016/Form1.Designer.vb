@@ -238,6 +238,7 @@ Partial Class Form1
         Me.MembersBindingSource16 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Enter_Tow_Pilot1 = New MASA_redo_3Apr2016.Enter_Tow_Pilot1()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Add_Edit_BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
@@ -316,7 +317,6 @@ Partial Class Form1
         Me.MembersTableAdapter23 = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.MembersTableAdapter()
         Me.Add_Edit_TableAdapterManager = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager()
         Me.Add_Edit_Pilot_Names1 = New MASA_redo_3Apr2016.Add_Edit_Pilot_Names()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2180,6 +2180,13 @@ Partial Class Form1
         Me.TabPage3.Text = "Print Invoices"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Location = New System.Drawing.Point(100, 117)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(396, 246)
+        Me.ReportViewer1.TabIndex = 0
+        '
         'TabPage4
         '
         Me.TabPage4.Controls.Add(Me.Add_Edit_BindingNavigator)
@@ -2673,13 +2680,6 @@ Partial Class Form1
         '
         Me.Add_Edit_Pilot_Names1.DataSetName = "Add_Edit_Pilot_Names"
         Me.Add_Edit_Pilot_Names1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ReportViewer1
-        '
-        Me.ReportViewer1.Location = New System.Drawing.Point(100, 117)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(396, 246)
-        Me.ReportViewer1.TabIndex = 0
         '
         'Form1
         '
