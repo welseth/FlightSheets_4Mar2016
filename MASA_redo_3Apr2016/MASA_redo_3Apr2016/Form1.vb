@@ -133,14 +133,14 @@
         If GliderPilotComboBox.SelectedIndex > 0 Then
             newFlightRow.Glider_Pilot_Name = GliderPilotComboBox.SelectedIndex
         Else
-            MessageBox.Show("Must Select Glider Pilot")
+            MessageBox.Show("Must Select Pilot In Charge (PIC)")
             Exit Sub
         End If
 
         If GliderComboBox.SelectedIndex > 0 Then
             newFlightRow.Glider = GliderComboBox.SelectedIndex
         Else
-            MessageBox.Show("Must Select The Glider That Was Used")
+            MessageBox.Show("Must Select The Aircraft That Was Rented")
             Exit Sub
         End If
 
@@ -200,7 +200,7 @@
         If FirstNameComboBox.SelectedIndex > 0 Then   'MUST assign who will pay invoice
             newFlightRow.First_name_on_invoice = FirstNameComboBox.SelectedIndex
         Else
-            MessageBox.Show("Must Select Who Will Pay")
+            MessageBox.Show("Must Select First Name On Invoice")
             Exit Sub   'DUMP out of the "writing to the DB" because there is NO primary pilot, we don't want to save anything without a pilot.
         End If
 
@@ -555,6 +555,8 @@
         End If
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
+
+
 
 
 

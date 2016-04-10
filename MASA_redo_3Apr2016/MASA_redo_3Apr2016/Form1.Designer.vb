@@ -67,6 +67,7 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Tow_Plane_TextBox = New System.Windows.Forms.TextBox()
         Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
@@ -238,8 +239,10 @@ Partial Class Form1
         Me.MembersBindingSource16 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Enter_Tow_Pilot1 = New MASA_redo_3Apr2016.Enter_Tow_Pilot1()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label49 = New System.Windows.Forms.Label()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label50 = New System.Windows.Forms.Label()
         Me.Add_Edit_BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Add_Edit_Pilot_Names_MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -415,7 +418,7 @@ Partial Class Form1
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1448, 590)
+        Me.TabControl1.Size = New System.Drawing.Size(1448, 599)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -439,7 +442,7 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1440, 564)
+        Me.TabPage1.Size = New System.Drawing.Size(1440, 573)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "OD/AOD/Tow Pilot Info"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -728,6 +731,7 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.TextBox2)
         Me.TabPage2.Controls.Add(Me.Label44)
         Me.TabPage2.Controls.Add(Me.Tow_Plane_TextBox)
         Me.TabPage2.Controls.Add(Me.MinAltTowWarningText)
@@ -816,10 +820,22 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1440, 564)
+        Me.TabPage2.Size = New System.Drawing.Size(1440, 573)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(50, 215)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(296, 65)
+        Me.TextBox2.TabIndex = 119
+        Me.TextBox2.Text = "Items outside of this box are for debugging only!"
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label44
         '
@@ -1349,7 +1365,7 @@ Partial Class Form1
         Me.FlightsDataGridView.DataSource = Me.MASA_All_BindingSource
         Me.FlightsDataGridView.Location = New System.Drawing.Point(6, 370)
         Me.FlightsDataGridView.Name = "FlightsDataGridView"
-        Me.FlightsDataGridView.Size = New System.Drawing.Size(1545, 220)
+        Me.FlightsDataGridView.Size = New System.Drawing.Size(1366, 181)
         Me.FlightsDataGridView.TabIndex = 34
         '
         'DataGridViewTextBoxColumn1
@@ -1393,35 +1409,35 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "OD1"
         Me.DataGridViewTextBoxColumn6.HeaderText = "OD1"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.Width = 50
+        Me.DataGridViewTextBoxColumn6.Width = 38
         '
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "OD2"
         Me.DataGridViewTextBoxColumn7.HeaderText = "OD2"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.Width = 50
+        Me.DataGridViewTextBoxColumn7.Width = 38
         '
         'DataGridViewTextBoxColumn8
         '
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "OD3"
         Me.DataGridViewTextBoxColumn8.HeaderText = "OD3"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.Width = 50
+        Me.DataGridViewTextBoxColumn8.Width = 38
         '
         'DataGridViewTextBoxColumn9
         '
         Me.DataGridViewTextBoxColumn9.DataPropertyName = "AOD1"
         Me.DataGridViewTextBoxColumn9.HeaderText = "AOD1"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.Width = 50
+        Me.DataGridViewTextBoxColumn9.Width = 40
         '
         'DataGridViewTextBoxColumn10
         '
         Me.DataGridViewTextBoxColumn10.DataPropertyName = "AOD2"
         Me.DataGridViewTextBoxColumn10.HeaderText = "AOD2"
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.Width = 50
+        Me.DataGridViewTextBoxColumn10.Width = 40
         '
         'DataGridViewTextBoxColumn11
         '
@@ -2171,14 +2187,25 @@ Partial Class Form1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Label49)
         Me.TabPage3.Controls.Add(Me.ReportViewer1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1440, 564)
+        Me.TabPage3.Size = New System.Drawing.Size(1440, 573)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Print Invoices"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(217, 51)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(607, 31)
+        Me.Label49.TabIndex = 1
+        Me.Label49.Text = "NOT WORKING YET- Please Ignore This Tab"
         '
         'ReportViewer1
         '
@@ -2189,6 +2216,7 @@ Partial Class Form1
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label50)
         Me.TabPage4.Controls.Add(Me.Add_Edit_BindingNavigator)
         Me.TabPage4.Controls.Add(Me.Label48)
         Me.TabPage4.Controls.Add(Me.TextBox4)
@@ -2203,10 +2231,20 @@ Partial Class Form1
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1440, 564)
+        Me.TabPage4.Size = New System.Drawing.Size(1440, 573)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label50.Location = New System.Drawing.Point(745, 185)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(607, 31)
+        Me.Label50.TabIndex = 36
+        Me.Label50.Text = "NOT WORKING YET- Please Ignore This Tab"
         '
         'Add_Edit_BindingNavigator
         '
@@ -2473,7 +2511,7 @@ Partial Class Form1
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1440, 564)
+        Me.TabPage5.Size = New System.Drawing.Size(1440, 573)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Admin Stuff"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -2483,7 +2521,7 @@ Partial Class Form1
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1440, 564)
+        Me.TabPage6.Size = New System.Drawing.Size(1440, 573)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Developer-Maint"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -2685,7 +2723,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1472, 623)
+        Me.ClientSize = New System.Drawing.Size(1472, 644)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Form1"
         Me.Text = "MASA Flight Sheet Entry"
@@ -2765,6 +2803,7 @@ Partial Class Form1
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         CType(Me.Add_Edit_BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2951,36 +2990,6 @@ Partial Class Form1
     Friend WithEvents MembersBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents FlightsTableAdapter As MASA_all_1Apr2016DataSetTableAdapters.FlightsTableAdapter
     Friend WithEvents FlightsDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn3 As DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
     Friend WithEvents MASA_All_Flights_TableAdapterManager As MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager
     Friend WithEvents Save_Button As Button
     Friend WithEvents Label23 As Label
@@ -3078,4 +3087,37 @@ Partial Class Form1
     Friend WithEvents DataGridViewCheckBoxColumn6 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn7 As DataGridViewCheckBoxColumn
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents Label49 As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn2 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn3 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox2 As TextBox
 End Class
