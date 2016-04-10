@@ -67,6 +67,10 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Tow_Plane_TextBox = New System.Windows.Forms.TextBox()
+        Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Enter_Glider1 = New MASA_redo_3Apr2016.Enter_Glider1()
         Me.MinAltTowWarningText = New System.Windows.Forms.Label()
         Me.MinAltitudeWarning = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
@@ -92,8 +96,6 @@ Partial Class Form1
         Me.ActualRopeBreak_Label = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Enter_Glider1 = New MASA_redo_3Apr2016.Enter_Glider1()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Single_Seat_Penalty_Start_Mins_TextBox = New System.Windows.Forms.TextBox()
         Me.RatesAndFeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -237,6 +239,37 @@ Partial Class Form1
         Me.Enter_Tow_Pilot1 = New MASA_redo_3Apr2016.Enter_Tow_Pilot1()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Add_Edit_BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.Add_Edit_Pilot_Names_MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Add_Edit_Pilot_Names = New MASA_redo_3Apr2016.Add_Edit_Pilot_Names()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Save_Name_Edit_ToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Cancel_Login_Button = New System.Windows.Forms.Button()
+        Me.Edit_Names_Login_Button = New System.Windows.Forms.Button()
+        Me.Password_Login_TextBox = New System.Windows.Forms.TextBox()
+        Me.UserName_Login_TextBox = New System.Windows.Forms.TextBox()
+        Me.MembersDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn4 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewCheckBoxColumn5 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewCheckBoxColumn6 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewCheckBoxColumn7 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -280,8 +313,10 @@ Partial Class Form1
         Me.MASA_All_Flights_TableAdapterManager = New MASA_redo_3Apr2016.MASA_all_1Apr2016DataSetTableAdapters.TableAdapterManager()
         Me.RatesAndFeesTableAdapter = New MASA_redo_3Apr2016.RatesAndFeesTableAdapters.RatesAndFeesTableAdapter()
         Me.RatesAndFeesTableAdapter1 = New MASA_redo_3Apr2016.RatesAndFees2TableAdapters.RatesAndFeesTableAdapter()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Tow_Plane_TextBox = New System.Windows.Forms.TextBox()
+        Me.MembersTableAdapter23 = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.MembersTableAdapter()
+        Me.Add_Edit_TableAdapterManager = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager()
+        Me.Add_Edit_Pilot_Names1 = New MASA_redo_3Apr2016.Add_Edit_Pilot_Names()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -309,11 +344,11 @@ Partial Class Form1
         CType(Me.MembersBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RatesAndFeesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RatesAndFees2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RatesAndFeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RatesAndFees, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -352,6 +387,13 @@ Partial Class Form1
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.Add_Edit_BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Add_Edit_BindingNavigator.SuspendLayout()
+        CType(Me.Add_Edit_Pilot_Names_MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Add_Edit_Pilot_Names, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -359,6 +401,7 @@ Partial Class Form1
         CType(Me.ODAODAOD1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnterTowPilot1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Add_Edit_Pilot_Names1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -778,6 +821,34 @@ Partial Class Form1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Location = New System.Drawing.Point(1151, 103)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(64, 13)
+        Me.Label44.TabIndex = 117
+        Me.Label44.Text = "Tow Plane?"
+        '
+        'Tow_Plane_TextBox
+        '
+        Me.Tow_Plane_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "TowPlane", True))
+        Me.Tow_Plane_TextBox.Enabled = False
+        Me.Tow_Plane_TextBox.Location = New System.Drawing.Point(1096, 99)
+        Me.Tow_Plane_TextBox.Name = "Tow_Plane_TextBox"
+        Me.Tow_Plane_TextBox.Size = New System.Drawing.Size(49, 20)
+        Me.Tow_Plane_TextBox.TabIndex = 116
+        '
+        'AircraftBindingSource2
+        '
+        Me.AircraftBindingSource2.DataMember = "Aircraft"
+        Me.AircraftBindingSource2.DataSource = Me.Enter_Glider1
+        '
+        'Enter_Glider1
+        '
+        Me.Enter_Glider1.DataSetName = "Enter_Glider1"
+        Me.Enter_Glider1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'MinAltTowWarningText
         '
         Me.MinAltTowWarningText.BackColor = System.Drawing.Color.LemonChiffon
@@ -996,16 +1067,6 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(49, 20)
         Me.TextBox1.TabIndex = 95
-        '
-        'AircraftBindingSource2
-        '
-        Me.AircraftBindingSource2.DataMember = "Aircraft"
-        Me.AircraftBindingSource2.DataSource = Me.Enter_Glider1
-        '
-        'Enter_Glider1
-        '
-        Me.Enter_Glider1.DataSetName = "Enter_Glider1"
-        Me.Enter_Glider1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label35
         '
@@ -1520,7 +1581,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.MASA_All_FlightsBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.MASA_All_FlightsBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.MembersBindingNavigatorSaveItem})
-        Me.MASA_All_FlightsBindingNavigator.Location = New System.Drawing.Point(20, 342)
+        Me.MASA_All_FlightsBindingNavigator.Location = New System.Drawing.Point(20, 328)
         Me.MASA_All_FlightsBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.MASA_All_FlightsBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.MASA_All_FlightsBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -2110,6 +2171,7 @@ Partial Class Form1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.ReportViewer1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -2120,6 +2182,17 @@ Partial Class Form1
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Add_Edit_BindingNavigator)
+        Me.TabPage4.Controls.Add(Me.Label48)
+        Me.TabPage4.Controls.Add(Me.TextBox4)
+        Me.TabPage4.Controls.Add(Me.Label47)
+        Me.TabPage4.Controls.Add(Me.Label46)
+        Me.TabPage4.Controls.Add(Me.Label45)
+        Me.TabPage4.Controls.Add(Me.Cancel_Login_Button)
+        Me.TabPage4.Controls.Add(Me.Edit_Names_Login_Button)
+        Me.TabPage4.Controls.Add(Me.Password_Login_TextBox)
+        Me.TabPage4.Controls.Add(Me.UserName_Login_TextBox)
+        Me.TabPage4.Controls.Add(Me.MembersDataGridView)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
@@ -2127,6 +2200,266 @@ Partial Class Form1
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Add_Edit_BindingNavigator
+        '
+        Me.Add_Edit_BindingNavigator.AddNewItem = Me.ToolStripButton1
+        Me.Add_Edit_BindingNavigator.BindingSource = Me.Add_Edit_Pilot_Names_MembersBindingSource
+        Me.Add_Edit_BindingNavigator.CountItem = Me.ToolStripLabel1
+        Me.Add_Edit_BindingNavigator.DeleteItem = Me.ToolStripButton2
+        Me.Add_Edit_BindingNavigator.Dock = System.Windows.Forms.DockStyle.None
+        Me.Add_Edit_BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.Save_Name_Edit_ToolStripButton})
+        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(736, 66)
+        Me.Add_Edit_BindingNavigator.MoveFirstItem = Me.ToolStripButton3
+        Me.Add_Edit_BindingNavigator.MoveLastItem = Me.ToolStripButton6
+        Me.Add_Edit_BindingNavigator.MoveNextItem = Me.ToolStripButton5
+        Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
+        Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
+        Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.Add_Edit_BindingNavigator.TabIndex = 35
+        Me.Add_Edit_BindingNavigator.TabStop = True
+        Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "Add new"
+        '
+        'Add_Edit_Pilot_Names_MembersBindingSource
+        '
+        Me.Add_Edit_Pilot_Names_MembersBindingSource.DataMember = "Members"
+        Me.Add_Edit_Pilot_Names_MembersBindingSource.DataSource = Me.Add_Edit_Pilot_Names
+        '
+        'Add_Edit_Pilot_Names
+        '
+        Me.Add_Edit_Pilot_Names.DataSetName = "Add_Edit_Pilot_Names"
+        Me.Add_Edit_Pilot_Names.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(36, 22)
+        Me.ToolStripLabel1.Text = "of {0}"
+        Me.ToolStripLabel1.ToolTipText = "Total number of items"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton2.Text = "Delete"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton3.Text = "Move first"
+        '
+        'ToolStripButton4
+        '
+        Me.ToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
+        Me.ToolStripButton4.Name = "ToolStripButton4"
+        Me.ToolStripButton4.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton4.Text = "Move previous"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripTextBox1
+        '
+        Me.ToolStripTextBox1.AccessibleName = "Position"
+        Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
+        Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 21)
+        Me.ToolStripTextBox1.Text = "0"
+        Me.ToolStripTextBox1.ToolTipText = "Current position"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripButton5
+        '
+        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
+        Me.ToolStripButton5.Name = "ToolStripButton5"
+        Me.ToolStripButton5.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton5.Text = "Move next"
+        '
+        'ToolStripButton6
+        '
+        Me.ToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton6.Image = CType(resources.GetObject("ToolStripButton6.Image"), System.Drawing.Image)
+        Me.ToolStripButton6.Name = "ToolStripButton6"
+        Me.ToolStripButton6.RightToLeftAutoMirrorImage = True
+        Me.ToolStripButton6.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton6.Text = "Move last"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'Save_Name_Edit_ToolStripButton
+        '
+        Me.Save_Name_Edit_ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Save_Name_Edit_ToolStripButton.Image = CType(resources.GetObject("Save_Name_Edit_ToolStripButton.Image"), System.Drawing.Image)
+        Me.Save_Name_Edit_ToolStripButton.Name = "Save_Name_Edit_ToolStripButton"
+        Me.Save_Name_Edit_ToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.Save_Name_Edit_ToolStripButton.Text = "Save Data"
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Location = New System.Drawing.Point(771, 409)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(118, 13)
+        Me.Label48.TabIndex = 21
+        Me.Label48.Text = "The ""Password"" is: test"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.TextBox4.Location = New System.Drawing.Point(736, 344)
+        Me.TextBox4.Multiline = True
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(184, 49)
+        Me.TextBox4.TabIndex = 20
+        Me.TextBox4.Text = "Please BE CAREFUL!! Do NOT edit this member information unless absolutely necessa" &
+    "ry."
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Location = New System.Drawing.Point(771, 396)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(122, 13)
+        Me.Label47.TabIndex = 18
+        Me.Label47.Text = "The ""UserName"" is: test"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Location = New System.Drawing.Point(299, 459)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(53, 13)
+        Me.Label46.TabIndex = 17
+        Me.Label46.Text = "Password"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Location = New System.Drawing.Point(193, 459)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(60, 13)
+        Me.Label45.TabIndex = 16
+        Me.Label45.Text = "User Name"
+        '
+        'Cancel_Login_Button
+        '
+        Me.Cancel_Login_Button.Location = New System.Drawing.Point(489, 473)
+        Me.Cancel_Login_Button.Name = "Cancel_Login_Button"
+        Me.Cancel_Login_Button.Size = New System.Drawing.Size(75, 23)
+        Me.Cancel_Login_Button.TabIndex = 4
+        Me.Cancel_Login_Button.Text = "Cancel"
+        Me.Cancel_Login_Button.UseVisualStyleBackColor = True
+        '
+        'Edit_Names_Login_Button
+        '
+        Me.Edit_Names_Login_Button.Location = New System.Drawing.Point(408, 473)
+        Me.Edit_Names_Login_Button.Name = "Edit_Names_Login_Button"
+        Me.Edit_Names_Login_Button.Size = New System.Drawing.Size(75, 23)
+        Me.Edit_Names_Login_Button.TabIndex = 3
+        Me.Edit_Names_Login_Button.Text = "Login"
+        Me.Edit_Names_Login_Button.UseVisualStyleBackColor = True
+        '
+        'Password_Login_TextBox
+        '
+        Me.Password_Login_TextBox.Location = New System.Drawing.Point(302, 475)
+        Me.Password_Login_TextBox.Name = "Password_Login_TextBox"
+        Me.Password_Login_TextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Password_Login_TextBox.TabIndex = 2
+        '
+        'UserName_Login_TextBox
+        '
+        Me.UserName_Login_TextBox.Location = New System.Drawing.Point(196, 475)
+        Me.UserName_Login_TextBox.Name = "UserName_Login_TextBox"
+        Me.UserName_Login_TextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UserName_Login_TextBox.TabIndex = 1
+        '
+        'MembersDataGridView
+        '
+        Me.MembersDataGridView.AutoGenerateColumns = False
+        Me.MembersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MembersDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewCheckBoxColumn4, Me.DataGridViewCheckBoxColumn5, Me.DataGridViewCheckBoxColumn6, Me.DataGridViewCheckBoxColumn7})
+        Me.MembersDataGridView.DataSource = Me.Add_Edit_Pilot_Names_MembersBindingSource
+        Me.MembersDataGridView.Location = New System.Drawing.Point(12, 6)
+        Me.MembersDataGridView.Name = "MembersDataGridView"
+        Me.MembersDataGridView.Size = New System.Drawing.Size(718, 433)
+        Me.MembersDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn28
+        '
+        Me.DataGridViewTextBoxColumn28.DataPropertyName = "Member_refnum"
+        Me.DataGridViewTextBoxColumn28.HeaderText = "Member Number"
+        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn29
+        '
+        Me.DataGridViewTextBoxColumn29.DataPropertyName = "Name"
+        Me.DataGridViewTextBoxColumn29.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.Width = 325
+        '
+        'DataGridViewCheckBoxColumn4
+        '
+        Me.DataGridViewCheckBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.DataGridViewCheckBoxColumn4.DataPropertyName = "Instructor"
+        Me.DataGridViewCheckBoxColumn4.HeaderText = "Instructor?"
+        Me.DataGridViewCheckBoxColumn4.Name = "DataGridViewCheckBoxColumn4"
+        Me.DataGridViewCheckBoxColumn4.Width = 63
+        '
+        'DataGridViewCheckBoxColumn5
+        '
+        Me.DataGridViewCheckBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.DataGridViewCheckBoxColumn5.DataPropertyName = "Tow Pilot"
+        Me.DataGridViewCheckBoxColumn5.HeaderText = "Tow Pilot?"
+        Me.DataGridViewCheckBoxColumn5.Name = "DataGridViewCheckBoxColumn5"
+        Me.DataGridViewCheckBoxColumn5.Width = 57
+        '
+        'DataGridViewCheckBoxColumn6
+        '
+        Me.DataGridViewCheckBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.DataGridViewCheckBoxColumn6.DataPropertyName = "MASA_Member"
+        Me.DataGridViewCheckBoxColumn6.HeaderText = "MASA Member?"
+        Me.DataGridViewCheckBoxColumn6.Name = "DataGridViewCheckBoxColumn6"
+        Me.DataGridViewCheckBoxColumn6.Width = 81
+        '
+        'DataGridViewCheckBoxColumn7
+        '
+        Me.DataGridViewCheckBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.DataGridViewCheckBoxColumn7.DataPropertyName = "Guest_Member"
+        Me.DataGridViewCheckBoxColumn7.HeaderText = "Guest?"
+        Me.DataGridViewCheckBoxColumn7.Name = "DataGridViewCheckBoxColumn7"
+        Me.DataGridViewCheckBoxColumn7.Width = 47
         '
         'TabPage5
         '
@@ -2326,23 +2659,27 @@ Partial Class Form1
         '
         Me.RatesAndFeesTableAdapter1.ClearBeforeFill = True
         '
-        'Label44
+        'MembersTableAdapter23
         '
-        Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(1151, 103)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(64, 13)
-        Me.Label44.TabIndex = 117
-        Me.Label44.Text = "Tow Plane?"
+        Me.MembersTableAdapter23.ClearBeforeFill = True
         '
-        'Tow_Plane_TextBox
+        'Add_Edit_TableAdapterManager
         '
-        Me.Tow_Plane_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "TowPlane", True))
-        Me.Tow_Plane_TextBox.Enabled = False
-        Me.Tow_Plane_TextBox.Location = New System.Drawing.Point(1096, 99)
-        Me.Tow_Plane_TextBox.Name = "Tow_Plane_TextBox"
-        Me.Tow_Plane_TextBox.Size = New System.Drawing.Size(49, 20)
-        Me.Tow_Plane_TextBox.TabIndex = 116
+        Me.Add_Edit_TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.Add_Edit_TableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter23
+        Me.Add_Edit_TableAdapterManager.UpdateOrder = MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Add_Edit_Pilot_Names1
+        '
+        Me.Add_Edit_Pilot_Names1.DataSetName = "Add_Edit_Pilot_Names"
+        Me.Add_Edit_Pilot_Names1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Location = New System.Drawing.Point(100, 117)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(396, 246)
+        Me.ReportViewer1.TabIndex = 0
         '
         'Form1
         '
@@ -2381,12 +2718,12 @@ Partial Class Form1
         CType(Me.OD_AOD_OD1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RatesAndFeesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RatesAndFees2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.AircraftBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Enter_Glider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RatesAndFeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RatesAndFees, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FlightsDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2427,6 +2764,15 @@ Partial Class Form1
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        CType(Me.Add_Edit_BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Add_Edit_BindingNavigator.ResumeLayout(False)
+        Me.Add_Edit_BindingNavigator.PerformLayout()
+        CType(Me.Add_Edit_Pilot_Names_MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Add_Edit_Pilot_Names, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2434,6 +2780,7 @@ Partial Class Form1
         CType(Me.ODAODAOD1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnterTowPilot1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Add_Edit_Pilot_Names1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2696,4 +3043,39 @@ Partial Class Form1
     Friend WithEvents MinAltTowWarningText As Label
     Friend WithEvents Label44 As Label
     Friend WithEvents Tow_Plane_TextBox As TextBox
+    Friend WithEvents Add_Edit_Pilot_Names As Add_Edit_Pilot_Names
+    Friend WithEvents Add_Edit_Pilot_Names_MembersBindingSource As BindingSource
+    Friend WithEvents MembersTableAdapter23 As Add_Edit_Pilot_NamesTableAdapters.MembersTableAdapter
+    Friend WithEvents Add_Edit_TableAdapterManager As Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager
+    Friend WithEvents MembersDataGridView As DataGridView
+    Friend WithEvents Label48 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label47 As Label
+    Friend WithEvents Label46 As Label
+    Friend WithEvents Label45 As Label
+    Friend WithEvents Cancel_Login_Button As Button
+    Friend WithEvents Edit_Names_Login_Button As Button
+    Friend WithEvents Password_Login_TextBox As TextBox
+    Friend WithEvents UserName_Login_TextBox As TextBox
+    Friend WithEvents Add_Edit_BindingNavigator As BindingNavigator
+    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents ToolStripButton3 As ToolStripButton
+    Friend WithEvents ToolStripButton4 As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents ToolStripButton5 As ToolStripButton
+    Friend WithEvents ToolStripButton6 As ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents Save_Name_Edit_ToolStripButton As ToolStripButton
+    Friend WithEvents Add_Edit_Pilot_Names1 As Add_Edit_Pilot_Names
+    Friend WithEvents DataGridViewTextBoxColumn28 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn29 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn4 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn5 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn6 As DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn7 As DataGridViewCheckBoxColumn
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

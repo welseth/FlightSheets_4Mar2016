@@ -1,6 +1,8 @@
 ﻿Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Add_Edit_Pilot_Names.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter23.Fill(Me.Add_Edit_Pilot_Names.Members)
         'TODO: This line of code loads data into the 'RatesAndFees2.RatesAndFees' table. You can move, or remove it, as needed.
         Me.RatesAndFeesTableAdapter1.Fill(Me.RatesAndFees2.RatesAndFees)
         'TODO: This line of code loads data into the 'RatesAndFees._RatesAndFees' table. You can move, or remove it, as needed.
@@ -90,8 +92,32 @@
         MinAltTowWarningText.Visible = False
         MinAltitudeWarning.Visible = False
 
+        Me.ReportViewer1.RefreshReport()
     End Sub
 
+    'Private Sub Save_Name_Edit_ToolStripButton_Click(sender As Object, e As EventArgs) Handles Save_Name_Edit_ToolStripButton.Click
+    '    'This saves the user-edited list of member names.  They can add/delete/edit as needed.
+
+    '    Dim newMemberRow As MASA_all_1Apr2016DataSet.MembersRow
+    '    newMemberRow = Me.MASA_all_1Apr2016DataSet.Members.NewMembersRow()
+    '    'load the NEW data into each and every field in the new record
+    '    newMemberRow.Name = MembersDataGridView.Name
+    '    newMemberRow.Instructor = MembersDataGridView.
+
+
+    '    'ok, close everything and write to the DB file.
+    '    Me.Validate()
+    '    Me.Add_Edit_Pilot_Names_MembersBindingSource.EndEdit()
+
+    '    'save the new row to the DB
+    '    Try
+
+    '        Me.MASA_All_Flights_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
+    '        'Me.pilot_na
+    '    Catch ex As Exception
+    '        MessageBox.Show("Update failed  " & vbCrLf & ex.Message)
+    '    End Try
+    'End Sub
 
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Save_Button.Click
         'Save the data that the user entered into the form for each flight.
@@ -529,5 +555,63 @@
         End If
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
+
+
+
+
+
+
+
+
+    '    PASSWORD Code VVVV   PASSWORD Code VVVV   PASSWORD Code VVVV   PASSWORD Code VVVV
+    'possible username/password code.
+    'Private Sub cmdMaintenanceSwitchboard_Click()
+
+    '    'check for null password
+    '    If IsNull(Trim(txtUser)) Then
+    '        MsgBox "User Name required.", vbExclamation
+    '    txtUser.SetFocus
+    '        Exit Sub
+    '    End If
+
+    '    'check for null password
+    '    If IsNull(Trim(txtPassword)) Then
+    '        MsgBox "Password required.", vbExclamation
+    '    txtPassword.SetFocus
+    '        Exit Sub
+    '    End If
+
+    '    'To use the following code, open the code window for a form.
+    '    'Under the Tools/References menu, enable the "Microsoft DAO 3.6 Object Library"
+    '    'and some may have to disable the "Microsoft ActiveX Data Objects Library"
+
+    '    'declare variables (tempRecordSet becomes an object variable)
+    '    Dim tempRecordSet As Recordset, Password As String
+
+    ''open the AdminUsers table
+    ''(recordset object variables allow access to records and fields in tables and queries.
+    ''This modified version opens a recordset via a SQL statement to pull the record (if any) where the field matches the txtUser field in the form.
+    ''Since the field is a primary key, there should only be one record if any matches are found.
+    'Set tempRecordSet = CurrentDb.OpenRecordset("select * from AdminUsers where UCase(trim(UserID)) = '" & UCase(Trim(txtUser)) & "'")
+
+    ''retrieve the Password field from the AdminUsers table if the UserID matches the txtUser Field
+    'If tempRecordSet.RecordCount <> 0 Then
+    '        Password = UCase(Trim(tempRecordSet("Password")))
+    '    End If
+
+    '    'close the recordset and release the recordset object variable
+    '    tempRecordSet.Close
+    'Set tempRecordSet = Nothing
+
+    ''check the password
+    'If Password <> UCase(Trim(txtPassword)) Then
+    '        MsgBox "Incorrect password", vbExclamation
+    'Else
+    '        'passwords match, allow the user to the maintenance switchboard
+    '        MsgBox "Congratulations! Right Password!!!", vbExclamation
+    'End If
+    '    txtPassword = Empty
+    'End Sub
+
 
 End Class
