@@ -1,4 +1,9 @@
-﻿Public Class Form1
+﻿Imports System.Data.SqlClient
+Imports System
+Imports System.Data
+
+
+Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Add_Edit_Pilot_Names.Members' table. You can move, or remove it, as needed.
@@ -556,15 +561,22 @@
         Cost_This_Flight_TextBox_TextChanged()
     End Sub
 
+
+
+
+
+
+
+
+
     Private Sub Edit_Names_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Login_Button.Click
-        'check for null password
+        'check for null UserName
         If ((Trim(UserName_Login_TextBox.Text)) = "") Then
             MsgBox("User Name required.", vbExclamation)
             UserName_Login_TextBox.Focus()
             Exit Sub
         End If
-
-        'check for null password
+        'check for null Password
         If ((Trim(Password_Login_TextBox.Text)) = "") Then
             MsgBox("Password required.", vbExclamation)
             Password_Login_TextBox.Focus()
@@ -572,12 +584,77 @@
         End If
 
 
-        'Dim tempRecordSet As IDataRecord, Password As String
+
+        'Lookup the password that matches the Username 
+        'go read the DB and use the UserName and Pwd from that DB
+        '
+        'This seems to be agood query:
+        '        Dim queryString As String =
+        '        "SELECT * from UserNames where UCase(trim(UserName)) = '" & UCase(Trim(txtUserInputFmTextBox)) & "'"
+        '
+        '  LOOK Here:
+        '  http://www.java2s.com/Code/VB/Database-ADO.net/CatalogDatabase-ADO.net.htm
+        ' this one might work??  :
+        '  http://www.java2s.com/Code/VB/Database-ADO.net/UseSqlDataReadertoreadresultsetfromselectcommand.htm
+        '
+        '  Some connection strings...
+        '  http://www.connectionstrings.com/sql-server/
+        '
+        ' Here's how to create connection strings in Visual Studio:
+        '  http://www.itworld.com/article/3007292/development/how-to-create-sql-server-connection-strings-in-visual-studio.html
+        '  Below connection string is the ACTUAL string for MASA's project:
+        '  Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30
+        '
+        Dim thisConnection As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30")
+
+        'Create Command object
+        Dim thisCommand As New SqlCommand("SELECT * from UserNames WHERE UserName='a'", thisConnection)
+        Try
+            ' Open Connection
+            thisConnection.Open()
+            Console.WriteLine("Connection Opened<<<")
+
+            ' Execute Query
+            Dim strUsername As String = "empty" 'temp strings for debug
+            Dim strPassword As String = "empty 2" 'temp strings for debug
+
+            Dim thisReader As SqlDataReader = thisCommand.ExecuteReader()
+            While (thisReader.Read())
+
+                'If Not thisReader.Item("UserName") Is DBNull.Value Then strUsername = thisReader.Item("UserName")
+                'If Not thisReader.Item("Password") Is DBNull.Value Then strPassword = thisReader.Item("Password")
+
+                Console.WriteLine("Username and Pwd: ", thisReader.Item("UserName"), thisReader.Item("Password"))
+            End While
+
+        Catch ex As SqlException
+            ' Display error
+            Console.WriteLine("Error: " & ex.ToString())
+        Finally
+            ' Close Connection
+            thisConnection.Close()
+            Console.WriteLine("Connection Closed<<<")
+            Console.WriteLine("Need to Fix NOT pulling data from DB")
+
+        End Try
+
+
+
+
+
+
+
+
+
+
+        'Dim tempRecordSet As IDataRecord
+        'Dim Password As String
 
         ''open the AdminUsers table
         ''(recordset object variables allow access to records and fields in tables and queries.
-        ''This modified version opens a recordset via a SQL statement to pull the record (if any) where the field matches the txtUser field in the form.
-        ''Since the field is a primary key, there should only be one record if any matches are found.
+        ''This modified version opens a recordset via a SQL statement to pull the record (if any) where the field matches the txtUser 
+        ''field in the form.
+        ''Since the UserName field is a "must be unique" field, there should only be one record if any matches are found.
         'Set tempRecordSet = CurrentDb.OpenRecordset("select * from AdminUsers where UCase(trim(UserID)) = '" & UCase(Trim(txtUser)) & "'")
 
         ''retrieve the Password field from the AdminUsers table if the UserID matches the txtUser Field
