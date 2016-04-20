@@ -613,17 +613,16 @@ Public Class Form1
             ' Open Connection
             thisConnection.Open()
             Console.WriteLine("Connection Opened<<<")
-
             ' Execute Query
             Dim strUsername As String = "empty" 'temp strings for debug
             Dim strPassword As String = "empty 2" 'temp strings for debug
-
             Dim thisReader As SqlDataReader = thisCommand.ExecuteReader()
             While (thisReader.Read())
 
                 'If Not thisReader.Item("UserName") Is DBNull.Value Then strUsername = thisReader.Item("UserName")
                 'If Not thisReader.Item("Password") Is DBNull.Value Then strPassword = thisReader.Item("Password")
 
+                Console.WriteLine("Next writeline should show the letter 'A' for both.")
                 Console.WriteLine("Username and Pwd: ", thisReader.Item("UserName"), thisReader.Item("Password"))
             End While
 
@@ -635,17 +634,7 @@ Public Class Form1
             thisConnection.Close()
             Console.WriteLine("Connection Closed<<<")
             Console.WriteLine("Need to Fix NOT pulling data from DB")
-
         End Try
-
-
-
-
-
-
-
-
-
 
         'Dim tempRecordSet As IDataRecord
         'Dim Password As String
