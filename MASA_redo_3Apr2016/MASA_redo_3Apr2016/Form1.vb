@@ -96,6 +96,7 @@ Public Class Form1
         ActualRopeBreak_Label.Visible = False
         MinAltTowWarningText.Visible = False
         MinAltitudeWarning.Visible = False
+        txtBxGoodPassword.Visible = False
 
         Me.ReportViewer1.RefreshReport()
     End Sub
@@ -602,38 +603,56 @@ Public Class Form1
         '
         ' Here's how to create connection strings in Visual Studio:
         '  http://www.itworld.com/article/3007292/development/how-to-create-sql-server-connection-strings-in-visual-studio.html
-        '  Below connection string is the ACTUAL string for MASA's project:
+        '  Below connection string is the ACTUAL connection string for MASA's project:
         '  Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30
         '
+        'Create the connection and the command object
         Dim thisConnection As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30")
+        Dim thisCommand As New SqlCommand("SELECT * from UserNames WHERE UserName= '" & Trim(UserName_Login_TextBox.Text) & "'", thisConnection)
 
-        'Create Command object
-        Dim thisCommand As New SqlCommand("SELECT * from UserNames WHERE UserName='a'", thisConnection)
         Try
             ' Open Connection
             thisConnection.Open()
-            Console.WriteLine("Connection Opened<<<")
-            ' Execute Query
-            Dim strUsername As String = "empty" 'temp strings for debug
-            Dim strPassword As String = "empty 2" 'temp strings for debug
+            Debug.WriteLine("Connection Opened<<<")
+            ' Execute Query pulling the password for the user-supplied username
+            Dim strUsername As String = "Test 1" 'temp strings for debug, when done change these to "" (vbNull) <<<<<<<<<<<<<<
+            Dim strPassword As String = "Test 2" 'temp strings for debug
+            Debug.WriteLine("Next 2 lines below should show the letter 'Test 1' and 'Test 2'")
+            Debug.WriteLine(strUsername)
+            Debug.WriteLine(strPassword)
             Dim thisReader As SqlDataReader = thisCommand.ExecuteReader()
             While (thisReader.Read())
 
-                'If Not thisReader.Item("UserName") Is DBNull.Value Then strUsername = thisReader.Item("UserName")
-                'If Not thisReader.Item("Password") Is DBNull.Value Then strPassword = thisReader.Item("Password")
+                If Not thisReader.Item("UserName") Is DBNull.Value Then strUsername = thisReader.Item("UserName")
+                If Not thisReader.Item("Password") Is DBNull.Value Then strPassword = thisReader.Item("Password")
+                Debug.WriteLine("Next 2 lines below should show actual DB values for the specific UserName:")
+                Debug.WriteLine(strUsername)
+                Debug.WriteLine(strPassword)
 
-                Console.WriteLine("Next writeline should show the letter 'A' for both.")
-                Console.WriteLine("Username and Pwd: ", thisReader.Item("UserName"), thisReader.Item("Password"))
+                'Now do the string compare and decide if the password matches
+                'If String.Compare(str1, str2) = 0 And String.Compare(str3, str4) = 0 Then
+                '    MessageBox.Show("str1 = str2 And str3 = str4")
+                'Else
+                '    MessageBox.Show("Else")
+                'End If
+
+                If String.Compare(strPassword, Password_Login_TextBox.Text) = 0 Then
+                    txtBxGoodPassword.Visible = True
+                    System.Threading.Thread.Sleep(1000)
+                    txtBxGoodPassword.Visible = False
+                End If
+
+
             End While
 
         Catch ex As SqlException
             ' Display error
-            Console.WriteLine("Error: " & ex.ToString())
+            Debug.WriteLine("Error: " & ex.ToString())
         Finally
             ' Close Connection
             thisConnection.Close()
-            Console.WriteLine("Connection Closed<<<")
-            Console.WriteLine("Need to Fix NOT pulling data from DB")
+            Debug.WriteLine("Connection Closed<<<")
+            Debug.WriteLine("Need to Fix NOT pulling data from DB")
         End Try
 
         'Dim tempRecordSet As IDataRecord
@@ -663,6 +682,10 @@ Public Class Form1
         '    MsgBox "Congratulations! Right Password!!!", vbExclamation
         'End If
         'txtPassword = Empty
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txtBxGoodPassword.TextChanged
+
     End Sub
 
 

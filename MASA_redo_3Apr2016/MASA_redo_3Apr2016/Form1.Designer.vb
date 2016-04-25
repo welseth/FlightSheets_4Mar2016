@@ -241,7 +241,6 @@ Partial Class Form1
         Me.Label49 = New System.Windows.Forms.Label()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Label50 = New System.Windows.Forms.Label()
         Me.Add_Edit_BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Add_Edit_Pilot_Names_MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -319,6 +318,7 @@ Partial Class Form1
         Me.MembersTableAdapter23 = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.MembersTableAdapter()
         Me.Add_Edit_TableAdapterManager = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager()
         Me.Add_Edit_Pilot_Names1 = New MASA_redo_3Apr2016.Add_Edit_Pilot_Names()
+        Me.txtBxGoodPassword = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2202,7 +2202,7 @@ Partial Class Form1
         '
         'TabPage4
         '
-        Me.TabPage4.Controls.Add(Me.Label50)
+        Me.TabPage4.Controls.Add(Me.txtBxGoodPassword)
         Me.TabPage4.Controls.Add(Me.Add_Edit_BindingNavigator)
         Me.TabPage4.Controls.Add(Me.Label48)
         Me.TabPage4.Controls.Add(Me.TextBox4)
@@ -2221,16 +2221,6 @@ Partial Class Form1
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'Label50
-        '
-        Me.Label50.AutoSize = True
-        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.Location = New System.Drawing.Point(745, 185)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(607, 31)
-        Me.Label50.TabIndex = 36
-        Me.Label50.Text = "NOT WORKING YET- Please Ignore This Tab"
         '
         'Add_Edit_BindingNavigator
         '
@@ -2705,6 +2695,17 @@ Partial Class Form1
         Me.Add_Edit_Pilot_Names1.DataSetName = "Add_Edit_Pilot_Names"
         Me.Add_Edit_Pilot_Names1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'txtBxGoodPassword
+        '
+        Me.txtBxGoodPassword.BackColor = System.Drawing.Color.Cyan
+        Me.txtBxGoodPassword.Location = New System.Drawing.Point(613, 475)
+        Me.txtBxGoodPassword.Multiline = True
+        Me.txtBxGoodPassword.Name = "txtBxGoodPassword"
+        Me.txtBxGoodPassword.Size = New System.Drawing.Size(184, 49)
+        Me.txtBxGoodPassword.TabIndex = 36
+        Me.txtBxGoodPassword.Text = "GOOD Password!!"
+        Me.txtBxGoodPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3074,7 +3075,6 @@ Partial Class Form1
     Friend WithEvents DataGridViewCheckBoxColumn7 As DataGridViewCheckBoxColumn
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Label49 As Label
-    Friend WithEvents Label50 As Label
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
@@ -3105,4 +3105,5 @@ Partial Class Form1
     Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn3 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
+    Friend WithEvents txtBxGoodPassword As TextBox
 End Class
