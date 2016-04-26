@@ -571,6 +571,8 @@ Public Class Form1
 
 
     Private Sub Edit_Names_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Login_Button.Click
+        '
+        'This section checks for username and passwords.  All authorized user info is stored in the UserNames table in the main DB.
         'check for null UserName
         If ((Trim(UserName_Login_TextBox.Text)) = "") Then
             MsgBox("User Name required.", vbExclamation)
@@ -586,8 +588,7 @@ Public Class Form1
 
 
 
-        'Lookup the password that matches the Username 
-        'go read the DB and use the UserName and Pwd from that DB
+
         '
         'This seems to be agood query:
         '        Dim queryString As String =
@@ -606,26 +607,28 @@ Public Class Form1
         '  Below connection string is the ACTUAL connection string for MASA's project:
         '  Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30
         '
+        'Lookup the password that matches the Username 
+        'go read the DB and use the UserName and Pwd from that DB
         'Create the connection and the command object
-        Dim thisConnection As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30")
-        Dim thisCommand As New SqlCommand("SELECT * from UserNames WHERE UserName= '" & Trim(UserName_Login_TextBox.Text) & "'", thisConnection)
+        Dim thisPasswordConnection As New SqlConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30")
+        Dim thisPasswordCommand As New SqlCommand("SELECT * from UserNames WHERE UserName= '" & Trim(UserName_Login_TextBox.Text) & "'", thisPasswordConnection)
 
         Try
             ' Open Connection
-            thisConnection.Open()
-            Debug.WriteLine("Connection Opened<<<")
+            thisPasswordConnection.Open()
+            Debug.WriteLine("Connection to UserName DB Opened<<<")
             ' Execute Query pulling the password for the user-supplied username
             Dim strUsername As String = "Test 1" 'temp strings for debug, when done change these to "" (vbNull) <<<<<<<<<<<<<<
             Dim strPassword As String = "Test 2" 'temp strings for debug
             Debug.WriteLine("Next 2 lines below should show the letter 'Test 1' and 'Test 2'")
-            Debug.WriteLine(strUsername)
+            Debug.WriteLine(strUsername)  'for whatever reason these debug.writeline commands must be on SEPARATE lines!
             Debug.WriteLine(strPassword)
-            Dim thisReader As SqlDataReader = thisCommand.ExecuteReader()
+            Dim thisReader As SqlDataReader = thisPasswordCommand.ExecuteReader()
             While (thisReader.Read())
 
                 If Not thisReader.Item("UserName") Is DBNull.Value Then strUsername = thisReader.Item("UserName")
                 If Not thisReader.Item("Password") Is DBNull.Value Then strPassword = thisReader.Item("Password")
-                Debug.WriteLine("Next 2 lines below should show actual DB values for the specific UserName:")
+                Debug.WriteLine("Next 2 lines below should show actual values pulled from the DB for the specific UserName:")
                 Debug.WriteLine(strUsername)
                 Debug.WriteLine(strPassword)
 
@@ -635,11 +638,31 @@ Public Class Form1
                 'Else
                 '    MessageBox.Show("Else")
                 'End If
-
+                'Dim tmpPwdBoxColor As Color = Password_Login_TextBox.BackColor  'save whatever color the box was originally
+                'Dim tmpUserBoxColor As Color = UserName_Login_TextBox.BackColor
                 If String.Compare(strPassword, Password_Login_TextBox.Text) = 0 Then
-                    txtBxGoodPassword.Visible = True
-                    System.Threading.Thread.Sleep(1000)
+                    txtBxGoodPassword.Visible = True   'success, so flash the "good pwd" box once 
+                    Password_Login_TextBox.BackColor = Color.Green
+                    UserName_Login_TextBox.BackColor = Color.Green
+                    System.Threading.Thread.Sleep(1100)
                     txtBxGoodPassword.Visible = False
+                    'clear out both Username and Password entry, put color back to original color
+                    Password_Login_TextBox.Text = ""
+                    UserName_Login_TextBox.Text = ""
+                    Password_Login_TextBox.BackColor = SystemColors.Window
+                    UserName_Login_TextBox.BackColor = SystemColors.Window
+
+                Else
+                    'incorrect entry, just clear out both Username and Pwd text boxes
+                    Password_Login_TextBox.Clear()
+                    Password_Login_TextBox.BackColor = Color.Red
+                    UserName_Login_TextBox.Clear()
+                    UserName_Login_TextBox.BackColor = Color.Red
+                    System.Threading.Thread.Sleep(1100)
+                    Password_Login_TextBox.BackColor = SystemColors.Window
+                    UserName_Login_TextBox.BackColor = SystemColors.Window
+                    UserName_Login_TextBox.Focus()
+                    Exit Sub
                 End If
 
 
@@ -650,9 +673,8 @@ Public Class Form1
             Debug.WriteLine("Error: " & ex.ToString())
         Finally
             ' Close Connection
-            thisConnection.Close()
+            thisPasswordConnection.Close()
             Debug.WriteLine("Connection Closed<<<")
-            Debug.WriteLine("Need to Fix NOT pulling data from DB")
         End Try
 
         'Dim tempRecordSet As IDataRecord

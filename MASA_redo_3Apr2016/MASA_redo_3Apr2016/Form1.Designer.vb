@@ -241,6 +241,7 @@ Partial Class Form1
         Me.Label49 = New System.Windows.Forms.Label()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.txtBxGoodPassword = New System.Windows.Forms.TextBox()
         Me.Add_Edit_BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Add_Edit_Pilot_Names_MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -318,7 +319,6 @@ Partial Class Form1
         Me.MembersTableAdapter23 = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.MembersTableAdapter()
         Me.Add_Edit_TableAdapterManager = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager()
         Me.Add_Edit_Pilot_Names1 = New MASA_redo_3Apr2016.Add_Edit_Pilot_Names()
-        Me.txtBxGoodPassword = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1590,7 +1590,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_All_FlightsBindingNavigator.Name = "MASA_All_FlightsBindingNavigator"
         Me.MASA_All_FlightsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.MASA_All_FlightsBindingNavigator.TabIndex = 34
         Me.MASA_All_FlightsBindingNavigator.TabStop = True
         Me.MASA_All_FlightsBindingNavigator.Text = "FlightsBindingNavigator1"
@@ -1607,7 +1607,7 @@ Partial Class Form1
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -2222,6 +2222,17 @@ Partial Class Form1
         Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'txtBxGoodPassword
+        '
+        Me.txtBxGoodPassword.BackColor = System.Drawing.Color.Cyan
+        Me.txtBxGoodPassword.Location = New System.Drawing.Point(613, 475)
+        Me.txtBxGoodPassword.Multiline = True
+        Me.txtBxGoodPassword.Name = "txtBxGoodPassword"
+        Me.txtBxGoodPassword.Size = New System.Drawing.Size(184, 49)
+        Me.txtBxGoodPassword.TabIndex = 36
+        Me.txtBxGoodPassword.Text = "GOOD Password!!"
+        Me.txtBxGoodPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Add_Edit_BindingNavigator
         '
         Me.Add_Edit_BindingNavigator.AddNewItem = Me.ToolStripButton1
@@ -2237,7 +2248,7 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
         Me.Add_Edit_BindingNavigator.TabStop = True
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
@@ -2264,7 +2275,7 @@ Partial Class Form1
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(36, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
         Me.ToolStripLabel1.Text = "of {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -2413,6 +2424,7 @@ Partial Class Form1
         '
         'Password_Login_TextBox
         '
+        Me.Password_Login_TextBox.BackColor = System.Drawing.SystemColors.Window
         Me.Password_Login_TextBox.Location = New System.Drawing.Point(302, 475)
         Me.Password_Login_TextBox.Name = "Password_Login_TextBox"
         Me.Password_Login_TextBox.Size = New System.Drawing.Size(100, 20)
@@ -2694,17 +2706,6 @@ Partial Class Form1
         '
         Me.Add_Edit_Pilot_Names1.DataSetName = "Add_Edit_Pilot_Names"
         Me.Add_Edit_Pilot_Names1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'txtBxGoodPassword
-        '
-        Me.txtBxGoodPassword.BackColor = System.Drawing.Color.Cyan
-        Me.txtBxGoodPassword.Location = New System.Drawing.Point(613, 475)
-        Me.txtBxGoodPassword.Multiline = True
-        Me.txtBxGoodPassword.Name = "txtBxGoodPassword"
-        Me.txtBxGoodPassword.Size = New System.Drawing.Size(184, 49)
-        Me.txtBxGoodPassword.TabIndex = 36
-        Me.txtBxGoodPassword.Text = "GOOD Password!!"
-        Me.txtBxGoodPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Form1
         '
