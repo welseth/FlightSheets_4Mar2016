@@ -96,7 +96,11 @@ Public Class Form1
         ActualRopeBreak_Label.Visible = False
         MinAltTowWarningText.Visible = False
         MinAltitudeWarning.Visible = False
-        txtBxGoodPassword.Visible = False
+        TabControl1.SelectedIndex = 3 'move to the member editing tab, then set datagrid enabled to false (first time only)
+        MembersDataGridView.Enabled = False   'unenable the "edit members list" datagrid so they can't change things without the pwd
+        TabControl1.SelectedIndex = 0
+
+        Edit_Names_Cancel_Login_Button = Me.CancelButton
 
         Me.ReportViewer1.RefreshReport()
     End Sub
@@ -566,8 +570,11 @@ Public Class Form1
 
 
 
-
-
+    Private Sub Edit_Names_Cancel_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Cancel_Login_Button.Click
+        'cancel button reference
+        'https://msdn.microsoft.com/en-us/library/system.windows.forms.form.cancelbutton%28v=vs.110%29.aspx
+        Debug.WriteLine("You just hit the cancel button.")
+    End Sub
 
 
     Private Sub Edit_Names_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Login_Button.Click
@@ -585,27 +592,6 @@ Public Class Form1
             Password_Login_TextBox.Focus()
             Exit Sub
         End If
-
-
-
-
-        '
-        'This seems to be agood query:
-        '        Dim queryString As String =
-        '        "SELECT * from UserNames where UCase(trim(UserName)) = '" & UCase(Trim(txtUserInputFmTextBox)) & "'"
-        '
-        '  LOOK Here:
-        '  http://www.java2s.com/Code/VB/Database-ADO.net/CatalogDatabase-ADO.net.htm
-        ' this one might work??  :
-        '  http://www.java2s.com/Code/VB/Database-ADO.net/UseSqlDataReadertoreadresultsetfromselectcommand.htm
-        '
-        '  Some connection strings...
-        '  http://www.connectionstrings.com/sql-server/
-        '
-        ' Here's how to create connection strings in Visual Studio:
-        '  http://www.itworld.com/article/3007292/development/how-to-create-sql-server-connection-strings-in-visual-studio.html
-        '  Below connection string is the ACTUAL connection string for MASA's project:
-        '  Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30
         '
         'Lookup the password that matches the Username 
         'go read the DB and use the UserName and Pwd from that DB
@@ -631,41 +617,24 @@ Public Class Form1
                 Debug.WriteLine("Next 2 lines below should show actual values pulled from the DB for the specific UserName:")
                 Debug.WriteLine(strUsername)
                 Debug.WriteLine(strPassword)
-
-                'Now do the string compare and decide if the password matches
-                'If String.Compare(str1, str2) = 0 And String.Compare(str3, str4) = 0 Then
-                '    MessageBox.Show("str1 = str2 And str3 = str4")
-                'Else
-                '    MessageBox.Show("Else")
-                'End If
-                'Dim tmpPwdBoxColor As Color = Password_Login_TextBox.BackColor  'save whatever color the box was originally
-                'Dim tmpUserBoxColor As Color = UserName_Login_TextBox.BackColor
-                If String.Compare(strPassword, Password_Login_TextBox.Text) = 0 Then
-                    txtBxGoodPassword.Visible = True   'success, so flash the "good pwd" box once 
-                    Password_Login_TextBox.BackColor = Color.Green
-                    UserName_Login_TextBox.BackColor = Color.Green
-                    System.Threading.Thread.Sleep(1100)
-                    txtBxGoodPassword.Visible = False
-                    'clear out both Username and Password entry, put color back to original color
+                'using string.compareOrdinal as this function includes case sensitivity
+                If String.CompareOrdinal(strPassword, Password_Login_TextBox.Text) = 0 Then
+                    'txtBxGoodPassword.Visible = True   'success, so flash the "good pwd" box once 
+                    'System.Threading.Thread.Sleep(1100)
+                    'txtBxGoodPassword.Visible = False
+                    'clear out both Username and Password entry, make datagrid enabled 
                     Password_Login_TextBox.Text = ""
                     UserName_Login_TextBox.Text = ""
-                    Password_Login_TextBox.BackColor = SystemColors.Window
-                    UserName_Login_TextBox.BackColor = SystemColors.Window
-
+                    MembersDataGridView.Enabled = True  'enable the datagrid so new user info can be entered
                 Else
-                    'incorrect entry, just clear out both Username and Pwd text boxes
+                    'incorrect entry, clear out both Username and Pwd text boxes, yell at them.
                     Password_Login_TextBox.Clear()
-                    Password_Login_TextBox.BackColor = Color.Red
                     UserName_Login_TextBox.Clear()
-                    UserName_Login_TextBox.BackColor = Color.Red
-                    System.Threading.Thread.Sleep(1100)
-                    Password_Login_TextBox.BackColor = SystemColors.Window
-                    UserName_Login_TextBox.BackColor = SystemColors.Window
+                    MsgBox("Try again", vbExclamation)
                     UserName_Login_TextBox.Focus()
+                    MembersDataGridView.Enabled = False
                     Exit Sub
                 End If
-
-
             End While
 
         Catch ex As SqlException
@@ -677,6 +646,33 @@ Public Class Form1
             Debug.WriteLine("Connection Closed<<<")
         End Try
 
+        'Now do the string compare and decide if the password matches
+        'If String.Compare(str1, str2) = 0 And String.Compare(str3, str4) = 0 Then
+        '    MessageBox.Show("str1 = str2 And str3 = str4")
+        'Else
+        '    MessageBox.Show("Else")
+        'End If
+        'Dim tmpPwdBoxColor As Color = Password_Login_TextBox.BackColor  'save whatever color the box was originally
+        'Dim tmpUserBoxColor As Color = UserName_Login_TextBox.BackColor
+
+
+        'This seems to be agood query:
+        '        Dim queryString As String =
+        '        "SELECT * from UserNames where UCase(trim(UserName)) = '" & UCase(Trim(txtUserInputFmTextBox)) & "'"
+        '
+        '  LOOK Here:
+        '  http://www.java2s.com/Code/VB/Database-ADO.net/CatalogDatabase-ADO.net.htm
+        ' this one might work??  :
+        '  http://www.java2s.com/Code/VB/Database-ADO.net/UseSqlDataReadertoreadresultsetfromselectcommand.htm
+        '
+        '  Some connection strings...
+        '  http://www.connectionstrings.com/sql-server/
+        '
+        ' Here's how to create connection strings in Visual Studio:
+        '  http://www.itworld.com/article/3007292/development/how-to-create-sql-server-connection-strings-in-visual-studio.html
+        '  Below connection string is the ACTUAL connection string for MASA's project:
+        '  Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30
+        '
         'Dim tempRecordSet As IDataRecord
         'Dim Password As String
 
@@ -706,9 +702,9 @@ Public Class Form1
         'txtPassword = Empty
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txtBxGoodPassword.TextChanged
 
-    End Sub
+
+
 
 
 

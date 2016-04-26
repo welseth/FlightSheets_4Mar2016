@@ -238,10 +238,9 @@ Partial Class Form1
         Me.MembersBindingSource16 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Enter_Tow_Pilot1 = New MASA_redo_3Apr2016.Enter_Tow_Pilot1()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Label49 = New System.Windows.Forms.Label()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.txtBxGoodPassword = New System.Windows.Forms.TextBox()
+        Me.Edit_Names_LogOUT_Button = New System.Windows.Forms.Button()
         Me.Add_Edit_BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Add_Edit_Pilot_Names_MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -262,7 +261,7 @@ Partial Class Form1
         Me.Label47 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
-        Me.Cancel_Login_Button = New System.Windows.Forms.Button()
+        Me.Edit_Names_Cancel_Login_Button = New System.Windows.Forms.Button()
         Me.Edit_Names_Login_Button = New System.Windows.Forms.Button()
         Me.Password_Login_TextBox = New System.Windows.Forms.TextBox()
         Me.UserName_Login_TextBox = New System.Windows.Forms.TextBox()
@@ -1590,7 +1589,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_All_FlightsBindingNavigator.Name = "MASA_All_FlightsBindingNavigator"
         Me.MASA_All_FlightsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(278, 25)
+        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(277, 25)
         Me.MASA_All_FlightsBindingNavigator.TabIndex = 34
         Me.MASA_All_FlightsBindingNavigator.TabStop = True
         Me.MASA_All_FlightsBindingNavigator.Text = "FlightsBindingNavigator1"
@@ -1607,7 +1606,7 @@ Partial Class Form1
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -2173,7 +2172,6 @@ Partial Class Form1
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Label49)
         Me.TabPage3.Controls.Add(Me.ReportViewer1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
@@ -2182,16 +2180,6 @@ Partial Class Form1
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Print Invoices"
         Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(217, 51)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(607, 31)
-        Me.Label49.TabIndex = 1
-        Me.Label49.Text = "NOT WORKING YET- Please Ignore This Tab"
         '
         'ReportViewer1
         '
@@ -2202,14 +2190,14 @@ Partial Class Form1
         '
         'TabPage4
         '
-        Me.TabPage4.Controls.Add(Me.txtBxGoodPassword)
+        Me.TabPage4.Controls.Add(Me.Edit_Names_LogOUT_Button)
         Me.TabPage4.Controls.Add(Me.Add_Edit_BindingNavigator)
         Me.TabPage4.Controls.Add(Me.Label48)
         Me.TabPage4.Controls.Add(Me.TextBox4)
         Me.TabPage4.Controls.Add(Me.Label47)
         Me.TabPage4.Controls.Add(Me.Label46)
         Me.TabPage4.Controls.Add(Me.Label45)
-        Me.TabPage4.Controls.Add(Me.Cancel_Login_Button)
+        Me.TabPage4.Controls.Add(Me.Edit_Names_Cancel_Login_Button)
         Me.TabPage4.Controls.Add(Me.Edit_Names_Login_Button)
         Me.TabPage4.Controls.Add(Me.Password_Login_TextBox)
         Me.TabPage4.Controls.Add(Me.UserName_Login_TextBox)
@@ -2222,16 +2210,14 @@ Partial Class Form1
         Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'txtBxGoodPassword
+        'Edit_Names_LogOUT_Button
         '
-        Me.txtBxGoodPassword.BackColor = System.Drawing.Color.Cyan
-        Me.txtBxGoodPassword.Location = New System.Drawing.Point(613, 475)
-        Me.txtBxGoodPassword.Multiline = True
-        Me.txtBxGoodPassword.Name = "txtBxGoodPassword"
-        Me.txtBxGoodPassword.Size = New System.Drawing.Size(184, 49)
-        Me.txtBxGoodPassword.TabIndex = 36
-        Me.txtBxGoodPassword.Text = "GOOD Password!!"
-        Me.txtBxGoodPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Edit_Names_LogOUT_Button.Location = New System.Drawing.Point(570, 473)
+        Me.Edit_Names_LogOUT_Button.Name = "Edit_Names_LogOUT_Button"
+        Me.Edit_Names_LogOUT_Button.Size = New System.Drawing.Size(75, 23)
+        Me.Edit_Names_LogOUT_Button.TabIndex = 36
+        Me.Edit_Names_LogOUT_Button.Text = "Sign OUT"
+        Me.Edit_Names_LogOUT_Button.UseVisualStyleBackColor = True
         '
         'Add_Edit_BindingNavigator
         '
@@ -2248,7 +2234,7 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(278, 25)
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(277, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
         Me.Add_Edit_BindingNavigator.TabStop = True
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
@@ -2275,7 +2261,7 @@ Partial Class Form1
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(36, 22)
         Me.ToolStripLabel1.Text = "of {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -2404,14 +2390,14 @@ Partial Class Form1
         Me.Label45.TabIndex = 16
         Me.Label45.Text = "User Name"
         '
-        'Cancel_Login_Button
+        'Edit_Names_Cancel_Login_Button
         '
-        Me.Cancel_Login_Button.Location = New System.Drawing.Point(489, 473)
-        Me.Cancel_Login_Button.Name = "Cancel_Login_Button"
-        Me.Cancel_Login_Button.Size = New System.Drawing.Size(75, 23)
-        Me.Cancel_Login_Button.TabIndex = 4
-        Me.Cancel_Login_Button.Text = "Cancel"
-        Me.Cancel_Login_Button.UseVisualStyleBackColor = True
+        Me.Edit_Names_Cancel_Login_Button.Location = New System.Drawing.Point(489, 473)
+        Me.Edit_Names_Cancel_Login_Button.Name = "Edit_Names_Cancel_Login_Button"
+        Me.Edit_Names_Cancel_Login_Button.Size = New System.Drawing.Size(75, 23)
+        Me.Edit_Names_Cancel_Login_Button.TabIndex = 4
+        Me.Edit_Names_Cancel_Login_Button.Text = "Cancel"
+        Me.Edit_Names_Cancel_Login_Button.UseVisualStyleBackColor = True
         '
         'Edit_Names_Login_Button
         '
@@ -2791,7 +2777,6 @@ Partial Class Form1
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         CType(Me.Add_Edit_BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3050,7 +3035,7 @@ Partial Class Form1
     Friend WithEvents Label47 As Label
     Friend WithEvents Label46 As Label
     Friend WithEvents Label45 As Label
-    Friend WithEvents Cancel_Login_Button As Button
+    Friend WithEvents Edit_Names_Cancel_Login_Button As Button
     Friend WithEvents Edit_Names_Login_Button As Button
     Friend WithEvents Password_Login_TextBox As TextBox
     Friend WithEvents UserName_Login_TextBox As TextBox
@@ -3075,7 +3060,6 @@ Partial Class Form1
     Friend WithEvents DataGridViewCheckBoxColumn6 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn7 As DataGridViewCheckBoxColumn
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents Label49 As Label
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
@@ -3106,5 +3090,5 @@ Partial Class Form1
     Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn3 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
-    Friend WithEvents txtBxGoodPassword As TextBox
+    Friend WithEvents Edit_Names_LogOUT_Button As Button
 End Class
