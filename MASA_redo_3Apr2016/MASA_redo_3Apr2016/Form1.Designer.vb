@@ -240,6 +240,8 @@ Partial Class Form1
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.btnEdit_Names_Save_new = New System.Windows.Forms.Button()
+        Me.Label49 = New System.Windows.Forms.Label()
         Me.Edit_Names_LogOUT_Button = New System.Windows.Forms.Button()
         Me.Add_Edit_BindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
@@ -2190,6 +2192,8 @@ Partial Class Form1
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.btnEdit_Names_Save_new)
+        Me.TabPage4.Controls.Add(Me.Label49)
         Me.TabPage4.Controls.Add(Me.Edit_Names_LogOUT_Button)
         Me.TabPage4.Controls.Add(Me.Add_Edit_BindingNavigator)
         Me.TabPage4.Controls.Add(Me.Label48)
@@ -2210,9 +2214,27 @@ Partial Class Form1
         Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'btnEdit_Names_Save_new
+        '
+        Me.btnEdit_Names_Save_new.Location = New System.Drawing.Point(570, 473)
+        Me.btnEdit_Names_Save_new.Name = "btnEdit_Names_Save_new"
+        Me.btnEdit_Names_Save_new.Size = New System.Drawing.Size(75, 23)
+        Me.btnEdit_Names_Save_new.TabIndex = 38
+        Me.btnEdit_Names_Save_new.Text = "Save"
+        Me.btnEdit_Names_Save_new.UseVisualStyleBackColor = True
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Location = New System.Drawing.Point(775, 422)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(117, 13)
+        Me.Label49.TabIndex = 37
+        Me.Label49.Text = "Both are case sensitive"
+        '
         'Edit_Names_LogOUT_Button
         '
-        Me.Edit_Names_LogOUT_Button.Location = New System.Drawing.Point(570, 473)
+        Me.Edit_Names_LogOUT_Button.Location = New System.Drawing.Point(651, 473)
         Me.Edit_Names_LogOUT_Button.Name = "Edit_Names_LogOUT_Button"
         Me.Edit_Names_LogOUT_Button.Size = New System.Drawing.Size(75, 23)
         Me.Edit_Names_LogOUT_Button.TabIndex = 36
@@ -2234,7 +2256,7 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(308, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
         Me.Add_Edit_BindingNavigator.TabStop = True
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
@@ -2347,9 +2369,9 @@ Partial Class Form1
         Me.Label48.AutoSize = True
         Me.Label48.Location = New System.Drawing.Point(771, 409)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(118, 13)
+        Me.Label48.Size = New System.Drawing.Size(122, 13)
         Me.Label48.TabIndex = 21
-        Me.Label48.Text = "The ""Password"" is: test"
+        Me.Label48.Text = "The ""Password"" is: Test"
         '
         'TextBox4
         '
@@ -2368,9 +2390,9 @@ Partial Class Form1
         Me.Label47.AutoSize = True
         Me.Label47.Location = New System.Drawing.Point(771, 396)
         Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(122, 13)
+        Me.Label47.Size = New System.Drawing.Size(126, 13)
         Me.Label47.TabIndex = 18
-        Me.Label47.Text = "The ""UserName"" is: test"
+        Me.Label47.Text = "The ""UserName"" is: Test"
         '
         'Label46
         '
@@ -2413,6 +2435,7 @@ Partial Class Form1
         Me.Password_Login_TextBox.BackColor = System.Drawing.SystemColors.Window
         Me.Password_Login_TextBox.Location = New System.Drawing.Point(302, 475)
         Me.Password_Login_TextBox.Name = "Password_Login_TextBox"
+        Me.Password_Login_TextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Password_Login_TextBox.Size = New System.Drawing.Size(100, 20)
         Me.Password_Login_TextBox.TabIndex = 2
         '
@@ -3091,4 +3114,6 @@ Partial Class Form1
     Friend WithEvents DataGridViewCheckBoxColumn3 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
     Friend WithEvents Edit_Names_LogOUT_Button As Button
+    Friend WithEvents Label49 As Label
+    Friend WithEvents btnEdit_Names_Save_new As Button
 End Class

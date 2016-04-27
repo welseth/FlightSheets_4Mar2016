@@ -100,7 +100,6 @@ Public Class Form1
         MembersDataGridView.Enabled = False   'unenable the "edit members list" datagrid so they can't change things without the pwd
         TabControl1.SelectedIndex = 0
 
-        Edit_Names_Cancel_Login_Button = Me.CancelButton
 
         Me.ReportViewer1.RefreshReport()
     End Sub
@@ -404,6 +403,12 @@ Public Class Form1
         Dim TabIndexValue As Integer
         TabIndexValue = TabControl1.SelectedIndex
         Debug.WriteLine("Tab Just Changed TabIndex:  " & TabIndexValue)
+        'Log out any member name editing ANY TIME the tab is changed
+        Debug.WriteLine("You now signed-out.")
+        UserName_Login_TextBox.Clear()
+        Password_Login_TextBox.Clear()
+        UserName_Login_TextBox.Focus()
+        MembersDataGridView.Enabled = False
     End Sub
 
     Private Sub FirstNameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FirstNameComboBox.SelectedIndexChanged
@@ -570,12 +575,6 @@ Public Class Form1
 
 
 
-    Private Sub Edit_Names_Cancel_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Cancel_Login_Button.Click
-        'cancel button reference
-        'https://msdn.microsoft.com/en-us/library/system.windows.forms.form.cancelbutton%28v=vs.110%29.aspx
-        Debug.WriteLine("You just hit the cancel button.")
-    End Sub
-
 
     Private Sub Edit_Names_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Login_Button.Click
         '
@@ -702,8 +701,20 @@ Public Class Form1
         'txtPassword = Empty
     End Sub
 
+    Private Sub Edit_Names_Cancel_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Cancel_Login_Button.Click
+        Debug.WriteLine("You just clicked CANCEL.")
+        UserName_Login_TextBox.Clear()
+        Password_Login_TextBox.Clear()
+        UserName_Login_TextBox.Focus()
+    End Sub
 
-
+    Private Sub Edit_Names_LogOUT_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_LogOUT_Button.Click
+        Debug.WriteLine("You now signed-out.")
+        UserName_Login_TextBox.Clear()
+        Password_Login_TextBox.Clear()
+        UserName_Login_TextBox.Focus()
+        MembersDataGridView.Enabled = False
+    End Sub
 
 
 
