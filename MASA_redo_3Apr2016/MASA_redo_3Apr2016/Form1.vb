@@ -3,7 +3,12 @@ Imports System
 Imports System.Data
 
 
+
 Public Class Form1
+
+
+    Dim New_Member_Name_DGVhasChanged As Boolean   'holds state when the new member name data grid has been edited in any way
+
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Add_Edit_Pilot_Names.Members' table. You can move, or remove it, as needed.
@@ -574,11 +579,10 @@ Public Class Form1
 
 
 
-
-
     Private Sub Edit_Names_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Login_Button.Click
-        '
-        'This section checks for username and passwords.  All authorized user info is stored in the UserNames table in the main DB.
+        'This is the "user login" logic 
+        'This section checks for valid username and passwords.  All authorized user info is stored in the UserNames table in the main DB.
+
         'check for null UserName
         If ((Trim(UserName_Login_TextBox.Text)) = "") Then
             MsgBox("User Name required.", vbExclamation)
@@ -637,7 +641,7 @@ Public Class Form1
             End While
 
         Catch ex As SqlException
-            ' Display error
+            ' Display the error
             Debug.WriteLine("Error: " & ex.ToString())
         Finally
             ' Close Connection
@@ -714,6 +718,100 @@ Public Class Form1
         Password_Login_TextBox.Clear()
         UserName_Login_TextBox.Focus()
         MembersDataGridView.Enabled = False
+    End Sub
+
+
+    Private Sub DataGridView1_CellValueChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) _
+        Handles MembersDataGridView.CellValueChanged
+        New_Member_Name_DGVhasChanged = True  'the data grid view contents has changed, so set the changed-flag
+
+    End Sub
+
+    Private Sub DataGridView1_CurrentCellDirtyStateChanged(ByVal sender As Object, ByVal e As System.EventArgs) _
+        Handles MembersDataGridView.CurrentCellDirtyStateChanged
+        New_Member_Name_DGVhasChanged = True  'the check boxes have changed, so set the changed-flag
+    End Sub
+
+
+    Private Sub btnEdit_Names_Save_new_Click(sender As Object, e As EventArgs) Handles btnEdit_Names_Save_new.Click
+        '********************************
+        '********************************
+        'I copied word-for-word the "save new flights" logic to here.  NEED TO:
+        ' -delete anything that doesn't apply to saving new member names
+        ' -add proper code to create a new row in the DB table and save it.
+        ' >>>Hoping this will be simpler since it's already "solved" !!! :-) 
+
+
+
+        '        I would use two events in order to detect any change in the DataGridView. 
+        '            These are CellValueChanged for detecting changes on fields And 
+        '            CurrentCellDirtyStateChanged for detecting changes in CheckBox type columns.
+
+        '       Set a boolean flag = true when either of those events occurs And 
+        '           check the status of this flag when the form Is closed Or whenever 
+        '            you want to ask the user for saving changes.
+
+
+
+
+        'Save the data that the user entered into the form for each flight.
+        'create a newFlightRow to store the new flight info into.
+        Dim newMemberNameRow As MASA_all_1Apr2016DataSet.MembersRow
+        newMemberNameRow = Me.MASA_all_1Apr2016DataSet.Members.NewMembersRow()
+
+
+        'Dim newFlightRow As MASA_all_1Apr2016DataSet.FlightsRow
+        'newFlightRow = Me.MASA_all_1Apr2016DataSet.Flights.NewFlightsRow()
+
+        'Debug.Print("GliderPilotNameComboBox.SelectedIndex:  " & GliderPilotComboBox.SelectedIndex)
+        'Debug.Print("GliderNameComboBox2.SelectedIndex: >>  " & GliderComboBox.SelectedIndex)
+
+        ' load the new data into each, and every, field in the new record
+        If GliderPilotComboBox.SelectedIndex > 0 Then
+            newFlightRow.Glider_Pilot_Name = GliderPilotComboBox.SelectedIndex
+        Else
+            MessageBox.Show("Must Select Pilot In Charge (PIC)")
+            Exit Sub
+        End If
+
+
+
+        'Text boxes can't be blank, need to check that user didn't backspace and delete everything in the textbox.
+        Try
+            newFlightRow.Altitude_towed = TowAltitude.Text
+        Catch ex As Exception
+            newFlightRow.Altitude_towed = "0"
+            Debug.Print("Reset AltTowed to 0")
+        End Try
+
+
+        '
+        '
+        'ok, close everything and write to the DB file.
+        Me.Validate()
+        Me.MembersBindingSource.EndEdit()
+
+        'add new the row that as all the user-entered values into the table
+        Try
+            Me.MASA_all_1Apr2016DataSet.Flights.Rows.Add(newFlightRow)
+        Catch ex As Exception
+            MessageBox.Show("Add failed" & vbCrLf & ex.Message)
+        End Try
+
+        'save the new row to the DB
+        Try
+            'Me.Validate()   'this line is probably NOT needed. 
+            'Me.MASA_All_BindingSource.EndEdit()  'this line is probably NOT needed
+            Me.MASA_All_Flights_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
+
+        Catch ex As Exception
+            MessageBox.Show("Update failed  " & vbCrLf & ex.Message)
+        End Try
+
+        Debug.WriteLine("Now FINISHED the DB .add and the DB .update")
+
+
+
     End Sub
 
 
