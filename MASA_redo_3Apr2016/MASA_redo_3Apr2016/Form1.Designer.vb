@@ -2249,14 +2249,14 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.DeleteItem = Me.ToolStripButton2
         Me.Add_Edit_BindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.Add_Edit_BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.Save_Name_Edit_ToolStripButton})
-        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(736, 66)
+        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(753, 67)
         Me.Add_Edit_BindingNavigator.MoveFirstItem = Me.ToolStripButton3
         Me.Add_Edit_BindingNavigator.MoveLastItem = Me.ToolStripButton6
         Me.Add_Edit_BindingNavigator.MoveNextItem = Me.ToolStripButton5
         Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(308, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
         Me.Add_Edit_BindingNavigator.TabStop = True
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"

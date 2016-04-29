@@ -251,7 +251,7 @@ Public Class Form1
         Try
             Me.MASA_all_1Apr2016DataSet.Flights.Rows.Add(newFlightRow)
         Catch ex As Exception
-            MessageBox.Show("Add failed" & vbCrLf & ex.Message)
+            MessageBox.Show("Add new FLIGHT failed" & vbCrLf & ex.Message)
         End Try
 
         'save the new row to the DB
@@ -724,12 +724,13 @@ Public Class Form1
     Private Sub DataGridView1_CellValueChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) _
         Handles MembersDataGridView.CellValueChanged
         New_Member_Name_DGVhasChanged = True  'the data grid view contents has changed, so set the changed-flag
-
+        Debug.WriteLine("Data Grid changed.")
     End Sub
 
     Private Sub DataGridView1_CurrentCellDirtyStateChanged(ByVal sender As Object, ByVal e As System.EventArgs) _
         Handles MembersDataGridView.CurrentCellDirtyStateChanged
         New_Member_Name_DGVhasChanged = True  'the check boxes have changed, so set the changed-flag
+        Debug.WriteLine("Check boxes changed.")
     End Sub
 
 
@@ -755,10 +756,9 @@ Public Class Form1
 
 
         'Save the data that the user entered into the form for each flight.
-        'create a newFlightRow to store the new flight info into.
-        Dim newMemberNameRow As MASA_all_1Apr2016DataSet.MembersRow
-        newMemberNameRow = Me.MASA_all_1Apr2016DataSet.Members.NewMembersRow()
-
+        'Need to create a newFlightRow to store the new flight info into.
+        Dim newMembersRow As MASA_all_1Apr2016DataSet.MembersRow
+        newMembersRow = Me.MASA_all_1Apr2016DataSet.Members.NewMembersRow()   'not sure if NewMembersRow() is correct, look here if there are problems.
 
         'Dim newFlightRow As MASA_all_1Apr2016DataSet.FlightsRow
         'newFlightRow = Me.MASA_all_1Apr2016DataSet.Flights.NewFlightsRow()
@@ -767,24 +767,13 @@ Public Class Form1
         'Debug.Print("GliderNameComboBox2.SelectedIndex: >>  " & GliderComboBox.SelectedIndex)
 
         ' load the new data into each, and every, field in the new record
-        If GliderPilotComboBox.SelectedIndex > 0 Then
-            newFlightRow.Glider_Pilot_Name = GliderPilotComboBox.SelectedIndex
-        Else
-            MessageBox.Show("Must Select Pilot In Charge (PIC)")
-            Exit Sub
-        End If
-
-
-
         'Text boxes can't be blank, need to check that user didn't backspace and delete everything in the textbox.
-        Try
-            newFlightRow.Altitude_towed = TowAltitude.Text
-        Catch ex As Exception
-            newFlightRow.Altitude_towed = "0"
-            Debug.Print("Reset AltTowed to 0")
-        End Try
-
-
+        'Try
+        '    newFlightRow.Altitude_towed = TowAltitude.Text
+        'Catch ex As Exception
+        '    newFlightRow.Altitude_towed = "0"
+        '    Debug.Print("Reset AltTowed to 0")
+        'End Try
         '
         '
         'ok, close everything and write to the DB file.
@@ -793,16 +782,18 @@ Public Class Form1
 
         'add new the row that as all the user-entered values into the table
         Try
-            Me.MASA_all_1Apr2016DataSet.Flights.Rows.Add(newFlightRow)
+            Me.MASA_all_1Apr2016DataSet.Members.Rows.Add(newMembersRow)    'Flights.Rows.Add(newFlightRow)
         Catch ex As Exception
-            MessageBox.Show("Add failed" & vbCrLf & ex.Message)
+            MessageBox.Show("Add new member failed" & vbCrLf & ex.Message)
         End Try
 
         'save the new row to the DB
         Try
             'Me.Validate()   'this line is probably NOT needed. 
             'Me.MASA_All_BindingSource.EndEdit()  'this line is probably NOT needed
+
             Me.MASA_All_Flights_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
+            Me.Add_Edit_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
 
         Catch ex As Exception
             MessageBox.Show("Update failed  " & vbCrLf & ex.Message)
@@ -813,6 +804,8 @@ Public Class Form1
 
 
     End Sub
+
+
 
 
 
