@@ -102,7 +102,10 @@ Public Class Form1
         MinAltTowWarningText.Visible = False
         MinAltitudeWarning.Visible = False
         TabControl1.SelectedIndex = 3 'move to the member editing tab, then set datagrid enabled to false (first time only)
-        MembersDataGridView.Enabled = False   'unenable the "edit members list" datagrid so they can't change things without the pwd
+        MembersDataGridView.Enabled = False   'disable the "edit members list" datagrid so they can't change things without the pwd
+        MembersDataGridView.ReadOnly = True
+        btnEdit_Names_Save_new.Enabled = False   'Nothing has changed in the datagridview yet, so disable the "save" button
+
         TabControl1.SelectedIndex = 0
 
 
@@ -626,6 +629,7 @@ Public Class Form1
                     'clear out both Username and Password entry, make datagrid enabled 
                     Password_Login_TextBox.Text = ""
                     UserName_Login_TextBox.Text = ""
+                    MembersDataGridView.ReadOnly = False
                     MembersDataGridView.Enabled = True  'enable the datagrid so new user info can be entered
                 Else
                     'incorrect entry, clear out both Username and Pwd text boxes, yell at them.
@@ -633,6 +637,7 @@ Public Class Form1
                     UserName_Login_TextBox.Clear()
                     MsgBox("Try again", vbExclamation)
                     UserName_Login_TextBox.Focus()
+                    MembersDataGridView.ReadOnly = True
                     MembersDataGridView.Enabled = False
                     Exit Sub
                 End If
@@ -708,6 +713,9 @@ Public Class Form1
         UserName_Login_TextBox.Clear()
         Password_Login_TextBox.Clear()
         UserName_Login_TextBox.Focus()
+        MembersDataGridView.Enabled = False
+        MembersDataGridView.ReadOnly = True
+        btnEdit_Names_Save_new.Enabled = False  'nothing to save, we just cleared everything, so disable the Save button
     End Sub
 
     Private Sub Edit_Names_LogOUT_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_LogOUT_Button.Click
@@ -716,18 +724,22 @@ Public Class Form1
         Password_Login_TextBox.Clear()
         UserName_Login_TextBox.Focus()
         MembersDataGridView.Enabled = False
+        MembersDataGridView.ReadOnly = True
+        btnEdit_Names_Save_new.Enabled = False  'nothing to save, we just cleared everything, so disable the Save button
     End Sub
 
 
     Private Sub DataGridView1_CellValueChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) _
         Handles MembersDataGridView.CellValueChanged
         New_Member_Name_DGVhasChanged = True  'the data grid view contents has changed, so set the changed-flag
+        btnEdit_Names_Save_new.Enabled = True 'something changed so enable the save button
         Debug.WriteLine("Data Grid changed.")
     End Sub
 
     Private Sub DataGridView1_CurrentCellDirtyStateChanged(ByVal sender As Object, ByVal e As System.EventArgs) _
         Handles MembersDataGridView.CurrentCellDirtyStateChanged
         New_Member_Name_DGVhasChanged = True  'the check boxes have changed, so set the changed-flag
+        btnEdit_Names_Save_new.Enabled = True 'something changed so enable the save button
         Debug.WriteLine("Check boxes changed.")
     End Sub
 
@@ -762,41 +774,44 @@ Public Class Form1
         ' load the new data into each, and every, field in the new record
         'Text boxes can't be blank, need to check that user didn't backspace and delete everything in the textbox.
         'Try
-        '    newFlightRow.Altitude_towed = TowAltitude.Text
+        '    newMembersRow.Name = MembersDataGridView.Name
+
+
         'Catch ex As Exception
         '    newFlightRow.Altitude_towed = "0"
         '    Debug.Print("Reset AltTowed to 0")
         'End Try
+
         '
         'ok, close everything and write to the DB file.
+        ' EXCELLENT reference about EndEdit and AcceptChanges and when to use each is here:
+        '   https://msdn.microsoft.com/en-us/library/bb384432.aspx
+
         Me.Validate()
-        Me.MembersBindingSource.EndEdit()
+        Me.MembersBindingSource.EndEdit()  'When the EndEdit method is called, all pending changes are applied to the underlying data source
 
-        'add new the row that has all the user-entered values into the *TABLE*
+        ''add new the row that has all the user-entered values into the *TABLE*
+        'Try
+        '    Me.MASA_all_1Apr2016DataSet.Members.Rows.Add(newMembersRow)    'Flights.Rows.Add(newFlightRow)
+        '    Debug.WriteLine("Completed table write.")
+        'Catch ex As Exception
+        '    MessageBox.Show("Add new member failed" & vbCrLf & ex.Message)
+        'End Try
+
+        ' The changes have been put into the local datagrid table, so now commit/save the new row to the *DB*
         Try
-            Me.MASA_all_1Apr2016DataSet.Members.Rows.Add(newMembersRow)    'Flights.Rows.Add(newFlightRow)
-            Debug.WriteLine("Completed table write.")
-        Catch ex As Exception
-            MessageBox.Show("Add new member failed" & vbCrLf & ex.Message)
-        End Try
-
-        'save the new row to the *DB*
-        Try
-
-            'Me.MASA_All_Flights_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
-            'Me.Add_Edit_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
-
-
-
+            'Me.MASA_all_1Apr2016DataSet.AcceptChanges()
+            MembersTableAdapter23.Update(Add_Edit_Pilot_Names_MembersBindingSource.DataSource)
         Catch ex As Exception
             MessageBox.Show("Update failed  " & vbCrLf & ex.Message)
         End Try
+        btnEdit_Names_Save_new.Enabled = False   'we completed saving everything, so disable the "save" button
 
         Debug.WriteLine("Now FINISHED the DB .add and the DB .update")
 
-
-
     End Sub
+
+
 
 
 
