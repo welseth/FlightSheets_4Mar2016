@@ -256,8 +256,6 @@ Public Class Form1
 
         'save the new row to the DB
         Try
-            'Me.Validate()   'this line is probably NOT needed. 
-            'Me.MASA_All_BindingSource.EndEdit()  'this line is probably NOT needed
             Me.MASA_All_Flights_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
 
         Catch ex As Exception
@@ -741,22 +739,17 @@ Public Class Form1
         ' -delete anything that doesn't apply to saving new member names
         ' -add proper code to create a new row in the DB table and save it.
         ' >>>Hoping this will be simpler since it's already "solved" !!! :-) 
-
-
-
-        '        I would use two events in order to detect any change in the DataGridView. 
-        '            These are CellValueChanged for detecting changes on fields And 
-        '            CurrentCellDirtyStateChanged for detecting changes in CheckBox type columns.
-
+        '
+        'this section relies on DatGridView1_CellValueChanged and DataGridView1_CurrentCellDirtyStateChanged
+        ' in order to determine if there is any info that actually needs to be saved out into the DB table.
+        ' Both of these are done in separate Subs
         '       Set a boolean flag = true when either of those events occurs And 
         '           check the status of this flag when the form Is closed Or whenever 
         '            you want to ask the user for saving changes.
 
+        'Save the info that the user entered into the form for the new member names
 
-
-
-        'Save the data that the user entered into the form for each flight.
-        'Need to create a newFlightRow to store the new flight info into.
+        'Need to create a neewMembersRow to store the new flight info into.
         Dim newMembersRow As MASA_all_1Apr2016DataSet.MembersRow
         newMembersRow = Me.MASA_all_1Apr2016DataSet.Members.NewMembersRow()   'not sure if NewMembersRow() is correct, look here if there are problems.
 
@@ -775,25 +768,25 @@ Public Class Form1
         '    Debug.Print("Reset AltTowed to 0")
         'End Try
         '
-        '
         'ok, close everything and write to the DB file.
         Me.Validate()
         Me.MembersBindingSource.EndEdit()
 
-        'add new the row that as all the user-entered values into the table
+        'add new the row that has all the user-entered values into the *TABLE*
         Try
             Me.MASA_all_1Apr2016DataSet.Members.Rows.Add(newMembersRow)    'Flights.Rows.Add(newFlightRow)
+            Debug.WriteLine("Completed table write.")
         Catch ex As Exception
             MessageBox.Show("Add new member failed" & vbCrLf & ex.Message)
         End Try
 
-        'save the new row to the DB
+        'save the new row to the *DB*
         Try
-            'Me.Validate()   'this line is probably NOT needed. 
-            'Me.MASA_All_BindingSource.EndEdit()  'this line is probably NOT needed
 
-            Me.MASA_All_Flights_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
-            Me.Add_Edit_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
+            'Me.MASA_All_Flights_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
+            'Me.Add_Edit_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
+
+
 
         Catch ex As Exception
             MessageBox.Show("Update failed  " & vbCrLf & ex.Message)

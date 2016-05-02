@@ -320,6 +320,7 @@ Partial Class Form1
         Me.MembersTableAdapter23 = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.MembersTableAdapter()
         Me.Add_Edit_TableAdapterManager = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager()
         Me.Add_Edit_Pilot_Names1 = New MASA_redo_3Apr2016.Add_Edit_Pilot_Names()
+        Me.TableAdapterManager1 = New MASA_redo_3Apr2016.OD_AOD_OD6TableAdapters.TableAdapterManager()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1591,7 +1592,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_All_FlightsBindingNavigator.Name = "MASA_All_FlightsBindingNavigator"
         Me.MASA_All_FlightsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.MASA_All_FlightsBindingNavigator.TabIndex = 34
         Me.MASA_All_FlightsBindingNavigator.TabStop = True
         Me.MASA_All_FlightsBindingNavigator.Text = "FlightsBindingNavigator1"
@@ -1608,7 +1609,7 @@ Partial Class Form1
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -2216,7 +2217,7 @@ Partial Class Form1
         '
         'btnEdit_Names_Save_new
         '
-        Me.btnEdit_Names_Save_new.Location = New System.Drawing.Point(570, 473)
+        Me.btnEdit_Names_Save_new.Location = New System.Drawing.Point(833, 502)
         Me.btnEdit_Names_Save_new.Name = "btnEdit_Names_Save_new"
         Me.btnEdit_Names_Save_new.Size = New System.Drawing.Size(75, 23)
         Me.btnEdit_Names_Save_new.TabIndex = 38
@@ -2249,14 +2250,14 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.DeleteItem = Me.ToolStripButton2
         Me.Add_Edit_BindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.Add_Edit_BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.Save_Name_Edit_ToolStripButton})
-        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(753, 67)
+        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(408, 512)
         Me.Add_Edit_BindingNavigator.MoveFirstItem = Me.ToolStripButton3
         Me.Add_Edit_BindingNavigator.MoveLastItem = Me.ToolStripButton6
         Me.Add_Edit_BindingNavigator.MoveNextItem = Me.ToolStripButton5
         Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(308, 25)
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
         Me.Add_Edit_BindingNavigator.TabStop = True
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
@@ -2283,7 +2284,7 @@ Partial Class Form1
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(36, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
         Me.ToolStripLabel1.Text = "of {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -2716,6 +2717,12 @@ Partial Class Form1
         Me.Add_Edit_Pilot_Names1.DataSetName = "Add_Edit_Pilot_Names"
         Me.Add_Edit_Pilot_Names1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter6
+        Me.TableAdapterManager1.UpdateOrder = MASA_redo_3Apr2016.OD_AOD_OD6TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3116,4 +3123,5 @@ Partial Class Form1
     Friend WithEvents Edit_Names_LogOUT_Button As Button
     Friend WithEvents Label49 As Label
     Friend WithEvents btnEdit_Names_Save_new As Button
+    Friend WithEvents TableAdapterManager1 As OD_AOD_OD6TableAdapters.TableAdapterManager
 End Class
