@@ -104,12 +104,27 @@ Public Class Form1
         TabControl1.SelectedIndex = 3 'move to the member editing tab, then set datagrid enabled to false (first time only)
         MembersDataGridView.Enabled = False   'disable the "edit members list" datagrid so they can't change things without the pwd
         MembersDataGridView.ReadOnly = True
+        FlightsDataGridView.Enabled = False
+        FlightsDataGridView.ReadOnly = True
         btnEdit_Names_Save_new.Enabled = False   'Nothing has changed in the datagridview yet, so disable the "save" button
 
         TabControl1.SelectedIndex = 0
 
+        'below code mostly to pretty-up the GUI once it's "ready for outside reviewers"
+        Set_Test_Vals_Tab1.Visible = True
+        SetTestValsTab2.Visible = True
+        Button2.Visible = True
+        Dim final_deployed_code As Boolean
+        final_deployed_code = False    'set True if this is "deployed code", and it'll hide a bunch of extra textboxes and such
+        If final_deployed_code = True Then
 
-        Me.ReportViewer1.RefreshReport()
+            Add_Edit_BindingNavigator.Visible = False  'hide this control, useful only for debuggins, not for deployed program
+            MASA_All_FlightsBindingNavigator.Visible = False
+
+            TabPage5.Visible = False
+            TabPage6.Visible = False
+        End If
+
     End Sub
 
     'Private Sub Save_Name_Edit_ToolStripButton_Click(sender As Object, e As EventArgs) Handles Save_Name_Edit_ToolStripButton.Click

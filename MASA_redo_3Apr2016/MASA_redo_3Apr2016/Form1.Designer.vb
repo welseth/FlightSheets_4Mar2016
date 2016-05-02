@@ -238,7 +238,6 @@ Partial Class Form1
         Me.MembersBindingSource16 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Enter_Tow_Pilot1 = New MASA_redo_3Apr2016.Enter_Tow_Pilot1()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.btnEdit_Names_Save_new = New System.Windows.Forms.Button()
         Me.Label49 = New System.Windows.Forms.Label()
@@ -321,6 +320,7 @@ Partial Class Form1
         Me.Add_Edit_TableAdapterManager = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager()
         Me.Add_Edit_Pilot_Names1 = New MASA_redo_3Apr2016.Add_Edit_Pilot_Names()
         Me.TableAdapterManager1 = New MASA_redo_3Apr2016.OD_AOD_OD6TableAdapters.TableAdapterManager()
+        Me.Label50 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -391,7 +391,6 @@ Partial Class Form1
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         CType(Me.Add_Edit_BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Add_Edit_BindingNavigator.SuspendLayout()
@@ -1592,7 +1591,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_All_FlightsBindingNavigator.Name = "MASA_All_FlightsBindingNavigator"
         Me.MASA_All_FlightsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.MASA_All_FlightsBindingNavigator.TabIndex = 34
         Me.MASA_All_FlightsBindingNavigator.TabStop = True
         Me.MASA_All_FlightsBindingNavigator.Text = "FlightsBindingNavigator1"
@@ -1609,7 +1608,7 @@ Partial Class Form1
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -2175,7 +2174,6 @@ Partial Class Form1
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.ReportViewer1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -2184,15 +2182,9 @@ Partial Class Form1
         Me.TabPage3.Text = "Print Invoices"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'ReportViewer1
-        '
-        Me.ReportViewer1.Location = New System.Drawing.Point(100, 117)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(396, 246)
-        Me.ReportViewer1.TabIndex = 0
-        '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label50)
         Me.TabPage4.Controls.Add(Me.btnEdit_Names_Save_new)
         Me.TabPage4.Controls.Add(Me.Label49)
         Me.TabPage4.Controls.Add(Me.Edit_Names_LogOUT_Button)
@@ -2217,7 +2209,7 @@ Partial Class Form1
         '
         'btnEdit_Names_Save_new
         '
-        Me.btnEdit_Names_Save_new.Location = New System.Drawing.Point(570, 473)
+        Me.btnEdit_Names_Save_new.Location = New System.Drawing.Point(397, 490)
         Me.btnEdit_Names_Save_new.Name = "btnEdit_Names_Save_new"
         Me.btnEdit_Names_Save_new.Size = New System.Drawing.Size(75, 23)
         Me.btnEdit_Names_Save_new.TabIndex = 38
@@ -2227,7 +2219,7 @@ Partial Class Form1
         'Label49
         '
         Me.Label49.AutoSize = True
-        Me.Label49.Location = New System.Drawing.Point(775, 422)
+        Me.Label49.Location = New System.Drawing.Point(586, 538)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(117, 13)
         Me.Label49.TabIndex = 37
@@ -2235,7 +2227,7 @@ Partial Class Form1
         '
         'Edit_Names_LogOUT_Button
         '
-        Me.Edit_Names_LogOUT_Button.Location = New System.Drawing.Point(651, 473)
+        Me.Edit_Names_LogOUT_Button.Location = New System.Drawing.Point(478, 490)
         Me.Edit_Names_LogOUT_Button.Name = "Edit_Names_LogOUT_Button"
         Me.Edit_Names_LogOUT_Button.Size = New System.Drawing.Size(75, 23)
         Me.Edit_Names_LogOUT_Button.TabIndex = 36
@@ -2250,14 +2242,14 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.DeleteItem = Me.ToolStripButton2
         Me.Add_Edit_BindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.Add_Edit_BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.Save_Name_Edit_ToolStripButton})
-        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(408, 512)
+        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(753, 403)
         Me.Add_Edit_BindingNavigator.MoveFirstItem = Me.ToolStripButton3
         Me.Add_Edit_BindingNavigator.MoveLastItem = Me.ToolStripButton6
         Me.Add_Edit_BindingNavigator.MoveNextItem = Me.ToolStripButton5
         Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
         Me.Add_Edit_BindingNavigator.TabStop = True
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
@@ -2284,7 +2276,7 @@ Partial Class Form1
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(36, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
         Me.ToolStripLabel1.Text = "of {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -2368,7 +2360,7 @@ Partial Class Form1
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(771, 409)
+        Me.Label48.Location = New System.Drawing.Point(582, 525)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(122, 13)
         Me.Label48.TabIndex = 21
@@ -2377,10 +2369,10 @@ Partial Class Form1
         'TextBox4
         '
         Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.TextBox4.Location = New System.Drawing.Point(736, 344)
+        Me.TextBox4.Location = New System.Drawing.Point(559, 460)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(184, 49)
+        Me.TextBox4.Size = New System.Drawing.Size(171, 49)
         Me.TextBox4.TabIndex = 20
         Me.TextBox4.Text = "Please BE CAREFUL!! Do NOT edit this member information unless absolutely necessa" &
     "ry."
@@ -2389,7 +2381,7 @@ Partial Class Form1
         'Label47
         '
         Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(771, 396)
+        Me.Label47.Location = New System.Drawing.Point(582, 512)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(126, 13)
         Me.Label47.TabIndex = 18
@@ -2398,7 +2390,7 @@ Partial Class Form1
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(299, 459)
+        Me.Label46.Location = New System.Drawing.Point(126, 476)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(53, 13)
         Me.Label46.TabIndex = 17
@@ -2407,7 +2399,7 @@ Partial Class Form1
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(193, 459)
+        Me.Label45.Location = New System.Drawing.Point(20, 476)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(60, 13)
         Me.Label45.TabIndex = 16
@@ -2415,7 +2407,7 @@ Partial Class Form1
         '
         'Edit_Names_Cancel_Login_Button
         '
-        Me.Edit_Names_Cancel_Login_Button.Location = New System.Drawing.Point(489, 473)
+        Me.Edit_Names_Cancel_Login_Button.Location = New System.Drawing.Point(316, 490)
         Me.Edit_Names_Cancel_Login_Button.Name = "Edit_Names_Cancel_Login_Button"
         Me.Edit_Names_Cancel_Login_Button.Size = New System.Drawing.Size(75, 23)
         Me.Edit_Names_Cancel_Login_Button.TabIndex = 4
@@ -2424,7 +2416,7 @@ Partial Class Form1
         '
         'Edit_Names_Login_Button
         '
-        Me.Edit_Names_Login_Button.Location = New System.Drawing.Point(408, 473)
+        Me.Edit_Names_Login_Button.Location = New System.Drawing.Point(235, 490)
         Me.Edit_Names_Login_Button.Name = "Edit_Names_Login_Button"
         Me.Edit_Names_Login_Button.Size = New System.Drawing.Size(75, 23)
         Me.Edit_Names_Login_Button.TabIndex = 3
@@ -2434,7 +2426,7 @@ Partial Class Form1
         'Password_Login_TextBox
         '
         Me.Password_Login_TextBox.BackColor = System.Drawing.SystemColors.Window
-        Me.Password_Login_TextBox.Location = New System.Drawing.Point(302, 475)
+        Me.Password_Login_TextBox.Location = New System.Drawing.Point(129, 492)
         Me.Password_Login_TextBox.Name = "Password_Login_TextBox"
         Me.Password_Login_TextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Password_Login_TextBox.Size = New System.Drawing.Size(100, 20)
@@ -2442,7 +2434,7 @@ Partial Class Form1
         '
         'UserName_Login_TextBox
         '
-        Me.UserName_Login_TextBox.Location = New System.Drawing.Point(196, 475)
+        Me.UserName_Login_TextBox.Location = New System.Drawing.Point(23, 492)
         Me.UserName_Login_TextBox.Name = "UserName_Login_TextBox"
         Me.UserName_Login_TextBox.Size = New System.Drawing.Size(100, 20)
         Me.UserName_Login_TextBox.TabIndex = 1
@@ -2723,6 +2715,15 @@ Partial Class Form1
         Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter6
         Me.TableAdapterManager1.UpdateOrder = MASA_redo_3Apr2016.OD_AOD_OD6TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Location = New System.Drawing.Point(20, 463)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(217, 13)
+        Me.Label50.TabIndex = 39
+        Me.Label50.Text = "You must Login to change/add member info."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2806,7 +2807,6 @@ Partial Class Form1
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage3.ResumeLayout(False)
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         CType(Me.Add_Edit_BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3089,7 +3089,6 @@ Partial Class Form1
     Friend WithEvents DataGridViewCheckBoxColumn5 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn6 As DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewCheckBoxColumn7 As DataGridViewCheckBoxColumn
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
@@ -3124,4 +3123,5 @@ Partial Class Form1
     Friend WithEvents Label49 As Label
     Friend WithEvents btnEdit_Names_Save_new As Button
     Friend WithEvents TableAdapterManager1 As OD_AOD_OD6TableAdapters.TableAdapterManager
+    Friend WithEvents Label50 As Label
 End Class
