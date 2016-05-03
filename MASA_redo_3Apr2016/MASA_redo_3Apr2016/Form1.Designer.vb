@@ -239,6 +239,7 @@ Partial Class Form1
         Me.Enter_Tow_Pilot1 = New MASA_redo_3Apr2016.Enter_Tow_Pilot1()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label50 = New System.Windows.Forms.Label()
         Me.btnEdit_Names_Save_new = New System.Windows.Forms.Button()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Edit_Names_LogOUT_Button = New System.Windows.Forms.Button()
@@ -320,7 +321,6 @@ Partial Class Form1
         Me.Add_Edit_TableAdapterManager = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager()
         Me.Add_Edit_Pilot_Names1 = New MASA_redo_3Apr2016.Add_Edit_Pilot_Names()
         Me.TableAdapterManager1 = New MASA_redo_3Apr2016.OD_AOD_OD6TableAdapters.TableAdapterManager()
-        Me.Label50 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1326,7 +1326,7 @@ Partial Class Form1
         '
         'Cost_This_Flight_TextBox
         '
-        Me.Cost_This_Flight_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Cost_This_Flight_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Cost_This_Flight_TextBox.Enabled = False
         Me.Cost_This_Flight_TextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cost_This_Flight_TextBox.ForeColor = System.Drawing.SystemColors.WindowText
@@ -1591,7 +1591,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_All_FlightsBindingNavigator.Name = "MASA_All_FlightsBindingNavigator"
         Me.MASA_All_FlightsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(278, 25)
+        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(277, 25)
         Me.MASA_All_FlightsBindingNavigator.TabIndex = 34
         Me.MASA_All_FlightsBindingNavigator.TabStop = True
         Me.MASA_All_FlightsBindingNavigator.Text = "FlightsBindingNavigator1"
@@ -1608,7 +1608,7 @@ Partial Class Form1
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -2207,6 +2207,15 @@ Partial Class Form1
         Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Location = New System.Drawing.Point(20, 463)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(217, 13)
+        Me.Label50.TabIndex = 39
+        Me.Label50.Text = "You must Login to change/add member info."
+        '
         'btnEdit_Names_Save_new
         '
         Me.btnEdit_Names_Save_new.Location = New System.Drawing.Point(397, 490)
@@ -2249,7 +2258,7 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(278, 25)
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(277, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
         Me.Add_Edit_BindingNavigator.TabStop = True
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
@@ -2276,7 +2285,7 @@ Partial Class Form1
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(36, 22)
         Me.ToolStripLabel1.Text = "of {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -2714,15 +2723,6 @@ Partial Class Form1
         Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter6
         Me.TableAdapterManager1.UpdateOrder = MASA_redo_3Apr2016.OD_AOD_OD6TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Label50
-        '
-        Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(20, 463)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(217, 13)
-        Me.Label50.TabIndex = 39
-        Me.Label50.Text = "You must Login to change/add member info."
         '
         'Form1
         '
