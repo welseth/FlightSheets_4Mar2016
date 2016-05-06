@@ -1287,6 +1287,7 @@ Partial Class Form1
         Me.Seats_TextBox.Name = "Seats_TextBox"
         Me.Seats_TextBox.Size = New System.Drawing.Size(49, 20)
         Me.Seats_TextBox.TabIndex = 72
+        Me.Seats_TextBox.Visible = False
         '
         'Label24
         '

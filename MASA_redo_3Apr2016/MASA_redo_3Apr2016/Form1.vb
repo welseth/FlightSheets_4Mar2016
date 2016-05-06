@@ -118,52 +118,52 @@ Public Class Form1
         final_deployed_code = True    'set True if this is "deployed code", and it'll hide a bunch of extra textboxes and such
         If final_deployed_code = True Then
 
-            Add_Edit_BindingNavigator.Visible = False  'hide this control, useful only for debuggins, not for deployed program
-            MASA_All_FlightsBindingNavigator.Visible = False
-            Label38.Visible = False
-            Label39.Visible = False
-            Label40.Visible = False
-            Label41.Visible = False
-            Label42.Visible = False  'THIS line << MIGHT be related to TOO LONG yellow box, not sure
-            Label43.Visible = False
-            CostPerHour.Visible = False
-            Time.Visible = False
-            BaseTowCost.Visible = False
-            BaseTowFeeDollars.Visible = False
-            FtAboveBase.Visible = False
-            PerHundredRowRate.Visible = False
-            Label25.Visible = False
-            Label26.Visible = False
-            Label28.Visible = False
-            Label44.Visible = False
-            Label21.Visible = False
-            Label27.Visible = False
-            Label29.Visible = False
-            Label30.Visible = False
-            Label31.Visible = False
-            Label32.Visible = False
-            Label33.Visible = False
-            Label34.Visible = False
-            Label35.Visible = False
-            Label36.Visible = False
-            Label37.Visible = False
-            Seats_TextBox.Visible = False
-            Glider_TextBox.Visible = False
-            Tow_Plane_TextBox.Visible = False
-            Actual_Rope_Break_Rate_TextBox.Visible = False
-            Simulated_Rope_Break_Rate_TextBox.Visible = False
-            Base_Tow_Altitude_TextBox.Visible = False
-            Addtl_Per_Hndrd_Feet_Tow_TextBox.Visible = False
-            Aero_Retrieve_TextBox.Visible = False
-            Single_Seat_Penalty_Rate_TextBox.Visible = False
-            Single_Seat_Penalty_Start_Mins_TextBox.Visible = False
-            Dual_Seat_Penalty_Rate_TextBox.Visible = False
-            Dual_Seat_Penalty_Start_Mins_TextBox.Visible = False
-            Base_Tow_Fee_Dollars.Visible = False
-            TextBox1.Visible = False
+            'Add_Edit_BindingNavigator.Visible = False  'hide this control, useful only for debuggins, not for deployed program
+            'MASA_All_FlightsBindingNavigator.Visible = False
+            'Label38.Visible = False
+            'Label39.Visible = False
+            'Label40.Visible = False
+            'Label41.Visible = False
+            'Label42.Visible = False
+            'Label43.Visible = False
+            'CostPerHour.Visible = False
+            'Time.Visible = False
+            'BaseTowCost.Visible = False
+            'BaseTowFeeDollars.Visible = False
+            'FtAboveBase.Visible = False
+            'PerHundredRowRate.Visible = False
+            'Label25.Visible = False
+            'Label26.Visible = False
+            'Label28.Visible = False
+            'Label44.Visible = False
+            'Label21.Visible = False
+            'Label27.Visible = False
+            'Label29.Visible = False
+            'Label30.Visible = False
+            'Label31.Visible = False
+            'Label32.Visible = False
+            'Label33.Visible = False
+            'Label34.Visible = False
+            'Label35.Visible = False
+            'Label36.Visible = False
+            'Label37.Visible = False
+            'Seats_TextBox.Visible = False
+            'Glider_TextBox.Visible = False
+            'Tow_Plane_TextBox.Visible = False
+            'Actual_Rope_Break_Rate_TextBox.Visible = False
+            'Simulated_Rope_Break_Rate_TextBox.Visible = False
+            'Base_Tow_Altitude_TextBox.Visible = False
+            'Addtl_Per_Hndrd_Feet_Tow_TextBox.Visible = False
+            'Aero_Retrieve_TextBox.Visible = False
+            'Single_Seat_Penalty_Rate_TextBox.Visible = False
+            'Single_Seat_Penalty_Start_Mins_TextBox.Visible = False
+            'Dual_Seat_Penalty_Rate_TextBox.Visible = False
+            'Dual_Seat_Penalty_Start_Mins_TextBox.Visible = False   'maybe this one
+            'Base_Tow_Fee_Dollars.Visible = False
+            'TextBox1.Visible = False
 
-            TabPage5.Visible = False
-            TabPage6.Visible = False
+            'TabPage5.Visible = False
+            'TabPage6.Visible = False
         End If
 
     End Sub
@@ -523,7 +523,8 @@ Public Class Form1
             temp_Penalty = 0
             Debug.Print("*NOT* over time")
         End If
-        If (temp_Time > two_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 2) Then  '2-seater
+        'If (temp_Time > two_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 2) Then  '2-seater    '****This change is to hide TextBox
+        If (temp_Time > two_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(AircraftBindingSource2.Current("Seats")) = 2) Then  '2-seater
             'Yes, penalty for 2-seater
             Penalty_CheckBox.Checked = True
             Override_CheckBox.Enabled = True
@@ -531,7 +532,8 @@ Public Class Form1
             temp_Penalty = two_seat_penalty * (temp_Time - two_seat_minutes)  'penalty for "extra" minutes beyond permitted amount
             Debug.Print("2-seat:  TOO long. Temp_Penalty: " & temp_Penalty)
         End If
-        If (temp_Time > single_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 1) Then  '1-seater
+        'If (temp_Time > single_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 1) Then  '1-seater '****This change is to hide TextBox
+        If (temp_Time > single_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(AircraftBindingSource2.Current("Seats")) = 1) Then  '1-seater
             'Yes, penalty for 1-seater
             Penalty_CheckBox.Checked = True
             Override_CheckBox.Enabled = True
@@ -579,6 +581,8 @@ Public Class Form1
         Debug.Print("two seat mins: " & two_seat_minutes)
         Debug.Print("Glider TextBox:  " & Glider_TextBox.Text)
         Debug.Print("Seats Textbox: " & Seats_TextBox.Text)
+        Debug.Print("BindingSourceSeats TxtBx: " & AircraftBindingSource2.Current("Seats")) '*************
+
         Debug.Print("temp_Cost_Per_Hour: " & temp_Cost_Per_Hour)
         Debug.Print("temp_Date: " & temp_Time)
         Debug.Print("OverRide Checked: " & Override_CheckBox.CheckState)
