@@ -69,6 +69,7 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label56 = New System.Windows.Forms.Label()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Tow_Plane_TextBox = New System.Windows.Forms.TextBox()
@@ -241,6 +242,7 @@ Partial Class Form1
         Me.MembersBindingSource16 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Enter_Tow_Pilot1 = New MASA_redo_3Apr2016.Enter_Tow_Pilot1()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label55 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
@@ -328,8 +330,6 @@ Partial Class Form1
         Me.QuitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label55 = New System.Windows.Forms.Label()
-        Me.Label56 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -857,6 +857,16 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label56
+        '
+        Me.Label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label56.Location = New System.Drawing.Point(21, 339)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(225, 28)
+        Me.Label56.TabIndex = 119
+        Me.Label56.Text = "Add better way to edit below data grid."
+        Me.Label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label53
         '
@@ -2255,6 +2265,16 @@ Partial Class Form1
         Me.TabPage3.Text = "Print Invoices"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'Label55
+        '
+        Me.Label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label55.Location = New System.Drawing.Point(17, 35)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(318, 106)
+        Me.Label55.TabIndex = 117
+        Me.Label55.Text = "Coming soon...."
+        Me.Label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'TabPage4
         '
         Me.TabPage4.Controls.Add(Me.Label51)
@@ -2824,26 +2844,6 @@ Partial Class Form1
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(213, 22)
         Me.ToolStripMenuItem1.Text = "About MASA Flight Sheets"
-        '
-        'Label55
-        '
-        Me.Label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label55.Location = New System.Drawing.Point(212, 135)
-        Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(318, 106)
-        Me.Label55.TabIndex = 117
-        Me.Label55.Text = "Coming soon...."
-        Me.Label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label56
-        '
-        Me.Label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label56.Location = New System.Drawing.Point(21, 339)
-        Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(225, 28)
-        Me.Label56.TabIndex = 119
-        Me.Label56.Text = "Add better way to edit below data grid."
-        Me.Label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form1
         '

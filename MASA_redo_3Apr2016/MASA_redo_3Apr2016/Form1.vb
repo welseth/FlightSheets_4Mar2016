@@ -166,6 +166,7 @@ Public Class Form1
         'TabPage6.Visible = False
         'End If
 
+        Me.ReportViewer1.RefreshReport()
     End Sub
 
     'Private Sub Save_Name_Edit_ToolStripButton_Click(sender As Object, e As EventArgs) Handles Save_Name_Edit_ToolStripButton.Click
@@ -879,9 +880,7 @@ Public Class Form1
         Me.Close()
     End Sub
 
-    Private Sub Label52_Click(sender As Object, e As EventArgs) Handles Label52.Click
 
-    End Sub
 
 
 
