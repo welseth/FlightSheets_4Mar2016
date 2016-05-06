@@ -167,6 +167,7 @@ Public Class Form1
         'End If
 
         Me.ReportViewer1.RefreshReport()
+        Me.ReportViewer1.RefreshReport
     End Sub
 
     'Private Sub Save_Name_Edit_ToolStripButton_Click(sender As Object, e As EventArgs) Handles Save_Name_Edit_ToolStripButton.Click

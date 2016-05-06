@@ -330,6 +330,7 @@ Partial Class Form1
         Me.QuitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2256,6 +2257,7 @@ Partial Class Form1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.ReportViewer1)
         Me.TabPage3.Controls.Add(Me.Label55)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
@@ -2845,6 +2847,14 @@ Partial Class Form1
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(213, 22)
         Me.ToolStripMenuItem1.Text = "About MASA Flight Sheets"
         '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Location = New System.Drawing.Point(359, 35)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote
+        Me.ReportViewer1.Size = New System.Drawing.Size(396, 246)
+        Me.ReportViewer1.TabIndex = 118
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3260,4 +3270,5 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents Label55 As Label
     Friend WithEvents Label56 As Label
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

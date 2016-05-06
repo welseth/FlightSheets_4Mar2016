@@ -300,7 +300,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Add_Edit_Pilot_Names.xsc">
