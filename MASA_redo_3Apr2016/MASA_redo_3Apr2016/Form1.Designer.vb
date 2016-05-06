@@ -274,8 +274,6 @@ Partial Class Form1
         Me.DataGridViewCheckBoxColumn5 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewCheckBoxColumn6 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewCheckBoxColumn7 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter = New MASA_redo_3Apr2016.OD_AOD_OD1TableAdapters.MembersTableAdapter()
         Me.TableAdapterManager = New MASA_redo_3Apr2016.OD_AOD_OD1TableAdapters.TableAdapterManager()
@@ -321,6 +319,15 @@ Partial Class Form1
         Me.Add_Edit_TableAdapterManager = New MASA_redo_3Apr2016.Add_Edit_Pilot_NamesTableAdapters.TableAdapterManager()
         Me.Add_Edit_Pilot_Names1 = New MASA_redo_3Apr2016.Add_Edit_Pilot_Names()
         Me.TableAdapterManager1 = New MASA_redo_3Apr2016.OD_AOD_OD6TableAdapters.TableAdapterManager()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.QuitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -405,6 +412,7 @@ Partial Class Form1
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnterTowPilot1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Add_Edit_Pilot_Names1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -413,9 +421,7 @@ Partial Class Form1
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Controls.Add(Me.TabPage5)
-        Me.TabControl1.Controls.Add(Me.TabPage6)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 30)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1448, 599)
@@ -423,6 +429,8 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label54)
+        Me.TabPage1.Controls.Add(Me.Label52)
         Me.TabPage1.Controls.Add(Me.Label22)
         Me.TabPage1.Controls.Add(Me.Todays_Date_DateTimePicker)
         Me.TabPage1.Controls.Add(Me.Button2)
@@ -465,7 +473,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(410, 204)
+        Me.Button2.Location = New System.Drawing.Point(410, 245)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(149, 23)
         Me.Button2.TabIndex = 14
@@ -475,7 +483,7 @@ Partial Class Form1
         'Set_Test_Vals_Tab1
         '
         Me.Set_Test_Vals_Tab1.BackColor = System.Drawing.Color.GreenYellow
-        Me.Set_Test_Vals_Tab1.Location = New System.Drawing.Point(410, 175)
+        Me.Set_Test_Vals_Tab1.Location = New System.Drawing.Point(410, 216)
         Me.Set_Test_Vals_Tab1.Name = "Set_Test_Vals_Tab1"
         Me.Set_Test_Vals_Tab1.Size = New System.Drawing.Size(101, 23)
         Me.Set_Test_Vals_Tab1.TabIndex = 13
@@ -731,6 +739,7 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.Label53)
         Me.TabPage2.Controls.Add(Me.Label44)
         Me.TabPage2.Controls.Add(Me.Tow_Plane_TextBox)
         Me.TabPage2.Controls.Add(Me.MinAltTowWarningText)
@@ -835,6 +844,7 @@ Partial Class Form1
         '
         'Tow_Plane_TextBox
         '
+        Me.Tow_Plane_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Tow_Plane_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "TowPlane", True))
         Me.Tow_Plane_TextBox.Enabled = False
         Me.Tow_Plane_TextBox.Location = New System.Drawing.Point(1096, 99)
@@ -884,6 +894,7 @@ Partial Class Form1
         '
         'BaseTowFeeDollars
         '
+        Me.BaseTowFeeDollars.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BaseTowFeeDollars.Enabled = False
         Me.BaseTowFeeDollars.Location = New System.Drawing.Point(755, 344)
         Me.BaseTowFeeDollars.Name = "BaseTowFeeDollars"
@@ -937,6 +948,7 @@ Partial Class Form1
         '
         'PerHundredRowRate
         '
+        Me.PerHundredRowRate.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.PerHundredRowRate.Enabled = False
         Me.PerHundredRowRate.Location = New System.Drawing.Point(972, 344)
         Me.PerHundredRowRate.Name = "PerHundredRowRate"
@@ -945,6 +957,7 @@ Partial Class Form1
         '
         'FtAboveBase
         '
+        Me.FtAboveBase.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.FtAboveBase.Enabled = False
         Me.FtAboveBase.Location = New System.Drawing.Point(866, 344)
         Me.FtAboveBase.Name = "FtAboveBase"
@@ -953,6 +966,7 @@ Partial Class Form1
         '
         'BaseTowCost
         '
+        Me.BaseTowCost.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BaseTowCost.Enabled = False
         Me.BaseTowCost.Location = New System.Drawing.Point(649, 342)
         Me.BaseTowCost.Name = "BaseTowCost"
@@ -961,6 +975,7 @@ Partial Class Form1
         '
         'Time
         '
+        Me.Time.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Time.Enabled = False
         Me.Time.Location = New System.Drawing.Point(543, 342)
         Me.Time.Name = "Time"
@@ -969,6 +984,7 @@ Partial Class Form1
         '
         'CostPerHour
         '
+        Me.CostPerHour.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.CostPerHour.Enabled = False
         Me.CostPerHour.Location = New System.Drawing.Point(432, 342)
         Me.CostPerHour.Name = "CostPerHour"
@@ -986,6 +1002,7 @@ Partial Class Form1
         '
         'Base_Tow_Fee_Dollars
         '
+        Me.Base_Tow_Fee_Dollars.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Base_Tow_Fee_Dollars.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource1, "base_tow_fee_dollars", True))
         Me.Base_Tow_Fee_Dollars.Enabled = False
         Me.Base_Tow_Fee_Dollars.Location = New System.Drawing.Point(1323, 183)
@@ -1064,6 +1081,7 @@ Partial Class Form1
         '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Privately_owned", True))
         Me.TextBox1.Enabled = False
         Me.TextBox1.Location = New System.Drawing.Point(1323, 71)
@@ -1082,6 +1100,7 @@ Partial Class Form1
         '
         'Single_Seat_Penalty_Start_Mins_TextBox
         '
+        Me.Single_Seat_Penalty_Start_Mins_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Single_Seat_Penalty_Start_Mins_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "single_seat_start_penalty_minutes", True))
         Me.Single_Seat_Penalty_Start_Mins_TextBox.Enabled = False
         Me.Single_Seat_Penalty_Start_Mins_TextBox.Location = New System.Drawing.Point(1096, 286)
@@ -1110,6 +1129,7 @@ Partial Class Form1
         '
         'Dual_Seat_Penalty_Start_Mins_TextBox
         '
+        Me.Dual_Seat_Penalty_Start_Mins_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Dual_Seat_Penalty_Start_Mins_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "dual_seat_start_penalty_minutes", True))
         Me.Dual_Seat_Penalty_Start_Mins_TextBox.Enabled = False
         Me.Dual_Seat_Penalty_Start_Mins_TextBox.Location = New System.Drawing.Point(1096, 338)
@@ -1128,6 +1148,7 @@ Partial Class Form1
         '
         'Dual_Seat_Penalty_Rate_TextBox
         '
+        Me.Dual_Seat_Penalty_Rate_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Dual_Seat_Penalty_Rate_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "dual_seat_penalty_rate", True))
         Me.Dual_Seat_Penalty_Rate_TextBox.Enabled = False
         Me.Dual_Seat_Penalty_Rate_TextBox.Location = New System.Drawing.Point(1096, 312)
@@ -1146,6 +1167,7 @@ Partial Class Form1
         '
         'Single_Seat_Penalty_Rate_TextBox
         '
+        Me.Single_Seat_Penalty_Rate_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Single_Seat_Penalty_Rate_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "single_seat_penalty_rate", True))
         Me.Single_Seat_Penalty_Rate_TextBox.Enabled = False
         Me.Single_Seat_Penalty_Rate_TextBox.Location = New System.Drawing.Point(1096, 260)
@@ -1164,6 +1186,7 @@ Partial Class Form1
         '
         'Aero_Retrieve_TextBox
         '
+        Me.Aero_Retrieve_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Aero_Retrieve_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "aero_retrieve", True))
         Me.Aero_Retrieve_TextBox.Enabled = False
         Me.Aero_Retrieve_TextBox.Location = New System.Drawing.Point(1096, 234)
@@ -1182,6 +1205,7 @@ Partial Class Form1
         '
         'Addtl_Per_Hndrd_Feet_Tow_TextBox
         '
+        Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "addtl_per_hundred_feet_tow", True))
         Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.Enabled = False
         Me.Addtl_Per_Hndrd_Feet_Tow_TextBox.Location = New System.Drawing.Point(1096, 208)
@@ -1200,6 +1224,7 @@ Partial Class Form1
         '
         'Base_Tow_Altitude_TextBox
         '
+        Me.Base_Tow_Altitude_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Base_Tow_Altitude_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "base_tow", True))
         Me.Base_Tow_Altitude_TextBox.Enabled = False
         Me.Base_Tow_Altitude_TextBox.Location = New System.Drawing.Point(1096, 182)
@@ -1227,6 +1252,7 @@ Partial Class Form1
         '
         'Simulated_Rope_Break_Rate_TextBox
         '
+        Me.Simulated_Rope_Break_Rate_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Simulated_Rope_Break_Rate_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "simulated_rope_break", True))
         Me.Simulated_Rope_Break_Rate_TextBox.Enabled = False
         Me.Simulated_Rope_Break_Rate_TextBox.Location = New System.Drawing.Point(1096, 156)
@@ -1245,6 +1271,7 @@ Partial Class Form1
         '
         'Actual_Rope_Break_Rate_TextBox
         '
+        Me.Actual_Rope_Break_Rate_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Actual_Rope_Break_Rate_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RatesAndFeesBindingSource, "actual_rope_break", True))
         Me.Actual_Rope_Break_Rate_TextBox.Enabled = False
         Me.Actual_Rope_Break_Rate_TextBox.Location = New System.Drawing.Point(1096, 130)
@@ -1263,6 +1290,7 @@ Partial Class Form1
         '
         'Glider_TextBox
         '
+        Me.Glider_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Glider_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Glider", True))
         Me.Glider_TextBox.Enabled = False
         Me.Glider_TextBox.Location = New System.Drawing.Point(1096, 73)
@@ -1281,6 +1309,7 @@ Partial Class Form1
         '
         'Seats_TextBox
         '
+        Me.Seats_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Seats_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource2, "Seats", True))
         Me.Seats_TextBox.Enabled = False
         Me.Seats_TextBox.Location = New System.Drawing.Point(1096, 47)
@@ -1595,6 +1624,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.TabIndex = 34
         Me.MASA_All_FlightsBindingNavigator.TabStop = True
         Me.MASA_All_FlightsBindingNavigator.Text = "FlightsBindingNavigator1"
+        Me.MASA_All_FlightsBindingNavigator.Visible = False
         '
         'BindingNavigatorAddNewItem
         '
@@ -1692,7 +1722,7 @@ Partial Class Form1
         'SetTestValsTab2
         '
         Me.SetTestValsTab2.BackColor = System.Drawing.Color.GreenYellow
-        Me.SetTestValsTab2.Location = New System.Drawing.Point(431, 220)
+        Me.SetTestValsTab2.Location = New System.Drawing.Point(309, 277)
         Me.SetTestValsTab2.Name = "SetTestValsTab2"
         Me.SetTestValsTab2.Size = New System.Drawing.Size(117, 23)
         Me.SetTestValsTab2.TabIndex = 33
@@ -1890,7 +1920,7 @@ Partial Class Form1
         '
         Me.TowPlane_N_Number.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AircraftBindingSource, "N-number", True))
         Me.TowPlane_N_Number.Enabled = False
-        Me.TowPlane_N_Number.Location = New System.Drawing.Point(325, 45)
+        Me.TowPlane_N_Number.Location = New System.Drawing.Point(307, 45)
         Me.TowPlane_N_Number.Name = "TowPlane_N_Number"
         Me.TowPlane_N_Number.Size = New System.Drawing.Size(91, 20)
         Me.TowPlane_N_Number.TabIndex = 16
@@ -2184,6 +2214,7 @@ Partial Class Form1
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label51)
         Me.TabPage4.Controls.Add(Me.Label50)
         Me.TabPage4.Controls.Add(Me.btnEdit_Names_Save_new)
         Me.TabPage4.Controls.Add(Me.Label49)
@@ -2251,7 +2282,7 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.DeleteItem = Me.ToolStripButton2
         Me.Add_Edit_BindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.Add_Edit_BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.Save_Name_Edit_ToolStripButton})
-        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(753, 403)
+        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(767, 402)
         Me.Add_Edit_BindingNavigator.MoveFirstItem = Me.ToolStripButton3
         Me.Add_Edit_BindingNavigator.MoveLastItem = Me.ToolStripButton6
         Me.Add_Edit_BindingNavigator.MoveNextItem = Me.ToolStripButton5
@@ -2505,26 +2536,6 @@ Partial Class Form1
         Me.DataGridViewCheckBoxColumn7.Name = "DataGridViewCheckBoxColumn7"
         Me.DataGridViewCheckBoxColumn7.Width = 47
         '
-        'TabPage5
-        '
-        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1440, 573)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "Admin Stuff"
-        Me.TabPage5.UseVisualStyleBackColor = True
-        '
-        'TabPage6
-        '
-        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1440, 573)
-        Me.TabPage6.TabIndex = 5
-        Me.TabPage6.Text = "Developer-Maint"
-        Me.TabPage6.UseVisualStyleBackColor = True
-        '
         'MembersBindingSource
         '
         Me.MembersBindingSource.DataMember = "Members"
@@ -2724,14 +2735,93 @@ Partial Class Form1
         Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter6
         Me.TableAdapterManager1.UpdateOrder = MASA_redo_3Apr2016.OD_AOD_OD6TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuitToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1472, 24)
+        Me.MenuStrip1.TabIndex = 1
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'QuitToolStripMenuItem
+        '
+        Me.QuitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuitToolStripMenuItem1})
+        Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.QuitToolStripMenuItem.Text = "File"
+        '
+        'QuitToolStripMenuItem1
+        '
+        Me.QuitToolStripMenuItem1.Name = "QuitToolStripMenuItem1"
+        Me.QuitToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
+        Me.QuitToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.QuitToolStripMenuItem1.Text = "Quit"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'Label51
+        '
+        Me.Label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label51.Location = New System.Drawing.Point(753, 333)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(318, 106)
+        Me.Label51.TabIndex = 116
+        Me.Label51.Text = "Add: logic to ask if user wants to save name changes before allowing moving to a " &
+    "different tab."
+        Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label52
+        '
+        Me.Label52.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label52.Location = New System.Drawing.Point(68, 405)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(278, 57)
+        Me.Label52.TabIndex = 116
+        Me.Label52.Text = "Of course, the Green ""Set Test Values"" items will be gone in the final version.  " &
+    "You'll find these buttons handy while doing testing."
+        Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Location = New System.Drawing.Point(306, 29)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(55, 13)
+        Me.Label53.TabIndex = 118
+        Me.Label53.Text = "N-Number"
+        '
+        'Label54
+        '
+        Me.Label54.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label54.Location = New System.Drawing.Point(68, 320)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(278, 57)
+        Me.Label54.TabIndex = 117
+        Me.Label54.Text = "All the green-shaded boxes will be hidden in the final version."
+        Me.Label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(213, 22)
+        Me.ToolStripMenuItem1.Text = "About MASA Flight Sheets"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1472, 644)
         Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
-        Me.Text = "MASA Flight Sheet Entry"
+        Me.Text = "MASA Flight Sheets"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -2823,7 +2913,10 @@ Partial Class Form1
         CType(Me.MembersBindingSource10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnterTowPilot1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Add_Edit_Pilot_Names1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -2832,8 +2925,6 @@ Partial Class Form1
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents TabPage5 As TabPage
-    Friend WithEvents TabPage6 As TabPage
     Friend WithEvents OD_AOD_OD1 As OD_AOD_OD1
     Friend WithEvents MembersBindingSource As BindingSource
     Friend WithEvents MembersTableAdapter As OD_AOD_OD1TableAdapters.MembersTableAdapter
@@ -3124,4 +3215,13 @@ Partial Class Form1
     Friend WithEvents btnEdit_Names_Save_new As Button
     Friend WithEvents TableAdapterManager1 As OD_AOD_OD6TableAdapters.TableAdapterManager
     Friend WithEvents Label50 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents QuitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuitToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label52 As Label
+    Friend WithEvents Label53 As Label
+    Friend WithEvents Label54 As Label
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

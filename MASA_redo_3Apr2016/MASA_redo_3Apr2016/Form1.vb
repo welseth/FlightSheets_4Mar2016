@@ -523,6 +523,8 @@ Public Class Form1
             temp_Penalty = 0
             Debug.Print("*NOT* over time")
         End If
+
+
         If (temp_Time > two_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 2) Then  '2-seater    '****This change is to hide TextBox
             'If (temp_Time > two_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(AircraftBindingSource2.Current("Seats")) = 2) Then  '2-seater
             'Yes, penalty for 2-seater
@@ -870,6 +872,12 @@ Public Class Form1
         Debug.WriteLine("Now FINISHED the DB .add and the DB .update")
 
     End Sub
+
+    Private Sub QuitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles QuitToolStripMenuItem1.Click
+        Me.Close()
+    End Sub
+
+
 
 
 
