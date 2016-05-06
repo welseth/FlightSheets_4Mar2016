@@ -26,6 +26,8 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Todays_Date_DateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -67,6 +69,7 @@ Partial Class Form1
         Me.MembersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OD_AOD_OD1 = New MASA_redo_3Apr2016.OD_AOD_OD1()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label53 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Tow_Plane_TextBox = New System.Windows.Forms.TextBox()
         Me.AircraftBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
@@ -239,6 +242,7 @@ Partial Class Form1
         Me.Enter_Tow_Pilot1 = New MASA_redo_3Apr2016.Enter_Tow_Pilot1()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label51 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.btnEdit_Names_Save_new = New System.Windows.Forms.Button()
         Me.Label49 = New System.Windows.Forms.Label()
@@ -323,11 +327,9 @@ Partial Class Form1
         Me.QuitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label51 = New System.Windows.Forms.Label()
-        Me.Label52 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label54 = New System.Windows.Forms.Label()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label56 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -398,6 +400,7 @@ Partial Class Form1
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         CType(Me.Add_Edit_BindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Add_Edit_BindingNavigator.SuspendLayout()
@@ -455,6 +458,27 @@ Partial Class Form1
         Me.TabPage1.Text = "OD/AOD/Tow Pilot Info"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label54
+        '
+        Me.Label54.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label54.Location = New System.Drawing.Point(68, 320)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(278, 57)
+        Me.Label54.TabIndex = 117
+        Me.Label54.Text = "All the green-shaded boxes will be hidden in the final version."
+        Me.Label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label52
+        '
+        Me.Label52.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label52.Location = New System.Drawing.Point(68, 405)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(278, 57)
+        Me.Label52.TabIndex = 116
+        Me.Label52.Text = "Of course, the Green ""Set Test Values"" items, and their labels, will be gone in t" &
+    "he final version.  You'll find these buttons handy while doing testing."
+        Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label22
         '
         Me.Label22.AutoSize = True
@@ -469,14 +493,14 @@ Partial Class Form1
         Me.Todays_Date_DateTimePicker.Location = New System.Drawing.Point(36, 49)
         Me.Todays_Date_DateTimePicker.Name = "Todays_Date_DateTimePicker"
         Me.Todays_Date_DateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Todays_Date_DateTimePicker.TabIndex = 15
+        Me.Todays_Date_DateTimePicker.TabIndex = 5
         '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(410, 245)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(149, 23)
-        Me.Button2.TabIndex = 14
+        Me.Button2.TabIndex = 22
         Me.Button2.Text = "Go To Next Tab"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -486,7 +510,7 @@ Partial Class Form1
         Me.Set_Test_Vals_Tab1.Location = New System.Drawing.Point(410, 216)
         Me.Set_Test_Vals_Tab1.Name = "Set_Test_Vals_Tab1"
         Me.Set_Test_Vals_Tab1.Size = New System.Drawing.Size(101, 23)
-        Me.Set_Test_Vals_Tab1.TabIndex = 13
+        Me.Set_Test_Vals_Tab1.TabIndex = 20
         Me.Set_Test_Vals_Tab1.Text = "Set Test Values"
         Me.Set_Test_Vals_Tab1.UseVisualStyleBackColor = False
         '
@@ -508,7 +532,7 @@ Partial Class Form1
         Me.OD_AOD_AirportName_Combobox.Location = New System.Drawing.Point(410, 143)
         Me.OD_AOD_AirportName_Combobox.Name = "OD_AOD_AirportName_Combobox"
         Me.OD_AOD_AirportName_Combobox.Size = New System.Drawing.Size(121, 21)
-        Me.OD_AOD_AirportName_Combobox.TabIndex = 11
+        Me.OD_AOD_AirportName_Combobox.TabIndex = 12
         Me.OD_AOD_AirportName_Combobox.ValueMember = "Airport_name"
         '
         'AirportBindingSource1
@@ -549,7 +573,7 @@ Partial Class Form1
         Me.OD_AOD_AOD2_ComboBox.Location = New System.Drawing.Point(219, 191)
         Me.OD_AOD_AOD2_ComboBox.Name = "OD_AOD_AOD2_ComboBox"
         Me.OD_AOD_AOD2_ComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.OD_AOD_AOD2_ComboBox.TabIndex = 9
+        Me.OD_AOD_AOD2_ComboBox.TabIndex = 16
         Me.OD_AOD_AOD2_ComboBox.ValueMember = "Name"
         '
         'MembersBindingSource14
@@ -590,7 +614,7 @@ Partial Class Form1
         Me.OD_AOD_AOD1_ComboBox.Location = New System.Drawing.Point(219, 143)
         Me.OD_AOD_AOD1_ComboBox.Name = "OD_AOD_AOD1_ComboBox"
         Me.OD_AOD_AOD1_ComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.OD_AOD_AOD1_ComboBox.TabIndex = 7
+        Me.OD_AOD_AOD1_ComboBox.TabIndex = 10
         Me.OD_AOD_AOD1_ComboBox.ValueMember = "Name"
         '
         'MembersBindingSource11
@@ -631,7 +655,7 @@ Partial Class Form1
         Me.OD_AOD_OD2_ComboBox.Location = New System.Drawing.Point(36, 191)
         Me.OD_AOD_OD2_ComboBox.Name = "OD_AOD_OD2_ComboBox"
         Me.OD_AOD_OD2_ComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.OD_AOD_OD2_ComboBox.TabIndex = 5
+        Me.OD_AOD_OD2_ComboBox.TabIndex = 14
         Me.OD_AOD_OD2_ComboBox.ValueMember = "Name"
         '
         'MembersBindingSource7
@@ -672,7 +696,7 @@ Partial Class Form1
         Me.OD_AOD_OD3_ComboBox.Location = New System.Drawing.Point(36, 237)
         Me.OD_AOD_OD3_ComboBox.Name = "OD_AOD_OD3_ComboBox"
         Me.OD_AOD_OD3_ComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.OD_AOD_OD3_ComboBox.TabIndex = 3
+        Me.OD_AOD_OD3_ComboBox.TabIndex = 18
         Me.OD_AOD_OD3_ComboBox.ValueMember = "Name"
         '
         'MembersBindingSource9
@@ -713,7 +737,7 @@ Partial Class Form1
         Me.OD_AOD_OD1_ComboBox.Location = New System.Drawing.Point(36, 143)
         Me.OD_AOD_OD1_ComboBox.Name = "OD_AOD_OD1_ComboBox"
         Me.OD_AOD_OD1_ComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.OD_AOD_OD1_ComboBox.TabIndex = 1
+        Me.OD_AOD_OD1_ComboBox.TabIndex = 8
         Me.OD_AOD_OD1_ComboBox.ValueMember = "Name"
         '
         'MembersBindingSource5
@@ -739,6 +763,7 @@ Partial Class Form1
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.Label56)
         Me.TabPage2.Controls.Add(Me.Label53)
         Me.TabPage2.Controls.Add(Me.Label44)
         Me.TabPage2.Controls.Add(Me.Tow_Plane_TextBox)
@@ -832,6 +857,15 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Location = New System.Drawing.Point(306, 29)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(55, 13)
+        Me.Label53.TabIndex = 118
+        Me.Label53.Text = "N-Number"
         '
         'Label44
         '
@@ -1037,6 +1071,7 @@ Partial Class Form1
         Me.Actual_Rope_Break_CheckBox.Name = "Actual_Rope_Break_CheckBox"
         Me.Actual_Rope_Break_CheckBox.Size = New System.Drawing.Size(116, 17)
         Me.Actual_Rope_Break_CheckBox.TabIndex = 28
+        Me.Actual_Rope_Break_CheckBox.TabStop = False
         Me.Actual_Rope_Break_CheckBox.Text = "Actual Rope Break"
         Me.Actual_Rope_Break_CheckBox.UseVisualStyleBackColor = True
         '
@@ -1047,6 +1082,7 @@ Partial Class Form1
         Me.Simulated_Rope_Break_CheckBox.Name = "Simulated_Rope_Break_CheckBox"
         Me.Simulated_Rope_Break_CheckBox.Size = New System.Drawing.Size(132, 17)
         Me.Simulated_Rope_Break_CheckBox.TabIndex = 97
+        Me.Simulated_Rope_Break_CheckBox.TabStop = False
         Me.Simulated_Rope_Break_CheckBox.Text = "Simulated Rope Break"
         Me.Simulated_Rope_Break_CheckBox.UseVisualStyleBackColor = True
         '
@@ -1334,13 +1370,14 @@ Partial Class Form1
         Me.Aircraft_Cost_TextBox.Name = "Aircraft_Cost_TextBox"
         Me.Aircraft_Cost_TextBox.Size = New System.Drawing.Size(91, 20)
         Me.Aircraft_Cost_TextBox.TabIndex = 39
+        Me.Aircraft_Cost_TextBox.TabStop = False
         '
         'ClearFormButton
         '
         Me.ClearFormButton.Location = New System.Drawing.Point(543, 264)
         Me.ClearFormButton.Name = "ClearFormButton"
         Me.ClearFormButton.Size = New System.Drawing.Size(105, 48)
-        Me.ClearFormButton.TabIndex = 38
+        Me.ClearFormButton.TabIndex = 90
         Me.ClearFormButton.Text = "Clear Form"
         Me.ClearFormButton.UseVisualStyleBackColor = True
         '
@@ -1363,13 +1400,14 @@ Partial Class Form1
         Me.Cost_This_Flight_TextBox.Name = "Cost_This_Flight_TextBox"
         Me.Cost_This_Flight_TextBox.Size = New System.Drawing.Size(100, 20)
         Me.Cost_This_Flight_TextBox.TabIndex = 36
+        Me.Cost_This_Flight_TextBox.TabStop = False
         '
         'Save_Button
         '
         Me.Save_Button.Location = New System.Drawing.Point(432, 264)
         Me.Save_Button.Name = "Save_Button"
         Me.Save_Button.Size = New System.Drawing.Size(105, 48)
-        Me.Save_Button.TabIndex = 35
+        Me.Save_Button.TabIndex = 85
         Me.Save_Button.Text = "Save and Create Another"
         Me.Save_Button.UseVisualStyleBackColor = True
         '
@@ -1726,6 +1764,7 @@ Partial Class Form1
         Me.SetTestValsTab2.Name = "SetTestValsTab2"
         Me.SetTestValsTab2.Size = New System.Drawing.Size(117, 23)
         Me.SetTestValsTab2.TabIndex = 33
+        Me.SetTestValsTab2.TabStop = False
         Me.SetTestValsTab2.Text = "Set Test Values"
         Me.SetTestValsTab2.UseVisualStyleBackColor = False
         '
@@ -1757,6 +1796,7 @@ Partial Class Form1
         Me.Override_CheckBox.Name = "Override_CheckBox"
         Me.Override_CheckBox.Size = New System.Drawing.Size(66, 17)
         Me.Override_CheckBox.TabIndex = 46
+        Me.Override_CheckBox.TabStop = False
         Me.Override_CheckBox.Text = "Override"
         Me.Override_CheckBox.UseVisualStyleBackColor = True
         '
@@ -1777,6 +1817,7 @@ Partial Class Form1
         Me.Penalty_CheckBox.Name = "Penalty_CheckBox"
         Me.Penalty_CheckBox.Size = New System.Drawing.Size(61, 17)
         Me.Penalty_CheckBox.TabIndex = 45
+        Me.Penalty_CheckBox.TabStop = False
         Me.Penalty_CheckBox.Text = "Penalty"
         Me.Penalty_CheckBox.UseVisualStyleBackColor = True
         '
@@ -1830,7 +1871,7 @@ Partial Class Form1
         Me.TowAltitude.Location = New System.Drawing.Point(766, 133)
         Me.TowAltitude.Name = "TowAltitude"
         Me.TowAltitude.Size = New System.Drawing.Size(91, 20)
-        Me.TowAltitude.TabIndex = 24
+        Me.TowAltitude.TabIndex = 70
         '
         'Landing_DateTimePicker
         '
@@ -1839,7 +1880,7 @@ Partial Class Form1
         Me.Landing_DateTimePicker.Name = "Landing_DateTimePicker"
         Me.Landing_DateTimePicker.ShowUpDown = True
         Me.Landing_DateTimePicker.Size = New System.Drawing.Size(98, 20)
-        Me.Landing_DateTimePicker.TabIndex = 23
+        Me.Landing_DateTimePicker.TabIndex = 68
         '
         'TakeOff_DateTimePicker
         '
@@ -1848,7 +1889,7 @@ Partial Class Form1
         Me.TakeOff_DateTimePicker.Name = "TakeOff_DateTimePicker"
         Me.TakeOff_DateTimePicker.ShowUpDown = True
         Me.TakeOff_DateTimePicker.Size = New System.Drawing.Size(98, 20)
-        Me.TakeOff_DateTimePicker.TabIndex = 22
+        Me.TakeOff_DateTimePicker.TabIndex = 64
         '
         'FlightDurationTextBox
         '
@@ -1857,6 +1898,7 @@ Partial Class Form1
         Me.FlightDurationTextBox.Name = "FlightDurationTextBox"
         Me.FlightDurationTextBox.Size = New System.Drawing.Size(91, 20)
         Me.FlightDurationTextBox.TabIndex = 21
+        Me.FlightDurationTextBox.TabStop = False
         '
         'Label14
         '
@@ -1876,7 +1918,7 @@ Partial Class Form1
         Me.SecondNameComboBox.Location = New System.Drawing.Point(431, 182)
         Me.SecondNameComboBox.Name = "SecondNameComboBox"
         Me.SecondNameComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.SecondNameComboBox.TabIndex = 19
+        Me.SecondNameComboBox.TabIndex = 80
         Me.SecondNameComboBox.ValueMember = "Name"
         '
         'MembersBindingSource26
@@ -1904,7 +1946,7 @@ Partial Class Form1
         Me.PercentFirstCheck.Location = New System.Drawing.Point(304, 183)
         Me.PercentFirstCheck.Name = "PercentFirstCheck"
         Me.PercentFirstCheck.Size = New System.Drawing.Size(73, 20)
-        Me.PercentFirstCheck.TabIndex = 18
+        Me.PercentFirstCheck.TabIndex = 76
         '
         'SplitCost
         '
@@ -1912,7 +1954,7 @@ Partial Class Form1
         Me.SplitCost.Location = New System.Drawing.Point(201, 182)
         Me.SplitCost.Name = "SplitCost"
         Me.SplitCost.Size = New System.Drawing.Size(76, 17)
-        Me.SplitCost.TabIndex = 17
+        Me.SplitCost.TabIndex = 74
         Me.SplitCost.Text = "Split Cost?"
         Me.SplitCost.UseVisualStyleBackColor = True
         '
@@ -1923,7 +1965,7 @@ Partial Class Form1
         Me.TowPlane_N_Number.Location = New System.Drawing.Point(307, 45)
         Me.TowPlane_N_Number.Name = "TowPlane_N_Number"
         Me.TowPlane_N_Number.Size = New System.Drawing.Size(91, 20)
-        Me.TowPlane_N_Number.TabIndex = 16
+        Me.TowPlane_N_Number.TabIndex = 54
         '
         'AircraftBindingSource
         '
@@ -1953,7 +1995,7 @@ Partial Class Form1
         Me.GliderComboBox.Location = New System.Drawing.Point(431, 132)
         Me.GliderComboBox.Name = "GliderComboBox"
         Me.GliderComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.GliderComboBox.TabIndex = 14
+        Me.GliderComboBox.TabIndex = 62
         Me.GliderComboBox.ValueMember = "Aircraft_name"
         '
         'AircraftBindingSource3
@@ -1984,7 +2026,7 @@ Partial Class Form1
         Me.PassengerComboBox.Location = New System.Drawing.Point(304, 132)
         Me.PassengerComboBox.Name = "PassengerComboBox"
         Me.PassengerComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.PassengerComboBox.TabIndex = 12
+        Me.PassengerComboBox.TabIndex = 60
         Me.PassengerComboBox.ValueMember = "Name"
         '
         'MembersBindingSource24
@@ -2025,7 +2067,7 @@ Partial Class Form1
         Me.InstructorComboBox.Location = New System.Drawing.Point(177, 132)
         Me.InstructorComboBox.Name = "InstructorComboBox"
         Me.InstructorComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.InstructorComboBox.TabIndex = 10
+        Me.InstructorComboBox.TabIndex = 58
         Me.InstructorComboBox.ValueMember = "Name"
         '
         'MembersBindingSource22
@@ -2066,7 +2108,7 @@ Partial Class Form1
         Me.FirstNameComboBox.Location = New System.Drawing.Point(50, 182)
         Me.FirstNameComboBox.Name = "FirstNameComboBox"
         Me.FirstNameComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.FirstNameComboBox.TabIndex = 8
+        Me.FirstNameComboBox.TabIndex = 72
         Me.FirstNameComboBox.ValueMember = "Name"
         '
         'MembersBindingSource20
@@ -2107,7 +2149,7 @@ Partial Class Form1
         Me.GliderPilotComboBox.Location = New System.Drawing.Point(50, 132)
         Me.GliderPilotComboBox.Name = "GliderPilotComboBox"
         Me.GliderPilotComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.GliderPilotComboBox.TabIndex = 6
+        Me.GliderPilotComboBox.TabIndex = 56
         Me.GliderPilotComboBox.ValueMember = "Name"
         '
         'MembersBindingSource18
@@ -2148,7 +2190,7 @@ Partial Class Form1
         Me.TowPlaneComboBox.Location = New System.Drawing.Point(177, 44)
         Me.TowPlaneComboBox.Name = "TowPlaneComboBox"
         Me.TowPlaneComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.TowPlaneComboBox.TabIndex = 4
+        Me.TowPlaneComboBox.TabIndex = 52
         Me.TowPlaneComboBox.ValueMember = "Aircraft_name"
         '
         'AircraftBindingSource1
@@ -2179,7 +2221,7 @@ Partial Class Form1
         Me.TowPilotNameComboBox.Location = New System.Drawing.Point(50, 44)
         Me.TowPilotNameComboBox.Name = "TowPilotNameComboBox"
         Me.TowPilotNameComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.TowPilotNameComboBox.TabIndex = 0
+        Me.TowPilotNameComboBox.TabIndex = 50
         Me.TowPilotNameComboBox.ValueMember = "Name"
         '
         'MembersBindingSource15
@@ -2204,6 +2246,7 @@ Partial Class Form1
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Label55)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -2238,6 +2281,17 @@ Partial Class Form1
         Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'Label51
+        '
+        Me.Label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label51.Location = New System.Drawing.Point(750, 333)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(318, 106)
+        Me.Label51.TabIndex = 116
+        Me.Label51.Text = "Add: logic to ask if user wants to save name changes before allowing moving to a " &
+    "different tab."
+        Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label50
         '
         Me.Label50.AutoSize = True
@@ -2252,7 +2306,7 @@ Partial Class Form1
         Me.btnEdit_Names_Save_new.Location = New System.Drawing.Point(397, 490)
         Me.btnEdit_Names_Save_new.Name = "btnEdit_Names_Save_new"
         Me.btnEdit_Names_Save_new.Size = New System.Drawing.Size(75, 23)
-        Me.btnEdit_Names_Save_new.TabIndex = 38
+        Me.btnEdit_Names_Save_new.TabIndex = 190
         Me.btnEdit_Names_Save_new.Text = "Save"
         Me.btnEdit_Names_Save_new.UseVisualStyleBackColor = True
         '
@@ -2270,7 +2324,7 @@ Partial Class Form1
         Me.Edit_Names_LogOUT_Button.Location = New System.Drawing.Point(478, 490)
         Me.Edit_Names_LogOUT_Button.Name = "Edit_Names_LogOUT_Button"
         Me.Edit_Names_LogOUT_Button.Size = New System.Drawing.Size(75, 23)
-        Me.Edit_Names_LogOUT_Button.TabIndex = 36
+        Me.Edit_Names_LogOUT_Button.TabIndex = 200
         Me.Edit_Names_LogOUT_Button.Text = "Sign OUT"
         Me.Edit_Names_LogOUT_Button.UseVisualStyleBackColor = True
         '
@@ -2291,7 +2345,6 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
         Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
-        Me.Add_Edit_BindingNavigator.TabStop = True
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
         '
         'ToolStripButton1
@@ -2414,6 +2467,7 @@ Partial Class Form1
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(171, 49)
         Me.TextBox4.TabIndex = 20
+        Me.TextBox4.TabStop = False
         Me.TextBox4.Text = "Please BE CAREFUL!! Do NOT edit this member information unless absolutely necessa" &
     "ry."
         Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -2450,7 +2504,7 @@ Partial Class Form1
         Me.Edit_Names_Cancel_Login_Button.Location = New System.Drawing.Point(316, 490)
         Me.Edit_Names_Cancel_Login_Button.Name = "Edit_Names_Cancel_Login_Button"
         Me.Edit_Names_Cancel_Login_Button.Size = New System.Drawing.Size(75, 23)
-        Me.Edit_Names_Cancel_Login_Button.TabIndex = 4
+        Me.Edit_Names_Cancel_Login_Button.TabIndex = 185
         Me.Edit_Names_Cancel_Login_Button.Text = "Cancel"
         Me.Edit_Names_Cancel_Login_Button.UseVisualStyleBackColor = True
         '
@@ -2459,7 +2513,7 @@ Partial Class Form1
         Me.Edit_Names_Login_Button.Location = New System.Drawing.Point(235, 490)
         Me.Edit_Names_Login_Button.Name = "Edit_Names_Login_Button"
         Me.Edit_Names_Login_Button.Size = New System.Drawing.Size(75, 23)
-        Me.Edit_Names_Login_Button.TabIndex = 3
+        Me.Edit_Names_Login_Button.TabIndex = 175
         Me.Edit_Names_Login_Button.Text = "Login"
         Me.Edit_Names_Login_Button.UseVisualStyleBackColor = True
         '
@@ -2470,14 +2524,14 @@ Partial Class Form1
         Me.Password_Login_TextBox.Name = "Password_Login_TextBox"
         Me.Password_Login_TextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Password_Login_TextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Password_Login_TextBox.TabIndex = 2
+        Me.Password_Login_TextBox.TabIndex = 150
         '
         'UserName_Login_TextBox
         '
         Me.UserName_Login_TextBox.Location = New System.Drawing.Point(23, 492)
         Me.UserName_Login_TextBox.Name = "UserName_Login_TextBox"
         Me.UserName_Login_TextBox.Size = New System.Drawing.Size(100, 20)
-        Me.UserName_Login_TextBox.TabIndex = 1
+        Me.UserName_Login_TextBox.TabIndex = 100
         '
         'MembersDataGridView
         '
@@ -2755,7 +2809,7 @@ Partial Class Form1
         '
         Me.QuitToolStripMenuItem1.Name = "QuitToolStripMenuItem1"
         Me.QuitToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
-        Me.QuitToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.QuitToolStripMenuItem1.Size = New System.Drawing.Size(140, 22)
         Me.QuitToolStripMenuItem1.Text = "Quit"
         '
         'HelpToolStripMenuItem
@@ -2765,52 +2819,31 @@ Partial Class Form1
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'Label51
-        '
-        Me.Label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label51.Location = New System.Drawing.Point(753, 333)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(318, 106)
-        Me.Label51.TabIndex = 116
-        Me.Label51.Text = "Add: logic to ask if user wants to save name changes before allowing moving to a " &
-    "different tab."
-        Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label52
-        '
-        Me.Label52.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label52.Location = New System.Drawing.Point(68, 405)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(278, 57)
-        Me.Label52.TabIndex = 116
-        Me.Label52.Text = "Of course, the Green ""Set Test Values"" items will be gone in the final version.  " &
-    "You'll find these buttons handy while doing testing."
-        Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(306, 29)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(55, 13)
-        Me.Label53.TabIndex = 118
-        Me.Label53.Text = "N-Number"
-        '
-        'Label54
-        '
-        Me.Label54.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label54.Location = New System.Drawing.Point(68, 320)
-        Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(278, 57)
-        Me.Label54.TabIndex = 117
-        Me.Label54.Text = "All the green-shaded boxes will be hidden in the final version."
-        Me.Label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(213, 22)
         Me.ToolStripMenuItem1.Text = "About MASA Flight Sheets"
+        '
+        'Label55
+        '
+        Me.Label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label55.Location = New System.Drawing.Point(212, 135)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(318, 106)
+        Me.Label55.TabIndex = 117
+        Me.Label55.Text = "Coming soon...."
+        Me.Label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label56
+        '
+        Me.Label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label56.Location = New System.Drawing.Point(21, 339)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(225, 28)
+        Me.Label56.TabIndex = 119
+        Me.Label56.Text = "Add better way to edit below data grid."
+        Me.Label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form1
         '
@@ -2897,6 +2930,7 @@ Partial Class Form1
         CType(Me.Enter_Tow_Pilot2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Enter_Tow_Pilot1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
         CType(Me.Add_Edit_BindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3224,4 +3258,6 @@ Partial Class Form1
     Friend WithEvents Label53 As Label
     Friend WithEvents Label54 As Label
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents Label55 As Label
+    Friend WithEvents Label56 As Label
 End Class

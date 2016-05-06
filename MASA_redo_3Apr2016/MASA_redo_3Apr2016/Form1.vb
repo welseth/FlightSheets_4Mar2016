@@ -330,6 +330,8 @@ Public Class Form1
         Penalty_CheckBox.Enabled = False   'we don't ever want user to actually change this button. We do it programmatically.
         Penalty_CheckBox.Checked = False
 
+
+
     End Sub
 
     Private Sub Button1_Click_3(sender As Object, e As EventArgs) Handles ClearFormButton.Click
@@ -875,6 +877,10 @@ Public Class Form1
 
     Private Sub QuitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles QuitToolStripMenuItem1.Click
         Me.Close()
+    End Sub
+
+    Private Sub Label52_Click(sender As Object, e As EventArgs) Handles Label52.Click
+
     End Sub
 
 
