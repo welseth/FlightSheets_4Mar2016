@@ -7,7 +7,8 @@ Imports System.Data
 Public Class Form1
 
 
-    Dim New_Member_Name_DGVhasChanged As Boolean   'holds state when the new member name data grid has been edited in any way
+    Dim New_Member_Name_DGVhasChanged As Boolean  'holds state when the new member name data grid has been edited in any way
+
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -101,7 +102,7 @@ Public Class Form1
         ActualRopeBreak_Label.Visible = False
         MinAltTowWarningText.Visible = False
         MinAltitudeWarning.Visible = False
-        TabControl1.SelectedIndex = 3 'move to the member editing tab, then set datagrid enabled to false (first time only)
+        TabControl1.SelectedIndex = 0 'move to the member editing tab, then set datagrid enabled to false (first time only)
         MembersDataGridView.Enabled = False   'disable the "edit members list" datagrid so they can't change things without the pwd
         MembersDataGridView.ReadOnly = True
         FlightsDataGridView.Enabled = False
@@ -109,6 +110,7 @@ Public Class Form1
         btnEdit_Names_Save_new.Enabled = False   'Nothing has changed in the datagridview yet, so disable the "save" button
 
         TabControl1.SelectedIndex = 0
+        New_Member_Name_DGVhasChanged = False   'initialize "nothing has been changed yet"
 
         'below code mostly to pretty-up the GUI once it's "ready for outside reviewers"
         Set_Test_Vals_Tab1.Visible = True
@@ -464,16 +466,28 @@ Public Class Form1
         Debug.Print("Date:  " & Todays_Date_DateTimePicker.Value)
     End Sub
     ' debug item
-    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+    'Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.Selecting
         ' debug item: this just does a quick debug.print with the index of the current selected tab
         Dim TabIndexValue As Integer
         TabIndexValue = TabControl1.SelectedIndex
         Debug.WriteLine("Tab Just Changed TabIndex:  " & TabIndexValue)
+        Debug.WriteLine("New_Member_Name_DVGValueHas Changed:  " & New_Member_Name_DGVhasChanged)
+        If (TabIndexValue <> 3) And (New_Member_Name_DGVhasChanged = True) Then
+            If MsgBox("Do you want to save your changes first?", vbYesNo) = vbYes Then
+                TabControl1.SelectedIndex = 3   'set the tab back to the original Tab 3 so user can save their work
+                Exit Sub   'stop the "clearing and exiting" stuff and let the user save the changes
+
+            End If
+        End If
         'Log out any member name editing ANY TIME the tab is changed
         Debug.WriteLine("You now signed-out.")
         UserName_Login_TextBox.Clear()
         Password_Login_TextBox.Clear()
         UserName_Login_TextBox.Focus()
+        btnEdit_Names_Save_new.Enabled = False   'we completed saving everything, so disable the "save" button
+        New_Member_Name_DGVhasChanged = False  'everything has been saved so re-set the changed flag to "nothing has changed"
+        Edit_Names_LogOUT_Button.Enabled = False
         MembersDataGridView.Enabled = False
     End Sub
 
@@ -791,7 +805,7 @@ Public Class Form1
             End If
         End If
         Debug.Print("Starting Logout stuff.")
-        '   NOW need to "rewrite" the members table so that the changes are removed 
+        '   NOW need to "rewrite" the members datagrid so that the changes are removed 
         Debug.Print("Starting to reload the datatable contents with unedited items.")
         Add_Edit_Pilot_Names_MembersBindingSource.DataSource = MembersTableAdapter23.GetData
         Add_Edit_Pilot_Names_MembersBindingSource.ResetBindings(False)
@@ -803,6 +817,7 @@ Public Class Form1
         MembersDataGridView.ReadOnly = True
         btnEdit_Names_Save_new.Enabled = False  'nothing to save, we just cleared everything, so disable the Save button
         Debug.WriteLine("You now signed-out.")
+        New_Member_Name_DGVhasChanged = False  're-set the changed flag to "nothing has changed"
     End Sub
 
 
@@ -883,7 +898,8 @@ Public Class Form1
             MessageBox.Show("Update failed  " & vbCrLf & ex.Message)
         End Try
         btnEdit_Names_Save_new.Enabled = False   'we completed saving everything, so disable the "save" button
-
+        New_Member_Name_DGVhasChanged = False  'everything has been saved so re-set the changed flag to "nothing has changed"
+        Edit_Names_Login_Button.Focus()  'set focus to login button 
         Debug.WriteLine("Now FINISHED the DB .add and the DB .update")
 
     End Sub
