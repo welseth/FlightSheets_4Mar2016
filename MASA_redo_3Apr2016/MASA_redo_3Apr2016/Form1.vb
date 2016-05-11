@@ -791,13 +791,11 @@ Public Class Form1
             End If
         End If
         Debug.Print("Starting Logout stuff.")
-        '   NOW need to "rewrite" the table so that the changes are removed <<<<<<<<<<<<<<
-        '       bindingSource1.DataSource = testTableAdapter.GetData();
-        '       bindingSource1.ResetBindings(False);
+        '   NOW need to "rewrite" the members table so that the changes are removed 
         Debug.Print("Starting to reload the datatable contents with unedited items.")
         Add_Edit_Pilot_Names_MembersBindingSource.DataSource = MembersTableAdapter23.GetData
         Add_Edit_Pilot_Names_MembersBindingSource.ResetBindings(False)
-        Debug.Print("Done reloading.")
+        Debug.Print("Done reloading, back to original data content.")
         UserName_Login_TextBox.Clear()
         Password_Login_TextBox.Clear()
         UserName_Login_TextBox.Focus()
