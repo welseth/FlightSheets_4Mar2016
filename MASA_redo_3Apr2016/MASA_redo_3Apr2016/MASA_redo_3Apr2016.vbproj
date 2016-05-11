@@ -63,10 +63,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>A3E72DB4B4418B7F8F764AE2EAC1FF20EC9A6FEA</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>59EC8924C71CDF7CB027D6DFE7E3AC4AB806384E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MASA_redo_3Apr2016_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MASA_redo_3Apr2016_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -512,6 +512,7 @@
     <None Include="MASA_all_1Apr2016DataSet.xss">
       <DependentUpon>MASA_all_1Apr2016DataSet.xsd</DependentUpon>
     </None>
+    <None Include="MASA_redo_3Apr2016_1_TemporaryKey.pfx" />
     <None Include="MASA_redo_3Apr2016_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

@@ -785,13 +785,26 @@ Public Class Form1
     End Sub
 
     Private Sub Edit_Names_LogOUT_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_LogOUT_Button.Click
-        Debug.WriteLine("You now signed-out.")
+        If New_Member_Name_DGVhasChanged = True Then
+            If MsgBox("Do you want to save your changes first?", vbYesNo) = vbYes Then
+                Exit Sub   'stop the "clearing and exiting" stuff and let the user save the changes
+            End If
+        End If
+        Debug.Print("Starting Logout stuff.")
+        '   NOW need to "rewrite" the table so that the changes are removed <<<<<<<<<<<<<<
+        '       bindingSource1.DataSource = testTableAdapter.GetData();
+        '       bindingSource1.ResetBindings(False);
+        Debug.Print("Starting to reload the datatable contents with unedited items.")
+        Add_Edit_Pilot_Names_MembersBindingSource.DataSource = MembersTableAdapter23.GetData
+        Add_Edit_Pilot_Names_MembersBindingSource.ResetBindings(False)
+        Debug.Print("Done reloading.")
         UserName_Login_TextBox.Clear()
         Password_Login_TextBox.Clear()
         UserName_Login_TextBox.Focus()
         MembersDataGridView.Enabled = False
         MembersDataGridView.ReadOnly = True
         btnEdit_Names_Save_new.Enabled = False  'nothing to save, we just cleared everything, so disable the Save button
+        Debug.WriteLine("You now signed-out.")
     End Sub
 
 
