@@ -242,6 +242,7 @@ Partial Class Form1
         Me.MembersBindingSource16 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Enter_Tow_Pilot1 = New MASA_redo_3Apr2016.Enter_Tow_Pilot1()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Label51 = New System.Windows.Forms.Label()
@@ -330,7 +331,7 @@ Partial Class Form1
         Me.QuitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.Label57 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1669,7 +1670,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_All_FlightsBindingNavigator.Name = "MASA_All_FlightsBindingNavigator"
         Me.MASA_All_FlightsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(278, 25)
+        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(277, 25)
         Me.MASA_All_FlightsBindingNavigator.TabIndex = 34
         Me.MASA_All_FlightsBindingNavigator.TabStop = True
         Me.MASA_All_FlightsBindingNavigator.Text = "FlightsBindingNavigator1"
@@ -1687,7 +1688,7 @@ Partial Class Form1
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -2267,6 +2268,14 @@ Partial Class Form1
         Me.TabPage3.Text = "Print Invoices"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Location = New System.Drawing.Point(359, 35)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote
+        Me.ReportViewer1.Size = New System.Drawing.Size(396, 246)
+        Me.ReportViewer1.TabIndex = 118
+        '
         'Label55
         '
         Me.Label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -2279,6 +2288,7 @@ Partial Class Form1
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label57)
         Me.TabPage4.Controls.Add(Me.Label51)
         Me.TabPage4.Controls.Add(Me.Label50)
         Me.TabPage4.Controls.Add(Me.btnEdit_Names_Save_new)
@@ -2310,8 +2320,7 @@ Partial Class Form1
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(318, 106)
         Me.Label51.TabIndex = 116
-        Me.Label51.Text = "Add: logic to ask if user wants to save name changes before allowing moving to a " &
-    "different tab."
+        Me.Label51.Text = "Fix: Sign OUT button doesn't turn ON"
         Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label50
@@ -2365,7 +2374,7 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(278, 25)
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(277, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
         '
@@ -2391,7 +2400,7 @@ Partial Class Form1
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(36, 22)
         Me.ToolStripLabel1.Text = "of {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -2824,36 +2833,38 @@ Partial Class Form1
         '
         Me.QuitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuitToolStripMenuItem1})
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
-        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
         Me.QuitToolStripMenuItem.Text = "File"
         '
         'QuitToolStripMenuItem1
         '
         Me.QuitToolStripMenuItem1.Name = "QuitToolStripMenuItem1"
         Me.QuitToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
-        Me.QuitToolStripMenuItem1.Size = New System.Drawing.Size(140, 22)
+        Me.QuitToolStripMenuItem1.Size = New System.Drawing.Size(134, 22)
         Me.QuitToolStripMenuItem1.Text = "Quit"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(213, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(199, 22)
         Me.ToolStripMenuItem1.Text = "About MASA Flight Sheets"
         '
-        'ReportViewer1
+        'Label57
         '
-        Me.ReportViewer1.Location = New System.Drawing.Point(359, 35)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Remote
-        Me.ReportViewer1.Size = New System.Drawing.Size(396, 246)
-        Me.ReportViewer1.TabIndex = 118
+        Me.Label57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label57.Location = New System.Drawing.Point(750, 200)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(318, 106)
+        Me.Label57.TabIndex = 201
+        Me.Label57.Text = "Fix: Cancel button doesn't log you OUT"
+        Me.Label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form1
         '
@@ -3271,4 +3282,5 @@ Partial Class Form1
     Friend WithEvents Label55 As Label
     Friend WithEvents Label56 As Label
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents Label57 As Label
 End Class

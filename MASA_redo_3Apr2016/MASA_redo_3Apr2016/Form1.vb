@@ -3,12 +3,9 @@ Imports System
 Imports System.Data
 
 
-
 Public Class Form1
 
-
     Dim New_Member_Name_DGVhasChanged As Boolean  'holds state when the new member name data grid has been edited in any way
-
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -169,32 +166,9 @@ Public Class Form1
         'End If
 
         Me.ReportViewer1.RefreshReport()
-        Me.ReportViewer1.RefreshReport
+        'Me.ReportViewer1.RefreshReport   'if everything keeps working, then delete this line
     End Sub
 
-    'Private Sub Save_Name_Edit_ToolStripButton_Click(sender As Object, e As EventArgs) Handles Save_Name_Edit_ToolStripButton.Click
-    '    'This saves the user-edited list of member names.  They can add/delete/edit as needed.
-
-    '    Dim newMemberRow As MASA_all_1Apr2016DataSet.MembersRow
-    '    newMemberRow = Me.MASA_all_1Apr2016DataSet.Members.NewMembersRow()
-    '    'load the NEW data into each and every field in the new record
-    '    newMemberRow.Name = MembersDataGridView.Name
-    '    newMemberRow.Instructor = MembersDataGridView.
-
-
-    '    'ok, close everything and write to the DB file.
-    '    Me.Validate()
-    '    Me.Add_Edit_Pilot_Names_MembersBindingSource.EndEdit()
-
-    '    'save the new row to the DB
-    '    Try
-
-    '        Me.MASA_All_Flights_TableAdapterManager.UpdateAll(Me.MASA_all_1Apr2016DataSet)
-    '        'Me.pilot_na
-    '    Catch ex As Exception
-    '        MessageBox.Show("Update failed  " & vbCrLf & ex.Message)
-    '    End Try
-    'End Sub
 
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Save_Button.Click
         'Save the data that the user entered into the form for each flight.
@@ -466,9 +440,7 @@ Public Class Form1
         Debug.Print("Date:  " & Todays_Date_DateTimePicker.Value)
     End Sub
     ' debug item
-    'Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
     Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.Selecting
-        ' debug item: this just does a quick debug.print with the index of the current selected tab
         Dim TabIndexValue As Integer
         TabIndexValue = TabControl1.SelectedIndex
         Debug.WriteLine("Tab Just Changed TabIndex:  " & TabIndexValue)
@@ -544,7 +516,6 @@ Public Class Form1
 
 
         If (temp_Time > two_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 2) Then  '2-seater    '****This change is to hide TextBox
-            'If (temp_Time > two_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(AircraftBindingSource2.Current("Seats")) = 2) Then  '2-seater
             'Yes, penalty for 2-seater
             Penalty_CheckBox.Checked = True
             Override_CheckBox.Enabled = True
@@ -553,7 +524,6 @@ Public Class Form1
             Debug.Print("2-seat:  TOO long. Temp_Penalty: " & temp_Penalty)
         End If
         If (temp_Time > single_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(Seats_TextBox.Text) = 1) Then  '1-seater '****This change is to hide TextBox
-            'If (temp_Time > single_seat_minutes) And (Glider_TextBox.Text = "True") And (Val(AircraftBindingSource2.Current("Seats")) = 1) Then  '1-seater
             'Yes, penalty for 1-seater
             Penalty_CheckBox.Checked = True
             Override_CheckBox.Enabled = True
@@ -703,9 +673,6 @@ Public Class Form1
                 Debug.WriteLine(strPassword)
                 'using string.compareOrdinal as this function includes case sensitivity
                 If String.CompareOrdinal(strPassword, Password_Login_TextBox.Text) = 0 Then
-                    'txtBxGoodPassword.Visible = True   'success, so flash the "good pwd" box once 
-                    'System.Threading.Thread.Sleep(1100)
-                    'txtBxGoodPassword.Visible = False
                     'clear out both Username and Password entry, make datagrid enabled 
                     Password_Login_TextBox.Text = ""
                     UserName_Login_TextBox.Text = ""
@@ -732,60 +699,6 @@ Public Class Form1
             Debug.WriteLine("Connection Closed<<<")
         End Try
 
-        'Now do the string compare and decide if the password matches
-        'If String.Compare(str1, str2) = 0 And String.Compare(str3, str4) = 0 Then
-        '    MessageBox.Show("str1 = str2 And str3 = str4")
-        'Else
-        '    MessageBox.Show("Else")
-        'End If
-        'Dim tmpPwdBoxColor As Color = Password_Login_TextBox.BackColor  'save whatever color the box was originally
-        'Dim tmpUserBoxColor As Color = UserName_Login_TextBox.BackColor
-
-
-        'This seems to be agood query:
-        '        Dim queryString As String =
-        '        "SELECT * from UserNames where UCase(trim(UserName)) = '" & UCase(Trim(txtUserInputFmTextBox)) & "'"
-        '
-        '  LOOK Here:
-        '  http://www.java2s.com/Code/VB/Database-ADO.net/CatalogDatabase-ADO.net.htm
-        ' this one might work??  :
-        '  http://www.java2s.com/Code/VB/Database-ADO.net/UseSqlDataReadertoreadresultsetfromselectcommand.htm
-        '
-        '  Some connection strings...
-        '  http://www.connectionstrings.com/sql-server/
-        '
-        ' Here's how to create connection strings in Visual Studio:
-        '  http://www.itworld.com/article/3007292/development/how-to-create-sql-server-connection-strings-in-visual-studio.html
-        '  Below connection string is the ACTUAL connection string for MASA's project:
-        '  Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MASA_all_1Apr2016.mdf;Integrated Security=True;Connect Timeout=30
-        '
-        'Dim tempRecordSet As IDataRecord
-        'Dim Password As String
-
-        ''open the AdminUsers table
-        ''(recordset object variables allow access to records and fields in tables and queries.
-        ''This modified version opens a recordset via a SQL statement to pull the record (if any) where the field matches the txtUser 
-        ''field in the form.
-        ''Since the UserName field is a "must be unique" field, there should only be one record if any matches are found.
-        'Set tempRecordSet = CurrentDb.OpenRecordset("select * from AdminUsers where UCase(trim(UserID)) = '" & UCase(Trim(txtUser)) & "'")
-
-        ''retrieve the Password field from the AdminUsers table if the UserID matches the txtUser Field
-        'If tempRecordSet.RecordCount <> 0 Then
-        '    Password = UCase(Trim(tempRecordSet("Password")))
-        'End If
-
-        ''close the recordset and release the recordset object variable
-        'tempRecordSet.Close
-        'Set tempRecordSet = Nothing
-
-        ''check the password
-        'If Password <> UCase(Trim(txtPassword)) Then
-        '    MsgBox "Incorrect password", vbExclamation
-        'Else
-        '    'passwords match, allow the user to the maintenance switchboard
-        '    MsgBox "Congratulations! Right Password!!!", vbExclamation
-        'End If
-        'txtPassword = Empty
     End Sub
 
     Private Sub Edit_Names_Cancel_Login_Button_Click(sender As Object, e As EventArgs) Handles Edit_Names_Cancel_Login_Button.Click
@@ -907,69 +820,6 @@ Public Class Form1
     Private Sub QuitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles QuitToolStripMenuItem1.Click
         Me.Close()
     End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    '    PASSWORD Code VVVV   PASSWORD Code VVVV   PASSWORD Code VVVV   PASSWORD Code VVVV
-    'possible username/password code.
-    'Private Sub cmdMaintenanceSwitchboard_Click()
-
-    '    'check for null password
-    '    If IsNull(Trim(txtUser)) Then
-    '        MsgBox "User Name required.", vbExclamation
-    '    txtUser.SetFocus
-    '        Exit Sub
-    '    End If
-
-    '    'check for null password
-    '    If IsNull(Trim(txtPassword)) Then
-    '        MsgBox "Password required.", vbExclamation
-    '    txtPassword.SetFocus
-    '        Exit Sub
-    '    End If
-
-    '    'To use the following code, open the code window for a form.
-    '    'Under the Tools/References menu, enable the "Microsoft DAO 3.6 Object Library"
-    '    'and some may have to disable the "Microsoft ActiveX Data Objects Library"
-
-    '    'declare variables (tempRecordSet becomes an object variable)
-    '    Dim tempRecordSet As Recordset, Password As String
-
-    ''open the AdminUsers table
-    ''(recordset object variables allow access to records and fields in tables and queries.
-    ''This modified version opens a recordset via a SQL statement to pull the record (if any) where the field matches the txtUser field in the form.
-    ''Since the field is a primary key, there should only be one record if any matches are found.
-    'Set tempRecordSet = CurrentDb.OpenRecordset("select * from AdminUsers where UCase(trim(UserID)) = '" & UCase(Trim(txtUser)) & "'")
-
-    ''retrieve the Password field from the AdminUsers table if the UserID matches the txtUser Field
-    'If tempRecordSet.RecordCount <> 0 Then
-    '        Password = UCase(Trim(tempRecordSet("Password")))
-    '    End If
-
-    '    'close the recordset and release the recordset object variable
-    '    tempRecordSet.Close
-    'Set tempRecordSet = Nothing
-
-    ''check the password
-    'If Password <> UCase(Trim(txtPassword)) Then
-    '        MsgBox "Incorrect password", vbExclamation
-    'Else
-    '        'passwords match, allow the user to the maintenance switchboard
-    '        MsgBox "Congratulations! Right Password!!!", vbExclamation
-    'End If
-    '    txtPassword = Empty
-    'End Sub
 
 
 End Class
