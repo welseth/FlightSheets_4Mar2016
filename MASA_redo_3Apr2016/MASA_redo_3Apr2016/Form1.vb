@@ -200,7 +200,7 @@ Public Class Form1
             If (OD_AOD_OD2_ComboBox.SelectedIndex > 0) Then newFlightRow.OD2 = OD_AOD_OD2_ComboBox.SelectedIndex
             If (OD_AOD_OD3_ComboBox.SelectedIndex > 0) Then newFlightRow.OD3 = OD_AOD_OD3_ComboBox.SelectedIndex
         Else
-            MessageBox.Show("Must Select The OD For These Flight Operations")
+            MessageBox.Show("Must Select The OD For These Flight Operations, on *previous* tab")
             Exit Sub
         End If
 
@@ -821,5 +821,23 @@ Public Class Form1
         Me.Close()
     End Sub
 
+    Private Sub RectangleShape2_Click(sender As Object, e As EventArgs) Handles RectangleShape2.Click, RectangleShape3.Click
 
+    End Sub
+
+    Private Sub RectangleShape1_Click(sender As Object, e As EventArgs) Handles RectangleShape1.Click
+
+    End Sub
+
+    Private Sub Label57_Click(sender As Object, e As EventArgs) Handles Label57.Click
+
+    End Sub
+
+    Private Sub PenaltyCharge_Enter(sender As Object, e As EventArgs) Handles PenaltyCharge.Enter
+
+    End Sub
+
+    Private Sub MembersDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles MembersDataGridView.CellContentClick
+
+    End Sub
 End Class

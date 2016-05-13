@@ -245,6 +245,7 @@ Partial Class Form1
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label57 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.btnEdit_Names_Save_new = New System.Windows.Forms.Button()
@@ -331,7 +332,16 @@ Partial Class Form1
         Me.QuitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label57 = New System.Windows.Forms.Label()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape3 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.ShapeContainer3 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label60 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.AirportBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -418,6 +428,7 @@ Partial Class Form1
         CType(Me.EnterTowPilot1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Add_Edit_Pilot_Names1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -429,15 +440,16 @@ Partial Class Form1
         Me.TabControl1.Location = New System.Drawing.Point(12, 30)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1448, 599)
+        Me.TabControl1.Size = New System.Drawing.Size(1448, 602)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label60)
+        Me.TabPage1.Controls.Add(Me.Label22)
+        Me.TabPage1.Controls.Add(Me.GroupBox2)
         Me.TabPage1.Controls.Add(Me.Label54)
         Me.TabPage1.Controls.Add(Me.Label52)
-        Me.TabPage1.Controls.Add(Me.Label22)
-        Me.TabPage1.Controls.Add(Me.Todays_Date_DateTimePicker)
         Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.Set_Test_Vals_Tab1)
         Me.TabPage1.Controls.Add(Me.Label6)
@@ -452,10 +464,11 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.OD_AOD_OD3_ComboBox)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.OD_AOD_OD1_ComboBox)
+        Me.TabPage1.Controls.Add(Me.ShapeContainer1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1440, 573)
+        Me.TabPage1.Size = New System.Drawing.Size(1440, 576)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "OD/AOD/Tow Pilot Info"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -484,7 +497,8 @@ Partial Class Form1
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(33, 33)
+        Me.Label22.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Label22.Location = New System.Drawing.Point(106, 25)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(68, 13)
         Me.Label22.TabIndex = 16
@@ -492,7 +506,8 @@ Partial Class Form1
         '
         'Todays_Date_DateTimePicker
         '
-        Me.Todays_Date_DateTimePicker.Location = New System.Drawing.Point(36, 49)
+        Me.Todays_Date_DateTimePicker.CalendarMonthBackground = System.Drawing.Color.Transparent
+        Me.Todays_Date_DateTimePicker.Location = New System.Drawing.Point(6, 19)
         Me.Todays_Date_DateTimePicker.Name = "Todays_Date_DateTimePicker"
         Me.Todays_Date_DateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Todays_Date_DateTimePicker.TabIndex = 5
@@ -852,10 +867,11 @@ Partial Class Form1
         Me.TabPage2.Controls.Add(Me.TowPlaneComboBox)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.TowPilotNameComboBox)
+        Me.TabPage2.Controls.Add(Me.ShapeContainer2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1440, 573)
+        Me.TabPage2.Size = New System.Drawing.Size(1440, 576)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Enter New Flights"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -863,7 +879,7 @@ Partial Class Form1
         'Label56
         '
         Me.Label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label56.Location = New System.Drawing.Point(21, 339)
+        Me.Label56.Location = New System.Drawing.Point(21, 336)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(225, 28)
         Me.Label56.TabIndex = 119
@@ -1068,11 +1084,13 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.GroupBox1.Controls.Add(Me.Label59)
         Me.GroupBox1.Controls.Add(Me.Actual_Rope_Break_CheckBox)
         Me.GroupBox1.Controls.Add(Me.Simulated_Rope_Break_CheckBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(863, 78)
+        Me.GroupBox1.Location = New System.Drawing.Point(866, 79)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(155, 76)
+        Me.GroupBox1.Size = New System.Drawing.Size(155, 75)
         Me.GroupBox1.TabIndex = 99
         Me.GroupBox1.TabStop = False
         '
@@ -1670,7 +1688,7 @@ Partial Class Form1
         Me.MASA_All_FlightsBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MASA_All_FlightsBindingNavigator.Name = "MASA_All_FlightsBindingNavigator"
         Me.MASA_All_FlightsBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.MASA_All_FlightsBindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.MASA_All_FlightsBindingNavigator.TabIndex = 34
         Me.MASA_All_FlightsBindingNavigator.TabStop = True
         Me.MASA_All_FlightsBindingNavigator.Text = "FlightsBindingNavigator1"
@@ -1688,7 +1706,7 @@ Partial Class Form1
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(36, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -1772,7 +1790,7 @@ Partial Class Form1
         'SetTestValsTab2
         '
         Me.SetTestValsTab2.BackColor = System.Drawing.Color.GreenYellow
-        Me.SetTestValsTab2.Location = New System.Drawing.Point(309, 277)
+        Me.SetTestValsTab2.Location = New System.Drawing.Point(299, 277)
         Me.SetTestValsTab2.Name = "SetTestValsTab2"
         Me.SetTestValsTab2.Size = New System.Drawing.Size(117, 23)
         Me.SetTestValsTab2.TabIndex = 33
@@ -1783,6 +1801,7 @@ Partial Class Form1
         'Label20
         '
         Me.Label20.AutoSize = True
+        Me.Label20.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Label20.Location = New System.Drawing.Point(512, 28)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(162, 13)
@@ -1791,20 +1810,21 @@ Partial Class Form1
         '
         'PenaltyCharge
         '
+        Me.PenaltyCharge.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.PenaltyCharge.Controls.Add(Me.Label58)
         Me.PenaltyCharge.Controls.Add(Me.Override_CheckBox)
         Me.PenaltyCharge.Controls.Add(Me.Penalty_Label)
         Me.PenaltyCharge.Controls.Add(Me.Penalty_CheckBox)
-        Me.PenaltyCharge.Location = New System.Drawing.Point(768, 167)
+        Me.PenaltyCharge.Location = New System.Drawing.Point(768, 165)
         Me.PenaltyCharge.Name = "PenaltyCharge"
         Me.PenaltyCharge.Size = New System.Drawing.Size(224, 100)
         Me.PenaltyCharge.TabIndex = 31
         Me.PenaltyCharge.TabStop = False
-        Me.PenaltyCharge.Text = "Penalty Charge For Too Long Flight?"
         '
         'Override_CheckBox
         '
         Me.Override_CheckBox.AutoSize = True
-        Me.Override_CheckBox.Location = New System.Drawing.Point(12, 56)
+        Me.Override_CheckBox.Location = New System.Drawing.Point(12, 59)
         Me.Override_CheckBox.Name = "Override_CheckBox"
         Me.Override_CheckBox.Size = New System.Drawing.Size(66, 17)
         Me.Override_CheckBox.TabIndex = 46
@@ -1815,7 +1835,7 @@ Partial Class Form1
         'Penalty_Label
         '
         Me.Penalty_Label.BackColor = System.Drawing.Color.LemonChiffon
-        Me.Penalty_Label.Location = New System.Drawing.Point(88, 28)
+        Me.Penalty_Label.Location = New System.Drawing.Point(88, 31)
         Me.Penalty_Label.Name = "Penalty_Label"
         Me.Penalty_Label.Size = New System.Drawing.Size(132, 48)
         Me.Penalty_Label.TabIndex = 33
@@ -1825,7 +1845,7 @@ Partial Class Form1
         'Penalty_CheckBox
         '
         Me.Penalty_CheckBox.AutoSize = True
-        Me.Penalty_CheckBox.Location = New System.Drawing.Point(12, 28)
+        Me.Penalty_CheckBox.Location = New System.Drawing.Point(12, 31)
         Me.Penalty_CheckBox.Name = "Penalty_CheckBox"
         Me.Penalty_CheckBox.Size = New System.Drawing.Size(61, 17)
         Me.Penalty_CheckBox.TabIndex = 45
@@ -2263,7 +2283,7 @@ Partial Class Form1
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1440, 573)
+        Me.TabPage3.Size = New System.Drawing.Size(1440, 576)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Print Invoices"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -2305,18 +2325,29 @@ Partial Class Form1
         Me.TabPage4.Controls.Add(Me.Password_Login_TextBox)
         Me.TabPage4.Controls.Add(Me.UserName_Login_TextBox)
         Me.TabPage4.Controls.Add(Me.MembersDataGridView)
+        Me.TabPage4.Controls.Add(Me.ShapeContainer3)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1440, 573)
+        Me.TabPage4.Size = New System.Drawing.Size(1440, 576)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Add/Edit Pilot Names"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'Label57
+        '
+        Me.Label57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label57.Location = New System.Drawing.Point(794, 200)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(318, 106)
+        Me.Label57.TabIndex = 201
+        Me.Label57.Text = "Fix: Cancel button doesn't log you OUT"
+        Me.Label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label51
         '
         Me.Label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label51.Location = New System.Drawing.Point(750, 333)
+        Me.Label51.Location = New System.Drawing.Point(794, 358)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(318, 106)
         Me.Label51.TabIndex = 116
@@ -2326,7 +2357,7 @@ Partial Class Form1
         'Label50
         '
         Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(20, 463)
+        Me.Label50.Location = New System.Drawing.Point(20, 449)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(217, 13)
         Me.Label50.TabIndex = 39
@@ -2334,7 +2365,7 @@ Partial Class Form1
         '
         'btnEdit_Names_Save_new
         '
-        Me.btnEdit_Names_Save_new.Location = New System.Drawing.Point(397, 490)
+        Me.btnEdit_Names_Save_new.Location = New System.Drawing.Point(397, 476)
         Me.btnEdit_Names_Save_new.Name = "btnEdit_Names_Save_new"
         Me.btnEdit_Names_Save_new.Size = New System.Drawing.Size(75, 23)
         Me.btnEdit_Names_Save_new.TabIndex = 190
@@ -2344,7 +2375,7 @@ Partial Class Form1
         'Label49
         '
         Me.Label49.AutoSize = True
-        Me.Label49.Location = New System.Drawing.Point(586, 538)
+        Me.Label49.Location = New System.Drawing.Point(586, 524)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(117, 13)
         Me.Label49.TabIndex = 37
@@ -2352,7 +2383,7 @@ Partial Class Form1
         '
         'Edit_Names_LogOUT_Button
         '
-        Me.Edit_Names_LogOUT_Button.Location = New System.Drawing.Point(478, 490)
+        Me.Edit_Names_LogOUT_Button.Location = New System.Drawing.Point(478, 476)
         Me.Edit_Names_LogOUT_Button.Name = "Edit_Names_LogOUT_Button"
         Me.Edit_Names_LogOUT_Button.Size = New System.Drawing.Size(75, 23)
         Me.Edit_Names_LogOUT_Button.TabIndex = 200
@@ -2367,14 +2398,14 @@ Partial Class Form1
         Me.Add_Edit_BindingNavigator.DeleteItem = Me.ToolStripButton2
         Me.Add_Edit_BindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.Add_Edit_BindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.ToolStripButton1, Me.ToolStripButton2, Me.Save_Name_Edit_ToolStripButton})
-        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(767, 402)
+        Me.Add_Edit_BindingNavigator.Location = New System.Drawing.Point(803, 439)
         Me.Add_Edit_BindingNavigator.MoveFirstItem = Me.ToolStripButton3
         Me.Add_Edit_BindingNavigator.MoveLastItem = Me.ToolStripButton6
         Me.Add_Edit_BindingNavigator.MoveNextItem = Me.ToolStripButton5
         Me.Add_Edit_BindingNavigator.MovePreviousItem = Me.ToolStripButton4
         Me.Add_Edit_BindingNavigator.Name = "Add_Edit_BindingNavigator"
         Me.Add_Edit_BindingNavigator.PositionItem = Me.ToolStripTextBox1
-        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(277, 25)
+        Me.Add_Edit_BindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.Add_Edit_BindingNavigator.TabIndex = 35
         Me.Add_Edit_BindingNavigator.Text = "FlightsBindingNavigator1"
         '
@@ -2400,7 +2431,7 @@ Partial Class Form1
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(36, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
         Me.ToolStripLabel1.Text = "of {0}"
         Me.ToolStripLabel1.ToolTipText = "Total number of items"
         '
@@ -2484,7 +2515,7 @@ Partial Class Form1
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(582, 525)
+        Me.Label48.Location = New System.Drawing.Point(582, 511)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(122, 13)
         Me.Label48.TabIndex = 21
@@ -2493,7 +2524,7 @@ Partial Class Form1
         'TextBox4
         '
         Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.TextBox4.Location = New System.Drawing.Point(559, 460)
+        Me.TextBox4.Location = New System.Drawing.Point(559, 446)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(171, 49)
@@ -2506,7 +2537,7 @@ Partial Class Form1
         'Label47
         '
         Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(582, 512)
+        Me.Label47.Location = New System.Drawing.Point(582, 498)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(126, 13)
         Me.Label47.TabIndex = 18
@@ -2515,7 +2546,7 @@ Partial Class Form1
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(126, 476)
+        Me.Label46.Location = New System.Drawing.Point(126, 462)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(53, 13)
         Me.Label46.TabIndex = 17
@@ -2524,7 +2555,7 @@ Partial Class Form1
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(20, 476)
+        Me.Label45.Location = New System.Drawing.Point(20, 462)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(60, 13)
         Me.Label45.TabIndex = 16
@@ -2532,7 +2563,7 @@ Partial Class Form1
         '
         'Edit_Names_Cancel_Login_Button
         '
-        Me.Edit_Names_Cancel_Login_Button.Location = New System.Drawing.Point(316, 490)
+        Me.Edit_Names_Cancel_Login_Button.Location = New System.Drawing.Point(316, 476)
         Me.Edit_Names_Cancel_Login_Button.Name = "Edit_Names_Cancel_Login_Button"
         Me.Edit_Names_Cancel_Login_Button.Size = New System.Drawing.Size(75, 23)
         Me.Edit_Names_Cancel_Login_Button.TabIndex = 185
@@ -2541,7 +2572,7 @@ Partial Class Form1
         '
         'Edit_Names_Login_Button
         '
-        Me.Edit_Names_Login_Button.Location = New System.Drawing.Point(235, 490)
+        Me.Edit_Names_Login_Button.Location = New System.Drawing.Point(235, 476)
         Me.Edit_Names_Login_Button.Name = "Edit_Names_Login_Button"
         Me.Edit_Names_Login_Button.Size = New System.Drawing.Size(75, 23)
         Me.Edit_Names_Login_Button.TabIndex = 175
@@ -2551,7 +2582,7 @@ Partial Class Form1
         'Password_Login_TextBox
         '
         Me.Password_Login_TextBox.BackColor = System.Drawing.SystemColors.Window
-        Me.Password_Login_TextBox.Location = New System.Drawing.Point(129, 492)
+        Me.Password_Login_TextBox.Location = New System.Drawing.Point(129, 478)
         Me.Password_Login_TextBox.Name = "Password_Login_TextBox"
         Me.Password_Login_TextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Password_Login_TextBox.Size = New System.Drawing.Size(100, 20)
@@ -2559,7 +2590,7 @@ Partial Class Form1
         '
         'UserName_Login_TextBox
         '
-        Me.UserName_Login_TextBox.Location = New System.Drawing.Point(23, 492)
+        Me.UserName_Login_TextBox.Location = New System.Drawing.Point(23, 478)
         Me.UserName_Login_TextBox.Name = "UserName_Login_TextBox"
         Me.UserName_Login_TextBox.Size = New System.Drawing.Size(100, 20)
         Me.UserName_Login_TextBox.TabIndex = 100
@@ -2570,9 +2601,9 @@ Partial Class Form1
         Me.MembersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.MembersDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewCheckBoxColumn4, Me.DataGridViewCheckBoxColumn5, Me.DataGridViewCheckBoxColumn6, Me.DataGridViewCheckBoxColumn7})
         Me.MembersDataGridView.DataSource = Me.Add_Edit_Pilot_Names_MembersBindingSource
-        Me.MembersDataGridView.Location = New System.Drawing.Point(12, 6)
+        Me.MembersDataGridView.Location = New System.Drawing.Point(12, 27)
         Me.MembersDataGridView.Name = "MembersDataGridView"
-        Me.MembersDataGridView.Size = New System.Drawing.Size(718, 433)
+        Me.MembersDataGridView.Size = New System.Drawing.Size(718, 412)
         Me.MembersDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn28
@@ -2833,38 +2864,125 @@ Partial Class Form1
         '
         Me.QuitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuitToolStripMenuItem1})
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
-        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.QuitToolStripMenuItem.Text = "File"
         '
         'QuitToolStripMenuItem1
         '
         Me.QuitToolStripMenuItem1.Name = "QuitToolStripMenuItem1"
         Me.QuitToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
-        Me.QuitToolStripMenuItem1.Size = New System.Drawing.Size(134, 22)
+        Me.QuitToolStripMenuItem1.Size = New System.Drawing.Size(140, 22)
         Me.QuitToolStripMenuItem1.Text = "Quit"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(199, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(213, 22)
         Me.ToolStripMenuItem1.Text = "About MASA Flight Sheets"
         '
-        'Label57
+        'ShapeContainer1
         '
-        Me.Label57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label57.Location = New System.Drawing.Point(750, 200)
-        Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(318, 106)
-        Me.Label57.TabIndex = 201
-        Me.Label57.Text = "Fix: Cancel button doesn't log you OUT"
-        Me.Label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ShapeContainer1.Location = New System.Drawing.Point(3, 3)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1434, 570)
+        Me.ShapeContainer1.TabIndex = 118
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.FillColor = System.Drawing.Color.CornflowerBlue
+        Me.RectangleShape1.FillGradientColor = System.Drawing.Color.Blue
+        Me.RectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
+        Me.RectangleShape1.Location = New System.Drawing.Point(16, 9)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(557, 288)
+        '
+        'ShapeContainer2
+        '
+        Me.ShapeContainer2.Location = New System.Drawing.Point(3, 3)
+        Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer2.Name = "ShapeContainer2"
+        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2})
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1434, 570)
+        Me.ShapeContainer2.TabIndex = 120
+        Me.ShapeContainer2.TabStop = False
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BackColor = System.Drawing.Color.Gray
+        Me.RectangleShape2.FillColor = System.Drawing.Color.CornflowerBlue
+        Me.RectangleShape2.FillGradientColor = System.Drawing.Color.Blue
+        Me.RectangleShape2.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
+        Me.RectangleShape2.Location = New System.Drawing.Point(23, 12)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(1017, 306)
+        '
+        'RectangleShape3
+        '
+        Me.RectangleShape3.BackColor = System.Drawing.Color.Gray
+        Me.RectangleShape3.FillColor = System.Drawing.Color.CornflowerBlue
+        Me.RectangleShape3.FillGradientColor = System.Drawing.Color.Blue
+        Me.RectangleShape3.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
+        Me.RectangleShape3.Location = New System.Drawing.Point(1, 7)
+        Me.RectangleShape3.Name = "RectangleShape3"
+        Me.RectangleShape3.Size = New System.Drawing.Size(764, 546)
+        '
+        'ShapeContainer3
+        '
+        Me.ShapeContainer3.Location = New System.Drawing.Point(3, 3)
+        Me.ShapeContainer3.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer3.Name = "ShapeContainer3"
+        Me.ShapeContainer3.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape3})
+        Me.ShapeContainer3.Size = New System.Drawing.Size(1434, 570)
+        Me.ShapeContainer3.TabIndex = 202
+        Me.ShapeContainer3.TabStop = False
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Location = New System.Drawing.Point(18, 1)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(180, 13)
+        Me.Label58.TabIndex = 121
+        Me.Label58.Text = "Penalty Charge For Too Long Flight?"
+        '
+        'Label59
+        '
+        Me.Label59.AutoSize = True
+        Me.Label59.Location = New System.Drawing.Point(39, 1)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(70, 13)
+        Me.Label59.TabIndex = 122
+        Me.Label59.Text = "Rope Break?"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.GroupBox2.Controls.Add(Me.Todays_Date_DateTimePicker)
+        Me.GroupBox2.Location = New System.Drawing.Point(36, 26)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(217, 49)
+        Me.GroupBox2.TabIndex = 119
+        Me.GroupBox2.TabStop = False
+        '
+        'Label60
+        '
+        Me.Label60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label60.Location = New System.Drawing.Point(410, 343)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(240, 34)
+        Me.Label60.TabIndex = 120
+        Me.Label60.Text = "Still working on colors and boxes on all tabs."
+        Me.Label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form1
         '
@@ -2970,6 +3088,7 @@ Partial Class Form1
         CType(Me.Add_Edit_Pilot_Names1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3283,4 +3402,14 @@ Partial Class Form1
     Friend WithEvents Label56 As Label
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Label57 As Label
+    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
+    Friend WithEvents ShapeContainer2 As PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape2 As PowerPacks.RectangleShape
+    Friend WithEvents ShapeContainer3 As PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape3 As PowerPacks.RectangleShape
+    Friend WithEvents Label59 As Label
+    Friend WithEvents Label58 As Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label60 As Label
 End Class
