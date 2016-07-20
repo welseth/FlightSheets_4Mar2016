@@ -1,6 +1,8 @@
 #! /usr/bin/env python3
 # 12 June 2016  -  Switch operated wav and mp3 player
 #
+#  Run RasPi config script:  sudo raspi-config
+#       allows config of audio, password, camera, and others
 #
 #  Set python script to at startup:
 #  http://www.raspberry-projects.com/pi/pi-operating-systems/raspbian/auto-running-programs
@@ -27,6 +29,8 @@
 #
 #To pair type pair xx:xx:xx:xx:xx:xx where xx:xx:xx:xx:xx:xx is your BD address of the device you want to pair
 #Next type trust xx:xx:xx:xx:xx:xx
+#
+#  Good RasPi audio reference page:  https://www.raspberrypi.org/documentation/configuration/audio-config.md
 # ----------
 import os
 import time
@@ -59,6 +63,8 @@ GPIO.setmode(GPIO.BCM)
 #    voltage of any kind.  So, connect one side to ground, the other to the
 #    GPIO pin that is already set to PUD_UP.  Thus, a ground/falling edge
 #    will trigger the event.  GPIO pins have built-in resistor, protecting the input.
+#    The switches *DO* bounce, so using the debounce setting is required
+#
 # Switch 1 (Yes) [input]
 GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 # Switch 2 (No) [input]
@@ -72,8 +78,12 @@ GPIO.setup(20, GPIO.OUT, initial=0)
 
 # Audio can come out both HDMI and analog.  We are using analog speaker for now.
 # Force selection of the analog audio output
-os.system('amixer cset numid=3 2')  #"3 2" is HDMI/LCD computer monitor speaker (tested, works!!)
+os.system('amixer cset numid=3 2')  #"3 2" is HDMI Cable/LCD computer monitor speaker (tested, works!!)
                                     #"3 1" is 1/8" analog audio jack (tested, works!!)
+                                    #"3 0" is 'automatic', not sure what this does
+                                    # ALSA amixer supports command:  speaker-test
+                                    #  see:  http://blog.scphillips.com/posts/2013/01/sound-configuration-on-raspberry-pi-with-alsa/
+#
 #google:  python stdin stdout mpg123
 #http://stackoverflow.com/questions/17159627/python-mpg123-and-subprocess-not-properly-using-stdin-write-or-communicate
 #Does replacing the p.communicate(...) call with p.kill();o p.stdout.read()
