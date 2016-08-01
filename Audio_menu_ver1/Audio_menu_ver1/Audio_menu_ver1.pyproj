@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f9dc403-af32-456d-bb55-f28c73e3efda</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Audio_menu_ver1.py</StartupFile>
+    <StartupFile>Audio_menu_ver1Older.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Audio_menu_ver1.py" />
+    <Compile Include="Audio_menu_ver1Older.py" />
+    <Compile Include="audio_menu_ver3.py" />
+    <Compile Include="wav_player_thred_ver16_final_works.py" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
