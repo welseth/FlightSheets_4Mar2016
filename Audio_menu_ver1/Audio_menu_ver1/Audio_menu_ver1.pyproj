@@ -22,9 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Audio_menu_ver1Older.py" />
+    <None Include="Audio_menu_ver1Older.py" />
     <Compile Include="audio_menu_ver3.py" />
-    <Compile Include="wav_player_thred_ver16_final_works.py" />
+    <Compile Include="wav_player_thred_ver16_FINAL_works.py" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

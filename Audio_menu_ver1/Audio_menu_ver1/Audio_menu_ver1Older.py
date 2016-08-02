@@ -1,4 +1,10 @@
 #! /usr/bin/env python3
+#
+# >>>>>>>>>this file is just for historical purposes only!
+#   >>>>>this is OLD, non-working code.  Do not use.
+#   >>use this "newer file" :  audio_menu_ver3.py   instead 
+#
+#
 # 12 June 2016  -  Switch operated wav and mp3 player
 #
 #  Run RasPi config script:  sudo raspi-config
