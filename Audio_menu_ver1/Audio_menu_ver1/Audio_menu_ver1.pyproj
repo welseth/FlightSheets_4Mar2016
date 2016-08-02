@@ -24,6 +24,7 @@
   <ItemGroup>
     <None Include="Audio_menu_ver1Older.py" />
     <Compile Include="audio_menu_ver3.py" />
+    <Compile Include="audio_menu_ver4.py" />
     <Compile Include="wav_player_thred_ver16_FINAL_works.py" />
   </ItemGroup>
   <PropertyGroup>
