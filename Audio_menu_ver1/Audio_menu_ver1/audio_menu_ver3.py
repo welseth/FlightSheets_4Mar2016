@@ -65,19 +65,22 @@ GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(6, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 # Switch 3 (SHUTDOWN) [input]
 GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-# Switch 4 (Reload the song) [input]
+# Switch 4 (Rewind the song) [input]
 GPIO.setup(19, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+# Toggle Switch (program_switch) [input]
+GPIO.setup(1xxxxxxx, GPIO.IN, pull_up_down=GPIO.PUD_UP)   <<<<<<<<<<<<<<<<<<<< choose a pin number and update this item <<<
 # LED 1 [output]
 GPIO.setup(20, GPIO.OUT, initial=0)
 
 # Audio can come out both HDMI and analog.  We are using analog speaker for now.
 # Force selection of the analog audio output
-os.system('amixer cset numid=3 2')  #"3 2" is HDMI/LCD computer monitor speaker (tested, works!!)
+os.system('amixer cset numid=3 1')  #"3 2" is HDMI/LCD computer monitor speaker (tested, works!!)
                                     #"3 1" is 1/8" analog audio jack (tested, works!!)
 #google:  python stdin stdout mpg123
 #http://stackoverflow.com/questions/17159627/python-mpg123-and-subprocess-not-properly-using-stdin-write-or-communicate
 #Does replacing the p.communicate(...) call with p.kill();o p.stdout.read()
 #http://raspberrypi.stackexchange.com/questions/50007/mapping-key-events-using-evdev
+
 
 #Generic test to see if the speaker works
 print ("Playing test sound, please wait...")
@@ -178,10 +181,20 @@ def reload_song(channel):
     output_stuff = str(player_one.stdout.readline(),'utf-8')  #need better readline here 
     print ("Reload response: ", output_stuff)
     
-    
+#***** Pin xxxxxxxxx *****  program_switch   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<fix this <<<
+def program_mode_switch_handler(channel):
+    print ("\n\n\nPin xxxxxxxxxxx Now in program_switch mode...")
+    program_switch = programming_mode
+    print ("Program_switch status: ", program_switch)
+
+
+
+
 GPIO.add_event_detect(5, GPIO.BOTH, callback=play_song_one, bouncetime=50)   #Yes
 GPIO.add_event_detect(6, GPIO.BOTH, callback=play_song_two, bouncetime=50)   #No
 GPIO.add_event_detect(19, GPIO.FALLING, callback=reload_song, bouncetime=50) #Rewind
+GPIO.add_event_detect(19, GPIO.FALLING, callback=program_mode_switch_handler, bouncetime=50) #program_switch
+
 #Ready to start, so turn ON the "I'm OK" LED
 GPIO.output(20, GPIO.HIGH)  
 
